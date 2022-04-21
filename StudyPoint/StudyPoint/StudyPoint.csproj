@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{440D9564-B77E-41C7-A04A-E48223A3ED61}</ProjectGuid>
+    <ProjectGuid>{9C2F05B8-8BBF-495C-B044-ACDEEBCF9FBA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>StudyPoint_projekti</RootNamespace>
-    <AssemblyName>StudyPoint-projekti</AssemblyName>
+    <RootNamespace>StudyPoint</RootNamespace>
+    <AssemblyName>StudyPoint</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

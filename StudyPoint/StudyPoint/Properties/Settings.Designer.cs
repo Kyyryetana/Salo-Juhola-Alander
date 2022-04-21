@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace StudyPoint_projekti.Properties
+namespace StudyPoint.Properties
 {
 
 

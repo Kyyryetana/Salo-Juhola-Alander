@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("StudyPoint-projekti")]
+[assembly: AssemblyTitle("StudyPoint")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("StudyPoint-projekti")]
+[assembly: AssemblyProduct("StudyPoint")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("440d9564-b77e-41c7-a04a-e48223a3ed61")]
+[assembly: Guid("9c2f05b8-8bbf-495c-b044-acdeebcf9fba")]
 
 // Version information for an assembly consists of the following four values:
 //

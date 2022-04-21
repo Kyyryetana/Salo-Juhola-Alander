@@ -1,0 +1,11 @@
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\bin\Debug\StudyPoint.exe.config
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\bin\Debug\StudyPoint.exe
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\bin\Debug\StudyPoint.pdb
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.csproj.AssemblyReference.cache
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.csproj.SuggestedBindingRedirects.cache
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.StudyPointForm.resources
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.Properties.Resources.resources
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.csproj.GenerateResource.cache
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.csproj.CoreCompileInputs.cache
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.exe
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.pdb
