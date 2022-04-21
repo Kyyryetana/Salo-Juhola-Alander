@@ -1,0 +1,11 @@
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint-projekti\StudyPoint-projekti\bin\Debug\StudyPoint-projekti.exe.config
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint-projekti\StudyPoint-projekti\bin\Debug\StudyPoint-projekti.exe
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint-projekti\StudyPoint-projekti\bin\Debug\StudyPoint-projekti.pdb
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint-projekti\StudyPoint-projekti\obj\Debug\StudyPoint-projekti.csproj.AssemblyReference.cache
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint-projekti\StudyPoint-projekti\obj\Debug\StudyPoint-projekti.csproj.SuggestedBindingRedirects.cache
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint-projekti\StudyPoint-projekti\obj\Debug\StudyPoint_projekti.Form1.resources
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint-projekti\StudyPoint-projekti\obj\Debug\StudyPoint_projekti.Properties.Resources.resources
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint-projekti\StudyPoint-projekti\obj\Debug\StudyPoint-projekti.csproj.GenerateResource.cache
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint-projekti\StudyPoint-projekti\obj\Debug\StudyPoint-projekti.csproj.CoreCompileInputs.cache
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint-projekti\StudyPoint-projekti\obj\Debug\StudyPoint-projekti.exe
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint-projekti\StudyPoint-projekti\obj\Debug\StudyPoint-projekti.pdb
