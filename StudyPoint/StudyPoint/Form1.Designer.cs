@@ -102,25 +102,25 @@
             this.WhatsNewManPL = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.loginPL = new System.Windows.Forms.Panel();
-            this.loginMailTB = new System.Windows.Forms.TextBox();
-            this.loginPassTB = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.loginBT = new System.Windows.Forms.Button();
-            this.newUserLB = new System.Windows.Forms.Label();
             this.registrationPL = new System.Windows.Forms.Panel();
-            this.regNimiTB = new System.Windows.Forms.TextBox();
-            this.regSukunimiTB = new System.Windows.Forms.TextBox();
-            this.regMailTB = new System.Windows.Forms.TextBox();
-            this.regpass1TB = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.regPass2TB = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.RegBT = new System.Windows.Forms.Button();
             this.regExitBT = new System.Windows.Forms.Button();
+            this.RegBT = new System.Windows.Forms.Button();
+            this.regPass2LB = new System.Windows.Forms.Label();
+            this.regPass1LB = new System.Windows.Forms.Label();
+            this.regmailLB = new System.Windows.Forms.Label();
+            this.regSnimiLB = new System.Windows.Forms.Label();
+            this.regNimiLB = new System.Windows.Forms.Label();
+            this.regPass2TB = new System.Windows.Forms.TextBox();
+            this.regpass1TB = new System.Windows.Forms.TextBox();
+            this.regMailTB = new System.Windows.Forms.TextBox();
+            this.regSukunimiTB = new System.Windows.Forms.TextBox();
+            this.regNimiTB = new System.Windows.Forms.TextBox();
+            this.newUserLB = new System.Windows.Forms.Label();
+            this.loginBT = new System.Windows.Forms.Button();
+            this.logsalasLB = new System.Windows.Forms.Label();
+            this.logtunnusLB = new System.Windows.Forms.Label();
+            this.loginPassTB = new System.Windows.Forms.TextBox();
+            this.loginMailTB = new System.Windows.Forms.TextBox();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -990,8 +990,8 @@
             this.loginPL.Controls.Add(this.registrationPL);
             this.loginPL.Controls.Add(this.newUserLB);
             this.loginPL.Controls.Add(this.loginBT);
-            this.loginPL.Controls.Add(this.label26);
-            this.loginPL.Controls.Add(this.label25);
+            this.loginPL.Controls.Add(this.logsalasLB);
+            this.loginPL.Controls.Add(this.logtunnusLB);
             this.loginPL.Controls.Add(this.loginPassTB);
             this.loginPL.Controls.Add(this.loginMailTB);
             this.loginPL.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1002,72 +1002,15 @@
             this.loginPL.TabIndex = 11;
             this.loginPL.Visible = false;
             // 
-            // loginMailTB
-            // 
-            this.loginMailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginMailTB.Location = new System.Drawing.Point(170, 50);
-            this.loginMailTB.Name = "loginMailTB";
-            this.loginMailTB.Size = new System.Drawing.Size(185, 26);
-            this.loginMailTB.TabIndex = 0;
-            // 
-            // loginPassTB
-            // 
-            this.loginPassTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginPassTB.Location = new System.Drawing.Point(170, 122);
-            this.loginPassTB.Name = "loginPassTB";
-            this.loginPassTB.Size = new System.Drawing.Size(185, 26);
-            this.loginPassTB.TabIndex = 0;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(170, 21);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(89, 20);
-            this.label25.TabIndex = 1;
-            this.label25.Text = "Sähköposti";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(170, 93);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(76, 20);
-            this.label26.TabIndex = 1;
-            this.label26.Text = "Salasana";
-            // 
-            // loginBT
-            // 
-            this.loginBT.Location = new System.Drawing.Point(170, 161);
-            this.loginBT.Name = "loginBT";
-            this.loginBT.Size = new System.Drawing.Size(100, 37);
-            this.loginBT.TabIndex = 2;
-            this.loginBT.Text = "Login";
-            this.loginBT.UseVisualStyleBackColor = true;
-            this.loginBT.Click += new System.EventHandler(this.loginBT_Click);
-            // 
-            // newUserLB
-            // 
-            this.newUserLB.AutoSize = true;
-            this.newUserLB.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.newUserLB.Location = new System.Drawing.Point(166, 226);
-            this.newUserLB.Name = "newUserLB";
-            this.newUserLB.Size = new System.Drawing.Size(312, 20);
-            this.newUserLB.TabIndex = 3;
-            this.newUserLB.Text = "Eikö ole vielä tunnusta voit luoda sen täältä";
-            this.newUserLB.Click += new System.EventHandler(this.newUserLB_Click);
-            // 
             // registrationPL
             // 
             this.registrationPL.Controls.Add(this.regExitBT);
             this.registrationPL.Controls.Add(this.RegBT);
-            this.registrationPL.Controls.Add(this.label31);
-            this.registrationPL.Controls.Add(this.label30);
-            this.registrationPL.Controls.Add(this.label29);
-            this.registrationPL.Controls.Add(this.label28);
-            this.registrationPL.Controls.Add(this.label27);
+            this.registrationPL.Controls.Add(this.regPass2LB);
+            this.registrationPL.Controls.Add(this.regPass1LB);
+            this.registrationPL.Controls.Add(this.regmailLB);
+            this.registrationPL.Controls.Add(this.regSnimiLB);
+            this.registrationPL.Controls.Add(this.regNimiLB);
             this.registrationPL.Controls.Add(this.regPass2TB);
             this.registrationPL.Controls.Add(this.regpass1TB);
             this.registrationPL.Controls.Add(this.regMailTB);
@@ -1080,96 +1023,6 @@
             this.registrationPL.TabIndex = 4;
             this.registrationPL.Visible = false;
             // 
-            // regNimiTB
-            // 
-            this.regNimiTB.Location = new System.Drawing.Point(223, 48);
-            this.regNimiTB.Name = "regNimiTB";
-            this.regNimiTB.Size = new System.Drawing.Size(195, 26);
-            this.regNimiTB.TabIndex = 0;
-            // 
-            // regSukunimiTB
-            // 
-            this.regSukunimiTB.Location = new System.Drawing.Point(223, 105);
-            this.regSukunimiTB.Name = "regSukunimiTB";
-            this.regSukunimiTB.Size = new System.Drawing.Size(195, 26);
-            this.regSukunimiTB.TabIndex = 0;
-            // 
-            // regMailTB
-            // 
-            this.regMailTB.Location = new System.Drawing.Point(223, 164);
-            this.regMailTB.Name = "regMailTB";
-            this.regMailTB.Size = new System.Drawing.Size(195, 26);
-            this.regMailTB.TabIndex = 0;
-            // 
-            // regpass1TB
-            // 
-            this.regpass1TB.Location = new System.Drawing.Point(223, 217);
-            this.regpass1TB.Name = "regpass1TB";
-            this.regpass1TB.Size = new System.Drawing.Size(195, 26);
-            this.regpass1TB.TabIndex = 0;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(223, 18);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(66, 20);
-            this.label27.TabIndex = 1;
-            this.label27.Text = "Etunimi:";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(219, 82);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(78, 20);
-            this.label28.TabIndex = 1;
-            this.label28.Text = "Sukunimi:";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(219, 138);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(93, 20);
-            this.label29.TabIndex = 1;
-            this.label29.Text = "Sähköposti:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(219, 194);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(80, 20);
-            this.label30.TabIndex = 1;
-            this.label30.Text = "Salasana:";
-            // 
-            // regPass2TB
-            // 
-            this.regPass2TB.Location = new System.Drawing.Point(223, 270);
-            this.regPass2TB.Name = "regPass2TB";
-            this.regPass2TB.Size = new System.Drawing.Size(195, 26);
-            this.regPass2TB.TabIndex = 0;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(219, 247);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(153, 20);
-            this.label31.TabIndex = 1;
-            this.label31.Text = "Salasana uudelleen:";
-            // 
-            // RegBT
-            // 
-            this.RegBT.Location = new System.Drawing.Point(223, 313);
-            this.RegBT.Name = "RegBT";
-            this.RegBT.Size = new System.Drawing.Size(109, 30);
-            this.RegBT.TabIndex = 2;
-            this.RegBT.Text = "Rekisteröidy";
-            this.RegBT.UseVisualStyleBackColor = true;
-            this.RegBT.Click += new System.EventHandler(this.RegBT_Click);
-            // 
             // regExitBT
             // 
             this.regExitBT.FlatAppearance.BorderSize = 0;
@@ -1181,6 +1034,153 @@
             this.regExitBT.Text = "X";
             this.regExitBT.UseVisualStyleBackColor = true;
             this.regExitBT.Click += new System.EventHandler(this.regExitBT_Click);
+            // 
+            // RegBT
+            // 
+            this.RegBT.Location = new System.Drawing.Point(223, 313);
+            this.RegBT.Name = "RegBT";
+            this.RegBT.Size = new System.Drawing.Size(109, 30);
+            this.RegBT.TabIndex = 2;
+            this.RegBT.Text = "Rekisteröidy";
+            this.RegBT.UseVisualStyleBackColor = true;
+            this.RegBT.Click += new System.EventHandler(this.RegBT_Click);
+            // 
+            // regPass2LB
+            // 
+            this.regPass2LB.AutoSize = true;
+            this.regPass2LB.Location = new System.Drawing.Point(219, 247);
+            this.regPass2LB.Name = "regPass2LB";
+            this.regPass2LB.Size = new System.Drawing.Size(153, 20);
+            this.regPass2LB.TabIndex = 1;
+            this.regPass2LB.Text = "Salasana uudelleen:";
+            // 
+            // regPass1LB
+            // 
+            this.regPass1LB.AutoSize = true;
+            this.regPass1LB.Location = new System.Drawing.Point(219, 194);
+            this.regPass1LB.Name = "regPass1LB";
+            this.regPass1LB.Size = new System.Drawing.Size(80, 20);
+            this.regPass1LB.TabIndex = 1;
+            this.regPass1LB.Text = "Salasana:";
+            // 
+            // regmailLB
+            // 
+            this.regmailLB.AutoSize = true;
+            this.regmailLB.Location = new System.Drawing.Point(219, 138);
+            this.regmailLB.Name = "regmailLB";
+            this.regmailLB.Size = new System.Drawing.Size(93, 20);
+            this.regmailLB.TabIndex = 1;
+            this.regmailLB.Text = "Sähköposti:";
+            // 
+            // regSnimiLB
+            // 
+            this.regSnimiLB.AutoSize = true;
+            this.regSnimiLB.Location = new System.Drawing.Point(219, 82);
+            this.regSnimiLB.Name = "regSnimiLB";
+            this.regSnimiLB.Size = new System.Drawing.Size(78, 20);
+            this.regSnimiLB.TabIndex = 1;
+            this.regSnimiLB.Text = "Sukunimi:";
+            // 
+            // regNimiLB
+            // 
+            this.regNimiLB.AutoSize = true;
+            this.regNimiLB.Location = new System.Drawing.Point(223, 18);
+            this.regNimiLB.Name = "regNimiLB";
+            this.regNimiLB.Size = new System.Drawing.Size(66, 20);
+            this.regNimiLB.TabIndex = 1;
+            this.regNimiLB.Text = "Etunimi:";
+            // 
+            // regPass2TB
+            // 
+            this.regPass2TB.Location = new System.Drawing.Point(223, 270);
+            this.regPass2TB.Name = "regPass2TB";
+            this.regPass2TB.Size = new System.Drawing.Size(195, 26);
+            this.regPass2TB.TabIndex = 0;
+            // 
+            // regpass1TB
+            // 
+            this.regpass1TB.Location = new System.Drawing.Point(223, 217);
+            this.regpass1TB.Name = "regpass1TB";
+            this.regpass1TB.Size = new System.Drawing.Size(195, 26);
+            this.regpass1TB.TabIndex = 0;
+            // 
+            // regMailTB
+            // 
+            this.regMailTB.Location = new System.Drawing.Point(223, 164);
+            this.regMailTB.Name = "regMailTB";
+            this.regMailTB.Size = new System.Drawing.Size(195, 26);
+            this.regMailTB.TabIndex = 0;
+            // 
+            // regSukunimiTB
+            // 
+            this.regSukunimiTB.Location = new System.Drawing.Point(223, 105);
+            this.regSukunimiTB.Name = "regSukunimiTB";
+            this.regSukunimiTB.Size = new System.Drawing.Size(195, 26);
+            this.regSukunimiTB.TabIndex = 0;
+            // 
+            // regNimiTB
+            // 
+            this.regNimiTB.Location = new System.Drawing.Point(223, 48);
+            this.regNimiTB.Name = "regNimiTB";
+            this.regNimiTB.Size = new System.Drawing.Size(195, 26);
+            this.regNimiTB.TabIndex = 0;
+            // 
+            // newUserLB
+            // 
+            this.newUserLB.AutoSize = true;
+            this.newUserLB.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.newUserLB.Location = new System.Drawing.Point(166, 226);
+            this.newUserLB.Name = "newUserLB";
+            this.newUserLB.Size = new System.Drawing.Size(312, 20);
+            this.newUserLB.TabIndex = 3;
+            this.newUserLB.Text = "Eikö ole vielä tunnusta voit luoda sen täältä";
+            this.newUserLB.Click += new System.EventHandler(this.newUserLB_Click);
+            // 
+            // loginBT
+            // 
+            this.loginBT.Location = new System.Drawing.Point(170, 161);
+            this.loginBT.Name = "loginBT";
+            this.loginBT.Size = new System.Drawing.Size(100, 37);
+            this.loginBT.TabIndex = 2;
+            this.loginBT.Text = "Login";
+            this.loginBT.UseVisualStyleBackColor = true;
+            this.loginBT.Click += new System.EventHandler(this.loginBT_Click);
+            // 
+            // logsalasLB
+            // 
+            this.logsalasLB.AutoSize = true;
+            this.logsalasLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logsalasLB.Location = new System.Drawing.Point(170, 93);
+            this.logsalasLB.Name = "logsalasLB";
+            this.logsalasLB.Size = new System.Drawing.Size(76, 20);
+            this.logsalasLB.TabIndex = 1;
+            this.logsalasLB.Text = "Salasana";
+            // 
+            // logtunnusLB
+            // 
+            this.logtunnusLB.AutoSize = true;
+            this.logtunnusLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logtunnusLB.Location = new System.Drawing.Point(170, 21);
+            this.logtunnusLB.Name = "logtunnusLB";
+            this.logtunnusLB.Size = new System.Drawing.Size(89, 20);
+            this.logtunnusLB.TabIndex = 1;
+            this.logtunnusLB.Text = "Sähköposti";
+            // 
+            // loginPassTB
+            // 
+            this.loginPassTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginPassTB.Location = new System.Drawing.Point(170, 122);
+            this.loginPassTB.Name = "loginPassTB";
+            this.loginPassTB.Size = new System.Drawing.Size(185, 26);
+            this.loginPassTB.TabIndex = 0;
+            // 
+            // loginMailTB
+            // 
+            this.loginMailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginMailTB.Location = new System.Drawing.Point(170, 50);
+            this.loginMailTB.Name = "loginMailTB";
+            this.loginMailTB.Size = new System.Drawing.Size(185, 26);
+            this.loginMailTB.TabIndex = 0;
             // 
             // StudyPointForm
             // 
@@ -1326,18 +1326,18 @@
         private System.Windows.Forms.Button EmptyFBBT;
         private System.Windows.Forms.TextBox FeedbackTB;
         private System.Windows.Forms.Panel loginPL;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label logsalasLB;
+        private System.Windows.Forms.Label logtunnusLB;
         private System.Windows.Forms.TextBox loginPassTB;
         private System.Windows.Forms.TextBox loginMailTB;
         private System.Windows.Forms.Button loginBT;
         private System.Windows.Forms.Label newUserLB;
         private System.Windows.Forms.Panel registrationPL;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label regPass2LB;
+        private System.Windows.Forms.Label regPass1LB;
+        private System.Windows.Forms.Label regmailLB;
+        private System.Windows.Forms.Label regSnimiLB;
+        private System.Windows.Forms.Label regNimiLB;
         private System.Windows.Forms.TextBox regPass2TB;
         private System.Windows.Forms.TextBox regpass1TB;
         private System.Windows.Forms.TextBox regMailTB;
