@@ -1,49 +1,98 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace StudyPoint
 {
-    internal class USER
+    internal class USERS
     {
-        /*
+        
         CONNECT connection = new CONNECT();
+        Crypting crypting = new Crypting();
 
-        public bool AddUser(String enimi, String snimi, String email, int userId)
+        public bool AddUser(String enimi, String snimi, String email, string password)
         {
 
-            String password = passwordGenerator();
-            String encryptedPassword = Encrypt(password);
+            //String password = passwordGenerator();
+            String encryptedPassword = crypting.Encrypt(password);
             MySqlCommand komento = new MySqlCommand();
-            String lisayskysely = "INSERT INTO yhteystiedot " +
-                "(etunimi, sukunimi, sahkoposti, userid, password) " +
-                "VALUES (@enm, @snm, @eml, @uid, @pwd ); ";
+            String lisayskysely = "INSERT INTO kayttajat " +
+                "(etunimi, sukunimi, sahkoposti, salasana) " +
+                "VALUES (@enm, @snm, @eml, @pwd ); ";
             komento.CommandText = lisayskysely;
             komento.Connection = connection.Connection();
             //@enm, @snm, @eml, @uid, @pwd
             komento.Parameters.Add("@enm", MySqlDbType.VarChar).Value = enimi;
             komento.Parameters.Add("@snm", MySqlDbType.VarChar).Value = snimi;
             komento.Parameters.Add("@eml", MySqlDbType.VarChar).Value = email;
-            komento.Parameters.Add("@uid", MySqlDbType.UInt32).Value = userId;
+            //komento.Parameters.Add("@kid", MySqlDbType.UInt32).Value = userId;
             komento.Parameters.Add("@pwd", MySqlDbType.VarChar).Value =  encryptedPassword;
-            //komento.Parameters.Add("@ssa", MySqlDbType.VarChar).Value = salattu;
-            MessageBox.Show("Käyttäjätunnuksesi on " + ktunnus + "\nSalasanasi on " + salis + /*"\nSalattuna se on" + salattu + "\nkirjoita nämä visusti talteen");
+            MessageBox.Show("Käyttäjätunnuksesi on " + email );
 
-            connection.openConnection();
+            connection.OpenConnection();
             if (komento.ExecuteNonQuery() == 1)
             {
-                connection.closeConnection();
+                connection.CloseConnection();
                 return true;
             }
             else
             {
-                connection.closeConnection();
+                connection.CloseConnection();
                 return false;
             }
         }
+
+
+        //tarkistetaan käyttäjä ja salasana
+        public bool CheckPassword(string email, string password)
+        {
+            password = password.Trim();
+            password = crypting.Encrypt(password);
+            connection.OpenConnection();
+            MySqlCommand komento = new MySqlCommand("SELECT salasana FROM kayttajat WHERE sahkoposti = '" + email + "'"   , connection.Connection());
+            
+            var sana = (string) komento.ExecuteScalar();
+            connection.CloseConnection();
+            
+            if (sana == password)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+            
+        }
+
+        //tarkistaa onko jo käyttäjä olemassa
+        public bool CheckUser(string email)
+        {
+            
+            connection.OpenConnection();
+            MySqlCommand komento = new MySqlCommand("SELECT sahkoposti FROM kayttajat WHERE sahkoposti = '" + email + "'", connection.Connection());
+
+            var sana = (string)komento.ExecuteScalar();
+            connection.CloseConnection();
+
+            if (sana == email)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
+        }
+
 
 
 
@@ -67,15 +116,15 @@ namespace StudyPoint
 
 
 
-            connection.openConnection();
+            connection.OpenConnection();
             if (komento.ExecuteNonQuery() == 1)
             {
-                connection.closeConnection();
+                connection.CloseConnection();
                 return true;
             }
             else
             {
-                connection.closeConnection();
+                connection.CloseConnection();
                 return false;
             }
         }
@@ -91,18 +140,19 @@ namespace StudyPoint
             //@oid
             komento.Parameters.Add("@uid", MySqlDbType.UInt32).Value = userId;
 
-            connection.openConnection();
+            connection.OpenConnection();
             if (komento.ExecuteNonQuery() == 1)
             {
-                connection.closeConnection();
+                connection.CloseConnection();
                 return true;
             }
             else
             {
-                connection.closeConnection();
+                connection.CloseConnection();
                 return false;
             }
         }
+        /*
         public String salasana()
         {
             char[] jono = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
@@ -114,7 +164,7 @@ namespace StudyPoint
             }
             return ssana;
         }
-
+        
 
         public bool ChangePassword(String password, int UserId)
         {
@@ -128,19 +178,19 @@ namespace StudyPoint
 
 
 
-            connection.openConnection();
+            connection.OpenConnection();
             if (komento.ExecuteNonQuery() == 1)
             {
-                connection.closeConnection();
+                connection.CloseConnection();
                 return true;
             }
             else
             {
-                connection.closeConnection();
+                connection.CloseConnection();
                 return false;
             }
         }
-
-    */
+        */
+    
     }
 }

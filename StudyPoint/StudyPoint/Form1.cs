@@ -12,6 +12,7 @@ namespace StudyPoint
 {
     public partial class StudyPointForm : Form
     {
+        USERS users = new USERS();
         public StudyPointForm()
         {
             InitializeComponent();
@@ -52,6 +53,66 @@ namespace StudyPoint
             ManagementPL.Visible = false;
         }
 
-        
+        private void newUserLB_Click(object sender, EventArgs e)
+        {
+            registrationPL.Visible = true;
+        }
+
+        private void loginBT_Click(object sender, EventArgs e)
+        {
+            
+            string email = loginMailTB.Text;
+            string pass = loginPassTB.Text;
+            bool status = users.CheckPassword(email, pass);
+            if (status)
+            {
+                MessageBox.Show("onnistui");
+                loginPL.Visible = false;
+                
+            }
+            else 
+            {
+                MessageBox.Show("käyttäjätunnus ja salasana eivät täsmää");
+            }
+        }
+
+        private void RegBT_Click(object sender, EventArgs e)
+        {
+
+            tarkistaReg();
+            
+        }
+
+        private void loginRegBT_Click(object sender, EventArgs e)
+        {
+            
+            loginPL.Visible=true;
+        }
+
+
+        public void tarkistaReg()
+        {
+            string enimi = regNimiTB.Text;
+            string snimi = regSukunimiTB.Text;
+            string mail = regMailTB.Text;
+            string password = regpass1TB.Text;
+            string password2 = regPass2TB.Text;
+            bool status = Registration.tarkistaReg(enimi, snimi, mail, password, password2);
+            if (status)
+            {
+                registrationPL.Visible = false;
+            }
+            else
+            {
+                registrationPL.Visible = true;
+            }
+
+        }
+
+        private void regExitBT_Click(object sender, EventArgs e)
+        {
+            registrationPL.Visible=false;
+            
+        }
     }
 }

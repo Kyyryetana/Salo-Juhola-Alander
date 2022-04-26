@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.YlaPL = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.loginRegBT = new System.Windows.Forms.Button();
             this.VasenPL = new System.Windows.Forms.Panel();
             this.ManagementBT = new System.Windows.Forms.Button();
             this.FeedbackBT = new System.Windows.Forms.Button();
@@ -62,6 +62,15 @@
             this.OurDepartmentPL = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.FeedbackPL = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SendFBBT = new System.Windows.Forms.Button();
+            this.EmptyFBBT = new System.Windows.Forms.Button();
+            this.FeedbackTB = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.DiscussionBoardPL = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -74,6 +83,13 @@
             this.DownloadManPL = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.UserManPL = new System.Windows.Forms.Panel();
+            this.UserDTG = new System.Windows.Forms.DataGridView();
+            this.DeleteBT = new System.Windows.Forms.Button();
+            this.UpdateBT = new System.Windows.Forms.Button();
+            this.SaveBT = new System.Windows.Forms.Button();
+            this.EmptyBT = new System.Windows.Forms.Button();
+            this.AdminTB = new System.Windows.Forms.TextBox();
+            this.EmailTB = new System.Windows.Forms.TextBox();
             this.LastnameTB = new System.Windows.Forms.TextBox();
             this.FirstnameTB = new System.Windows.Forms.TextBox();
             this.UIDTB = new System.Windows.Forms.TextBox();
@@ -85,22 +101,26 @@
             this.label13 = new System.Windows.Forms.Label();
             this.WhatsNewManPL = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.EmailTB = new System.Windows.Forms.TextBox();
-            this.AdminTB = new System.Windows.Forms.TextBox();
-            this.EmptyBT = new System.Windows.Forms.Button();
-            this.SaveBT = new System.Windows.Forms.Button();
-            this.UpdateBT = new System.Windows.Forms.Button();
-            this.DeleteBT = new System.Windows.Forms.Button();
-            this.UserDTG = new System.Windows.Forms.DataGridView();
-            this.FeedbackTB = new System.Windows.Forms.TextBox();
-            this.EmptyFBBT = new System.Windows.Forms.Button();
-            this.SendFBBT = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.loginPL = new System.Windows.Forms.Panel();
+            this.loginMailTB = new System.Windows.Forms.TextBox();
+            this.loginPassTB = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.loginBT = new System.Windows.Forms.Button();
+            this.newUserLB = new System.Windows.Forms.Label();
+            this.registrationPL = new System.Windows.Forms.Panel();
+            this.regNimiTB = new System.Windows.Forms.TextBox();
+            this.regSukunimiTB = new System.Windows.Forms.TextBox();
+            this.regMailTB = new System.Windows.Forms.TextBox();
+            this.regpass1TB = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.regPass2TB = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.RegBT = new System.Windows.Forms.Button();
+            this.regExitBT = new System.Windows.Forms.Button();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -118,31 +138,34 @@
             this.FeedBackManPL.SuspendLayout();
             this.DownloadManPL.SuspendLayout();
             this.UserManPL.SuspendLayout();
-            this.WhatsNewManPL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserDTG)).BeginInit();
+            this.WhatsNewManPL.SuspendLayout();
+            this.loginPL.SuspendLayout();
+            this.registrationPL.SuspendLayout();
             this.SuspendLayout();
             // 
             // YlaPL
             // 
             this.YlaPL.BackColor = System.Drawing.Color.Gainsboro;
-            this.YlaPL.Controls.Add(this.button1);
+            this.YlaPL.Controls.Add(this.loginRegBT);
             this.YlaPL.Dock = System.Windows.Forms.DockStyle.Top;
             this.YlaPL.Location = new System.Drawing.Point(0, 0);
             this.YlaPL.Name = "YlaPL";
             this.YlaPL.Size = new System.Drawing.Size(794, 47);
             this.YlaPL.TabIndex = 0;
             // 
-            // button1
+            // loginRegBT
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(674, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 41);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Log in / Register";
-            this.button1.UseVisualStyleBackColor = true;
+            this.loginRegBT.FlatAppearance.BorderSize = 0;
+            this.loginRegBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginRegBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginRegBT.Location = new System.Drawing.Point(674, 3);
+            this.loginRegBT.Name = "loginRegBT";
+            this.loginRegBT.Size = new System.Drawing.Size(117, 41);
+            this.loginRegBT.TabIndex = 0;
+            this.loginRegBT.Text = "Log in / Register";
+            this.loginRegBT.UseVisualStyleBackColor = true;
+            this.loginRegBT.Click += new System.EventHandler(this.loginRegBT_Click);
             // 
             // VasenPL
             // 
@@ -574,6 +597,91 @@
             this.FeedbackPL.TabIndex = 18;
             this.FeedbackPL.Visible = false;
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(18, 70);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(166, 20);
+            this.label24.TabIndex = 10;
+            this.label24.Text = "Leave feedback for us";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(16, 351);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(325, 16);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "Leave your contacts if you wish us to contact you back";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(18, 410);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(52, 20);
+            this.label22.TabIndex = 8;
+            this.label22.Text = "Email:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(15, 378);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(55, 20);
+            this.label21.TabIndex = 7;
+            this.label21.Text = "Name:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(76, 407);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(183, 26);
+            this.textBox2.TabIndex = 6;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(76, 375);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(183, 26);
+            this.textBox1.TabIndex = 5;
+            // 
+            // SendFBBT
+            // 
+            this.SendFBBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SendFBBT.Location = new System.Drawing.Point(19, 439);
+            this.SendFBBT.Name = "SendFBBT";
+            this.SendFBBT.Size = new System.Drawing.Size(85, 33);
+            this.SendFBBT.TabIndex = 3;
+            this.SendFBBT.Text = "Send";
+            this.SendFBBT.UseVisualStyleBackColor = true;
+            // 
+            // EmptyFBBT
+            // 
+            this.EmptyFBBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmptyFBBT.Location = new System.Drawing.Point(17, 283);
+            this.EmptyFBBT.Name = "EmptyFBBT";
+            this.EmptyFBBT.Size = new System.Drawing.Size(85, 33);
+            this.EmptyFBBT.TabIndex = 2;
+            this.EmptyFBBT.Text = "Empty";
+            this.EmptyFBBT.UseVisualStyleBackColor = true;
+            // 
+            // FeedbackTB
+            // 
+            this.FeedbackTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeedbackTB.Location = new System.Drawing.Point(17, 96);
+            this.FeedbackTB.Multiline = true;
+            this.FeedbackTB.Name = "FeedbackTB";
+            this.FeedbackTB.Size = new System.Drawing.Size(594, 181);
+            this.FeedbackTB.TabIndex = 1;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -709,6 +817,70 @@
             this.UserManPL.TabIndex = 21;
             this.UserManPL.Visible = false;
             // 
+            // UserDTG
+            // 
+            this.UserDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UserDTG.Location = new System.Drawing.Point(17, 213);
+            this.UserDTG.Name = "UserDTG";
+            this.UserDTG.Size = new System.Drawing.Size(612, 273);
+            this.UserDTG.TabIndex = 15;
+            // 
+            // DeleteBT
+            // 
+            this.DeleteBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBT.Location = new System.Drawing.Point(299, 166);
+            this.DeleteBT.Name = "DeleteBT";
+            this.DeleteBT.Size = new System.Drawing.Size(87, 32);
+            this.DeleteBT.TabIndex = 14;
+            this.DeleteBT.Text = "Delete";
+            this.DeleteBT.UseVisualStyleBackColor = true;
+            // 
+            // UpdateBT
+            // 
+            this.UpdateBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBT.Location = new System.Drawing.Point(206, 166);
+            this.UpdateBT.Name = "UpdateBT";
+            this.UpdateBT.Size = new System.Drawing.Size(87, 32);
+            this.UpdateBT.TabIndex = 13;
+            this.UpdateBT.Text = "Update";
+            this.UpdateBT.UseVisualStyleBackColor = true;
+            // 
+            // SaveBT
+            // 
+            this.SaveBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBT.Location = new System.Drawing.Point(113, 164);
+            this.SaveBT.Name = "SaveBT";
+            this.SaveBT.Size = new System.Drawing.Size(87, 32);
+            this.SaveBT.TabIndex = 12;
+            this.SaveBT.Text = "Save";
+            this.SaveBT.UseVisualStyleBackColor = true;
+            // 
+            // EmptyBT
+            // 
+            this.EmptyBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmptyBT.Location = new System.Drawing.Point(17, 166);
+            this.EmptyBT.Name = "EmptyBT";
+            this.EmptyBT.Size = new System.Drawing.Size(87, 32);
+            this.EmptyBT.TabIndex = 11;
+            this.EmptyBT.Text = "Empty";
+            this.EmptyBT.UseVisualStyleBackColor = true;
+            // 
+            // AdminTB
+            // 
+            this.AdminTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminTB.Location = new System.Drawing.Point(409, 91);
+            this.AdminTB.Name = "AdminTB";
+            this.AdminTB.Size = new System.Drawing.Size(179, 26);
+            this.AdminTB.TabIndex = 10;
+            // 
+            // EmailTB
+            // 
+            this.EmailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailTB.Location = new System.Drawing.Point(409, 60);
+            this.EmailTB.Name = "EmailTB";
+            this.EmailTB.Size = new System.Drawing.Size(179, 26);
+            this.EmailTB.TabIndex = 9;
+            // 
             // LastnameTB
             // 
             this.LastnameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -813,160 +985,209 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "What\'s new management";
             // 
-            // EmailTB
+            // loginPL
             // 
-            this.EmailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTB.Location = new System.Drawing.Point(409, 60);
-            this.EmailTB.Name = "EmailTB";
-            this.EmailTB.Size = new System.Drawing.Size(179, 26);
-            this.EmailTB.TabIndex = 9;
+            this.loginPL.Controls.Add(this.registrationPL);
+            this.loginPL.Controls.Add(this.newUserLB);
+            this.loginPL.Controls.Add(this.loginBT);
+            this.loginPL.Controls.Add(this.label26);
+            this.loginPL.Controls.Add(this.label25);
+            this.loginPL.Controls.Add(this.loginPassTB);
+            this.loginPL.Controls.Add(this.loginMailTB);
+            this.loginPL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loginPL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginPL.Location = new System.Drawing.Point(153, 47);
+            this.loginPL.Name = "loginPL";
+            this.loginPL.Size = new System.Drawing.Size(641, 498);
+            this.loginPL.TabIndex = 11;
+            this.loginPL.Visible = false;
             // 
-            // AdminTB
+            // loginMailTB
             // 
-            this.AdminTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminTB.Location = new System.Drawing.Point(409, 91);
-            this.AdminTB.Name = "AdminTB";
-            this.AdminTB.Size = new System.Drawing.Size(179, 26);
-            this.AdminTB.TabIndex = 10;
+            this.loginMailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginMailTB.Location = new System.Drawing.Point(170, 50);
+            this.loginMailTB.Name = "loginMailTB";
+            this.loginMailTB.Size = new System.Drawing.Size(185, 26);
+            this.loginMailTB.TabIndex = 0;
             // 
-            // EmptyBT
+            // loginPassTB
             // 
-            this.EmptyBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmptyBT.Location = new System.Drawing.Point(17, 166);
-            this.EmptyBT.Name = "EmptyBT";
-            this.EmptyBT.Size = new System.Drawing.Size(87, 32);
-            this.EmptyBT.TabIndex = 11;
-            this.EmptyBT.Text = "Empty";
-            this.EmptyBT.UseVisualStyleBackColor = true;
+            this.loginPassTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginPassTB.Location = new System.Drawing.Point(170, 122);
+            this.loginPassTB.Name = "loginPassTB";
+            this.loginPassTB.Size = new System.Drawing.Size(185, 26);
+            this.loginPassTB.TabIndex = 0;
             // 
-            // SaveBT
+            // label25
             // 
-            this.SaveBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveBT.Location = new System.Drawing.Point(113, 164);
-            this.SaveBT.Name = "SaveBT";
-            this.SaveBT.Size = new System.Drawing.Size(87, 32);
-            this.SaveBT.TabIndex = 12;
-            this.SaveBT.Text = "Save";
-            this.SaveBT.UseVisualStyleBackColor = true;
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(170, 21);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(89, 20);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Sähköposti";
             // 
-            // UpdateBT
+            // label26
             // 
-            this.UpdateBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBT.Location = new System.Drawing.Point(206, 166);
-            this.UpdateBT.Name = "UpdateBT";
-            this.UpdateBT.Size = new System.Drawing.Size(87, 32);
-            this.UpdateBT.TabIndex = 13;
-            this.UpdateBT.Text = "Update";
-            this.UpdateBT.UseVisualStyleBackColor = true;
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(170, 93);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(76, 20);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "Salasana";
             // 
-            // DeleteBT
+            // loginBT
             // 
-            this.DeleteBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteBT.Location = new System.Drawing.Point(299, 166);
-            this.DeleteBT.Name = "DeleteBT";
-            this.DeleteBT.Size = new System.Drawing.Size(87, 32);
-            this.DeleteBT.TabIndex = 14;
-            this.DeleteBT.Text = "Delete";
-            this.DeleteBT.UseVisualStyleBackColor = true;
+            this.loginBT.Location = new System.Drawing.Point(170, 161);
+            this.loginBT.Name = "loginBT";
+            this.loginBT.Size = new System.Drawing.Size(100, 37);
+            this.loginBT.TabIndex = 2;
+            this.loginBT.Text = "Login";
+            this.loginBT.UseVisualStyleBackColor = true;
+            this.loginBT.Click += new System.EventHandler(this.loginBT_Click);
             // 
-            // UserDTG
+            // newUserLB
             // 
-            this.UserDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UserDTG.Location = new System.Drawing.Point(17, 213);
-            this.UserDTG.Name = "UserDTG";
-            this.UserDTG.Size = new System.Drawing.Size(612, 273);
-            this.UserDTG.TabIndex = 15;
+            this.newUserLB.AutoSize = true;
+            this.newUserLB.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.newUserLB.Location = new System.Drawing.Point(166, 226);
+            this.newUserLB.Name = "newUserLB";
+            this.newUserLB.Size = new System.Drawing.Size(312, 20);
+            this.newUserLB.TabIndex = 3;
+            this.newUserLB.Text = "Eikö ole vielä tunnusta voit luoda sen täältä";
+            this.newUserLB.Click += new System.EventHandler(this.newUserLB_Click);
             // 
-            // FeedbackTB
+            // registrationPL
             // 
-            this.FeedbackTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FeedbackTB.Location = new System.Drawing.Point(17, 96);
-            this.FeedbackTB.Multiline = true;
-            this.FeedbackTB.Name = "FeedbackTB";
-            this.FeedbackTB.Size = new System.Drawing.Size(594, 181);
-            this.FeedbackTB.TabIndex = 1;
+            this.registrationPL.Controls.Add(this.regExitBT);
+            this.registrationPL.Controls.Add(this.RegBT);
+            this.registrationPL.Controls.Add(this.label31);
+            this.registrationPL.Controls.Add(this.label30);
+            this.registrationPL.Controls.Add(this.label29);
+            this.registrationPL.Controls.Add(this.label28);
+            this.registrationPL.Controls.Add(this.label27);
+            this.registrationPL.Controls.Add(this.regPass2TB);
+            this.registrationPL.Controls.Add(this.regpass1TB);
+            this.registrationPL.Controls.Add(this.regMailTB);
+            this.registrationPL.Controls.Add(this.regSukunimiTB);
+            this.registrationPL.Controls.Add(this.regNimiTB);
+            this.registrationPL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.registrationPL.Location = new System.Drawing.Point(0, 0);
+            this.registrationPL.Name = "registrationPL";
+            this.registrationPL.Size = new System.Drawing.Size(641, 498);
+            this.registrationPL.TabIndex = 4;
+            this.registrationPL.Visible = false;
             // 
-            // EmptyFBBT
+            // regNimiTB
             // 
-            this.EmptyFBBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmptyFBBT.Location = new System.Drawing.Point(17, 283);
-            this.EmptyFBBT.Name = "EmptyFBBT";
-            this.EmptyFBBT.Size = new System.Drawing.Size(85, 33);
-            this.EmptyFBBT.TabIndex = 2;
-            this.EmptyFBBT.Text = "Empty";
-            this.EmptyFBBT.UseVisualStyleBackColor = true;
+            this.regNimiTB.Location = new System.Drawing.Point(223, 48);
+            this.regNimiTB.Name = "regNimiTB";
+            this.regNimiTB.Size = new System.Drawing.Size(195, 26);
+            this.regNimiTB.TabIndex = 0;
             // 
-            // SendFBBT
+            // regSukunimiTB
             // 
-            this.SendFBBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SendFBBT.Location = new System.Drawing.Point(19, 439);
-            this.SendFBBT.Name = "SendFBBT";
-            this.SendFBBT.Size = new System.Drawing.Size(85, 33);
-            this.SendFBBT.TabIndex = 3;
-            this.SendFBBT.Text = "Send";
-            this.SendFBBT.UseVisualStyleBackColor = true;
+            this.regSukunimiTB.Location = new System.Drawing.Point(223, 105);
+            this.regSukunimiTB.Name = "regSukunimiTB";
+            this.regSukunimiTB.Size = new System.Drawing.Size(195, 26);
+            this.regSukunimiTB.TabIndex = 0;
             // 
-            // textBox1
+            // regMailTB
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(76, 375);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 26);
-            this.textBox1.TabIndex = 5;
+            this.regMailTB.Location = new System.Drawing.Point(223, 164);
+            this.regMailTB.Name = "regMailTB";
+            this.regMailTB.Size = new System.Drawing.Size(195, 26);
+            this.regMailTB.TabIndex = 0;
             // 
-            // textBox2
+            // regpass1TB
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(76, 407);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 26);
-            this.textBox2.TabIndex = 6;
+            this.regpass1TB.Location = new System.Drawing.Point(223, 217);
+            this.regpass1TB.Name = "regpass1TB";
+            this.regpass1TB.Size = new System.Drawing.Size(195, 26);
+            this.regpass1TB.TabIndex = 0;
             // 
-            // label21
+            // label27
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(15, 378);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(55, 20);
-            this.label21.TabIndex = 7;
-            this.label21.Text = "Name:";
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(223, 18);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(66, 20);
+            this.label27.TabIndex = 1;
+            this.label27.Text = "Etunimi:";
             // 
-            // label22
+            // label28
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(18, 410);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(52, 20);
-            this.label22.TabIndex = 8;
-            this.label22.Text = "Email:";
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(219, 82);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(78, 20);
+            this.label28.TabIndex = 1;
+            this.label28.Text = "Sukunimi:";
             // 
-            // label23
+            // label29
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(16, 351);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(325, 16);
-            this.label23.TabIndex = 9;
-            this.label23.Text = "Leave your contacts if you wish us to contact you back";
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(219, 138);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(93, 20);
+            this.label29.TabIndex = 1;
+            this.label29.Text = "Sähköposti:";
             // 
-            // label24
+            // label30
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(18, 70);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(166, 20);
-            this.label24.TabIndex = 10;
-            this.label24.Text = "Leave feedback for us";
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(219, 194);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(80, 20);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "Salasana:";
+            // 
+            // regPass2TB
+            // 
+            this.regPass2TB.Location = new System.Drawing.Point(223, 270);
+            this.regPass2TB.Name = "regPass2TB";
+            this.regPass2TB.Size = new System.Drawing.Size(195, 26);
+            this.regPass2TB.TabIndex = 0;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(219, 247);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(153, 20);
+            this.label31.TabIndex = 1;
+            this.label31.Text = "Salasana uudelleen:";
+            // 
+            // RegBT
+            // 
+            this.RegBT.Location = new System.Drawing.Point(223, 313);
+            this.RegBT.Name = "RegBT";
+            this.RegBT.Size = new System.Drawing.Size(109, 30);
+            this.RegBT.TabIndex = 2;
+            this.RegBT.Text = "Rekisteröidy";
+            this.RegBT.UseVisualStyleBackColor = true;
+            this.RegBT.Click += new System.EventHandler(this.RegBT_Click);
+            // 
+            // regExitBT
+            // 
+            this.regExitBT.FlatAppearance.BorderSize = 0;
+            this.regExitBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.regExitBT.Location = new System.Drawing.Point(587, 1);
+            this.regExitBT.Name = "regExitBT";
+            this.regExitBT.Size = new System.Drawing.Size(51, 46);
+            this.regExitBT.TabIndex = 3;
+            this.regExitBT.Text = "X";
+            this.regExitBT.UseVisualStyleBackColor = true;
+            this.regExitBT.Click += new System.EventHandler(this.regExitBT_Click);
             // 
             // StudyPointForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
+            this.Controls.Add(this.loginPL);
             this.Controls.Add(this.FeedbackPL);
             this.Controls.Add(this.UserManPL);
             this.Controls.Add(this.AboutPL);
@@ -1018,9 +1239,13 @@
             this.DownloadManPL.PerformLayout();
             this.UserManPL.ResumeLayout(false);
             this.UserManPL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UserDTG)).EndInit();
             this.WhatsNewManPL.ResumeLayout(false);
             this.WhatsNewManPL.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UserDTG)).EndInit();
+            this.loginPL.ResumeLayout(false);
+            this.loginPL.PerformLayout();
+            this.registrationPL.ResumeLayout(false);
+            this.registrationPL.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1046,7 +1271,7 @@
         private System.Windows.Forms.Button UserManBT;
         private System.Windows.Forms.Button DownloadManBT;
         private System.Windows.Forms.Button FeedbackManBT;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button loginRegBT;
         private System.Windows.Forms.Panel HomePL;
         private System.Windows.Forms.Panel DashboardPL;
         private System.Windows.Forms.Panel AboutUsPL;
@@ -1100,6 +1325,26 @@
         private System.Windows.Forms.Button SendFBBT;
         private System.Windows.Forms.Button EmptyFBBT;
         private System.Windows.Forms.TextBox FeedbackTB;
+        private System.Windows.Forms.Panel loginPL;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox loginPassTB;
+        private System.Windows.Forms.TextBox loginMailTB;
+        private System.Windows.Forms.Button loginBT;
+        private System.Windows.Forms.Label newUserLB;
+        private System.Windows.Forms.Panel registrationPL;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox regPass2TB;
+        private System.Windows.Forms.TextBox regpass1TB;
+        private System.Windows.Forms.TextBox regMailTB;
+        private System.Windows.Forms.TextBox regSukunimiTB;
+        private System.Windows.Forms.TextBox regNimiTB;
+        private System.Windows.Forms.Button RegBT;
+        private System.Windows.Forms.Button regExitBT;
     }
 }
 
