@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.YlaPL = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.loginBT = new System.Windows.Forms.Button();
             this.VasenPL = new System.Windows.Forms.Panel();
             this.ManagementBT = new System.Windows.Forms.Button();
             this.FeedbackBT = new System.Windows.Forms.Button();
@@ -100,24 +100,25 @@
             // YlaPL
             // 
             this.YlaPL.BackColor = System.Drawing.Color.Gainsboro;
-            this.YlaPL.Controls.Add(this.button1);
+            this.YlaPL.Controls.Add(this.loginBT);
             this.YlaPL.Dock = System.Windows.Forms.DockStyle.Top;
             this.YlaPL.Location = new System.Drawing.Point(0, 0);
             this.YlaPL.Name = "YlaPL";
             this.YlaPL.Size = new System.Drawing.Size(794, 47);
             this.YlaPL.TabIndex = 0;
             // 
-            // button1
+            // loginBT
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(674, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 41);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Log in / Register";
-            this.button1.UseVisualStyleBackColor = true;
+            this.loginBT.FlatAppearance.BorderSize = 0;
+            this.loginBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginBT.Location = new System.Drawing.Point(674, 3);
+            this.loginBT.Name = "loginBT";
+            this.loginBT.Size = new System.Drawing.Size(117, 41);
+            this.loginBT.TabIndex = 0;
+            this.loginBT.Text = "Log in / Register";
+            this.loginBT.UseVisualStyleBackColor = true;
+            this.loginBT.Click += new System.EventHandler(this.loginBT_Click);
             // 
             // VasenPL
             // 
@@ -773,7 +774,7 @@
         private System.Windows.Forms.Button UserManBT;
         private System.Windows.Forms.Button DownloadManBT;
         private System.Windows.Forms.Button FeedbackManBT;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button loginBT;
         private System.Windows.Forms.Panel HomePL;
         private System.Windows.Forms.Panel DashboardPL;
         private System.Windows.Forms.Panel AboutUsPL;

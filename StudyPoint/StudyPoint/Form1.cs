@@ -52,6 +52,9 @@ namespace StudyPoint
             ManagementPL.Visible = false;
         }
 
-        
+        private void loginBT_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
