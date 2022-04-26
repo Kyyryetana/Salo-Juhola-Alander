@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudyPointForm));
             this.YlaPL = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.VasenPL = new System.Windows.Forms.Panel();
@@ -49,10 +50,10 @@
             this.DownloadManBT = new System.Windows.Forms.Button();
             this.FeedbackManBT = new System.Windows.Forms.Button();
             this.HomePL = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.whatNewLB = new System.Windows.Forms.Label();
+            this.HomeLB = new System.Windows.Forms.Label();
             this.DashboardPL = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dashboardLB = new System.Windows.Forms.Label();
             this.AboutUsPL = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.OurServicesPL = new System.Windows.Forms.Panel();
@@ -62,6 +63,15 @@
             this.OurDepartmentPL = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.FeedbackPL = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SendFBBT = new System.Windows.Forms.Button();
+            this.EmptyFBBT = new System.Windows.Forms.Button();
+            this.FeedbackTB = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.DiscussionBoardPL = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -74,6 +84,13 @@
             this.DownloadManPL = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.UserManPL = new System.Windows.Forms.Panel();
+            this.UserDTG = new System.Windows.Forms.DataGridView();
+            this.DeleteBT = new System.Windows.Forms.Button();
+            this.UpdateBT = new System.Windows.Forms.Button();
+            this.SaveBT = new System.Windows.Forms.Button();
+            this.EmptyBT = new System.Windows.Forms.Button();
+            this.AdminTB = new System.Windows.Forms.TextBox();
+            this.EmailTB = new System.Windows.Forms.TextBox();
             this.LastnameTB = new System.Windows.Forms.TextBox();
             this.FirstnameTB = new System.Windows.Forms.TextBox();
             this.UIDTB = new System.Windows.Forms.TextBox();
@@ -85,22 +102,21 @@
             this.label13 = new System.Windows.Forms.Label();
             this.WhatsNewManPL = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.EmailTB = new System.Windows.Forms.TextBox();
-            this.AdminTB = new System.Windows.Forms.TextBox();
-            this.EmptyBT = new System.Windows.Forms.Button();
-            this.SaveBT = new System.Windows.Forms.Button();
-            this.UpdateBT = new System.Windows.Forms.Button();
-            this.DeleteBT = new System.Windows.Forms.Button();
-            this.UserDTG = new System.Windows.Forms.DataGridView();
-            this.FeedbackTB = new System.Windows.Forms.TextBox();
-            this.EmptyFBBT = new System.Windows.Forms.Button();
-            this.SendFBBT = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.regUsersLB = new System.Windows.Forms.Label();
+            this.regUserNumberLB = new System.Windows.Forms.Label();
+            this.UserDashboardPL = new System.Windows.Forms.Panel();
+            this.thisUserLB = new System.Windows.Forms.Label();
+            this.homepageTxtLB = new System.Windows.Forms.Label();
+            this.newLB2 = new System.Windows.Forms.Label();
+            this.newLB4 = new System.Windows.Forms.Label();
+            this.newLB1 = new System.Windows.Forms.Label();
+            this.newLB3 = new System.Windows.Forms.Label();
+            this.newThing1 = new System.Windows.Forms.Label();
+            this.newThing2 = new System.Windows.Forms.Label();
+            this.newThing3 = new System.Windows.Forms.Label();
+            this.newThing4 = new System.Windows.Forms.Label();
+            this.newThing5 = new System.Windows.Forms.Label();
+            this.newLB5 = new System.Windows.Forms.Label();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -118,8 +134,9 @@
             this.FeedBackManPL.SuspendLayout();
             this.DownloadManPL.SuspendLayout();
             this.UserManPL.SuspendLayout();
-            this.WhatsNewManPL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserDTG)).BeginInit();
+            this.WhatsNewManPL.SuspendLayout();
+            this.UserDashboardPL.SuspendLayout();
             this.SuspendLayout();
             // 
             // YlaPL
@@ -268,6 +285,7 @@
             this.DashboardBT.Text = "Dashboard";
             this.DashboardBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DashboardBT.UseVisualStyleBackColor = false;
+            this.DashboardBT.Click += new System.EventHandler(this.DashboardBT_Click);
             // 
             // HomeBT
             // 
@@ -283,6 +301,7 @@
             this.HomeBT.Text = "Home";
             this.HomeBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HomeBT.UseVisualStyleBackColor = false;
+            this.HomeBT.Click += new System.EventHandler(this.HomeBT_Click);
             // 
             // ServicesBT
             // 
@@ -426,8 +445,19 @@
             // 
             // HomePL
             // 
-            this.HomePL.Controls.Add(this.label15);
-            this.HomePL.Controls.Add(this.label1);
+            this.HomePL.Controls.Add(this.newLB5);
+            this.HomePL.Controls.Add(this.newThing5);
+            this.HomePL.Controls.Add(this.newThing4);
+            this.HomePL.Controls.Add(this.newThing3);
+            this.HomePL.Controls.Add(this.newThing2);
+            this.HomePL.Controls.Add(this.newThing1);
+            this.HomePL.Controls.Add(this.newLB3);
+            this.HomePL.Controls.Add(this.newLB1);
+            this.HomePL.Controls.Add(this.newLB4);
+            this.HomePL.Controls.Add(this.newLB2);
+            this.HomePL.Controls.Add(this.homepageTxtLB);
+            this.HomePL.Controls.Add(this.whatNewLB);
+            this.HomePL.Controls.Add(this.HomeLB);
             this.HomePL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HomePL.Location = new System.Drawing.Point(153, 47);
             this.HomePL.Name = "HomePL";
@@ -435,29 +465,32 @@
             this.HomePL.TabIndex = 13;
             this.HomePL.Visible = false;
             // 
-            // label15
+            // whatNewLB
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(437, 17);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(107, 24);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "What\'s new";
+            this.whatNewLB.AutoSize = true;
+            this.whatNewLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.whatNewLB.Location = new System.Drawing.Point(405, 11);
+            this.whatNewLB.Name = "whatNewLB";
+            this.whatNewLB.Size = new System.Drawing.Size(107, 24);
+            this.whatNewLB.TabIndex = 1;
+            this.whatNewLB.Text = "What\'s new";
             // 
-            // label1
+            // HomeLB
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Home";
+            this.HomeLB.AutoSize = true;
+            this.HomeLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeLB.Location = new System.Drawing.Point(6, 11);
+            this.HomeLB.Name = "HomeLB";
+            this.HomeLB.Size = new System.Drawing.Size(62, 24);
+            this.HomeLB.TabIndex = 0;
+            this.HomeLB.Text = "Home";
             // 
             // DashboardPL
             // 
-            this.DashboardPL.Controls.Add(this.label2);
+            this.DashboardPL.Controls.Add(this.UserDashboardPL);
+            this.DashboardPL.Controls.Add(this.regUserNumberLB);
+            this.DashboardPL.Controls.Add(this.regUsersLB);
+            this.DashboardPL.Controls.Add(this.dashboardLB);
             this.DashboardPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DashboardPL.Location = new System.Drawing.Point(153, 47);
             this.DashboardPL.Name = "DashboardPL";
@@ -465,15 +498,15 @@
             this.DashboardPL.TabIndex = 14;
             this.DashboardPL.Visible = false;
             // 
-            // label2
+            // dashboardLB
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Dashboard";
+            this.dashboardLB.AutoSize = true;
+            this.dashboardLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardLB.Location = new System.Drawing.Point(6, 8);
+            this.dashboardLB.Name = "dashboardLB";
+            this.dashboardLB.Size = new System.Drawing.Size(102, 24);
+            this.dashboardLB.TabIndex = 0;
+            this.dashboardLB.Text = "Dashboard";
             // 
             // AboutUsPL
             // 
@@ -573,6 +606,91 @@
             this.FeedbackPL.Size = new System.Drawing.Size(641, 498);
             this.FeedbackPL.TabIndex = 18;
             this.FeedbackPL.Visible = false;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(18, 70);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(166, 20);
+            this.label24.TabIndex = 10;
+            this.label24.Text = "Leave feedback for us";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(16, 351);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(325, 16);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "Leave your contacts if you wish us to contact you back";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(18, 410);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(52, 20);
+            this.label22.TabIndex = 8;
+            this.label22.Text = "Email:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(15, 378);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(55, 20);
+            this.label21.TabIndex = 7;
+            this.label21.Text = "Name:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(76, 407);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(183, 26);
+            this.textBox2.TabIndex = 6;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(76, 375);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(183, 26);
+            this.textBox1.TabIndex = 5;
+            // 
+            // SendFBBT
+            // 
+            this.SendFBBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SendFBBT.Location = new System.Drawing.Point(19, 439);
+            this.SendFBBT.Name = "SendFBBT";
+            this.SendFBBT.Size = new System.Drawing.Size(85, 33);
+            this.SendFBBT.TabIndex = 3;
+            this.SendFBBT.Text = "Send";
+            this.SendFBBT.UseVisualStyleBackColor = true;
+            // 
+            // EmptyFBBT
+            // 
+            this.EmptyFBBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmptyFBBT.Location = new System.Drawing.Point(17, 283);
+            this.EmptyFBBT.Name = "EmptyFBBT";
+            this.EmptyFBBT.Size = new System.Drawing.Size(85, 33);
+            this.EmptyFBBT.TabIndex = 2;
+            this.EmptyFBBT.Text = "Empty";
+            this.EmptyFBBT.UseVisualStyleBackColor = true;
+            // 
+            // FeedbackTB
+            // 
+            this.FeedbackTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeedbackTB.Location = new System.Drawing.Point(17, 96);
+            this.FeedbackTB.Multiline = true;
+            this.FeedbackTB.Name = "FeedbackTB";
+            this.FeedbackTB.Size = new System.Drawing.Size(594, 181);
+            this.FeedbackTB.TabIndex = 1;
             // 
             // label7
             // 
@@ -709,6 +827,70 @@
             this.UserManPL.TabIndex = 21;
             this.UserManPL.Visible = false;
             // 
+            // UserDTG
+            // 
+            this.UserDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UserDTG.Location = new System.Drawing.Point(17, 213);
+            this.UserDTG.Name = "UserDTG";
+            this.UserDTG.Size = new System.Drawing.Size(612, 273);
+            this.UserDTG.TabIndex = 15;
+            // 
+            // DeleteBT
+            // 
+            this.DeleteBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBT.Location = new System.Drawing.Point(299, 166);
+            this.DeleteBT.Name = "DeleteBT";
+            this.DeleteBT.Size = new System.Drawing.Size(87, 32);
+            this.DeleteBT.TabIndex = 14;
+            this.DeleteBT.Text = "Delete";
+            this.DeleteBT.UseVisualStyleBackColor = true;
+            // 
+            // UpdateBT
+            // 
+            this.UpdateBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBT.Location = new System.Drawing.Point(206, 166);
+            this.UpdateBT.Name = "UpdateBT";
+            this.UpdateBT.Size = new System.Drawing.Size(87, 32);
+            this.UpdateBT.TabIndex = 13;
+            this.UpdateBT.Text = "Update";
+            this.UpdateBT.UseVisualStyleBackColor = true;
+            // 
+            // SaveBT
+            // 
+            this.SaveBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBT.Location = new System.Drawing.Point(113, 164);
+            this.SaveBT.Name = "SaveBT";
+            this.SaveBT.Size = new System.Drawing.Size(87, 32);
+            this.SaveBT.TabIndex = 12;
+            this.SaveBT.Text = "Save";
+            this.SaveBT.UseVisualStyleBackColor = true;
+            // 
+            // EmptyBT
+            // 
+            this.EmptyBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmptyBT.Location = new System.Drawing.Point(17, 166);
+            this.EmptyBT.Name = "EmptyBT";
+            this.EmptyBT.Size = new System.Drawing.Size(87, 32);
+            this.EmptyBT.TabIndex = 11;
+            this.EmptyBT.Text = "Empty";
+            this.EmptyBT.UseVisualStyleBackColor = true;
+            // 
+            // AdminTB
+            // 
+            this.AdminTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminTB.Location = new System.Drawing.Point(409, 91);
+            this.AdminTB.Name = "AdminTB";
+            this.AdminTB.Size = new System.Drawing.Size(179, 26);
+            this.AdminTB.TabIndex = 10;
+            // 
+            // EmailTB
+            // 
+            this.EmailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailTB.Location = new System.Drawing.Point(409, 60);
+            this.EmailTB.Name = "EmailTB";
+            this.EmailTB.Size = new System.Drawing.Size(179, 26);
+            this.EmailTB.TabIndex = 9;
+            // 
             // LastnameTB
             // 
             this.LastnameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -813,165 +995,169 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "What\'s new management";
             // 
-            // EmailTB
+            // regUsersLB
             // 
-            this.EmailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTB.Location = new System.Drawing.Point(409, 60);
-            this.EmailTB.Name = "EmailTB";
-            this.EmailTB.Size = new System.Drawing.Size(179, 26);
-            this.EmailTB.TabIndex = 9;
+            this.regUsersLB.AutoSize = true;
+            this.regUsersLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regUsersLB.Location = new System.Drawing.Point(10, 51);
+            this.regUsersLB.Name = "regUsersLB";
+            this.regUsersLB.Size = new System.Drawing.Size(209, 20);
+            this.regUsersLB.TabIndex = 1;
+            this.regUsersLB.Text = "Amount of registered users: ";
             // 
-            // AdminTB
+            // regUserNumberLB
             // 
-            this.AdminTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminTB.Location = new System.Drawing.Point(409, 91);
-            this.AdminTB.Name = "AdminTB";
-            this.AdminTB.Size = new System.Drawing.Size(179, 26);
-            this.AdminTB.TabIndex = 10;
+            this.regUserNumberLB.AutoSize = true;
+            this.regUserNumberLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regUserNumberLB.Location = new System.Drawing.Point(225, 51);
+            this.regUserNumberLB.Name = "regUserNumberLB";
+            this.regUserNumberLB.Size = new System.Drawing.Size(16, 20);
+            this.regUserNumberLB.TabIndex = 2;
+            this.regUserNumberLB.Text = "x";
+            this.regUserNumberLB.Visible = false;
             // 
-            // EmptyBT
+            // UserDashboardPL
             // 
-            this.EmptyBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmptyBT.Location = new System.Drawing.Point(17, 166);
-            this.EmptyBT.Name = "EmptyBT";
-            this.EmptyBT.Size = new System.Drawing.Size(87, 32);
-            this.EmptyBT.TabIndex = 11;
-            this.EmptyBT.Text = "Empty";
-            this.EmptyBT.UseVisualStyleBackColor = true;
+            this.UserDashboardPL.BackColor = System.Drawing.Color.LightBlue;
+            this.UserDashboardPL.Controls.Add(this.thisUserLB);
+            this.UserDashboardPL.Dock = System.Windows.Forms.DockStyle.Right;
+            this.UserDashboardPL.Location = new System.Drawing.Point(441, 0);
+            this.UserDashboardPL.Name = "UserDashboardPL";
+            this.UserDashboardPL.Size = new System.Drawing.Size(200, 498);
+            this.UserDashboardPL.TabIndex = 3;
             // 
-            // SaveBT
+            // thisUserLB
             // 
-            this.SaveBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveBT.Location = new System.Drawing.Point(113, 164);
-            this.SaveBT.Name = "SaveBT";
-            this.SaveBT.Size = new System.Drawing.Size(87, 32);
-            this.SaveBT.TabIndex = 12;
-            this.SaveBT.Text = "Save";
-            this.SaveBT.UseVisualStyleBackColor = true;
+            this.thisUserLB.AutoSize = true;
+            this.thisUserLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thisUserLB.Location = new System.Drawing.Point(4, 7);
+            this.thisUserLB.Name = "thisUserLB";
+            this.thisUserLB.Size = new System.Drawing.Size(87, 20);
+            this.thisUserLB.TabIndex = 0;
+            this.thisUserLB.Text = "User name";
             // 
-            // UpdateBT
+            // homepageTxtLB
             // 
-            this.UpdateBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBT.Location = new System.Drawing.Point(206, 166);
-            this.UpdateBT.Name = "UpdateBT";
-            this.UpdateBT.Size = new System.Drawing.Size(87, 32);
-            this.UpdateBT.TabIndex = 13;
-            this.UpdateBT.Text = "Update";
-            this.UpdateBT.UseVisualStyleBackColor = true;
+            this.homepageTxtLB.AutoSize = true;
+            this.homepageTxtLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homepageTxtLB.Location = new System.Drawing.Point(10, 81);
+            this.homepageTxtLB.Name = "homepageTxtLB";
+            this.homepageTxtLB.Size = new System.Drawing.Size(327, 243);
+            this.homepageTxtLB.TabIndex = 2;
+            this.homepageTxtLB.Text = resources.GetString("homepageTxtLB.Text");
+            this.homepageTxtLB.UseCompatibleTextRendering = true;
             // 
-            // DeleteBT
+            // newLB2
             // 
-            this.DeleteBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteBT.Location = new System.Drawing.Point(299, 166);
-            this.DeleteBT.Name = "DeleteBT";
-            this.DeleteBT.Size = new System.Drawing.Size(87, 32);
-            this.DeleteBT.TabIndex = 14;
-            this.DeleteBT.Text = "Delete";
-            this.DeleteBT.UseVisualStyleBackColor = true;
+            this.newLB2.AutoSize = true;
+            this.newLB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newLB2.ForeColor = System.Drawing.Color.Red;
+            this.newLB2.Location = new System.Drawing.Point(362, 105);
+            this.newLB2.Name = "newLB2";
+            this.newLB2.Size = new System.Drawing.Size(41, 18);
+            this.newLB2.TabIndex = 3;
+            this.newLB2.Text = "New";
             // 
-            // UserDTG
+            // newLB4
             // 
-            this.UserDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UserDTG.Location = new System.Drawing.Point(17, 213);
-            this.UserDTG.Name = "UserDTG";
-            this.UserDTG.Size = new System.Drawing.Size(612, 273);
-            this.UserDTG.TabIndex = 15;
+            this.newLB4.AutoSize = true;
+            this.newLB4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newLB4.ForeColor = System.Drawing.Color.Red;
+            this.newLB4.Location = new System.Drawing.Point(362, 153);
+            this.newLB4.Name = "newLB4";
+            this.newLB4.Size = new System.Drawing.Size(41, 18);
+            this.newLB4.TabIndex = 4;
+            this.newLB4.Text = "New";
             // 
-            // FeedbackTB
+            // newLB1
             // 
-            this.FeedbackTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FeedbackTB.Location = new System.Drawing.Point(17, 96);
-            this.FeedbackTB.Multiline = true;
-            this.FeedbackTB.Name = "FeedbackTB";
-            this.FeedbackTB.Size = new System.Drawing.Size(594, 181);
-            this.FeedbackTB.TabIndex = 1;
+            this.newLB1.AutoSize = true;
+            this.newLB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newLB1.ForeColor = System.Drawing.Color.Red;
+            this.newLB1.Location = new System.Drawing.Point(362, 81);
+            this.newLB1.Name = "newLB1";
+            this.newLB1.Size = new System.Drawing.Size(41, 18);
+            this.newLB1.TabIndex = 5;
+            this.newLB1.Text = "New";
             // 
-            // EmptyFBBT
+            // newLB3
             // 
-            this.EmptyFBBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmptyFBBT.Location = new System.Drawing.Point(17, 283);
-            this.EmptyFBBT.Name = "EmptyFBBT";
-            this.EmptyFBBT.Size = new System.Drawing.Size(85, 33);
-            this.EmptyFBBT.TabIndex = 2;
-            this.EmptyFBBT.Text = "Empty";
-            this.EmptyFBBT.UseVisualStyleBackColor = true;
+            this.newLB3.AutoSize = true;
+            this.newLB3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newLB3.ForeColor = System.Drawing.Color.Red;
+            this.newLB3.Location = new System.Drawing.Point(362, 129);
+            this.newLB3.Name = "newLB3";
+            this.newLB3.Size = new System.Drawing.Size(41, 18);
+            this.newLB3.TabIndex = 6;
+            this.newLB3.Text = "New";
             // 
-            // SendFBBT
+            // newThing1
             // 
-            this.SendFBBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SendFBBT.Location = new System.Drawing.Point(19, 439);
-            this.SendFBBT.Name = "SendFBBT";
-            this.SendFBBT.Size = new System.Drawing.Size(85, 33);
-            this.SendFBBT.TabIndex = 3;
-            this.SendFBBT.Text = "Send";
-            this.SendFBBT.UseVisualStyleBackColor = true;
+            this.newThing1.AutoSize = true;
+            this.newThing1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newThing1.Location = new System.Drawing.Point(406, 81);
+            this.newThing1.Name = "newThing1";
+            this.newThing1.Size = new System.Drawing.Size(0, 18);
+            this.newThing1.TabIndex = 7;
             // 
-            // textBox1
+            // newThing2
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(76, 375);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 26);
-            this.textBox1.TabIndex = 5;
+            this.newThing2.AutoSize = true;
+            this.newThing2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newThing2.Location = new System.Drawing.Point(406, 105);
+            this.newThing2.Name = "newThing2";
+            this.newThing2.Size = new System.Drawing.Size(0, 18);
+            this.newThing2.TabIndex = 8;
             // 
-            // textBox2
+            // newThing3
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(76, 407);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 26);
-            this.textBox2.TabIndex = 6;
+            this.newThing3.AutoSize = true;
+            this.newThing3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newThing3.Location = new System.Drawing.Point(406, 129);
+            this.newThing3.Name = "newThing3";
+            this.newThing3.Size = new System.Drawing.Size(0, 18);
+            this.newThing3.TabIndex = 9;
             // 
-            // label21
+            // newThing4
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(15, 378);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(55, 20);
-            this.label21.TabIndex = 7;
-            this.label21.Text = "Name:";
+            this.newThing4.AutoSize = true;
+            this.newThing4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newThing4.Location = new System.Drawing.Point(406, 153);
+            this.newThing4.Name = "newThing4";
+            this.newThing4.Size = new System.Drawing.Size(0, 18);
+            this.newThing4.TabIndex = 10;
             // 
-            // label22
+            // newThing5
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(18, 410);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(52, 20);
-            this.label22.TabIndex = 8;
-            this.label22.Text = "Email:";
+            this.newThing5.AutoSize = true;
+            this.newThing5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newThing5.Location = new System.Drawing.Point(406, 177);
+            this.newThing5.Name = "newThing5";
+            this.newThing5.Size = new System.Drawing.Size(0, 18);
+            this.newThing5.TabIndex = 11;
             // 
-            // label23
+            // newLB5
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(16, 351);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(325, 16);
-            this.label23.TabIndex = 9;
-            this.label23.Text = "Leave your contacts if you wish us to contact you back";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(18, 70);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(166, 20);
-            this.label24.TabIndex = 10;
-            this.label24.Text = "Leave feedback for us";
+            this.newLB5.AutoSize = true;
+            this.newLB5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newLB5.ForeColor = System.Drawing.Color.Red;
+            this.newLB5.Location = new System.Drawing.Point(362, 177);
+            this.newLB5.Name = "newLB5";
+            this.newLB5.Size = new System.Drawing.Size(41, 18);
+            this.newLB5.TabIndex = 17;
+            this.newLB5.Text = "New";
             // 
             // StudyPointForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
-            this.Controls.Add(this.FeedbackPL);
-            this.Controls.Add(this.UserManPL);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.HomePL);
+            this.Controls.Add(this.DashboardPL);
+            this.Controls.Add(this.FeedbackPL);
+            this.Controls.Add(this.UserManPL);
             this.Controls.Add(this.WhatsNewManPL);
             this.Controls.Add(this.FeedBackManPL);
             this.Controls.Add(this.DownloadManPL);
@@ -982,7 +1168,6 @@
             this.Controls.Add(this.OurGalleryPL);
             this.Controls.Add(this.AboutUsPL);
             this.Controls.Add(this.OurServicesPL);
-            this.Controls.Add(this.DashboardPL);
             this.Controls.Add(this.VasenPL);
             this.Controls.Add(this.YlaPL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1018,9 +1203,11 @@
             this.DownloadManPL.PerformLayout();
             this.UserManPL.ResumeLayout(false);
             this.UserManPL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UserDTG)).EndInit();
             this.WhatsNewManPL.ResumeLayout(false);
             this.WhatsNewManPL.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UserDTG)).EndInit();
+            this.UserDashboardPL.ResumeLayout(false);
+            this.UserDashboardPL.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1061,10 +1248,10 @@
         private System.Windows.Forms.Panel DownloadManPL;
         private System.Windows.Forms.Panel UserManPL;
         private System.Windows.Forms.Panel WhatsNewManPL;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label HomeLB;
+        private System.Windows.Forms.Label dashboardLB;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label whatNewLB;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -1100,6 +1287,21 @@
         private System.Windows.Forms.Button SendFBBT;
         private System.Windows.Forms.Button EmptyFBBT;
         private System.Windows.Forms.TextBox FeedbackTB;
+        private System.Windows.Forms.Label regUserNumberLB;
+        private System.Windows.Forms.Label regUsersLB;
+        private System.Windows.Forms.Panel UserDashboardPL;
+        private System.Windows.Forms.Label thisUserLB;
+        private System.Windows.Forms.Label homepageTxtLB;
+        private System.Windows.Forms.Label newLB5;
+        private System.Windows.Forms.Label newThing5;
+        private System.Windows.Forms.Label newThing4;
+        private System.Windows.Forms.Label newThing3;
+        private System.Windows.Forms.Label newThing2;
+        private System.Windows.Forms.Label newThing1;
+        private System.Windows.Forms.Label newLB3;
+        private System.Windows.Forms.Label newLB1;
+        private System.Windows.Forms.Label newLB4;
+        private System.Windows.Forms.Label newLB2;
     }
 }
 

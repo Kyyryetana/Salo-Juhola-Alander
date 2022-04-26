@@ -16,6 +16,7 @@ namespace StudyPoint
         {
             InitializeComponent();
             HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
+            tarkistaNewThing(); // tarkistaa home sivulla olevan whats new tilanteen
         }
 
   
@@ -52,6 +53,45 @@ namespace StudyPoint
             ManagementPL.Visible = false;
         }
 
-        
+        private void DashboardBT_Click(object sender, EventArgs e) //dashboard esiin, home piiloon, dashboardille tiedot SQL:stä
+        {
+            // kesken
+            // tänne sql tietojen noudot
+            // rekisteröityneiden käyttäjien määrä
+            // sen hetkisen käyttäjän / adminin tiedot
+            DashboardPL.Visible = true;
+            HomePL.Visible = false;
+        }
+
+        private void HomeBT_Click(object sender, EventArgs e) //home näkyviin, dashboard piiloon ja tarkistetaan whats new tilanne
+        {
+            HomePL.Visible = true;
+            DashboardPL.Visible = false;
+            tarkistaNewThing();
+        }
+
+        private void tarkistaNewThing() //funktio tarkistaa home sivulla olevan whats new tilanteen, ja kytkee new tekstin päälle tai pois
+        {
+            if (newThing1.Text == "") 
+            {
+                newLB1.Visible = false;
+            }
+            if (newThing2.Text == "")
+            {
+                newLB2.Visible = false;
+            }
+            if (newThing3.Text == "")
+            {
+                newLB3.Visible = false;
+            }
+            if (newThing4.Text == "")
+            {
+                newLB4.Visible = false;
+            }
+            if (newThing5.Text == "")
+            {
+                newLB5.Visible = false;
+            }
+        }
     }
 }
