@@ -20,3 +20,4 @@ C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debu
 C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.csproj.CoreCompileInputs.cache
 C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.exe
 C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.pdb
+C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.exe.config

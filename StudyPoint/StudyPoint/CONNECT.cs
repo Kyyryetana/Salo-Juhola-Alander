@@ -10,10 +10,9 @@ namespace StudyPoint
 {
     internal class CONNECT
     {
-        //Lisää dataVar muuttujaan mysql database nimi
-        string dataVar;
+        
 
-        private MySqlConnection _connection = new MySqlConnection("datasource=localhost; port=3306;username=root;password=;database="+dataVar+ ";SSL Mode = None");
+        private MySqlConnection _connection = new MySqlConnection("datasource=localhost; port=3306;username=root;password=;database="+ "studypoint" + ";SSL Mode = None");
 
         public MySqlConnection Connection()
         {

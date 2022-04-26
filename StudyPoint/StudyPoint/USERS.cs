@@ -9,7 +9,7 @@ namespace StudyPoint
 {
     internal class USER
     {
-
+        /*
         CONNECT connection = new CONNECT();
 
         public bool AddUser(String enimi, String snimi, String email, int userId)
@@ -30,7 +30,7 @@ namespace StudyPoint
             komento.Parameters.Add("@uid", MySqlDbType.UInt32).Value = userId;
             komento.Parameters.Add("@pwd", MySqlDbType.VarChar).Value =  encryptedPassword;
             //komento.Parameters.Add("@ssa", MySqlDbType.VarChar).Value = salattu;
-            MessageBox.Show("Käyttäjätunnuksesi on " + ktunnus + "\nSalasanasi on " + salis + /*"\nSalattuna se on" + salattu + */"\nkirjoita nämä visusti talteen");
+            MessageBox.Show("Käyttäjätunnuksesi on " + ktunnus + "\nSalasanasi on " + salis + /*"\nSalattuna se on" + salattu + "\nkirjoita nämä visusti talteen");
 
             connection.openConnection();
             if (komento.ExecuteNonQuery() == 1)
@@ -141,6 +141,6 @@ namespace StudyPoint
             }
         }
 
-
+    */
     }
 }
