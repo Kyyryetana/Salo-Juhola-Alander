@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudyPointForm));
             this.YlaPL = new System.Windows.Forms.Panel();
             this.loginRegBT = new System.Windows.Forms.Button();
             this.VasenPL = new System.Windows.Forms.Panel();
@@ -49,10 +50,10 @@
             this.DownloadManBT = new System.Windows.Forms.Button();
             this.FeedbackManBT = new System.Windows.Forms.Button();
             this.HomePL = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.whatNewLB = new System.Windows.Forms.Label();
+            this.HomeLB = new System.Windows.Forms.Label();
             this.DashboardPL = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dashboardLB = new System.Windows.Forms.Label();
             this.AboutUsPL = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.OurServicesPL = new System.Windows.Forms.Panel();
@@ -121,6 +122,21 @@
             this.logtunnusLB = new System.Windows.Forms.Label();
             this.loginPassTB = new System.Windows.Forms.TextBox();
             this.loginMailTB = new System.Windows.Forms.TextBox();
+            this.regUsersLB = new System.Windows.Forms.Label();
+            this.regUserNumberLB = new System.Windows.Forms.Label();
+            this.UserDashboardPL = new System.Windows.Forms.Panel();
+            this.thisUserLB = new System.Windows.Forms.Label();
+            this.homepageTxtLB = new System.Windows.Forms.Label();
+            this.newLB2 = new System.Windows.Forms.Label();
+            this.newLB4 = new System.Windows.Forms.Label();
+            this.newLB1 = new System.Windows.Forms.Label();
+            this.newLB3 = new System.Windows.Forms.Label();
+            this.newThing1 = new System.Windows.Forms.Label();
+            this.newThing2 = new System.Windows.Forms.Label();
+            this.newThing3 = new System.Windows.Forms.Label();
+            this.newThing4 = new System.Windows.Forms.Label();
+            this.newThing5 = new System.Windows.Forms.Label();
+            this.newLB5 = new System.Windows.Forms.Label();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -142,6 +158,8 @@
             this.WhatsNewManPL.SuspendLayout();
             this.loginPL.SuspendLayout();
             this.registrationPL.SuspendLayout();
+            this.WhatsNewManPL.SuspendLayout();
+            this.UserDashboardPL.SuspendLayout();
             this.SuspendLayout();
             // 
             // YlaPL
@@ -291,6 +309,7 @@
             this.DashboardBT.Text = "Dashboard";
             this.DashboardBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DashboardBT.UseVisualStyleBackColor = false;
+            this.DashboardBT.Click += new System.EventHandler(this.DashboardBT_Click);
             // 
             // HomeBT
             // 
@@ -306,6 +325,7 @@
             this.HomeBT.Text = "Home";
             this.HomeBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HomeBT.UseVisualStyleBackColor = false;
+            this.HomeBT.Click += new System.EventHandler(this.HomeBT_Click);
             // 
             // ServicesBT
             // 
@@ -449,8 +469,19 @@
             // 
             // HomePL
             // 
-            this.HomePL.Controls.Add(this.label15);
-            this.HomePL.Controls.Add(this.label1);
+            this.HomePL.Controls.Add(this.newLB5);
+            this.HomePL.Controls.Add(this.newThing5);
+            this.HomePL.Controls.Add(this.newThing4);
+            this.HomePL.Controls.Add(this.newThing3);
+            this.HomePL.Controls.Add(this.newThing2);
+            this.HomePL.Controls.Add(this.newThing1);
+            this.HomePL.Controls.Add(this.newLB3);
+            this.HomePL.Controls.Add(this.newLB1);
+            this.HomePL.Controls.Add(this.newLB4);
+            this.HomePL.Controls.Add(this.newLB2);
+            this.HomePL.Controls.Add(this.homepageTxtLB);
+            this.HomePL.Controls.Add(this.whatNewLB);
+            this.HomePL.Controls.Add(this.HomeLB);
             this.HomePL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HomePL.Location = new System.Drawing.Point(153, 47);
             this.HomePL.Name = "HomePL";
@@ -458,29 +489,32 @@
             this.HomePL.TabIndex = 13;
             this.HomePL.Visible = false;
             // 
-            // label15
+            // whatNewLB
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(437, 17);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(107, 24);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "What\'s new";
+            this.whatNewLB.AutoSize = true;
+            this.whatNewLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.whatNewLB.Location = new System.Drawing.Point(405, 11);
+            this.whatNewLB.Name = "whatNewLB";
+            this.whatNewLB.Size = new System.Drawing.Size(107, 24);
+            this.whatNewLB.TabIndex = 1;
+            this.whatNewLB.Text = "What\'s new";
             // 
-            // label1
+            // HomeLB
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Home";
+            this.HomeLB.AutoSize = true;
+            this.HomeLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeLB.Location = new System.Drawing.Point(6, 11);
+            this.HomeLB.Name = "HomeLB";
+            this.HomeLB.Size = new System.Drawing.Size(62, 24);
+            this.HomeLB.TabIndex = 0;
+            this.HomeLB.Text = "Home";
             // 
             // DashboardPL
             // 
-            this.DashboardPL.Controls.Add(this.label2);
+            this.DashboardPL.Controls.Add(this.UserDashboardPL);
+            this.DashboardPL.Controls.Add(this.regUserNumberLB);
+            this.DashboardPL.Controls.Add(this.regUsersLB);
+            this.DashboardPL.Controls.Add(this.dashboardLB);
             this.DashboardPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DashboardPL.Location = new System.Drawing.Point(153, 47);
             this.DashboardPL.Name = "DashboardPL";
@@ -488,15 +522,15 @@
             this.DashboardPL.TabIndex = 14;
             this.DashboardPL.Visible = false;
             // 
-            // label2
+            // dashboardLB
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Dashboard";
+            this.dashboardLB.AutoSize = true;
+            this.dashboardLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardLB.Location = new System.Drawing.Point(6, 8);
+            this.dashboardLB.Name = "dashboardLB";
+            this.dashboardLB.Size = new System.Drawing.Size(102, 24);
+            this.dashboardLB.TabIndex = 0;
+            this.dashboardLB.Text = "Dashboard";
             // 
             // AboutUsPL
             // 
@@ -1034,8 +1068,16 @@
             this.regExitBT.Text = "X";
             this.regExitBT.UseVisualStyleBackColor = true;
             this.regExitBT.Click += new System.EventHandler(this.regExitBT_Click);
+            // regUsersLB
             // 
             // RegBT
+            this.regUsersLB.AutoSize = true;
+            this.regUsersLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regUsersLB.Location = new System.Drawing.Point(10, 51);
+            this.regUsersLB.Name = "regUsersLB";
+            this.regUsersLB.Size = new System.Drawing.Size(209, 20);
+            this.regUsersLB.TabIndex = 1;
+            this.regUsersLB.Text = "Amount of registered users: ";
             // 
             this.RegBT.Location = new System.Drawing.Point(223, 313);
             this.RegBT.Name = "RegBT";
@@ -1044,8 +1086,17 @@
             this.RegBT.Text = "Rekisteröidy";
             this.RegBT.UseVisualStyleBackColor = true;
             this.RegBT.Click += new System.EventHandler(this.RegBT_Click);
+            // regUserNumberLB
             // 
             // regPass2LB
+            this.regUserNumberLB.AutoSize = true;
+            this.regUserNumberLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regUserNumberLB.Location = new System.Drawing.Point(225, 51);
+            this.regUserNumberLB.Name = "regUserNumberLB";
+            this.regUserNumberLB.Size = new System.Drawing.Size(16, 20);
+            this.regUserNumberLB.TabIndex = 2;
+            this.regUserNumberLB.Text = "x";
+            this.regUserNumberLB.Visible = false;
             // 
             this.regPass2LB.AutoSize = true;
             this.regPass2LB.Location = new System.Drawing.Point(219, 247);
@@ -1053,8 +1104,16 @@
             this.regPass2LB.Size = new System.Drawing.Size(153, 20);
             this.regPass2LB.TabIndex = 1;
             this.regPass2LB.Text = "Salasana uudelleen:";
+            // UserDashboardPL
             // 
             // regPass1LB
+            this.UserDashboardPL.BackColor = System.Drawing.Color.LightBlue;
+            this.UserDashboardPL.Controls.Add(this.thisUserLB);
+            this.UserDashboardPL.Dock = System.Windows.Forms.DockStyle.Right;
+            this.UserDashboardPL.Location = new System.Drawing.Point(441, 0);
+            this.UserDashboardPL.Name = "UserDashboardPL";
+            this.UserDashboardPL.Size = new System.Drawing.Size(200, 498);
+            this.UserDashboardPL.TabIndex = 3;
             // 
             this.regPass1LB.AutoSize = true;
             this.regPass1LB.Location = new System.Drawing.Point(219, 194);
@@ -1062,8 +1121,16 @@
             this.regPass1LB.Size = new System.Drawing.Size(80, 20);
             this.regPass1LB.TabIndex = 1;
             this.regPass1LB.Text = "Salasana:";
+            // thisUserLB
             // 
             // regmailLB
+            this.thisUserLB.AutoSize = true;
+            this.thisUserLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thisUserLB.Location = new System.Drawing.Point(4, 7);
+            this.thisUserLB.Name = "thisUserLB";
+            this.thisUserLB.Size = new System.Drawing.Size(87, 20);
+            this.thisUserLB.TabIndex = 0;
+            this.thisUserLB.Text = "User name";
             // 
             this.regmailLB.AutoSize = true;
             this.regmailLB.Location = new System.Drawing.Point(219, 138);
@@ -1071,8 +1138,17 @@
             this.regmailLB.Size = new System.Drawing.Size(93, 20);
             this.regmailLB.TabIndex = 1;
             this.regmailLB.Text = "Sähköposti:";
+            // homepageTxtLB
             // 
             // regSnimiLB
+            this.homepageTxtLB.AutoSize = true;
+            this.homepageTxtLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homepageTxtLB.Location = new System.Drawing.Point(10, 81);
+            this.homepageTxtLB.Name = "homepageTxtLB";
+            this.homepageTxtLB.Size = new System.Drawing.Size(327, 243);
+            this.homepageTxtLB.TabIndex = 2;
+            this.homepageTxtLB.Text = resources.GetString("homepageTxtLB.Text");
+            this.homepageTxtLB.UseCompatibleTextRendering = true;
             // 
             this.regSnimiLB.AutoSize = true;
             this.regSnimiLB.Location = new System.Drawing.Point(219, 82);
@@ -1080,8 +1156,17 @@
             this.regSnimiLB.Size = new System.Drawing.Size(78, 20);
             this.regSnimiLB.TabIndex = 1;
             this.regSnimiLB.Text = "Sukunimi:";
+            // newLB2
             // 
             // regNimiLB
+            this.newLB2.AutoSize = true;
+            this.newLB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newLB2.ForeColor = System.Drawing.Color.Red;
+            this.newLB2.Location = new System.Drawing.Point(362, 105);
+            this.newLB2.Name = "newLB2";
+            this.newLB2.Size = new System.Drawing.Size(41, 18);
+            this.newLB2.TabIndex = 3;
+            this.newLB2.Text = "New";
             // 
             this.regNimiLB.AutoSize = true;
             this.regNimiLB.Location = new System.Drawing.Point(223, 18);
@@ -1089,20 +1174,39 @@
             this.regNimiLB.Size = new System.Drawing.Size(66, 20);
             this.regNimiLB.TabIndex = 1;
             this.regNimiLB.Text = "Etunimi:";
+            // newLB4
             // 
             // regPass2TB
+            this.newLB4.AutoSize = true;
+            this.newLB4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newLB4.ForeColor = System.Drawing.Color.Red;
+            this.newLB4.Location = new System.Drawing.Point(362, 153);
+            this.newLB4.Name = "newLB4";
+            this.newLB4.Size = new System.Drawing.Size(41, 18);
+            this.newLB4.TabIndex = 4;
+            this.newLB4.Text = "New";
             // 
             this.regPass2TB.Location = new System.Drawing.Point(223, 270);
             this.regPass2TB.Name = "regPass2TB";
             this.regPass2TB.Size = new System.Drawing.Size(195, 26);
             this.regPass2TB.TabIndex = 0;
+            // newLB1
             // 
             // regpass1TB
+            this.newLB1.AutoSize = true;
+            this.newLB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newLB1.ForeColor = System.Drawing.Color.Red;
+            this.newLB1.Location = new System.Drawing.Point(362, 81);
+            this.newLB1.Name = "newLB1";
+            this.newLB1.Size = new System.Drawing.Size(41, 18);
+            this.newLB1.TabIndex = 5;
+            this.newLB1.Text = "New";
             // 
             this.regpass1TB.Location = new System.Drawing.Point(223, 217);
             this.regpass1TB.Name = "regpass1TB";
             this.regpass1TB.Size = new System.Drawing.Size(195, 26);
             this.regpass1TB.TabIndex = 0;
+            // newLB3
             // 
             // regMailTB
             // 
@@ -1124,8 +1228,17 @@
             this.regNimiTB.Name = "regNimiTB";
             this.regNimiTB.Size = new System.Drawing.Size(195, 26);
             this.regNimiTB.TabIndex = 0;
+            this.newLB3.AutoSize = true;
+            this.newLB3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newLB3.ForeColor = System.Drawing.Color.Red;
+            this.newLB3.Location = new System.Drawing.Point(362, 129);
+            this.newLB3.Name = "newLB3";
+            this.newLB3.Size = new System.Drawing.Size(41, 18);
+            this.newLB3.TabIndex = 6;
+            this.newLB3.Text = "New";
             // 
             // newUserLB
+            // newThing1
             // 
             this.newUserLB.AutoSize = true;
             this.newUserLB.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -1135,8 +1248,15 @@
             this.newUserLB.TabIndex = 3;
             this.newUserLB.Text = "Eikö ole vielä tunnusta voit luoda sen täältä";
             this.newUserLB.Click += new System.EventHandler(this.newUserLB_Click);
+            this.newThing1.AutoSize = true;
+            this.newThing1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newThing1.Location = new System.Drawing.Point(406, 81);
+            this.newThing1.Name = "newThing1";
+            this.newThing1.Size = new System.Drawing.Size(0, 18);
+            this.newThing1.TabIndex = 7;
             // 
             // loginBT
+            // newThing2
             // 
             this.loginBT.Location = new System.Drawing.Point(170, 161);
             this.loginBT.Name = "loginBT";
@@ -1145,8 +1265,15 @@
             this.loginBT.Text = "Login";
             this.loginBT.UseVisualStyleBackColor = true;
             this.loginBT.Click += new System.EventHandler(this.loginBT_Click);
+            this.newThing2.AutoSize = true;
+            this.newThing2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newThing2.Location = new System.Drawing.Point(406, 105);
+            this.newThing2.Name = "newThing2";
+            this.newThing2.Size = new System.Drawing.Size(0, 18);
+            this.newThing2.TabIndex = 8;
             // 
             // logsalasLB
+            // newThing3
             // 
             this.logsalasLB.AutoSize = true;
             this.logsalasLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1155,8 +1282,15 @@
             this.logsalasLB.Size = new System.Drawing.Size(76, 20);
             this.logsalasLB.TabIndex = 1;
             this.logsalasLB.Text = "Salasana";
+            this.newThing3.AutoSize = true;
+            this.newThing3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newThing3.Location = new System.Drawing.Point(406, 129);
+            this.newThing3.Name = "newThing3";
+            this.newThing3.Size = new System.Drawing.Size(0, 18);
+            this.newThing3.TabIndex = 9;
             // 
             // logtunnusLB
+            // newThing4
             // 
             this.logtunnusLB.AutoSize = true;
             this.logtunnusLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1165,22 +1299,44 @@
             this.logtunnusLB.Size = new System.Drawing.Size(89, 20);
             this.logtunnusLB.TabIndex = 1;
             this.logtunnusLB.Text = "Sähköposti";
+            this.newThing4.AutoSize = true;
+            this.newThing4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newThing4.Location = new System.Drawing.Point(406, 153);
+            this.newThing4.Name = "newThing4";
+            this.newThing4.Size = new System.Drawing.Size(0, 18);
+            this.newThing4.TabIndex = 10;
             // 
             // loginPassTB
+            // newThing5
             // 
             this.loginPassTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginPassTB.Location = new System.Drawing.Point(170, 122);
             this.loginPassTB.Name = "loginPassTB";
             this.loginPassTB.Size = new System.Drawing.Size(185, 26);
             this.loginPassTB.TabIndex = 0;
+            this.newThing5.AutoSize = true;
+            this.newThing5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newThing5.Location = new System.Drawing.Point(406, 177);
+            this.newThing5.Name = "newThing5";
+            this.newThing5.Size = new System.Drawing.Size(0, 18);
+            this.newThing5.TabIndex = 11;
             // 
             // loginMailTB
+            // newLB5
             // 
             this.loginMailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginMailTB.Location = new System.Drawing.Point(170, 50);
             this.loginMailTB.Name = "loginMailTB";
             this.loginMailTB.Size = new System.Drawing.Size(185, 26);
             this.loginMailTB.TabIndex = 0;
+            this.newLB5.AutoSize = true;
+            this.newLB5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newLB5.ForeColor = System.Drawing.Color.Red;
+            this.newLB5.Location = new System.Drawing.Point(362, 177);
+            this.newLB5.Name = "newLB5";
+            this.newLB5.Size = new System.Drawing.Size(41, 18);
+            this.newLB5.TabIndex = 17;
+            this.newLB5.Text = "New";
             // 
             // StudyPointForm
             // 
@@ -1193,6 +1349,9 @@
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.HomePL);
+            this.Controls.Add(this.DashboardPL);
+            this.Controls.Add(this.FeedbackPL);
+            this.Controls.Add(this.UserManPL);
             this.Controls.Add(this.WhatsNewManPL);
             this.Controls.Add(this.FeedBackManPL);
             this.Controls.Add(this.DownloadManPL);
@@ -1203,7 +1362,6 @@
             this.Controls.Add(this.OurGalleryPL);
             this.Controls.Add(this.AboutUsPL);
             this.Controls.Add(this.OurServicesPL);
-            this.Controls.Add(this.DashboardPL);
             this.Controls.Add(this.VasenPL);
             this.Controls.Add(this.YlaPL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1246,6 +1404,8 @@
             this.loginPL.PerformLayout();
             this.registrationPL.ResumeLayout(false);
             this.registrationPL.PerformLayout();
+            this.UserDashboardPL.ResumeLayout(false);
+            this.UserDashboardPL.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1286,10 +1446,10 @@
         private System.Windows.Forms.Panel DownloadManPL;
         private System.Windows.Forms.Panel UserManPL;
         private System.Windows.Forms.Panel WhatsNewManPL;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label HomeLB;
+        private System.Windows.Forms.Label dashboardLB;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label whatNewLB;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -1345,6 +1505,21 @@
         private System.Windows.Forms.TextBox regNimiTB;
         private System.Windows.Forms.Button RegBT;
         private System.Windows.Forms.Button regExitBT;
+        private System.Windows.Forms.Label regUserNumberLB;
+        private System.Windows.Forms.Label regUsersLB;
+        private System.Windows.Forms.Panel UserDashboardPL;
+        private System.Windows.Forms.Label thisUserLB;
+        private System.Windows.Forms.Label homepageTxtLB;
+        private System.Windows.Forms.Label newLB5;
+        private System.Windows.Forms.Label newThing5;
+        private System.Windows.Forms.Label newThing4;
+        private System.Windows.Forms.Label newThing3;
+        private System.Windows.Forms.Label newThing2;
+        private System.Windows.Forms.Label newThing1;
+        private System.Windows.Forms.Label newLB3;
+        private System.Windows.Forms.Label newLB1;
+        private System.Windows.Forms.Label newLB4;
+        private System.Windows.Forms.Label newLB2;
     }
 }
 
