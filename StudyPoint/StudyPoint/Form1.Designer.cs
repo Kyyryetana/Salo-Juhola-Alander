@@ -78,16 +78,16 @@
             this.OurDepartmentPL = new System.Windows.Forms.Panel();
             this.ourDepLB = new System.Windows.Forms.Label();
             this.FeedbackPL = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.LeaveFeedbackLB = new System.Windows.Forms.Label();
+            this.LeaveContactsLB = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.FBEmailTB = new System.Windows.Forms.TextBox();
+            this.FBNameTB = new System.Windows.Forms.TextBox();
             this.SendFBBT = new System.Windows.Forms.Button();
             this.EmptyFBBT = new System.Windows.Forms.Button();
             this.FeedbackTB = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.FeedbackLB = new System.Windows.Forms.Label();
             this.DiscussionBoardPL = new System.Windows.Forms.Panel();
             this.DiscLB = new System.Windows.Forms.Label();
             this.DownloadPL = new System.Windows.Forms.Panel();
@@ -765,16 +765,16 @@
             // 
             // FeedbackPL
             // 
-            this.FeedbackPL.Controls.Add(this.label24);
-            this.FeedbackPL.Controls.Add(this.label23);
+            this.FeedbackPL.Controls.Add(this.LeaveFeedbackLB);
+            this.FeedbackPL.Controls.Add(this.LeaveContactsLB);
             this.FeedbackPL.Controls.Add(this.label22);
             this.FeedbackPL.Controls.Add(this.label21);
-            this.FeedbackPL.Controls.Add(this.textBox2);
-            this.FeedbackPL.Controls.Add(this.textBox1);
+            this.FeedbackPL.Controls.Add(this.FBEmailTB);
+            this.FeedbackPL.Controls.Add(this.FBNameTB);
             this.FeedbackPL.Controls.Add(this.SendFBBT);
             this.FeedbackPL.Controls.Add(this.EmptyFBBT);
             this.FeedbackPL.Controls.Add(this.FeedbackTB);
-            this.FeedbackPL.Controls.Add(this.label7);
+            this.FeedbackPL.Controls.Add(this.FeedbackLB);
             this.FeedbackPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FeedbackPL.Location = new System.Drawing.Point(153, 47);
             this.FeedbackPL.Name = "FeedbackPL";
@@ -782,25 +782,25 @@
             this.FeedbackPL.TabIndex = 18;
             this.FeedbackPL.Visible = false;
             // 
-            // label24
+            // LeaveFeedbackLB
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(18, 70);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(166, 20);
-            this.label24.TabIndex = 10;
-            this.label24.Text = "Leave feedback for us";
+            this.LeaveFeedbackLB.AutoSize = true;
+            this.LeaveFeedbackLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LeaveFeedbackLB.Location = new System.Drawing.Point(18, 70);
+            this.LeaveFeedbackLB.Name = "LeaveFeedbackLB";
+            this.LeaveFeedbackLB.Size = new System.Drawing.Size(166, 20);
+            this.LeaveFeedbackLB.TabIndex = 10;
+            this.LeaveFeedbackLB.Text = "Leave feedback for us";
             // 
-            // label23
+            // LeaveContactsLB
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(16, 351);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(325, 16);
-            this.label23.TabIndex = 9;
-            this.label23.Text = "Leave your contacts if you wish us to contact you back";
+            this.LeaveContactsLB.AutoSize = true;
+            this.LeaveContactsLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LeaveContactsLB.Location = new System.Drawing.Point(16, 351);
+            this.LeaveContactsLB.Name = "LeaveContactsLB";
+            this.LeaveContactsLB.Size = new System.Drawing.Size(325, 16);
+            this.LeaveContactsLB.TabIndex = 9;
+            this.LeaveContactsLB.Text = "Leave your contacts if you wish us to contact you back";
             // 
             // label22
             // 
@@ -822,21 +822,21 @@
             this.label21.TabIndex = 7;
             this.label21.Text = "Name:";
             // 
-            // textBox2
+            // FBEmailTB
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(76, 407);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 26);
-            this.textBox2.TabIndex = 6;
+            this.FBEmailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FBEmailTB.Location = new System.Drawing.Point(76, 407);
+            this.FBEmailTB.Name = "FBEmailTB";
+            this.FBEmailTB.Size = new System.Drawing.Size(183, 26);
+            this.FBEmailTB.TabIndex = 6;
             // 
-            // textBox1
+            // FBNameTB
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(76, 375);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 26);
-            this.textBox1.TabIndex = 5;
+            this.FBNameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FBNameTB.Location = new System.Drawing.Point(76, 375);
+            this.FBNameTB.Name = "FBNameTB";
+            this.FBNameTB.Size = new System.Drawing.Size(183, 26);
+            this.FBNameTB.TabIndex = 5;
             // 
             // SendFBBT
             // 
@@ -867,15 +867,15 @@
             this.FeedbackTB.Size = new System.Drawing.Size(594, 181);
             this.FeedbackTB.TabIndex = 1;
             // 
-            // label7
+            // FeedbackLB
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 24);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Feedback";
+            this.FeedbackLB.AutoSize = true;
+            this.FeedbackLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeedbackLB.Location = new System.Drawing.Point(6, 8);
+            this.FeedbackLB.Name = "FeedbackLB";
+            this.FeedbackLB.Size = new System.Drawing.Size(95, 24);
+            this.FeedbackLB.TabIndex = 0;
+            this.FeedbackLB.Text = "Feedback";
             // 
             // DiscussionBoardPL
             // 
@@ -1372,12 +1372,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
+            this.Controls.Add(this.FeedbackPL);
             this.Controls.Add(this.loginPL);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.HomePL);
             this.Controls.Add(this.DashboardPL);
-            this.Controls.Add(this.FeedbackPL);
             this.Controls.Add(this.UserManPL);
             this.Controls.Add(this.WhatsNewManPL);
             this.Controls.Add(this.FeedBackManPL);
@@ -1480,7 +1480,7 @@
         private System.Windows.Forms.Label sercicesLB;
         private System.Windows.Forms.Label galleryLB;
         private System.Windows.Forms.Label ourDepLB;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label FeedbackLB;
         private System.Windows.Forms.Label DiscLB;
         private System.Windows.Forms.Label downloadLB;
         private System.Windows.Forms.Label ContactUsLB;
@@ -1503,12 +1503,12 @@
         private System.Windows.Forms.Button UpdateBT;
         private System.Windows.Forms.Button SaveBT;
         private System.Windows.Forms.Button EmptyBT;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label LeaveFeedbackLB;
+        private System.Windows.Forms.Label LeaveContactsLB;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox FBEmailTB;
+        private System.Windows.Forms.TextBox FBNameTB;
         private System.Windows.Forms.Button SendFBBT;
         private System.Windows.Forms.Button EmptyFBBT;
         private System.Windows.Forms.TextBox FeedbackTB;
