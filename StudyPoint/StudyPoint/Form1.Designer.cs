@@ -240,6 +240,7 @@
             this.FeedbackBT.Text = "Feedback";
             this.FeedbackBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FeedbackBT.UseVisualStyleBackColor = false;
+            this.FeedbackBT.Click += new System.EventHandler(this.FeedbackBT_Click_1);
             // 
             // ContactBT
             // 
@@ -473,6 +474,7 @@
             this.FeedbackManBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FeedbackManBT.UseVisualStyleBackColor = false;
             this.FeedbackManBT.Visible = false;
+            this.FeedbackManBT.Click += new System.EventHandler(this.FeedbackManBT_Click_1);
             // 
             // HomePL
             // 
@@ -855,6 +857,7 @@
             this.SendFBBT.TabIndex = 3;
             this.SendFBBT.Text = "Send";
             this.SendFBBT.UseVisualStyleBackColor = true;
+            this.SendFBBT.Click += new System.EventHandler(this.SendFBBT_Click_1);
             // 
             // EmptyFBBT
             // 
@@ -865,6 +868,7 @@
             this.EmptyFBBT.TabIndex = 2;
             this.EmptyFBBT.Text = "Empty";
             this.EmptyFBBT.UseVisualStyleBackColor = true;
+            this.EmptyFBBT.Click += new System.EventHandler(this.EmptyFBBT_Click_1);
             // 
             // FeedbackTB
             // 
@@ -1389,6 +1393,7 @@
             this.FBManDG.Name = "FBManDG";
             this.FBManDG.Size = new System.Drawing.Size(619, 154);
             this.FBManDG.TabIndex = 1;
+            this.FBManDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FBManDG_CellContentClick_1);
             // 
             // FBManTB
             // 
@@ -1424,6 +1429,7 @@
             this.FBDeleteBT.TabIndex = 5;
             this.FBDeleteBT.Text = "Delete";
             this.FBDeleteBT.UseVisualStyleBackColor = true;
+            this.FBDeleteBT.Click += new System.EventHandler(this.FBDeleteBT_Click_1);
             // 
             // FBManNameLB
             // 
@@ -1450,11 +1456,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
+            this.Controls.Add(this.AboutPL);
+            this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.FeedBackManPL);
             this.Controls.Add(this.FeedbackPL);
             this.Controls.Add(this.loginPL);
-            this.Controls.Add(this.AboutPL);
-            this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.HomePL);
             this.Controls.Add(this.DashboardPL);
             this.Controls.Add(this.UserManPL);
