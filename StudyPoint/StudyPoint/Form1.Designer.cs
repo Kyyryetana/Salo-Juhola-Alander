@@ -137,6 +137,13 @@
             this.logtunnusLB = new System.Windows.Forms.Label();
             this.loginPassTB = new System.Windows.Forms.TextBox();
             this.loginMailTB = new System.Windows.Forms.TextBox();
+            this.FBManDG = new System.Windows.Forms.DataGridView();
+            this.FBManTB = new System.Windows.Forms.TextBox();
+            this.FBManNameTB = new System.Windows.Forms.TextBox();
+            this.FBManEmailTB = new System.Windows.Forms.TextBox();
+            this.FBDeleteBT = new System.Windows.Forms.Button();
+            this.FBManNameLB = new System.Windows.Forms.Label();
+            this.FBManEmailLB = new System.Windows.Forms.Label();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -159,6 +166,7 @@
             this.WhatsNewManPL.SuspendLayout();
             this.loginPL.SuspendLayout();
             this.registrationPL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FBManDG)).BeginInit();
             this.SuspendLayout();
             // 
             // YlaPL
@@ -939,6 +947,13 @@
             // 
             // FeedBackManPL
             // 
+            this.FeedBackManPL.Controls.Add(this.FBManEmailLB);
+            this.FeedBackManPL.Controls.Add(this.FBManNameLB);
+            this.FeedBackManPL.Controls.Add(this.FBDeleteBT);
+            this.FeedBackManPL.Controls.Add(this.FBManEmailTB);
+            this.FeedBackManPL.Controls.Add(this.FBManNameTB);
+            this.FeedBackManPL.Controls.Add(this.FBManTB);
+            this.FeedBackManPL.Controls.Add(this.FBManDG);
             this.FeedBackManPL.Controls.Add(this.feedbackManLB);
             this.FeedBackManPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FeedBackManPL.Location = new System.Drawing.Point(153, 47);
@@ -1367,11 +1382,75 @@
             this.loginMailTB.Size = new System.Drawing.Size(185, 26);
             this.loginMailTB.TabIndex = 0;
             // 
+            // FBManDG
+            // 
+            this.FBManDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FBManDG.Location = new System.Drawing.Point(10, 44);
+            this.FBManDG.Name = "FBManDG";
+            this.FBManDG.Size = new System.Drawing.Size(619, 154);
+            this.FBManDG.TabIndex = 1;
+            // 
+            // FBManTB
+            // 
+            this.FBManTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FBManTB.Location = new System.Drawing.Point(10, 207);
+            this.FBManTB.Multiline = true;
+            this.FBManTB.Name = "FBManTB";
+            this.FBManTB.Size = new System.Drawing.Size(619, 117);
+            this.FBManTB.TabIndex = 2;
+            // 
+            // FBManNameTB
+            // 
+            this.FBManNameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FBManNameTB.Location = new System.Drawing.Point(68, 339);
+            this.FBManNameTB.Name = "FBManNameTB";
+            this.FBManNameTB.Size = new System.Drawing.Size(200, 26);
+            this.FBManNameTB.TabIndex = 3;
+            // 
+            // FBManEmailTB
+            // 
+            this.FBManEmailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FBManEmailTB.Location = new System.Drawing.Point(68, 380);
+            this.FBManEmailTB.Name = "FBManEmailTB";
+            this.FBManEmailTB.Size = new System.Drawing.Size(200, 26);
+            this.FBManEmailTB.TabIndex = 4;
+            // 
+            // FBDeleteBT
+            // 
+            this.FBDeleteBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FBDeleteBT.Location = new System.Drawing.Point(68, 415);
+            this.FBDeleteBT.Name = "FBDeleteBT";
+            this.FBDeleteBT.Size = new System.Drawing.Size(95, 38);
+            this.FBDeleteBT.TabIndex = 5;
+            this.FBDeleteBT.Text = "Delete";
+            this.FBDeleteBT.UseVisualStyleBackColor = true;
+            // 
+            // FBManNameLB
+            // 
+            this.FBManNameLB.AutoSize = true;
+            this.FBManNameLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FBManNameLB.Location = new System.Drawing.Point(10, 342);
+            this.FBManNameLB.Name = "FBManNameLB";
+            this.FBManNameLB.Size = new System.Drawing.Size(51, 20);
+            this.FBManNameLB.TabIndex = 6;
+            this.FBManNameLB.Text = "Name";
+            // 
+            // FBManEmailLB
+            // 
+            this.FBManEmailLB.AutoSize = true;
+            this.FBManEmailLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FBManEmailLB.Location = new System.Drawing.Point(10, 385);
+            this.FBManEmailLB.Name = "FBManEmailLB";
+            this.FBManEmailLB.Size = new System.Drawing.Size(48, 20);
+            this.FBManEmailLB.TabIndex = 7;
+            this.FBManEmailLB.Text = "Email";
+            // 
             // StudyPointForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
+            this.Controls.Add(this.FeedBackManPL);
             this.Controls.Add(this.FeedbackPL);
             this.Controls.Add(this.loginPL);
             this.Controls.Add(this.AboutPL);
@@ -1380,7 +1459,6 @@
             this.Controls.Add(this.DashboardPL);
             this.Controls.Add(this.UserManPL);
             this.Controls.Add(this.WhatsNewManPL);
-            this.Controls.Add(this.FeedBackManPL);
             this.Controls.Add(this.DownloadManPL);
             this.Controls.Add(this.ContactUsPL);
             this.Controls.Add(this.DownloadPL);
@@ -1433,6 +1511,7 @@
             this.loginPL.PerformLayout();
             this.registrationPL.ResumeLayout(false);
             this.registrationPL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FBManDG)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1547,6 +1626,13 @@
         private System.Windows.Forms.Label newLB1;
         private System.Windows.Forms.Label newLB4;
         private System.Windows.Forms.Label newLB2;
+        private System.Windows.Forms.Label FBManEmailLB;
+        private System.Windows.Forms.Label FBManNameLB;
+        private System.Windows.Forms.Button FBDeleteBT;
+        private System.Windows.Forms.TextBox FBManEmailTB;
+        private System.Windows.Forms.TextBox FBManNameTB;
+        private System.Windows.Forms.TextBox FBManTB;
+        private System.Windows.Forms.DataGridView FBManDG;
     }
 }
 
