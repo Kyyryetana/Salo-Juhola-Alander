@@ -18,7 +18,7 @@ namespace StudyPoint
         public bool AddUser(String enimi, String snimi, String email, string password)
         {
 
-            //String password = passwordGenerator();
+            
             String encryptedPassword = crypting.Encrypt(password);
             MySqlCommand komento = new MySqlCommand();
             String lisayskysely = "INSERT INTO kayttajat " +
@@ -95,13 +95,13 @@ namespace StudyPoint
 
 
 
-
+        /* Tätä pitää muokata sen mukaan mihin laitetaan ja miten laitetaan tietojen muokkaus*/
         // Luodaan funktio käyttäjän tietojen muokkaamiseksi
         public bool EditUser(String enimi, String snimi, String email, int UserId)
         {
             MySqlCommand komento = new MySqlCommand();
-            String paivityskysely = "UPDATE `yhteystiedot` SET `etunimi`= @enm," +
-                "`sukunimi`= @snm,`sahkoposti`= @eml,`userid`= @" +
+            String paivityskysely = "UPDATE `kayttajat` SET `etunimi`= @enm," +
+                "`sukunimi`= @snm,`sahkoposti`= @eml" +
                 " WHERE userid = @uid";
             komento.CommandText = paivityskysely;
             komento.Connection = connection.Connection();
@@ -109,11 +109,7 @@ namespace StudyPoint
             komento.Parameters.Add("@enm", MySqlDbType.VarChar).Value = enimi;
             komento.Parameters.Add("@snm", MySqlDbType.VarChar).Value = snimi;
             komento.Parameters.Add("@eml", MySqlDbType.VarChar).Value = email;
-            komento.Parameters.Add("@uid", MySqlDbType.UInt32).Value = UserId;
-
-
-
-
+            //komento.Parameters.Add("@uid", MySqlDbType.UInt32).Value = UserId;
 
 
             connection.OpenConnection();

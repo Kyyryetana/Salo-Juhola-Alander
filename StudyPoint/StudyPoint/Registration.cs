@@ -10,7 +10,7 @@ namespace StudyPoint
 {
     public static class Registration
     {
-
+        
         public static bool tarkistaReg(string nimi, string sukunimi, string email, string regPass1, string regPass2)
         {
             string enimi = nimi;
@@ -18,15 +18,20 @@ namespace StudyPoint
             string mail = email;
             string password = regPass1;
             string password2 = regPass2;
-
+            USERS users = new USERS();
             if (enimi.Trim().Equals("") || snimi.Trim().Equals("") || mail.Trim().Equals("") || password.Trim().Equals("") || password2.Trim().Equals(""))
             {
-                MessageBox.Show("Kaikki vaaditut kentät tulee olla täytettyinä");
+                MessageBox.Show("Kaikki vaaditut kentät tulee olla täytettyinä.");
                 return false;
             }
             else if (password != password2)
             {
-                MessageBox.Show("Salasanat eivät täsmää");
+                MessageBox.Show("Salasanat eivät täsmää.");
+                return false;
+            }
+            else if (users.CheckUser(email))
+            {
+                MessageBox.Show("Käyttäjätunnus on jo olemassa.");
                 return false;
             }
             else

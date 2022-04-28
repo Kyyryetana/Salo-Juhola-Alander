@@ -63,6 +63,7 @@ namespace StudyPoint
             
             string email = loginMailTB.Text;
             string pass = loginPassTB.Text;
+            
             bool status = users.CheckPassword(email, pass);
             if (status)
             {
@@ -74,6 +75,7 @@ namespace StudyPoint
             {
                 MessageBox.Show("käyttäjätunnus ja salasana eivät täsmää");
             }
+            
         }
 
         private void RegBT_Click(object sender, EventArgs e)
