@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.YlaPL = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.VasenPL = new System.Windows.Forms.Panel();
@@ -62,6 +63,15 @@
             this.OurDepartmentPL = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.FeedbackPL = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.FBEmailTB = new System.Windows.Forms.TextBox();
+            this.FBNameTB = new System.Windows.Forms.TextBox();
+            this.SendFBBT = new System.Windows.Forms.Button();
+            this.EmptyFBBT = new System.Windows.Forms.Button();
+            this.FeedbackTB = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.DiscussionBoardPL = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,10 +80,22 @@
             this.ContactUsPL = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.FeedBackManPL = new System.Windows.Forms.Panel();
+            this.FBManEmailTB = new System.Windows.Forms.TextBox();
+            this.FBManNameTB = new System.Windows.Forms.TextBox();
+            this.FBManTB = new System.Windows.Forms.TextBox();
+            this.FBDeleteBT = new System.Windows.Forms.Button();
+            this.FBManDG = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.DownloadManPL = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.UserManPL = new System.Windows.Forms.Panel();
+            this.UserDTG = new System.Windows.Forms.DataGridView();
+            this.DeleteBT = new System.Windows.Forms.Button();
+            this.UpdateBT = new System.Windows.Forms.Button();
+            this.SaveBT = new System.Windows.Forms.Button();
+            this.EmptyBT = new System.Windows.Forms.Button();
+            this.AdminTB = new System.Windows.Forms.TextBox();
+            this.EmailTB = new System.Windows.Forms.TextBox();
             this.LastnameTB = new System.Windows.Forms.TextBox();
             this.FirstnameTB = new System.Windows.Forms.TextBox();
             this.UIDTB = new System.Windows.Forms.TextBox();
@@ -85,22 +107,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.WhatsNewManPL = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.EmailTB = new System.Windows.Forms.TextBox();
-            this.AdminTB = new System.Windows.Forms.TextBox();
-            this.EmptyBT = new System.Windows.Forms.Button();
-            this.SaveBT = new System.Windows.Forms.Button();
-            this.UpdateBT = new System.Windows.Forms.Button();
-            this.DeleteBT = new System.Windows.Forms.Button();
-            this.UserDTG = new System.Windows.Forms.DataGridView();
-            this.FeedbackTB = new System.Windows.Forms.TextBox();
-            this.EmptyFBBT = new System.Windows.Forms.Button();
-            this.SendFBBT = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -116,10 +122,11 @@
             this.DownloadPL.SuspendLayout();
             this.ContactUsPL.SuspendLayout();
             this.FeedBackManPL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FBManDG)).BeginInit();
             this.DownloadManPL.SuspendLayout();
             this.UserManPL.SuspendLayout();
-            this.WhatsNewManPL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserDTG)).BeginInit();
+            this.WhatsNewManPL.SuspendLayout();
             this.SuspendLayout();
             // 
             // YlaPL
@@ -192,6 +199,7 @@
             this.FeedbackBT.Text = "Feedback";
             this.FeedbackBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FeedbackBT.UseVisualStyleBackColor = false;
+            this.FeedbackBT.Click += new System.EventHandler(this.FeedbackBT_Click);
             // 
             // ContactBT
             // 
@@ -283,6 +291,7 @@
             this.HomeBT.Text = "Home";
             this.HomeBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HomeBT.UseVisualStyleBackColor = false;
+            this.HomeBT.Click += new System.EventHandler(this.HomeBT_Click);
             // 
             // ServicesBT
             // 
@@ -423,15 +432,16 @@
             this.FeedbackManBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FeedbackManBT.UseVisualStyleBackColor = false;
             this.FeedbackManBT.Visible = false;
+            this.FeedbackManBT.Click += new System.EventHandler(this.FeedbackManBT_Click);
             // 
             // HomePL
             // 
             this.HomePL.Controls.Add(this.label15);
             this.HomePL.Controls.Add(this.label1);
             this.HomePL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HomePL.Location = new System.Drawing.Point(153, 47);
+            this.HomePL.Location = new System.Drawing.Point(0, 47);
             this.HomePL.Name = "HomePL";
-            this.HomePL.Size = new System.Drawing.Size(641, 498);
+            this.HomePL.Size = new System.Drawing.Size(794, 498);
             this.HomePL.TabIndex = 13;
             this.HomePL.Visible = false;
             // 
@@ -459,9 +469,9 @@
             // 
             this.DashboardPL.Controls.Add(this.label2);
             this.DashboardPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DashboardPL.Location = new System.Drawing.Point(153, 47);
+            this.DashboardPL.Location = new System.Drawing.Point(0, 47);
             this.DashboardPL.Name = "DashboardPL";
-            this.DashboardPL.Size = new System.Drawing.Size(641, 498);
+            this.DashboardPL.Size = new System.Drawing.Size(794, 498);
             this.DashboardPL.TabIndex = 14;
             this.DashboardPL.Visible = false;
             // 
@@ -479,9 +489,9 @@
             // 
             this.AboutUsPL.Controls.Add(this.label3);
             this.AboutUsPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AboutUsPL.Location = new System.Drawing.Point(153, 47);
+            this.AboutUsPL.Location = new System.Drawing.Point(0, 47);
             this.AboutUsPL.Name = "AboutUsPL";
-            this.AboutUsPL.Size = new System.Drawing.Size(641, 498);
+            this.AboutUsPL.Size = new System.Drawing.Size(794, 498);
             this.AboutUsPL.TabIndex = 15;
             this.AboutUsPL.Visible = false;
             // 
@@ -499,9 +509,9 @@
             // 
             this.OurServicesPL.Controls.Add(this.label4);
             this.OurServicesPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OurServicesPL.Location = new System.Drawing.Point(153, 47);
+            this.OurServicesPL.Location = new System.Drawing.Point(0, 47);
             this.OurServicesPL.Name = "OurServicesPL";
-            this.OurServicesPL.Size = new System.Drawing.Size(641, 498);
+            this.OurServicesPL.Size = new System.Drawing.Size(794, 498);
             this.OurServicesPL.TabIndex = 16;
             this.OurServicesPL.Visible = false;
             // 
@@ -519,9 +529,9 @@
             // 
             this.OurGalleryPL.Controls.Add(this.label5);
             this.OurGalleryPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OurGalleryPL.Location = new System.Drawing.Point(153, 47);
+            this.OurGalleryPL.Location = new System.Drawing.Point(0, 47);
             this.OurGalleryPL.Name = "OurGalleryPL";
-            this.OurGalleryPL.Size = new System.Drawing.Size(641, 498);
+            this.OurGalleryPL.Size = new System.Drawing.Size(794, 498);
             this.OurGalleryPL.TabIndex = 17;
             this.OurGalleryPL.Visible = false;
             // 
@@ -539,9 +549,9 @@
             // 
             this.OurDepartmentPL.Controls.Add(this.label6);
             this.OurDepartmentPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OurDepartmentPL.Location = new System.Drawing.Point(153, 47);
+            this.OurDepartmentPL.Location = new System.Drawing.Point(0, 47);
             this.OurDepartmentPL.Name = "OurDepartmentPL";
-            this.OurDepartmentPL.Size = new System.Drawing.Size(641, 498);
+            this.OurDepartmentPL.Size = new System.Drawing.Size(794, 498);
             this.OurDepartmentPL.TabIndex = 18;
             this.OurDepartmentPL.Visible = false;
             // 
@@ -561,24 +571,111 @@
             this.FeedbackPL.Controls.Add(this.label23);
             this.FeedbackPL.Controls.Add(this.label22);
             this.FeedbackPL.Controls.Add(this.label21);
-            this.FeedbackPL.Controls.Add(this.textBox2);
-            this.FeedbackPL.Controls.Add(this.textBox1);
+            this.FeedbackPL.Controls.Add(this.FBEmailTB);
+            this.FeedbackPL.Controls.Add(this.FBNameTB);
             this.FeedbackPL.Controls.Add(this.SendFBBT);
             this.FeedbackPL.Controls.Add(this.EmptyFBBT);
             this.FeedbackPL.Controls.Add(this.FeedbackTB);
             this.FeedbackPL.Controls.Add(this.label7);
             this.FeedbackPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FeedbackPL.Location = new System.Drawing.Point(153, 47);
+            this.FeedbackPL.Location = new System.Drawing.Point(0, 47);
             this.FeedbackPL.Name = "FeedbackPL";
-            this.FeedbackPL.Size = new System.Drawing.Size(641, 498);
+            this.FeedbackPL.Size = new System.Drawing.Size(794, 498);
             this.FeedbackPL.TabIndex = 18;
             this.FeedbackPL.Visible = false;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(160, 74);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(166, 20);
+            this.label24.TabIndex = 10;
+            this.label24.Text = "Leave feedback for us";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(158, 355);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(325, 16);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "Leave your contacts if you wish us to contact you back";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(160, 414);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(52, 20);
+            this.label22.TabIndex = 8;
+            this.label22.Text = "Email:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(157, 382);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(55, 20);
+            this.label21.TabIndex = 7;
+            this.label21.Text = "Name:";
+            // 
+            // FBEmailTB
+            // 
+            this.FBEmailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FBEmailTB.Location = new System.Drawing.Point(218, 411);
+            this.FBEmailTB.Name = "FBEmailTB";
+            this.FBEmailTB.Size = new System.Drawing.Size(183, 26);
+            this.FBEmailTB.TabIndex = 6;
+            // 
+            // FBNameTB
+            // 
+            this.FBNameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FBNameTB.Location = new System.Drawing.Point(218, 379);
+            this.FBNameTB.Name = "FBNameTB";
+            this.FBNameTB.Size = new System.Drawing.Size(183, 26);
+            this.FBNameTB.TabIndex = 5;
+            // 
+            // SendFBBT
+            // 
+            this.SendFBBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SendFBBT.Location = new System.Drawing.Point(252, 287);
+            this.SendFBBT.Name = "SendFBBT";
+            this.SendFBBT.Size = new System.Drawing.Size(85, 33);
+            this.SendFBBT.TabIndex = 3;
+            this.SendFBBT.Text = "Send";
+            this.SendFBBT.UseVisualStyleBackColor = true;
+            this.SendFBBT.Click += new System.EventHandler(this.SendFBBT_Click);
+            // 
+            // EmptyFBBT
+            // 
+            this.EmptyFBBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmptyFBBT.Location = new System.Drawing.Point(159, 287);
+            this.EmptyFBBT.Name = "EmptyFBBT";
+            this.EmptyFBBT.Size = new System.Drawing.Size(85, 33);
+            this.EmptyFBBT.TabIndex = 2;
+            this.EmptyFBBT.Text = "Empty";
+            this.EmptyFBBT.UseVisualStyleBackColor = true;
+            this.EmptyFBBT.Click += new System.EventHandler(this.EmptyFBBT_Click);
+            // 
+            // FeedbackTB
+            // 
+            this.FeedbackTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeedbackTB.Location = new System.Drawing.Point(159, 100);
+            this.FeedbackTB.Multiline = true;
+            this.FeedbackTB.Name = "FeedbackTB";
+            this.FeedbackTB.Size = new System.Drawing.Size(594, 181);
+            this.FeedbackTB.TabIndex = 1;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 8);
+            this.label7.Location = new System.Drawing.Point(160, 11);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 24);
             this.label7.TabIndex = 0;
@@ -588,9 +685,9 @@
             // 
             this.DiscussionBoardPL.Controls.Add(this.label8);
             this.DiscussionBoardPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DiscussionBoardPL.Location = new System.Drawing.Point(153, 47);
+            this.DiscussionBoardPL.Location = new System.Drawing.Point(0, 47);
             this.DiscussionBoardPL.Name = "DiscussionBoardPL";
-            this.DiscussionBoardPL.Size = new System.Drawing.Size(641, 498);
+            this.DiscussionBoardPL.Size = new System.Drawing.Size(794, 498);
             this.DiscussionBoardPL.TabIndex = 19;
             this.DiscussionBoardPL.Visible = false;
             // 
@@ -608,9 +705,9 @@
             // 
             this.DownloadPL.Controls.Add(this.label9);
             this.DownloadPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DownloadPL.Location = new System.Drawing.Point(153, 47);
+            this.DownloadPL.Location = new System.Drawing.Point(0, 47);
             this.DownloadPL.Name = "DownloadPL";
-            this.DownloadPL.Size = new System.Drawing.Size(641, 498);
+            this.DownloadPL.Size = new System.Drawing.Size(794, 498);
             this.DownloadPL.TabIndex = 20;
             this.DownloadPL.Visible = false;
             // 
@@ -628,9 +725,9 @@
             // 
             this.ContactUsPL.Controls.Add(this.label10);
             this.ContactUsPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ContactUsPL.Location = new System.Drawing.Point(153, 47);
+            this.ContactUsPL.Location = new System.Drawing.Point(0, 47);
             this.ContactUsPL.Name = "ContactUsPL";
-            this.ContactUsPL.Size = new System.Drawing.Size(641, 498);
+            this.ContactUsPL.Size = new System.Drawing.Size(794, 498);
             this.ContactUsPL.TabIndex = 21;
             this.ContactUsPL.Visible = false;
             // 
@@ -646,19 +743,79 @@
             // 
             // FeedBackManPL
             // 
+            this.FeedBackManPL.Controls.Add(this.FBManEmailTB);
+            this.FeedBackManPL.Controls.Add(this.FBManNameTB);
+            this.FeedBackManPL.Controls.Add(this.FBManTB);
+            this.FeedBackManPL.Controls.Add(this.FBDeleteBT);
+            this.FeedBackManPL.Controls.Add(this.FBManDG);
             this.FeedBackManPL.Controls.Add(this.label11);
             this.FeedBackManPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FeedBackManPL.Location = new System.Drawing.Point(153, 47);
+            this.FeedBackManPL.Location = new System.Drawing.Point(0, 47);
             this.FeedBackManPL.Name = "FeedBackManPL";
-            this.FeedBackManPL.Size = new System.Drawing.Size(641, 498);
+            this.FeedBackManPL.Size = new System.Drawing.Size(794, 498);
             this.FeedBackManPL.TabIndex = 19;
             this.FeedBackManPL.Visible = false;
+            // 
+            // FBManEmailTB
+            // 
+            this.FBManEmailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FBManEmailTB.Location = new System.Drawing.Point(164, 404);
+            this.FBManEmailTB.Name = "FBManEmailTB";
+            this.FBManEmailTB.Size = new System.Drawing.Size(213, 26);
+            this.FBManEmailTB.TabIndex = 5;
+            // 
+            // FBManNameTB
+            // 
+            this.FBManNameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FBManNameTB.Location = new System.Drawing.Point(164, 372);
+            this.FBManNameTB.Name = "FBManNameTB";
+            this.FBManNameTB.Size = new System.Drawing.Size(213, 26);
+            this.FBManNameTB.TabIndex = 4;
+            // 
+            // FBManTB
+            // 
+            this.FBManTB.Location = new System.Drawing.Point(164, 217);
+            this.FBManTB.Multiline = true;
+            this.FBManTB.Name = "FBManTB";
+            this.FBManTB.Size = new System.Drawing.Size(623, 132);
+            this.FBManTB.TabIndex = 3;
+            // 
+            // FBDeleteBT
+            // 
+            this.FBDeleteBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FBDeleteBT.Location = new System.Drawing.Point(164, 440);
+            this.FBDeleteBT.Name = "FBDeleteBT";
+            this.FBDeleteBT.Size = new System.Drawing.Size(70, 29);
+            this.FBDeleteBT.TabIndex = 2;
+            this.FBDeleteBT.Text = "Delete";
+            this.FBDeleteBT.UseVisualStyleBackColor = true;
+            this.FBDeleteBT.Click += new System.EventHandler(this.FBDeleteBT_Click);
+            // 
+            // FBManDG
+            // 
+            this.FBManDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.FBManDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.FBManDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FBManDG.Location = new System.Drawing.Point(164, 45);
+            this.FBManDG.Name = "FBManDG";
+            this.FBManDG.RowHeadersWidth = 16;
+            this.FBManDG.RowTemplate.Height = 30;
+            this.FBManDG.Size = new System.Drawing.Size(623, 162);
+            this.FBManDG.TabIndex = 1;
+            this.FBManDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FBManDG_CellContentClick);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 11);
+            this.label11.Location = new System.Drawing.Point(164, 5);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(211, 24);
             this.label11.TabIndex = 0;
@@ -668,9 +825,9 @@
             // 
             this.DownloadManPL.Controls.Add(this.label12);
             this.DownloadManPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DownloadManPL.Location = new System.Drawing.Point(153, 47);
+            this.DownloadManPL.Location = new System.Drawing.Point(0, 47);
             this.DownloadManPL.Name = "DownloadManPL";
-            this.DownloadManPL.Size = new System.Drawing.Size(641, 498);
+            this.DownloadManPL.Size = new System.Drawing.Size(794, 498);
             this.DownloadManPL.TabIndex = 20;
             this.DownloadManPL.Visible = false;
             // 
@@ -708,6 +865,70 @@
             this.UserManPL.Size = new System.Drawing.Size(641, 498);
             this.UserManPL.TabIndex = 21;
             this.UserManPL.Visible = false;
+            // 
+            // UserDTG
+            // 
+            this.UserDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UserDTG.Location = new System.Drawing.Point(17, 213);
+            this.UserDTG.Name = "UserDTG";
+            this.UserDTG.Size = new System.Drawing.Size(612, 273);
+            this.UserDTG.TabIndex = 15;
+            // 
+            // DeleteBT
+            // 
+            this.DeleteBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBT.Location = new System.Drawing.Point(299, 166);
+            this.DeleteBT.Name = "DeleteBT";
+            this.DeleteBT.Size = new System.Drawing.Size(87, 32);
+            this.DeleteBT.TabIndex = 14;
+            this.DeleteBT.Text = "Delete";
+            this.DeleteBT.UseVisualStyleBackColor = true;
+            // 
+            // UpdateBT
+            // 
+            this.UpdateBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBT.Location = new System.Drawing.Point(206, 166);
+            this.UpdateBT.Name = "UpdateBT";
+            this.UpdateBT.Size = new System.Drawing.Size(87, 32);
+            this.UpdateBT.TabIndex = 13;
+            this.UpdateBT.Text = "Update";
+            this.UpdateBT.UseVisualStyleBackColor = true;
+            // 
+            // SaveBT
+            // 
+            this.SaveBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBT.Location = new System.Drawing.Point(113, 164);
+            this.SaveBT.Name = "SaveBT";
+            this.SaveBT.Size = new System.Drawing.Size(87, 32);
+            this.SaveBT.TabIndex = 12;
+            this.SaveBT.Text = "Save";
+            this.SaveBT.UseVisualStyleBackColor = true;
+            // 
+            // EmptyBT
+            // 
+            this.EmptyBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmptyBT.Location = new System.Drawing.Point(17, 166);
+            this.EmptyBT.Name = "EmptyBT";
+            this.EmptyBT.Size = new System.Drawing.Size(87, 32);
+            this.EmptyBT.TabIndex = 11;
+            this.EmptyBT.Text = "Empty";
+            this.EmptyBT.UseVisualStyleBackColor = true;
+            // 
+            // AdminTB
+            // 
+            this.AdminTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminTB.Location = new System.Drawing.Point(409, 91);
+            this.AdminTB.Name = "AdminTB";
+            this.AdminTB.Size = new System.Drawing.Size(179, 26);
+            this.AdminTB.TabIndex = 10;
+            // 
+            // EmailTB
+            // 
+            this.EmailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailTB.Location = new System.Drawing.Point(409, 60);
+            this.EmailTB.Name = "EmailTB";
+            this.EmailTB.Size = new System.Drawing.Size(179, 26);
+            this.EmailTB.TabIndex = 9;
             // 
             // LastnameTB
             // 
@@ -797,9 +1018,9 @@
             // 
             this.WhatsNewManPL.Controls.Add(this.label14);
             this.WhatsNewManPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WhatsNewManPL.Location = new System.Drawing.Point(153, 47);
+            this.WhatsNewManPL.Location = new System.Drawing.Point(0, 47);
             this.WhatsNewManPL.Name = "WhatsNewManPL";
-            this.WhatsNewManPL.Size = new System.Drawing.Size(641, 498);
+            this.WhatsNewManPL.Size = new System.Drawing.Size(794, 498);
             this.WhatsNewManPL.TabIndex = 22;
             this.WhatsNewManPL.Visible = false;
             // 
@@ -813,167 +1034,19 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "What\'s new management";
             // 
-            // EmailTB
-            // 
-            this.EmailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTB.Location = new System.Drawing.Point(409, 60);
-            this.EmailTB.Name = "EmailTB";
-            this.EmailTB.Size = new System.Drawing.Size(179, 26);
-            this.EmailTB.TabIndex = 9;
-            // 
-            // AdminTB
-            // 
-            this.AdminTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminTB.Location = new System.Drawing.Point(409, 91);
-            this.AdminTB.Name = "AdminTB";
-            this.AdminTB.Size = new System.Drawing.Size(179, 26);
-            this.AdminTB.TabIndex = 10;
-            // 
-            // EmptyBT
-            // 
-            this.EmptyBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmptyBT.Location = new System.Drawing.Point(17, 166);
-            this.EmptyBT.Name = "EmptyBT";
-            this.EmptyBT.Size = new System.Drawing.Size(87, 32);
-            this.EmptyBT.TabIndex = 11;
-            this.EmptyBT.Text = "Empty";
-            this.EmptyBT.UseVisualStyleBackColor = true;
-            // 
-            // SaveBT
-            // 
-            this.SaveBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveBT.Location = new System.Drawing.Point(113, 164);
-            this.SaveBT.Name = "SaveBT";
-            this.SaveBT.Size = new System.Drawing.Size(87, 32);
-            this.SaveBT.TabIndex = 12;
-            this.SaveBT.Text = "Save";
-            this.SaveBT.UseVisualStyleBackColor = true;
-            // 
-            // UpdateBT
-            // 
-            this.UpdateBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBT.Location = new System.Drawing.Point(206, 166);
-            this.UpdateBT.Name = "UpdateBT";
-            this.UpdateBT.Size = new System.Drawing.Size(87, 32);
-            this.UpdateBT.TabIndex = 13;
-            this.UpdateBT.Text = "Update";
-            this.UpdateBT.UseVisualStyleBackColor = true;
-            // 
-            // DeleteBT
-            // 
-            this.DeleteBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteBT.Location = new System.Drawing.Point(299, 166);
-            this.DeleteBT.Name = "DeleteBT";
-            this.DeleteBT.Size = new System.Drawing.Size(87, 32);
-            this.DeleteBT.TabIndex = 14;
-            this.DeleteBT.Text = "Delete";
-            this.DeleteBT.UseVisualStyleBackColor = true;
-            // 
-            // UserDTG
-            // 
-            this.UserDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UserDTG.Location = new System.Drawing.Point(17, 213);
-            this.UserDTG.Name = "UserDTG";
-            this.UserDTG.Size = new System.Drawing.Size(612, 273);
-            this.UserDTG.TabIndex = 15;
-            // 
-            // FeedbackTB
-            // 
-            this.FeedbackTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FeedbackTB.Location = new System.Drawing.Point(17, 96);
-            this.FeedbackTB.Multiline = true;
-            this.FeedbackTB.Name = "FeedbackTB";
-            this.FeedbackTB.Size = new System.Drawing.Size(594, 181);
-            this.FeedbackTB.TabIndex = 1;
-            // 
-            // EmptyFBBT
-            // 
-            this.EmptyFBBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmptyFBBT.Location = new System.Drawing.Point(17, 283);
-            this.EmptyFBBT.Name = "EmptyFBBT";
-            this.EmptyFBBT.Size = new System.Drawing.Size(85, 33);
-            this.EmptyFBBT.TabIndex = 2;
-            this.EmptyFBBT.Text = "Empty";
-            this.EmptyFBBT.UseVisualStyleBackColor = true;
-            // 
-            // SendFBBT
-            // 
-            this.SendFBBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SendFBBT.Location = new System.Drawing.Point(19, 439);
-            this.SendFBBT.Name = "SendFBBT";
-            this.SendFBBT.Size = new System.Drawing.Size(85, 33);
-            this.SendFBBT.TabIndex = 3;
-            this.SendFBBT.Text = "Send";
-            this.SendFBBT.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(76, 375);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 26);
-            this.textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(76, 407);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 26);
-            this.textBox2.TabIndex = 6;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(15, 378);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(55, 20);
-            this.label21.TabIndex = 7;
-            this.label21.Text = "Name:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(18, 410);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(52, 20);
-            this.label22.TabIndex = 8;
-            this.label22.Text = "Email:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(16, 351);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(325, 16);
-            this.label23.TabIndex = 9;
-            this.label23.Text = "Leave your contacts if you wish us to contact you back";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(18, 70);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(166, 20);
-            this.label24.TabIndex = 10;
-            this.label24.Text = "Leave feedback for us";
-            // 
             // StudyPointForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
-            this.Controls.Add(this.FeedbackPL);
+            this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.UserManPL);
             this.Controls.Add(this.AboutPL);
-            this.Controls.Add(this.ManagementPL);
+            this.Controls.Add(this.VasenPL);
+            this.Controls.Add(this.FeedBackManPL);
+            this.Controls.Add(this.FeedbackPL);
             this.Controls.Add(this.HomePL);
             this.Controls.Add(this.WhatsNewManPL);
-            this.Controls.Add(this.FeedBackManPL);
             this.Controls.Add(this.DownloadManPL);
             this.Controls.Add(this.ContactUsPL);
             this.Controls.Add(this.DownloadPL);
@@ -983,11 +1056,11 @@
             this.Controls.Add(this.AboutUsPL);
             this.Controls.Add(this.OurServicesPL);
             this.Controls.Add(this.DashboardPL);
-            this.Controls.Add(this.VasenPL);
             this.Controls.Add(this.YlaPL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudyPointForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.StudyPointForm_Load);
             this.YlaPL.ResumeLayout(false);
             this.VasenPL.ResumeLayout(false);
             this.AboutPL.ResumeLayout(false);
@@ -1014,13 +1087,14 @@
             this.ContactUsPL.PerformLayout();
             this.FeedBackManPL.ResumeLayout(false);
             this.FeedBackManPL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FBManDG)).EndInit();
             this.DownloadManPL.ResumeLayout(false);
             this.DownloadManPL.PerformLayout();
             this.UserManPL.ResumeLayout(false);
             this.UserManPL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UserDTG)).EndInit();
             this.WhatsNewManPL.ResumeLayout(false);
             this.WhatsNewManPL.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UserDTG)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1095,11 +1169,16 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox FBEmailTB;
+        private System.Windows.Forms.TextBox FBNameTB;
         private System.Windows.Forms.Button SendFBBT;
         private System.Windows.Forms.Button EmptyFBBT;
         private System.Windows.Forms.TextBox FeedbackTB;
+        private System.Windows.Forms.DataGridView FBManDG;
+        private System.Windows.Forms.Button FBDeleteBT;
+        private System.Windows.Forms.TextBox FBManEmailTB;
+        private System.Windows.Forms.TextBox FBManNameTB;
+        private System.Windows.Forms.TextBox FBManTB;
     }
 }
 
