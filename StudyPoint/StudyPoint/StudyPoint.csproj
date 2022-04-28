@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="valikko.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CONNECT.cs" />
     <Compile Include="Crypting.cs" />
     <Compile Include="FEEDBACK.cs" />

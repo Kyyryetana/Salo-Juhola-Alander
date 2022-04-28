@@ -117,7 +117,7 @@ namespace StudyPoint
             registrationPL.Visible=false;
             
         }
-        private void DashboardBT_Click(object sender, EventArgs e) //dashboard esiin, home piiloon, dashboardille tiedot SQL:stä
+        /*private void DashboardBT_Click(object sender, EventArgs e) //dashboard esiin, home piiloon, dashboardille tiedot SQL:stä
         {
             // kesken
             // tänne sql tietojen noudot
@@ -125,14 +125,15 @@ namespace StudyPoint
             // sen hetkisen käyttäjän / adminin tiedot
             DashboardPL.Visible = true;
             HomePL.Visible = false;
-        }
+        }*/
 
-        private void HomeBT_Click(object sender, EventArgs e) //home näkyviin, dashboard piiloon ja tarkistetaan whats new tilanne
+        // SIIRRETTY VALIKKO-TIEDOSTOON
+        /*private void HomeBT_Click(object sender, EventArgs e) //home näkyviin, dashboard piiloon ja tarkistetaan whats new tilanne
         {
             HomePL.Visible = true;
             DashboardPL.Visible = false;
             tarkistaNewThing();
-        }
+        }*/
 
         private void tarkistaNewThing() //funktio tarkistaa home sivulla olevan whats new tilanteen, ja kytkee new tekstin päälle tai pois
         {
@@ -157,5 +158,7 @@ namespace StudyPoint
                 newLB5.Visible = false;
             }
         }
+
+        
     }
 }

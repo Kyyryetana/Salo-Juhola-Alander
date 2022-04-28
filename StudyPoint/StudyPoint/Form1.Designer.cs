@@ -232,6 +232,7 @@
             this.FeedbackBT.Text = "Feedback";
             this.FeedbackBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FeedbackBT.UseVisualStyleBackColor = false;
+            this.FeedbackBT.Click += new System.EventHandler(this.FeedbackBT_Click);
             // 
             // ContactBT
             // 
@@ -247,6 +248,7 @@
             this.ContactBT.Text = "Contact us";
             this.ContactBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ContactBT.UseVisualStyleBackColor = false;
+            this.ContactBT.Click += new System.EventHandler(this.ContactBT_Click);
             // 
             // DownloadBT
             // 
@@ -262,6 +264,7 @@
             this.DownloadBT.Text = "Download";
             this.DownloadBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DownloadBT.UseVisualStyleBackColor = false;
+            this.DownloadBT.Click += new System.EventHandler(this.DownloadBT_Click);
             // 
             // DiscussionBT
             // 
@@ -277,6 +280,7 @@
             this.DiscussionBT.Text = "Discussion board";
             this.DiscussionBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DiscussionBT.UseVisualStyleBackColor = false;
+            this.DiscussionBT.Click += new System.EventHandler(this.DiscussionBT_Click);
             // 
             // AboutBT
             // 
@@ -292,6 +296,7 @@
             this.AboutBT.Text = "About us";
             this.AboutBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AboutBT.UseVisualStyleBackColor = false;
+            this.AboutBT.Click += new System.EventHandler(this.AboutBT_Click);
             this.AboutBT.MouseHover += new System.EventHandler(this.AboutBT_MouseHover);
             // 
             // DashboardBT
@@ -341,6 +346,7 @@
             this.ServicesBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ServicesBT.UseVisualStyleBackColor = false;
             this.ServicesBT.Visible = false;
+            this.ServicesBT.Click += new System.EventHandler(this.ServicesBT_Click);
             // 
             // GalleryBT
             // 
@@ -357,6 +363,7 @@
             this.GalleryBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GalleryBT.UseVisualStyleBackColor = false;
             this.GalleryBT.Visible = false;
+            this.GalleryBT.Click += new System.EventHandler(this.GalleryBT_Click);
             // 
             // DepartmentBT
             // 
@@ -373,6 +380,7 @@
             this.DepartmentBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DepartmentBT.UseVisualStyleBackColor = false;
             this.DepartmentBT.Visible = false;
+            this.DepartmentBT.Click += new System.EventHandler(this.DepartmentBT_Click);
             // 
             // AboutPL
             // 
@@ -417,6 +425,7 @@
             this.NewManBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NewManBT.UseVisualStyleBackColor = false;
             this.NewManBT.Visible = false;
+            this.NewManBT.Click += new System.EventHandler(this.NewManBT_Click);
             // 
             // UserManBT
             // 
@@ -433,6 +442,7 @@
             this.UserManBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.UserManBT.UseVisualStyleBackColor = false;
             this.UserManBT.Visible = false;
+            this.UserManBT.Click += new System.EventHandler(this.UserManBT_Click);
             // 
             // DownloadManBT
             // 
@@ -449,6 +459,7 @@
             this.DownloadManBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DownloadManBT.UseVisualStyleBackColor = false;
             this.DownloadManBT.Visible = false;
+            this.DownloadManBT.Click += new System.EventHandler(this.DownloadManBT_Click);
             // 
             // FeedbackManBT
             // 
@@ -465,6 +476,7 @@
             this.FeedbackManBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FeedbackManBT.UseVisualStyleBackColor = false;
             this.FeedbackManBT.Visible = false;
+            this.FeedbackManBT.Click += new System.EventHandler(this.FeedbackManBT_Click);
             // 
             // HomePL
             // 
@@ -1372,9 +1384,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
-            this.Controls.Add(this.loginPL);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
+            this.Controls.Add(this.loginPL);
             this.Controls.Add(this.HomePL);
             this.Controls.Add(this.DashboardPL);
             this.Controls.Add(this.FeedbackPL);
