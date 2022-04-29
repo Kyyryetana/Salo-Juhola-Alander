@@ -14,25 +14,11 @@ namespace StudyPoint
     {
         private void HomeBT_Click(object sender, EventArgs e) //home näkyviin, dashboard piiloon ja tarkistetaan whats new tilanne
         {
+            HideAllPanels();
             tarkistaNewThing();
 
             HomePL.Visible = true;
-            DashboardPL.Visible = false;
             
-            AboutPL.Visible = false;
-            OurServicesPL.Visible = false;
-            OurGalleryPL.Visible = false;
-            OurDepartmentPL.Visible = false;
-
-            DiscussionBoardPL.Visible = false;
-            DownloadPL.Visible = false;
-            ContactUsPL.Visible = false;
-            
-            FeedbackPL.Visible = false;
-            FeedBackManPL.Visible = false;
-            DownloadManPL.Visible = false;
-            UserManPL.Visible = false;
-            WhatsNewManPL.Visible = false;
 
         }
 
@@ -42,257 +28,93 @@ namespace StudyPoint
             // tänne sql tietojen noudot
             // rekisteröityneiden käyttäjien määrä
             // sen hetkisen käyttäjän / adminin tiedot
-            HomePL.Visible = false;
+            HideAllPanels();
             DashboardPL.Visible = true;
 
-            AboutPL.Visible = false;
-            OurServicesPL.Visible = false;
-            OurGalleryPL.Visible = false;
-            OurDepartmentPL.Visible = false;
-
-            DiscussionBoardPL.Visible = false;
-            DownloadPL.Visible = false;
-            ContactUsPL.Visible = false;
-
-            FeedbackPL.Visible = false;
-            FeedBackManPL.Visible = false;
-            DownloadManPL.Visible = false;
-            UserManPL.Visible = false;
-            WhatsNewManPL.Visible = false;
         }
 
         private void AboutBT_Click(object sender, EventArgs e)
         {
-            HomePL.Visible = false;
-            DashboardPL.Visible = false;
-
+            HideAllPanels();
             AboutPL.Visible = true;
-            OurServicesPL.Visible = false;
-            OurGalleryPL.Visible = false;
-            OurDepartmentPL.Visible = false;
-
-            DiscussionBoardPL.Visible = false;
-            DownloadPL.Visible = false;
-            ContactUsPL.Visible = false;
-
-            FeedbackPL.Visible = false;
-            FeedBackManPL.Visible = false;
-            DownloadManPL.Visible = false;
-            UserManPL.Visible = false;
-            WhatsNewManPL.Visible = false;
+            
         }
 
         private void ServicesBT_Click(object sender, EventArgs e)
         {
-            HomePL.Visible = false;
-            DashboardPL.Visible = false;
-
-            AboutPL.Visible = false;
+            HideAllPanels();
             OurServicesPL.Visible = true;
-            OurGalleryPL.Visible = false;
-            OurDepartmentPL.Visible = false;
-
-            DiscussionBoardPL.Visible = false;
-            DownloadPL.Visible = false;
-            ContactUsPL.Visible = false;
-
-            FeedbackPL.Visible = false;
-            FeedBackManPL.Visible = false;
-            DownloadManPL.Visible = false;
-            UserManPL.Visible = false;
-            WhatsNewManPL.Visible = false;
+            
         }
 
         private void GalleryBT_Click(object sender, EventArgs e)
         {
-            HomePL.Visible = false;
-            DashboardPL.Visible = false;
-
-            AboutPL.Visible = false;
-            OurServicesPL.Visible = false;
+            HideAllPanels();
             OurGalleryPL.Visible = true;
-            OurDepartmentPL.Visible = false;
-
-            DiscussionBoardPL.Visible = false;
-            DownloadPL.Visible = false;
-            ContactUsPL.Visible = false;
-
-            FeedbackPL.Visible = false;
-            FeedBackManPL.Visible = false;
-            DownloadManPL.Visible = false;
-            UserManPL.Visible = false;
-            WhatsNewManPL.Visible = false;
+            
         }
 
         private void DepartmentBT_Click(object sender, EventArgs e)
         {
-            HomePL.Visible = false;
-            DashboardPL.Visible = false;
-
-            AboutPL.Visible = false;
-            OurServicesPL.Visible = false;
-            OurGalleryPL.Visible = false;
+            HideAllPanels();
             OurDepartmentPL.Visible = true;
 
-            DiscussionBoardPL.Visible = false;
-            DownloadPL.Visible = false;
-            ContactUsPL.Visible = false;
-
-            FeedbackPL.Visible = false;
-            FeedBackManPL.Visible = false;
-            DownloadManPL.Visible = false;
-            UserManPL.Visible = false;
-            WhatsNewManPL.Visible = false;
         }
         private void DiscussionBT_Click(object sender, EventArgs e)
         {
-            HomePL.Visible = false;
-            DashboardPL.Visible = false;
-
-            AboutPL.Visible = false;
-            OurServicesPL.Visible = false;
-            OurGalleryPL.Visible = false;
-            OurDepartmentPL.Visible = false;
-
+            HideAllPanels();
             DiscussionBoardPL.Visible = true;
-            DownloadPL.Visible = false;
-            ContactUsPL.Visible = false;
-
-            FeedbackPL.Visible = false;
-            FeedBackManPL.Visible = false;
-            DownloadManPL.Visible = false;
-            UserManPL.Visible = false;
-            WhatsNewManPL.Visible = false;
+            
 
         }
 
         private void DownloadBT_Click(object sender, EventArgs e)
         {
-            HomePL.Visible = false;
-            DashboardPL.Visible = false;
-
-            AboutPL.Visible = false;
-            OurServicesPL.Visible = false;
-            OurGalleryPL.Visible = false;
-            OurDepartmentPL.Visible = false;
-
-            DiscussionBoardPL.Visible = false;
+            HideAllPanels();
             DownloadPL.Visible = true;
-            ContactUsPL.Visible = false;
-
-            FeedbackPL.Visible = false;
-            FeedBackManPL.Visible = false;
-            DownloadManPL.Visible = false;
-            UserManPL.Visible = false;
-            WhatsNewManPL.Visible = false;
+            
         }
 
         private void ContactBT_Click(object sender, EventArgs e)
         {
-            HomePL.Visible = false;
-            DashboardPL.Visible = false;
-
-            AboutPL.Visible = false;
-            OurServicesPL.Visible = false;
-            OurGalleryPL.Visible = false;
-            OurDepartmentPL.Visible = false;
-
-            DiscussionBoardPL.Visible = false;
-            DownloadPL.Visible = false;
+            HideAllPanels();
             ContactUsPL.Visible = true;
 
-            FeedbackPL.Visible = false;
-            FeedBackManPL.Visible = false;
-            DownloadManPL.Visible = false;
-            UserManPL.Visible = false;
-            WhatsNewManPL.Visible = false;
         }
 
         private void FeedbackBT_Click(object sender, EventArgs e)
         {
-            HomePL.Visible = false;
-            DashboardPL.Visible = false;
-
-            AboutPL.Visible = false;
-            OurServicesPL.Visible = false;
-            OurGalleryPL.Visible = false;
-            OurDepartmentPL.Visible = false;
-
-            DiscussionBoardPL.Visible = false;
-            DownloadPL.Visible = false;
-            ContactUsPL.Visible = false;
-
+            HideAllPanels();
             FeedbackPL.Visible = true;
-            FeedBackManPL.Visible = false;
-            DownloadManPL.Visible = false;
-            UserManPL.Visible = false;
-            WhatsNewManPL.Visible = false;
         }
 
         private void FeedbackManBT_Click(object sender, EventArgs e)
         {
-            HomePL.Visible = false;
-            DashboardPL.Visible = false;
-
-            AboutPL.Visible = false;
-            OurServicesPL.Visible = false;
-            OurGalleryPL.Visible = false;
-            OurDepartmentPL.Visible = false;
-
-            DiscussionBoardPL.Visible = false;
-            DownloadPL.Visible = false;
-            ContactUsPL.Visible = false;
-
-            FeedbackPL.Visible = false;
+            HideAllPanels();
             FeedBackManPL.Visible = true;
-            DownloadManPL.Visible = false;
-            UserManPL.Visible = false;
-            WhatsNewManPL.Visible = false;
+            
         }
 
         private void DownloadManBT_Click(object sender, EventArgs e)
         {
-            HomePL.Visible = false;
-            DashboardPL.Visible = false;
-
-            AboutPL.Visible = false;
-            OurServicesPL.Visible = false;
-            OurGalleryPL.Visible = false;
-            OurDepartmentPL.Visible = false;
-
-            DiscussionBoardPL.Visible = false;
-            DownloadPL.Visible = false;
-            ContactUsPL.Visible = false;
-
-            FeedbackPL.Visible = false;
-            FeedBackManPL.Visible = false;
-            DownloadManPL.Visible = true;
-            UserManPL.Visible = false;
-            WhatsNewManPL.Visible = false;
+            HideAllPanels();
+            DownloadManPL.Visible = true;            
         }
 
         private void UserManBT_Click(object sender, EventArgs e)
         {
-            HomePL.Visible = false;
-            DashboardPL.Visible = false;
-
-            AboutPL.Visible = false;
-            OurServicesPL.Visible = false;
-            OurGalleryPL.Visible = false;
-            OurDepartmentPL.Visible = false;
-
-            DiscussionBoardPL.Visible = false;
-            DownloadPL.Visible = false;
-            ContactUsPL.Visible = false;
-
-            FeedbackPL.Visible = false;
-            FeedBackManPL.Visible = false;
-            DownloadManPL.Visible = false;
+            HideAllPanels();
             UserManPL.Visible = true;
-            WhatsNewManPL.Visible = false;
+            
         }
 
         private void NewManBT_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            WhatsNewManPL.Visible = true;
+        }
+
+        private void HideAllPanels()
         {
             HomePL.Visible = false;
             DashboardPL.Visible = false;
@@ -310,8 +132,9 @@ namespace StudyPoint
             FeedBackManPL.Visible = false;
             DownloadManPL.Visible = false;
             UserManPL.Visible = false;
-            WhatsNewManPL.Visible = true;
+            WhatsNewManPL.Visible = false;
         }
+
     }
 
 }
