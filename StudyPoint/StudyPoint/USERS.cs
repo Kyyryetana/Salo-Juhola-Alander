@@ -15,6 +15,7 @@ namespace StudyPoint
         CONNECT connection = new CONNECT();
         Crypting crypting = new Crypting();
 
+        //lisää uuden käyttäjän
         public bool AddUser(String enimi, String snimi, String email, string password)
         {
 
@@ -49,7 +50,7 @@ namespace StudyPoint
 
 
         //tarkistetaan käyttäjä ja salasana
-        public bool CheckPassword(string email, string password)
+        public string CheckPassword(string email, string password)
         {
             password = password.Trim();
             password = crypting.Encrypt(password);
@@ -61,11 +62,11 @@ namespace StudyPoint
             
             if (sana == password)
             {
-                return true;
+                return email;
             }
             else
             {
-                return false;
+                return "";
             }
             
             
@@ -82,6 +83,28 @@ namespace StudyPoint
             connection.CloseConnection();
 
             if (sana == email)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
+        }
+
+        //tarkistaa onko käyttäjä admin
+        public bool checkAdmin(string email)
+        {
+
+            connection.OpenConnection();
+            MySqlCommand komento = new MySqlCommand("SELECT admin FROM kayttajat WHERE sahkoposti = '" + email + "'", connection.Connection());
+
+            var status = (int)komento.ExecuteScalar();
+            connection.CloseConnection();
+
+            if (status == 1 )
             {
                 return true;
             }

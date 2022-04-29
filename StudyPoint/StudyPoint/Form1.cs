@@ -14,6 +14,8 @@ namespace StudyPoint
     {
         USERS users = new USERS();
         FEEDBACK feedback = new FEEDBACK();
+        string loggedUser = "";
+        bool admin = false;
         public StudyPointForm()
         {
             InitializeComponent();
@@ -60,26 +62,34 @@ namespace StudyPoint
             registrationPL.Visible = true;
         }
 
+        //Sisään kirjautuminen
         private void loginBT_Click(object sender, EventArgs e)
         {
             
             string email = loginMailTB.Text;
             string pass = loginPassTB.Text;
             
-            bool status = users.CheckPassword(email, pass);
-            if (status)
+            
+            if (loggedUser == "")
             {
-                MessageBox.Show("onnistui");
-                loginPL.Visible = false;
+                
+                loggedUser = users.CheckPassword(email, pass);
+                if (loggedUser != "")
+                {
+                    loginPL.Visible = false;
+                    loginRegBT.Text=LOGIN.loggedInStatus;
+                    admin = users.checkAdmin(email);
+                }
                 
             }
-            else 
+            else
             {
-                MessageBox.Show("käyttäjätunnus ja salasana eivät täsmää");
+                loginRegBT.Text = LOGIN.loggedOutStatus;
+                loggedUser = "";
             }
-            
         }
 
+        //Uuden käyttäjän rekisteröinnin nappi
         private void RegBT_Click(object sender, EventArgs e)
         {
 
@@ -87,13 +97,23 @@ namespace StudyPoint
             
         }
 
+        //login / logout nappulan toiminta
         private void loginRegBT_Click(object sender, EventArgs e)
         {
+            if (loggedUser == "")
+            {
+                loginPL.Visible=true;
+            }
+            else
+            {
+                loginRegBT.Text = LOGIN.loggedOutStatus;
+                loggedUser = "";
+            }
             
-            loginPL.Visible=true;
+            
         }
 
-
+        //Metodi Uuden käyttäjän rekisteröintiin
         public void tarkistaReg()
         {
             string enimi = regNimiTB.Text;
@@ -113,6 +133,7 @@ namespace StudyPoint
 
         }
 
+        //rekisteröinti lomakkeesta poistuminen
         private void regExitBT_Click(object sender, EventArgs e)
         {
             registrationPL.Visible=false;

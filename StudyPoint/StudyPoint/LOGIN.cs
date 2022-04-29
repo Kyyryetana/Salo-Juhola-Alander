@@ -9,12 +9,14 @@ namespace StudyPoint
 {
     public static class LOGIN
     {
-
+        
+        public const string loggedOutStatus = "Log in / register";
+        public const string loggedInStatus = "log out";
         //public const string LOGIN_NAME = LoginMadness();
 
         public static string LoginMadness()
         {
-            return "lol";
+            return ""; 
         }
         
 
