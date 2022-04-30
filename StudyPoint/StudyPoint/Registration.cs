@@ -36,6 +36,11 @@ namespace StudyPoint
                 MessageBox.Show("Salasanat eivät täsmää.");
                 return false;
             }
+            else if (password.Length < 5)
+            {
+                MessageBox.Show("salasana on liian lyhyt.");
+                return false;
+            }
             else if (users.CheckUser(email))
             {
 
