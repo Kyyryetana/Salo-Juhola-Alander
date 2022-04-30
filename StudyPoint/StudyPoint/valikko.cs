@@ -114,6 +114,7 @@ namespace StudyPoint
             WhatsNewManPL.Visible = true;
         }
 
+        //tämän tarkoitus on piilottaa kaikki panelit ennen kuin kutsuu uuden panelin näkyville.
         private void HideAllPanels()
         {
             HomePL.Visible = false;
@@ -133,6 +134,8 @@ namespace StudyPoint
             DownloadManPL.Visible = false;
             UserManPL.Visible = false;
             WhatsNewManPL.Visible = false;
+
+            loginPL.Visible = false;
         }
 
     }
