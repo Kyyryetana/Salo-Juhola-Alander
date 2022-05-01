@@ -171,6 +171,22 @@ namespace StudyPoint
                 return false;
             }
         }
+
+        // LISÄTTY
+        // HAKEE KÄYTTÄJIEN TIEDOT TIETOKANNASTA
+        public DataTable GetUsers()
+        {
+            MySqlCommand MyCommand = new MySqlCommand("SELECT sahkoposti, etunimi, sukunimi, kID, admin FROM kayttajat", connection.Connection());
+            MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+            DataTable MyTable = new DataTable();
+
+            MyAdapter.SelectCommand = MyCommand;
+            MyAdapter.Fill(MyTable);
+
+            return MyTable;
+        }
+
+
         /*
         public String salasana()
         {

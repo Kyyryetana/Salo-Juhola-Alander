@@ -442,7 +442,7 @@
             this.UserManBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.UserManBT.UseVisualStyleBackColor = false;
             this.UserManBT.Visible = false;
-
+            this.UserManBT.Click += new System.EventHandler(this.UserManBT_Click_1);
             // 
             // DownloadManBT
             // 
@@ -1090,11 +1090,13 @@
             // 
             // UserDTG
             // 
+            this.UserDTG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.UserDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UserDTG.Location = new System.Drawing.Point(17, 213);
             this.UserDTG.Name = "UserDTG";
             this.UserDTG.Size = new System.Drawing.Size(612, 273);
             this.UserDTG.TabIndex = 15;
+            this.UserDTG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UserDTG_CellContentClick);
             // 
             // UserManDeleteBT
             // 
@@ -1105,7 +1107,7 @@
             this.UserManDeleteBT.TabIndex = 14;
             this.UserManDeleteBT.Text = "Delete";
             this.UserManDeleteBT.UseVisualStyleBackColor = true;
-
+            this.UserManDeleteBT.Click += new System.EventHandler(this.UserManDeleteBT_Click);
             // 
             // UserManUpdateBT
             // 
@@ -1116,7 +1118,6 @@
             this.UserManUpdateBT.TabIndex = 13;
             this.UserManUpdateBT.Text = "Update";
             this.UserManUpdateBT.UseVisualStyleBackColor = true;
-
             // 
             // UserManSaveBT
             // 
@@ -1127,7 +1128,6 @@
             this.UserManSaveBT.TabIndex = 12;
             this.UserManSaveBT.Text = "Save";
             this.UserManSaveBT.UseVisualStyleBackColor = true;
-           
             // 
             // UserManEmptyBT
             // 
@@ -1138,7 +1138,7 @@
             this.UserManEmptyBT.TabIndex = 11;
             this.UserManEmptyBT.Text = "Empty";
             this.UserManEmptyBT.UseVisualStyleBackColor = true;
-
+            this.UserManEmptyBT.Click += new System.EventHandler(this.UserManEmptyBT_Click);
             // 
             // UserManAdminTB
             // 
@@ -1462,11 +1462,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
-            this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.UserManPL);
-            this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.FeedBackManPL);
+            this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.FeedbackPL);
+            this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.loginPL);
             this.Controls.Add(this.HomePL);
             this.Controls.Add(this.DashboardPL);
