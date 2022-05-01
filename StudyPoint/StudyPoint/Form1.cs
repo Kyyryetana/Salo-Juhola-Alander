@@ -251,7 +251,6 @@ namespace StudyPoint
             FBManEmailTB.Text = "";
         }
 
-      
     }
 }
     
