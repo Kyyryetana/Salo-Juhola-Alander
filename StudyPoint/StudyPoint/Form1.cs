@@ -280,7 +280,7 @@ namespace StudyPoint
 
         private void discNewBT_Click(object sender, EventArgs e)
         {
-
+            discussionWriteTopicPL.Visible = true;
         }
 
         private void discPrevBT_Click(object sender, EventArgs e)
@@ -336,6 +336,7 @@ namespace StudyPoint
 
         private void discussionBackMainBT_Click(object sender, EventArgs e)
         {
+            DiscussionPL.Visible = false;
 
         }
 
@@ -358,7 +359,7 @@ namespace StudyPoint
 
         private void discAnswerBackBT_Click(object sender, EventArgs e)
         {
-
+            discussionAswerPL.Visible = false;
         }
 
         private void discAnswerSendBT_Click(object sender, EventArgs e)
@@ -372,7 +373,7 @@ namespace StudyPoint
 
         private void discNewTopicBackBT_Click(object sender, EventArgs e)
         {
-
+            discussionWriteTopicPL.Visible = false;
         }
 
         private void discNewTopicSendBT_Click(object sender, EventArgs e)
@@ -387,7 +388,38 @@ namespace StudyPoint
         //menu discussion boad
         private void DiscussionBT_Click(object sender, EventArgs e)
         {
+            HideAllPanels();
+            DiscussionBoardPL.Visible = true;
+
+
             
+        }
+
+        private void HideAllPanels()
+        {
+            HomePL.Visible = false;
+            DashboardPL.Visible = false;
+
+            AboutPL.Visible = false;
+            OurServicesPL.Visible = false;
+            OurGalleryPL.Visible = false;
+            OurDepartmentPL.Visible = false;
+
+            DiscussionBoardPL.Visible = false;
+            DiscussionPL.Visible = false;
+            discussionAswerPL.Visible = false;
+            discussionWriteTopicPL.Visible = false;
+
+            DownloadPL.Visible = false;
+            ContactUsPL.Visible = false;
+
+            FeedbackPL.Visible = false;
+            FeedBackManPL.Visible = false;
+            DownloadManPL.Visible = false;
+            UserManPL.Visible = false;
+            WhatsNewManPL.Visible = false;
+
+            loginPL.Visible = false;
         }
         //menu discussion board
 

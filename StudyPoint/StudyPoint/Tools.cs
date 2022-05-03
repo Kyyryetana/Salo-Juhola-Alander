@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace StudyPoint
 {
-    internal class Tools
+    internal static class Tools
     {
-        
+
+      
 
     }
 }
