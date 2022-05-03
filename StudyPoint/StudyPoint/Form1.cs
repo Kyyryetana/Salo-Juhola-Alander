@@ -12,6 +12,7 @@ namespace StudyPoint
 {
     public partial class StudyPointForm : Form
     {
+        DISCUSSION discussion = new DISCUSSION();
         USERS users = new USERS();
         FEEDBACK feedback = new FEEDBACK();
         string loggedUser = "";
@@ -378,7 +379,10 @@ namespace StudyPoint
 
         private void discNewTopicSendBT_Click(object sender, EventArgs e)
         {
-
+            string topic = discNewTopicNameTB.Text;
+            string text = discNewTopicWriteTB.Text;
+            discussion.AddTopic(topic, text);
+            discussion.AddTopicText(topic, text);
         }
 
 

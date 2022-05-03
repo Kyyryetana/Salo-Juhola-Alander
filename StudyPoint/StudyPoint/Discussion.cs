@@ -12,28 +12,57 @@ namespace StudyPoint
     internal class DISCUSSION
     {
 
-        CONNECT connection = new CONNECT();
-        Crypting crypting = new Crypting();
+        CONNECT_DISCUSSION connection = new CONNECT_DISCUSSION();
+        //Crypting crypting = new Crypting();
+
+        
 
         //lisää uuden käyttäjän
-        public bool AddUser(String enimi, String snimi, String email, string password)
+        public bool AddTopic(String topicName, String teksti)
         {
 
 
-            String encryptedPassword = crypting.Encrypt(password);
+            //String encryptedPassword = crypting.Encrypt(password);
             MySqlCommand komento = new MySqlCommand();
-            String lisayskysely = "INSERT INTO kayttajat " +
-                "(etunimi, sukunimi, sahkoposti, salasana) " +
-                "VALUES (@enm, @snm, @eml, @pwd ); ";
-            komento.CommandText = lisayskysely;
+            String makeTopic = "CREATE TABLE " + topicName  +
+                "(numb int NOT NULL AUTO_INCREMENT, " +
+                "teksti text(500), " +
+                "PRIMARY KEY (numb))";            
+             
+            komento.CommandText = makeTopic;
             komento.Connection = connection.Connection();
-            //@enm, @snm, @eml, @uid, @pwd
-            komento.Parameters.Add("@enm", MySqlDbType.VarChar).Value = enimi;
-            komento.Parameters.Add("@snm", MySqlDbType.VarChar).Value = snimi;
-            komento.Parameters.Add("@eml", MySqlDbType.VarChar).Value = email;
+            connection.OpenConnection();
+            if (komento.ExecuteNonQuery() == 1)
+            {
+                connection.CloseConnection();
+                return true;
+            }
+            else
+            {
+                connection.CloseConnection();
+                return false;
+            }
+        }
+
+        public bool AddTopicText(String topicName, String teksti)
+        {
+
+
+            //String encryptedPassword = crypting.Encrypt(password);
+            MySqlCommand komento = new MySqlCommand();
+
+            String lisays = "INSERT INTO " + topicName +
+           "(teksti) " +
+           "VALUES (@txt); ";            
+            komento.CommandText = lisays;
+            komento.Connection = connection.Connection();
+            //@txt
+            komento.Parameters.Add("@txt", MySqlDbType.Text).Value = teksti;
+            //komento.Parameters.Add("@snm", MySqlDbType.VarChar).Value = snimi;
+            //komento.Parameters.Add("@eml", MySqlDbType.VarChar).Value = email;
             //komento.Parameters.Add("@kid", MySqlDbType.UInt32).Value = userId;
-            komento.Parameters.Add("@pwd", MySqlDbType.VarChar).Value = encryptedPassword;
-            MessageBox.Show("Käyttäjätunnuksesi on " + email);
+            //komento.Parameters.Add("@pwd", MySqlDbType.VarChar).Value = encryptedPassword;
+            //MessageBox.Show("Käyttäjätunnuksesi on " + email);
 
             connection.OpenConnection();
             if (komento.ExecuteNonQuery() == 1)
@@ -48,7 +77,7 @@ namespace StudyPoint
             }
         }
 
-
+        /*
         //tarkistetaan käyttäjä ja salasana
         public string CheckPassword(string email, string password)
         {
@@ -120,6 +149,8 @@ namespace StudyPoint
 
         /* Tätä pitää muokata sen mukaan mihin laitetaan ja miten laitetaan tietojen muokkaus*/
         // Luodaan funktio käyttäjän tietojen muokkaamiseksi
+
+        /*
         public bool EditUser(String enimi, String snimi, String email, int UserId)
         {
             MySqlCommand komento = new MySqlCommand();
@@ -171,6 +202,7 @@ namespace StudyPoint
                 return false;
             }
         }
+        */
         /*
         public String salasana()
         {
