@@ -142,14 +142,14 @@
             this.DownloadManLB = new System.Windows.Forms.Label();
             this.UserManPL = new System.Windows.Forms.Panel();
             this.UserDTG = new System.Windows.Forms.DataGridView();
-            this.DeleteBT = new System.Windows.Forms.Button();
-            this.UpdateBT = new System.Windows.Forms.Button();
-            this.SaveBT = new System.Windows.Forms.Button();
-            this.EmptyBT = new System.Windows.Forms.Button();
-            this.AdminTB = new System.Windows.Forms.TextBox();
-            this.EmailTB = new System.Windows.Forms.TextBox();
-            this.LastnameTB = new System.Windows.Forms.TextBox();
-            this.FirstnameTB = new System.Windows.Forms.TextBox();
+            this.UserManDeleteBT = new System.Windows.Forms.Button();
+            this.UserManUpdateBT = new System.Windows.Forms.Button();
+            this.UserManSaveBT = new System.Windows.Forms.Button();
+            this.UserManEmptyBT = new System.Windows.Forms.Button();
+            this.UserManAdminTB = new System.Windows.Forms.TextBox();
+            this.UserManEmailTB = new System.Windows.Forms.TextBox();
+            this.UserManLastnameTB = new System.Windows.Forms.TextBox();
+            this.UserManFirstnameTB = new System.Windows.Forms.TextBox();
             this.UIDTB = new System.Windows.Forms.TextBox();
             this.userManLB1 = new System.Windows.Forms.Label();
             this.userManLB2 = new System.Windows.Forms.Label();
@@ -484,6 +484,7 @@
             this.UserManBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.UserManBT.UseVisualStyleBackColor = false;
             this.UserManBT.Visible = false;
+
             // 
             // DownloadManBT
             // 
@@ -1480,14 +1481,14 @@
             // UserManPL
             // 
             this.UserManPL.Controls.Add(this.UserDTG);
-            this.UserManPL.Controls.Add(this.DeleteBT);
-            this.UserManPL.Controls.Add(this.UpdateBT);
-            this.UserManPL.Controls.Add(this.SaveBT);
-            this.UserManPL.Controls.Add(this.EmptyBT);
-            this.UserManPL.Controls.Add(this.AdminTB);
-            this.UserManPL.Controls.Add(this.EmailTB);
-            this.UserManPL.Controls.Add(this.LastnameTB);
-            this.UserManPL.Controls.Add(this.FirstnameTB);
+            this.UserManPL.Controls.Add(this.UserManDeleteBT);
+            this.UserManPL.Controls.Add(this.UserManUpdateBT);
+            this.UserManPL.Controls.Add(this.UserManSaveBT);
+            this.UserManPL.Controls.Add(this.UserManEmptyBT);
+            this.UserManPL.Controls.Add(this.UserManAdminTB);
+            this.UserManPL.Controls.Add(this.UserManEmailTB);
+            this.UserManPL.Controls.Add(this.UserManLastnameTB);
+            this.UserManPL.Controls.Add(this.UserManFirstnameTB);
             this.UserManPL.Controls.Add(this.UIDTB);
             this.UserManPL.Controls.Add(this.userManLB1);
             this.UserManPL.Controls.Add(this.userManLB2);
@@ -1510,77 +1511,81 @@
             this.UserDTG.Size = new System.Drawing.Size(612, 273);
             this.UserDTG.TabIndex = 15;
             // 
-            // DeleteBT
+            // UserManDeleteBT
             // 
-            this.DeleteBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteBT.Location = new System.Drawing.Point(299, 166);
-            this.DeleteBT.Name = "DeleteBT";
-            this.DeleteBT.Size = new System.Drawing.Size(87, 32);
-            this.DeleteBT.TabIndex = 14;
-            this.DeleteBT.Text = "Delete";
-            this.DeleteBT.UseVisualStyleBackColor = true;
+            this.UserManDeleteBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserManDeleteBT.Location = new System.Drawing.Point(299, 166);
+            this.UserManDeleteBT.Name = "UserManDeleteBT";
+            this.UserManDeleteBT.Size = new System.Drawing.Size(87, 32);
+            this.UserManDeleteBT.TabIndex = 14;
+            this.UserManDeleteBT.Text = "Delete";
+            this.UserManDeleteBT.UseVisualStyleBackColor = true;
+
             // 
-            // UpdateBT
+            // UserManUpdateBT
             // 
-            this.UpdateBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBT.Location = new System.Drawing.Point(206, 166);
-            this.UpdateBT.Name = "UpdateBT";
-            this.UpdateBT.Size = new System.Drawing.Size(87, 32);
-            this.UpdateBT.TabIndex = 13;
-            this.UpdateBT.Text = "Update";
-            this.UpdateBT.UseVisualStyleBackColor = true;
+            this.UserManUpdateBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserManUpdateBT.Location = new System.Drawing.Point(206, 166);
+            this.UserManUpdateBT.Name = "UserManUpdateBT";
+            this.UserManUpdateBT.Size = new System.Drawing.Size(87, 32);
+            this.UserManUpdateBT.TabIndex = 13;
+            this.UserManUpdateBT.Text = "Update";
+            this.UserManUpdateBT.UseVisualStyleBackColor = true;
+
             // 
-            // SaveBT
+            // UserManSaveBT
             // 
-            this.SaveBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveBT.Location = new System.Drawing.Point(113, 164);
-            this.SaveBT.Name = "SaveBT";
-            this.SaveBT.Size = new System.Drawing.Size(87, 32);
-            this.SaveBT.TabIndex = 12;
-            this.SaveBT.Text = "Save";
-            this.SaveBT.UseVisualStyleBackColor = true;
+            this.UserManSaveBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserManSaveBT.Location = new System.Drawing.Point(113, 164);
+            this.UserManSaveBT.Name = "UserManSaveBT";
+            this.UserManSaveBT.Size = new System.Drawing.Size(87, 32);
+            this.UserManSaveBT.TabIndex = 12;
+            this.UserManSaveBT.Text = "Save";
+            this.UserManSaveBT.UseVisualStyleBackColor = true;
+           
             // 
-            // EmptyBT
+            // UserManEmptyBT
             // 
-            this.EmptyBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmptyBT.Location = new System.Drawing.Point(17, 166);
-            this.EmptyBT.Name = "EmptyBT";
-            this.EmptyBT.Size = new System.Drawing.Size(87, 32);
-            this.EmptyBT.TabIndex = 11;
-            this.EmptyBT.Text = "Empty";
-            this.EmptyBT.UseVisualStyleBackColor = true;
+            this.UserManEmptyBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserManEmptyBT.Location = new System.Drawing.Point(17, 166);
+            this.UserManEmptyBT.Name = "UserManEmptyBT";
+            this.UserManEmptyBT.Size = new System.Drawing.Size(87, 32);
+            this.UserManEmptyBT.TabIndex = 11;
+            this.UserManEmptyBT.Text = "Empty";
+            this.UserManEmptyBT.UseVisualStyleBackColor = true;
+
             // 
-            // AdminTB
+            // UserManAdminTB
             // 
-            this.AdminTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminTB.Location = new System.Drawing.Point(409, 91);
-            this.AdminTB.Name = "AdminTB";
-            this.AdminTB.Size = new System.Drawing.Size(179, 26);
-            this.AdminTB.TabIndex = 10;
+            this.UserManAdminTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserManAdminTB.Location = new System.Drawing.Point(409, 91);
+            this.UserManAdminTB.Name = "UserManAdminTB";
+            this.UserManAdminTB.Size = new System.Drawing.Size(179, 26);
+            this.UserManAdminTB.TabIndex = 10;
             // 
-            // EmailTB
+            // UserManEmailTB
             // 
-            this.EmailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTB.Location = new System.Drawing.Point(409, 60);
-            this.EmailTB.Name = "EmailTB";
-            this.EmailTB.Size = new System.Drawing.Size(179, 26);
-            this.EmailTB.TabIndex = 9;
+            this.UserManEmailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserManEmailTB.Location = new System.Drawing.Point(409, 60);
+            this.UserManEmailTB.Name = "UserManEmailTB";
+            this.UserManEmailTB.Size = new System.Drawing.Size(179, 26);
+            this.UserManEmailTB.TabIndex = 9;
             // 
-            // LastnameTB
+            // UserManLastnameTB
             // 
-            this.LastnameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastnameTB.Location = new System.Drawing.Point(113, 127);
-            this.LastnameTB.Name = "LastnameTB";
-            this.LastnameTB.Size = new System.Drawing.Size(179, 26);
-            this.LastnameTB.TabIndex = 8;
+            this.UserManLastnameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserManLastnameTB.Location = new System.Drawing.Point(113, 127);
+            this.UserManLastnameTB.Name = "UserManLastnameTB";
+            this.UserManLastnameTB.Size = new System.Drawing.Size(179, 26);
+            this.UserManLastnameTB.TabIndex = 8;
             // 
-            // FirstnameTB
+            // UserManFirstnameTB
             // 
-            this.FirstnameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstnameTB.Location = new System.Drawing.Point(113, 93);
-            this.FirstnameTB.Name = "FirstnameTB";
-            this.FirstnameTB.Size = new System.Drawing.Size(179, 26);
-            this.FirstnameTB.TabIndex = 7;
+            this.UserManFirstnameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserManFirstnameTB.Location = new System.Drawing.Point(113, 93);
+            this.UserManFirstnameTB.Name = "UserManFirstnameTB";
+            this.UserManFirstnameTB.Size = new System.Drawing.Size(179, 26);
+            this.UserManFirstnameTB.TabIndex = 7;
             // 
             // UIDTB
             // 
@@ -1872,15 +1877,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
+            this.Controls.Add(this.ManagementPL);
+            this.Controls.Add(this.UserManPL);
             this.Controls.Add(this.DiscussionBoardPL);
             this.Controls.Add(this.AboutPL);
-            this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.FeedBackManPL);
             this.Controls.Add(this.FeedbackPL);
             this.Controls.Add(this.loginPL);
             this.Controls.Add(this.HomePL);
             this.Controls.Add(this.DashboardPL);
-            this.Controls.Add(this.UserManPL);
             this.Controls.Add(this.WhatsNewManPL);
             this.Controls.Add(this.DownloadManPL);
             this.Controls.Add(this.ContactUsPL);
@@ -2003,21 +2008,21 @@
         private System.Windows.Forms.Label DownloadManLB;
         private System.Windows.Forms.Label userManLB6;
         private System.Windows.Forms.Label WhatsNewManLB;
-        private System.Windows.Forms.TextBox LastnameTB;
-        private System.Windows.Forms.TextBox FirstnameTB;
+        private System.Windows.Forms.TextBox UserManLastnameTB;
+        private System.Windows.Forms.TextBox UserManFirstnameTB;
         private System.Windows.Forms.TextBox UIDTB;
         private System.Windows.Forms.Label userManLB1;
         private System.Windows.Forms.Label userManLB2;
         private System.Windows.Forms.Label userManLB3;
         private System.Windows.Forms.Label userManLB4;
         private System.Windows.Forms.Label userManLB5;
-        private System.Windows.Forms.TextBox AdminTB;
-        private System.Windows.Forms.TextBox EmailTB;
+        private System.Windows.Forms.TextBox UserManAdminTB;
+        private System.Windows.Forms.TextBox UserManEmailTB;
         private System.Windows.Forms.DataGridView UserDTG;
-        private System.Windows.Forms.Button DeleteBT;
-        private System.Windows.Forms.Button UpdateBT;
-        private System.Windows.Forms.Button SaveBT;
-        private System.Windows.Forms.Button EmptyBT;
+        private System.Windows.Forms.Button UserManDeleteBT;
+        private System.Windows.Forms.Button UserManUpdateBT;
+        private System.Windows.Forms.Button UserManSaveBT;
+        private System.Windows.Forms.Button UserManEmptyBT;
         private System.Windows.Forms.Label LeaveFeedbackLB;
         private System.Windows.Forms.Label LeaveContactsLB;
         private System.Windows.Forms.Label label22;
