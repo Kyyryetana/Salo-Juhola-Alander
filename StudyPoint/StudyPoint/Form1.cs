@@ -62,7 +62,10 @@ namespace StudyPoint
             registrationPL.Visible = true;
         }
 
-        //Sisään kirjautuminen
+        //kirjautuminen ja uusi käyttäjä
+        //begin
+
+        //Sisään kirjautuminen 
         private void loginBT_Click(object sender, EventArgs e)
         {
             
@@ -88,6 +91,8 @@ namespace StudyPoint
                 loggedUser = "";
             }
         }
+
+        //sisään kirjautuminen end
 
         //Uuden käyttäjän rekisteröinnin nappi
         private void RegBT_Click(object sender, EventArgs e)
@@ -139,6 +144,12 @@ namespace StudyPoint
             registrationPL.Visible=false;
             
         }
+
+        //kirjautuminen ja uusi käyttäjä
+        //end
+
+
+
         private void DashboardBT_Click(object sender, EventArgs e) //dashboard esiin, home piiloon, dashboardille tiedot SQL:stä
         {
             // kesken
@@ -342,7 +353,7 @@ namespace StudyPoint
 
         //discussion read topic end
 
-
+        //discussion write answer begin
        
 
         private void discAnswerBackBT_Click(object sender, EventArgs e)
