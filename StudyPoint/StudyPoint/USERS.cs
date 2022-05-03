@@ -153,7 +153,7 @@ namespace StudyPoint
         public bool DeleteUser(int userId)
         {
             MySqlCommand komento = new MySqlCommand();
-            String poistokysely = "DELETE FROM yhteystiedot WHERE kID = @uid"; // päivitetty userid = kID
+            String poistokysely = "DELETE FROM kayttajat WHERE kID = @uid"; // päivitetty: yhteystiedot = kayttajat, userid = kID
             komento.CommandText = poistokysely;
             komento.Connection = connection.Connection();
             //@oid
