@@ -380,10 +380,21 @@ namespace StudyPoint
 
         }
 
+
+
         //discussion write new topic end
+
+        //menu discussion boad
+        private void DiscussionBT_Click(object sender, EventArgs e)
+        {
+            
+        }
+        //menu discussion board
 
         //discussion board
         //end
+
+
     }
 }
     
