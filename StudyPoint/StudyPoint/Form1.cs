@@ -318,6 +318,39 @@ namespace StudyPoint
             UserManEmptyBT.PerformClick();
 
         }
+
+      
+
+        private void UserManUpdateBT_Click_1(object sender, EventArgs e)
+        {
+            int UserId = Int32.Parse(UIDTB.Text);
+            String enimi = UserManFirstnameTB.Text;
+            String snimi = UserManLastnameTB.Text;
+            String email = UserManEmailTB.Text;
+            int admin = Int32.Parse(UserManAdminTB.Text);
+
+            if (enimi.Trim().Equals("") || snimi.Trim().Equals("") || email.Trim().Equals(""))
+            {
+                MessageBox.Show("ERROR! Fill firstname, lastname and email to proceed");
+            }
+            else
+            {
+                Boolean SaveUser = users.EditUser(enimi, snimi, email, UserId);
+
+                if (SaveUser)
+                {
+                    MessageBox.Show("User information saved succesfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Error. Couldn't update the user information");
+                }
+                UserDTG.DataSource = users.GetUsers();
+
+            }
+        }
+
+      
     }
 }
     

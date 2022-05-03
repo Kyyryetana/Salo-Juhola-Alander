@@ -109,7 +109,6 @@
             this.UserDTG = new System.Windows.Forms.DataGridView();
             this.UserManDeleteBT = new System.Windows.Forms.Button();
             this.UserManUpdateBT = new System.Windows.Forms.Button();
-            this.UserManSaveBT = new System.Windows.Forms.Button();
             this.UserManEmptyBT = new System.Windows.Forms.Button();
             this.UserManAdminTB = new System.Windows.Forms.TextBox();
             this.UserManEmailTB = new System.Windows.Forms.TextBox();
@@ -1068,7 +1067,6 @@
             this.UserManPL.Controls.Add(this.UserDTG);
             this.UserManPL.Controls.Add(this.UserManDeleteBT);
             this.UserManPL.Controls.Add(this.UserManUpdateBT);
-            this.UserManPL.Controls.Add(this.UserManSaveBT);
             this.UserManPL.Controls.Add(this.UserManEmptyBT);
             this.UserManPL.Controls.Add(this.UserManAdminTB);
             this.UserManPL.Controls.Add(this.UserManEmailTB);
@@ -1101,7 +1099,7 @@
             // UserManDeleteBT
             // 
             this.UserManDeleteBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserManDeleteBT.Location = new System.Drawing.Point(299, 166);
+            this.UserManDeleteBT.Location = new System.Drawing.Point(206, 166);
             this.UserManDeleteBT.Name = "UserManDeleteBT";
             this.UserManDeleteBT.Size = new System.Drawing.Size(87, 32);
             this.UserManDeleteBT.TabIndex = 14;
@@ -1112,22 +1110,13 @@
             // UserManUpdateBT
             // 
             this.UserManUpdateBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserManUpdateBT.Location = new System.Drawing.Point(206, 166);
+            this.UserManUpdateBT.Location = new System.Drawing.Point(113, 166);
             this.UserManUpdateBT.Name = "UserManUpdateBT";
             this.UserManUpdateBT.Size = new System.Drawing.Size(87, 32);
             this.UserManUpdateBT.TabIndex = 13;
             this.UserManUpdateBT.Text = "Update";
             this.UserManUpdateBT.UseVisualStyleBackColor = true;
-            // 
-            // UserManSaveBT
-            // 
-            this.UserManSaveBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserManSaveBT.Location = new System.Drawing.Point(113, 164);
-            this.UserManSaveBT.Name = "UserManSaveBT";
-            this.UserManSaveBT.Size = new System.Drawing.Size(87, 32);
-            this.UserManSaveBT.TabIndex = 12;
-            this.UserManSaveBT.Text = "Save";
-            this.UserManSaveBT.UseVisualStyleBackColor = true;
+            this.UserManUpdateBT.Click += new System.EventHandler(this.UserManUpdateBT_Click_1);
             // 
             // UserManEmptyBT
             // 
@@ -1592,7 +1581,6 @@
         private System.Windows.Forms.DataGridView UserDTG;
         private System.Windows.Forms.Button UserManDeleteBT;
         private System.Windows.Forms.Button UserManUpdateBT;
-        private System.Windows.Forms.Button UserManSaveBT;
         private System.Windows.Forms.Button UserManEmptyBT;
         private System.Windows.Forms.Label LeaveFeedbackLB;
         private System.Windows.Forms.Label LeaveContactsLB;
