@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="CONNECT.cs" />
     <Compile Include="Crypting.cs" />
+    <Compile Include="Discussion.cs" />
     <Compile Include="FEEDBACK.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
