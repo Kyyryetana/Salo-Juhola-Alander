@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace StudyPoint
 {
@@ -289,7 +290,7 @@ namespace StudyPoint
         //discussion board
         //begin
         //
-        int discTopicNmbr = 0;
+        int discTopicNmbr = 0, discCommentnbr = 0 ;
         //discussion main topic start
         private void discGroupGB_Enter(object sender, EventArgs e)
         {
@@ -313,37 +314,40 @@ namespace StudyPoint
 
         private void discTopicLB1_Click(object sender, EventArgs e)
         {
-
+            DiscussionPL.Visible = true;
+            topicLB.Text = discTopicLB1.Text;
+            DiscRegex(discTopicLB1.Text);
+            
         }
 
         private void discTopicLB2_Click(object sender, EventArgs e)
         {
-
+            DiscussionPL.Visible = true;
         }
 
         private void discTopicLB3_Click(object sender, EventArgs e)
         {
-
+            DiscussionPL.Visible = true;
         }
 
         private void discTopicLB4_Click(object sender, EventArgs e)
         {
-
+            DiscussionPL.Visible = true;
         }
 
         private void discTopicLB5_Click(object sender, EventArgs e)
         {
-
+            DiscussionPL.Visible = true;
         }
 
         private void discTopicLB6_Click(object sender, EventArgs e)
         {
-
+            DiscussionPL.Visible = true;
         }
 
         private void discTopicLB7_Click(object sender, EventArgs e)
         {
-
+            DiscussionPL.Visible = true;
         }
 
 
@@ -354,7 +358,7 @@ namespace StudyPoint
 
         private void discussionTopicPrevBT_Click(object sender, EventArgs e)
         {
-
+            //edelliset kommentit tästä
         }
 
         private void discussionBackMainBT_Click(object sender, EventArgs e)
@@ -365,12 +369,12 @@ namespace StudyPoint
 
         private void discussionAnswerBT_Click(object sender, EventArgs e)
         {
-
+            discussionAswerPL.Visible = true;
         }
 
         private void discussionTopicNextBT_Click(object sender, EventArgs e)
         {
-
+            //seuraavat kommentit tästä
         }
 
 
@@ -387,7 +391,7 @@ namespace StudyPoint
 
         private void discAnswerSendBT_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         //discussion write answer end
@@ -405,8 +409,15 @@ namespace StudyPoint
             
             string topic = discNewTopicNameTB.Text;
             string text = discNewTopicWriteTB.Text;
-            discussion.AddTopic(topic);
-            discussion.AddTopicText(topic, text);
+            if (discussion.AddTopic(topic))
+            {
+                if (discussion.AddTopicText(loggedUser, topic, text))
+                {
+                    discNewTopicNameTB.Text = "";
+                    discNewTopicWriteTB.Text = "";
+                }
+            }
+            
             
         }
 
@@ -417,13 +428,23 @@ namespace StudyPoint
         //menu discussion boad
         private void DiscussionBT_Click(object sender, EventArgs e)
         {
+
+            Label[] labels = { discTopicLB1, discTopicLB2, discTopicLB3, discTopicLB4, discTopicLB5, discTopicLB6, discTopicLB7 };
             HideAllPanels();
             DiscussionBoardPL.Visible = true;
             List<string> diskList = new List<string>();
             diskList = discussion.MainTopic(discTopicNmbr);
             for (int i = 0; i < 7; i++)
             {
-                
+                labels[i].Text = diskList[i];
+                if (diskList[i] == "")
+                {
+                    labels[i].Visible = false;
+                }
+                else
+                {
+                    labels[i].Visible = true;
+                }
             }
 
 
@@ -460,7 +481,17 @@ namespace StudyPoint
             ProfileUpdatePL.Visible = false;
         }
 
-      
+        private string DiscRegex(string topicName)
+        {
+            topicName = Regex.Replace(topicName, "\\s+", "_");
+            try
+            {
+                topicName = topicName.Substring(0, 10);
+            }
+            catch (Exception ex){}
+
+            return topicName;
+        }
 
 
 

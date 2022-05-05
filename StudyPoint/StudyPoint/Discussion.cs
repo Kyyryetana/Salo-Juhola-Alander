@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace StudyPoint
 {
@@ -49,15 +50,25 @@ namespace StudyPoint
             }
         }
 
-        //lisää uuden käyttäjän
+        //tekee uuden aiheen
         public bool AddTopic(String topicName )
         {
+            
+            topicName = Regex.Replace(topicName, "\\s+", "_");
+            try
+            {
+                topicName = topicName.Substring(0, 10);
+            }
+            catch (Exception ex)
+            {
 
+            }
 
             //String encryptedPassword = crypting.Encrypt(password);
             MySqlCommand komento = new MySqlCommand();
             String makeTopic = "CREATE TABLE " + topicName  +
                 "(numb int NOT NULL AUTO_INCREMENT, " +
+                "user varchar (35)" +
                 "otsikko varchar (70), " +
                 "teksti text(500), " +
                 "PRIMARY KEY (numb))";            
@@ -77,22 +88,32 @@ namespace StudyPoint
             }
         }
 
-        public bool AddTopicText(String topicName, String teksti)
+        //lisää uuteen aiheeseen teksti
+        public bool AddTopicText(string user, String topicName, String teksti)
         {
+            string header;
+            header = Regex.Replace(topicName, "\\s+", "_");
+            try
+            {
+                header = topicName.Substring(0, 10);
+            }
+            catch (Exception ex)
+            {
 
+            }
 
             //String encryptedPassword = crypting.Encrypt(password);
             MySqlCommand komento = new MySqlCommand();
 
-            String lisays = "INSERT INTO " + topicName +
-           "(teksti) " +
-           "VALUES (@txt); ";            
+            String lisays = "INSERT INTO " + header +
+           "(user, otsikko,teksti) " +
+           "VALUES (@usr, @tpc, @txt); ";            
             komento.CommandText = lisays;
             komento.Connection = connection.Connection();
-            //@txt
+            //@tpc @txt
+            komento.Parameters.Add("@usr", MySqlDbType.VarChar).Value = user;
+            komento.Parameters.Add("@tpc", MySqlDbType.VarChar).Value = topicName;
             komento.Parameters.Add("@txt", MySqlDbType.Text).Value = teksti;
-            //komento.Parameters.Add("@snm", MySqlDbType.VarChar).Value = snimi;
-            //komento.Parameters.Add("@eml", MySqlDbType.VarChar).Value = email;
             //komento.Parameters.Add("@kid", MySqlDbType.UInt32).Value = userId;
             //komento.Parameters.Add("@pwd", MySqlDbType.VarChar).Value = encryptedPassword;
             //MessageBox.Show("Käyttäjätunnuksesi on " + email);
@@ -134,12 +155,45 @@ namespace StudyPoint
             List<String> list = new List<String>();
             connection.OpenConnection();
             DataTable schema = connection.Connection().GetSchema("Tables");
-            for (int i = x; i < x+4; i++)
+            try
             {
-                list.Add(schema.Rows[i][2].ToString());
+                for (int i = x; i < x+4; i++)
+                {
+                    list.Add(schema.Rows[i][2].ToString());
+                }
+            }
+            catch (Exception ex) { };
+            listlength:
+            if (list.Count < 7)
+            {
+                list.Add((String)null);
+                goto listlength;
             }
             return list;
-            
+        }
+
+
+        //hae vastaukset
+
+        public List<string> GiveDiscussion(string topicName)
+        {
+            List<string> list = new List<string>();
+            connection.OpenConnection();
+            MySqlCommand komento = new MySqlCommand("SELECT user, teksti FROM" + topicName , connection.Connection());
+            list.Add((string)komento.ExecuteReader()); //tee tätä
+            var sana = (string)komento.ExecuteScalar();
+            connection.CloseConnection();
+
+            if (sana == email)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
         }
 
 
