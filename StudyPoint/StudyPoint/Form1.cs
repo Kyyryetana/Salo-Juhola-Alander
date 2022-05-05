@@ -191,9 +191,9 @@ namespace StudyPoint
                 newLB5.Visible = false;
             }
         }
-        // FEEDBACK-SIVU
-       
 
+
+        // FEEDBACK-SIVU
         private void FeedbackBT_Click_1(object sender, EventArgs e)
         {
             HomePL.Visible = false;
@@ -262,6 +262,28 @@ namespace StudyPoint
             FBManNameTB.Text = "";
             FBManEmailTB.Text = "";
         }
+
+        // PROFIILI
+        private void ProfileBT_Click(object sender, EventArgs e)
+        {
+            ProfilePL.Visible = true;
+           
+        }
+        private void ProfileUpdateBT_Click(object sender, EventArgs e)
+        {
+            ProfileUpdatePL.Visible = true;
+        }
+        private void UpdateUpdateBT_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void UpdateCloseBT_Click(object sender, EventArgs e)
+        {
+            ProfileUpdatePL.Visible=false;
+        }
+
+
+
 
 
         //discussion board
@@ -433,11 +455,21 @@ namespace StudyPoint
             WhatsNewManPL.Visible = false;
 
             loginPL.Visible = false;
+
+            ProfilePL.Visible = false;
+            ProfileUpdatePL.Visible = false;
         }
+
+      
+
+
+
+
+
 
         //menu discussion board
 
-        
+
 
         //discussion board
         //end
