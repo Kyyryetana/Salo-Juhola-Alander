@@ -267,7 +267,7 @@ namespace StudyPoint
         //discussion board
         //begin
         //
-
+        int discTopicNmbr = 0;
         //discussion main topic start
         private void discGroupGB_Enter(object sender, EventArgs e)
         {
@@ -379,10 +379,13 @@ namespace StudyPoint
 
         private void discNewTopicSendBT_Click(object sender, EventArgs e)
         {
+                   
+            
             string topic = discNewTopicNameTB.Text;
             string text = discNewTopicWriteTB.Text;
-            discussion.AddTopic(topic, text);
+            discussion.AddTopic(topic);
             discussion.AddTopicText(topic, text);
+            
         }
 
 
@@ -394,6 +397,12 @@ namespace StudyPoint
         {
             HideAllPanels();
             DiscussionBoardPL.Visible = true;
+            List<string> diskList = new List<string>();
+            diskList = discussion.MainTopic(discTopicNmbr);
+            for (int i = 0; i < 7; i++)
+            {
+                
+            }
 
 
             
@@ -425,7 +434,10 @@ namespace StudyPoint
 
             loginPL.Visible = false;
         }
+
         //menu discussion board
+
+        
 
         //discussion board
         //end

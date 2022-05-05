@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using MySql.Data;
 using System;
 using System.Data;
 using System.Collections.Generic;
@@ -15,10 +16,41 @@ namespace StudyPoint
         CONNECT_DISCUSSION connection = new CONNECT_DISCUSSION();
         //Crypting crypting = new Crypting();
 
-        
+        public bool AddHelper(int i)
+        {
+
+
+            //String encryptedPassword = crypting.Encrypt(password);
+            MySqlCommand komento = new MySqlCommand();
+
+            String lisays = "INSERT INTO topicnames " +
+           "(topic) " +
+           "VALUES (@txt); ";
+            komento.CommandText = lisays;
+            komento.Connection = connection.Connection();
+            //@txt
+            komento.Parameters.Add("@txt", MySqlDbType.Text).Value = "topic" + i;
+            //komento.Parameters.Add("@snm", MySqlDbType.VarChar).Value = snimi;
+            //komento.Parameters.Add("@eml", MySqlDbType.VarChar).Value = email;
+            //komento.Parameters.Add("@kid", MySqlDbType.UInt32).Value = userId;
+            //komento.Parameters.Add("@pwd", MySqlDbType.VarChar).Value = encryptedPassword;
+            //MessageBox.Show("Käyttäjätunnuksesi on " + email);
+
+            connection.OpenConnection();
+            if (komento.ExecuteNonQuery() == 1)
+            {
+                connection.CloseConnection();
+                return true;
+            }
+            else
+            {
+                connection.CloseConnection();
+                return false;
+            }
+        }
 
         //lisää uuden käyttäjän
-        public bool AddTopic(String topicName, String teksti)
+        public bool AddTopic(String topicName )
         {
 
 
@@ -26,6 +58,7 @@ namespace StudyPoint
             MySqlCommand komento = new MySqlCommand();
             String makeTopic = "CREATE TABLE " + topicName  +
                 "(numb int NOT NULL AUTO_INCREMENT, " +
+                "otsikko varchar (70), " +
                 "teksti text(500), " +
                 "PRIMARY KEY (numb))";            
              
@@ -77,6 +110,72 @@ namespace StudyPoint
             }
         }
 
+        //tester
+        public void test()
+        {
+            List<String> list = new List<String>();
+            connection.OpenConnection();
+            DataTable schema = connection.Connection().GetSchema("Tables");
+
+            MessageBox.Show(schema.Rows[2][2].ToString());
+            foreach (DataRow row in schema.Rows)
+            {
+                list.Add(row.ToString());
+                MessageBox.Show(row[2].ToString());
+            }
+
+            
+        }
+
+
+        //hae oikeat topicit
+        public List<string> MainTopic(int x)
+        {
+            List<String> list = new List<String>();
+            connection.OpenConnection();
+            DataTable schema = connection.Connection().GetSchema("Tables");
+            for (int i = x; i < x+4; i++)
+            {
+                list.Add(schema.Rows[i][2].ToString());
+            }
+            return list;
+            
+        }
+
+
+        // tester 2
+
+        public bool tester()
+        {
+
+
+            MySqlCommand komento = new MySqlCommand();
+
+            String lisays = "SHOW TABLE";
+            komento.CommandText = lisays;
+            komento.Connection = connection.Connection();
+            //@txt
+            //komento.Parameters.Add("@txt", MySqlDbType.Text).Value = teksti;
+            //komento.Parameters.Add("@snm", MySqlDbType.VarChar).Value = snimi;
+            //komento.Parameters.Add("@eml", MySqlDbType.VarChar).Value = email;
+            //komento.Parameters.Add("@kid", MySqlDbType.UInt32).Value = userId;
+            //komento.Parameters.Add("@pwd", MySqlDbType.VarChar).Value = encryptedPassword;
+            //MessageBox.Show("Käyttäjätunnuksesi on " + email);
+
+            connection.OpenConnection();
+            if (komento.ExecuteNonQuery() == 1)
+            {
+                connection.CloseConnection();
+                return true;
+            }
+            else
+            {
+                connection.CloseConnection();
+                return false;
+            }
+        }
+
+
         /*
         //tarkistetaan käyttäjä ja salasana
         public string CheckPassword(string email, string password)
@@ -100,14 +199,16 @@ namespace StudyPoint
 
 
         }
-
+        */
         //tarkistaa onko jo käyttäjä olemassa
-        public bool CheckUser(string email)
+
+        /*
+        public bool GetTopics()
         {
 
             connection.OpenConnection();
-            MySqlCommand komento = new MySqlCommand("SELECT sahkoposti FROM kayttajat WHERE sahkoposti = '" + email + "'", connection.Connection());
-
+            MySqlCommand komento = new MySqlCommand("SELECT FROM kayttajat WHERE sahkoposti = '" + email + "'", connection.Connection());
+            
             var sana = (string)komento.ExecuteScalar();
             connection.CloseConnection();
 
@@ -122,7 +223,8 @@ namespace StudyPoint
 
 
         }
-
+        */
+        /*
         //tarkistaa onko käyttäjä admin
         public bool checkAdmin(string email)
         {
