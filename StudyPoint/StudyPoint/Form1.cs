@@ -15,6 +15,7 @@ namespace StudyPoint
         DISCUSSION discussion = new DISCUSSION();
         USERS users = new USERS();
         FEEDBACK feedback = new FEEDBACK();
+        PROFILE profile = new PROFILE();
         string loggedUser = "";
         bool admin = false;
         public StudyPointForm()
@@ -267,19 +268,52 @@ namespace StudyPoint
         private void ProfileBT_Click(object sender, EventArgs e)
         {
             ProfilePL.Visible = true;
-           
+            ProfileFirstname.Visible = true;
+            ProfileLastname.Visible = true;
+            ProfileEmail.Visible = true;
+
+            ProfileDTG.DataSource = profile.GetProfile();
+            var datagridview = new DataGridView();
+
+            ProfileFirstname.Text = ProfileDTG.CurrentRow.Cells[1].Value.ToString();
+            ProfileLastname.Text = ProfileDTG.CurrentRow.Cells[2].Value.ToString();
+            ProfileEmail.Text = ProfileDTG.CurrentRow.Cells[0].Value.ToString();
+
+            ProfileDTG.Visible = false;
+
+
+
         }
         private void ProfileUpdateBT_Click(object sender, EventArgs e)
         {
             ProfileUpdatePL.Visible = true;
+           
+            UpdateFNameTB.Text = ProfileDTG.CurrentRow.Cells[1].Value.ToString();
+            UpdateLNameTB.Text = ProfileDTG.CurrentRow.Cells[2].Value.ToString();
+            UpdateEmailTB.Text = ProfileDTG.CurrentRow.Cells[0].Value.ToString();
         }
         private void UpdateUpdateBT_Click(object sender, EventArgs e)
         {
+            String Fname = UpdateFNameTB.Text;
+            String Lname = UpdateLNameTB.Text;
+            String Email = UpdateEmailTB.Text;
+
+            Boolean UpdateProfile = profile.UpdateProfile(Email,Fname,Lname);
 
         }
         private void UpdateCloseBT_Click(object sender, EventArgs e)
         {
             ProfileUpdatePL.Visible=false;
+
+
+            ProfileDTG.DataSource = profile.GetProfile();
+            var datagridview = new DataGridView();
+
+            ProfileFirstname.Text = ProfileDTG.CurrentRow.Cells[1].Value.ToString();
+            ProfileLastname.Text = ProfileDTG.CurrentRow.Cells[2].Value.ToString();
+            ProfileEmail.Text = ProfileDTG.CurrentRow.Cells[0].Value.ToString();
+
+            ProfileDTG.Visible = false;
         }
 
 
