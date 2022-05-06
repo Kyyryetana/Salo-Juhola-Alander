@@ -2113,6 +2113,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 544);
+            this.Controls.Add(this.loginPL);
             this.Controls.Add(this.DiscussionPL);
             this.Controls.Add(this.discussionAswerPL);
             this.Controls.Add(this.DiscussionBoardPL);
@@ -2123,7 +2124,6 @@
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.FeedBackManPL);
             this.Controls.Add(this.FeedbackPL);
-            this.Controls.Add(this.loginPL);
             this.Controls.Add(this.DashboardPL);
             this.Controls.Add(this.WhatsNewManPL);
             this.Controls.Add(this.DownloadManPL);

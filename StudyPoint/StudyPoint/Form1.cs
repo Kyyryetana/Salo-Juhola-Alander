@@ -290,7 +290,7 @@ namespace StudyPoint
         //discussion board
         //begin
         //
-        int discTopicNmbr = 0, discCommentnbr = 0 ;
+        int discTopicNmbr = 0, discCommentnbr = 1 ;
         //discussion main topic start
         private void discGroupGB_Enter(object sender, EventArgs e)
         {
@@ -316,41 +316,79 @@ namespace StudyPoint
         {
             DiscussionPL.Visible = true;
             topicLB.Text = discTopicLB1.Text;
-            DiscRegex(discTopicLB1.Text);
+            ReadTopic();
+            
+            
             
         }
 
         private void discTopicLB2_Click(object sender, EventArgs e)
         {
             DiscussionPL.Visible = true;
+            topicLB.Text = discTopicLB2.Text;
+            ReadTopic();
         }
 
         private void discTopicLB3_Click(object sender, EventArgs e)
         {
             DiscussionPL.Visible = true;
+            topicLB.Text = discTopicLB3.Text;
+            ReadTopic();
         }
 
         private void discTopicLB4_Click(object sender, EventArgs e)
         {
             DiscussionPL.Visible = true;
+            topicLB.Text = discTopicLB4.Text;
+            ReadTopic();
         }
 
         private void discTopicLB5_Click(object sender, EventArgs e)
         {
             DiscussionPL.Visible = true;
+            topicLB.Text = discTopicLB5.Text;
+            ReadTopic();
         }
 
         private void discTopicLB6_Click(object sender, EventArgs e)
         {
             DiscussionPL.Visible = true;
+            topicLB.Text = discTopicLB6.Text;
+            ReadTopic();
         }
 
         private void discTopicLB7_Click(object sender, EventArgs e)
         {
             DiscussionPL.Visible = true;
+            topicLB.Text = discTopicLB7.Text;
+            ReadTopic();
         }
 
+        private void ReadTopic()
+        {
+            GroupBox[] groupBoxes = { discussionUserGB1, discussionUserGB2, discussionUserGB3 };
+            Label[] labelsList = { discussionTextLB1, discussionTextLB2, discussionTextLB3 };
+            List<string> list = new List<string>();
+            list = discussion.GiveDiscussion(discussion.DiscRegex(topicLB.Text), discCommentnbr);
+            int place = 0;
+            for (int i = 0; i < list.Count; i++)
+            {
+                if ( i % 2 == 0)
+                {
+                    groupBoxes[place].Text = list[i];
+                    
+                }
+                else
+                {
+                    labelsList[place].Text = list[i];
+                    place++;
+                }
+                
+                MessageBox.Show(list[i]);
+            }
+             
 
+        }
         //discussion main topic end
 
         //discussion read topic
@@ -409,14 +447,13 @@ namespace StudyPoint
             
             string topic = discNewTopicNameTB.Text;
             string text = discNewTopicWriteTB.Text;
-            if (discussion.AddTopic(topic))
-            {
-                if (discussion.AddTopicText(loggedUser, topic, text))
-                {
-                    discNewTopicNameTB.Text = "";
-                    discNewTopicWriteTB.Text = "";
-                }
-            }
+            discussion.AddTopic(topic);
+            discussion.AddTopicText(loggedUser, topic, text);
+            
+            discNewTopicNameTB.Text = "";
+            discNewTopicWriteTB.Text = "";
+             
+            
             
             
         }
@@ -481,18 +518,7 @@ namespace StudyPoint
             ProfileUpdatePL.Visible = false;
         }
 
-        private string DiscRegex(string topicName)
-        {
-            topicName = Regex.Replace(topicName, "\\s+", "_");
-            try
-            {
-                topicName = topicName.Substring(0, 10);
-            }
-            catch (Exception ex){}
-
-            return topicName;
-        }
-
+        
 
 
 

@@ -53,22 +53,14 @@ namespace StudyPoint
         //tekee uuden aiheen
         public bool AddTopic(String topicName )
         {
-            
-            topicName = Regex.Replace(topicName, "\\s+", "_");
-            try
-            {
-                topicName = topicName.Substring(0, 10);
-            }
-            catch (Exception ex)
-            {
 
-            }
+            topicName = DiscRegex(topicName);
 
             //String encryptedPassword = crypting.Encrypt(password);
             MySqlCommand komento = new MySqlCommand();
             String makeTopic = "CREATE TABLE " + topicName  +
                 "(numb int NOT NULL AUTO_INCREMENT, " +
-                "user varchar (35)" +
+                "user varchar (35)," +
                 "otsikko varchar (70), " +
                 "teksti text(500), " +
                 "PRIMARY KEY (numb))";            
@@ -92,15 +84,7 @@ namespace StudyPoint
         public bool AddTopicText(string user, String topicName, String teksti)
         {
             string header;
-            header = Regex.Replace(topicName, "\\s+", "_");
-            try
-            {
-                header = topicName.Substring(0, 10);
-            }
-            catch (Exception ex)
-            {
-
-            }
+            header = DiscRegex(topicName);
 
             //String encryptedPassword = crypting.Encrypt(password);
             MySqlCommand komento = new MySqlCommand();
@@ -175,23 +159,21 @@ namespace StudyPoint
 
         //hae vastaukset
 
-        public List<string> GiveDiscussion(string topicName)
+        public List<string> GiveDiscussion(string topicName, int number)
         {
             List<string> list = new List<string>();
             connection.OpenConnection();
-            MySqlCommand komento = new MySqlCommand("SELECT user, teksti FROM" + topicName , connection.Connection());
-            list.Add((string)komento.ExecuteReader()); //tee tätä
-            var sana = (string)komento.ExecuteScalar();
+            MySqlCommand komento = new MySqlCommand("SELECT * FROM " + topicName , connection.Connection());
+            MySqlDataReader reader = komento.ExecuteReader();
+            while (reader.Read())
+            {
+                if (reader.GetUInt32(0) == number || reader.GetUInt32(0) == number+1 || reader.GetUInt32(0) == number+2 || reader.GetUInt32(0) == number+3)
+                list.Add(reader.GetString(1));
+                list.Add(reader.GetString(3));
+            }
             connection.CloseConnection();
 
-            if (sana == email)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return list;
 
 
         }
@@ -399,5 +381,17 @@ namespace StudyPoint
         }
         */
 
+
+        public string DiscRegex(string topicName)
+        {
+            topicName = Regex.Replace(topicName, "\\s+", "_");
+            try
+            {
+                topicName = topicName.Substring(0, 10);
+            }
+            catch (Exception ex) { }
+
+            return topicName;
+        }
     }
 }
