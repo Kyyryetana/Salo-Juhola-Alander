@@ -141,7 +141,7 @@ namespace StudyPoint
             DataTable schema = connection.Connection().GetSchema("Tables");
             try
             {
-                for (int i = x; i < x+4; i++)
+                for (int i = x; i < x+7; i++)
                 {
                     list.Add(schema.Rows[i][2].ToString());
                 }
@@ -150,7 +150,8 @@ namespace StudyPoint
             listlength:
             if (list.Count < 7)
             {
-                list.Add((String)null);
+                //list.Add((String)null);
+                list.Add("");
                 goto listlength;
             }
             return list;
@@ -167,12 +168,20 @@ namespace StudyPoint
             MySqlDataReader reader = komento.ExecuteReader();
             while (reader.Read())
             {
-                if (reader.GetUInt32(0) == number || reader.GetUInt32(0) == number+1 || reader.GetUInt32(0) == number+2 || reader.GetUInt32(0) == number+3)
-                list.Add(reader.GetString(1));
-                list.Add(reader.GetString(3));
+                if (reader.GetUInt32(0) == number || reader.GetUInt32(0) == number+1  || reader.GetUInt32(0) == number+2 )
+                {
+                    list.Add(reader.GetString(1));
+                    list.Add(reader.GetString(3));
+                }
+                
             }
             connection.CloseConnection();
-
+            checkList:
+            if (list.Count < 6)
+            {
+                list.Add("");
+                goto checkList;
+            }
             return list;
 
 

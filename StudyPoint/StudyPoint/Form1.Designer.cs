@@ -97,23 +97,6 @@
             this.discNewTopicSendBT = new System.Windows.Forms.Button();
             this.discNewTopicWriteTB = new System.Windows.Forms.RichTextBox();
             this.discAnswertopicLB = new System.Windows.Forms.Label();
-            this.DiscussionPL = new System.Windows.Forms.Panel();
-            this.discussionAswerPL = new System.Windows.Forms.Panel();
-            this.discAnswerBackBT = new System.Windows.Forms.Button();
-            this.discAnswerSendBT = new System.Windows.Forms.Button();
-            this.discAnswerTB = new System.Windows.Forms.RichTextBox();
-            this.discAnswerTopicNameLB = new System.Windows.Forms.Label();
-            this.discussionTopicPrevBT = new System.Windows.Forms.Button();
-            this.discussionAnswerBT = new System.Windows.Forms.Button();
-            this.discussionBackMainBT = new System.Windows.Forms.Button();
-            this.discussionTopicNextBT = new System.Windows.Forms.Button();
-            this.discussionUserGB3 = new System.Windows.Forms.GroupBox();
-            this.discussionTextLB3 = new System.Windows.Forms.Label();
-            this.discussionUserGB2 = new System.Windows.Forms.GroupBox();
-            this.discussionTextLB2 = new System.Windows.Forms.Label();
-            this.discussionUserGB1 = new System.Windows.Forms.GroupBox();
-            this.discussionTextLB1 = new System.Windows.Forms.Label();
-            this.topicLB = new System.Windows.Forms.Label();
             this.discGroupGB = new System.Windows.Forms.GroupBox();
             this.discTopicLB5 = new System.Windows.Forms.Label();
             this.discTopicLB3 = new System.Windows.Forms.Label();
@@ -126,6 +109,23 @@
             this.discNewBT = new System.Windows.Forms.Button();
             this.discnextBT = new System.Windows.Forms.Button();
             this.DiscLB = new System.Windows.Forms.Label();
+            this.DiscussionPL = new System.Windows.Forms.Panel();
+            this.discussionTopicPrevBT = new System.Windows.Forms.Button();
+            this.discussionAnswerBT = new System.Windows.Forms.Button();
+            this.discussionBackMainBT = new System.Windows.Forms.Button();
+            this.discussionTopicNextBT = new System.Windows.Forms.Button();
+            this.discussionUserGB3 = new System.Windows.Forms.GroupBox();
+            this.discussionTextLB3 = new System.Windows.Forms.Label();
+            this.discussionUserGB2 = new System.Windows.Forms.GroupBox();
+            this.discussionTextLB2 = new System.Windows.Forms.Label();
+            this.discussionUserGB1 = new System.Windows.Forms.GroupBox();
+            this.discussionTextLB1 = new System.Windows.Forms.Label();
+            this.topicLB = new System.Windows.Forms.Label();
+            this.discussionAswerPL = new System.Windows.Forms.Panel();
+            this.discAnswerBackBT = new System.Windows.Forms.Button();
+            this.discAnswerSendBT = new System.Windows.Forms.Button();
+            this.discAnswerTB = new System.Windows.Forms.RichTextBox();
+            this.discAnswerTopicNameLB = new System.Windows.Forms.Label();
             this.DownloadPL = new System.Windows.Forms.Panel();
             this.downloadLB = new System.Windows.Forms.Label();
             this.ContactUsPL = new System.Windows.Forms.Panel();
@@ -213,12 +213,12 @@
             this.FeedbackPL.SuspendLayout();
             this.DiscussionBoardPL.SuspendLayout();
             this.discussionWriteTopicPL.SuspendLayout();
+            this.discGroupGB.SuspendLayout();
             this.DiscussionPL.SuspendLayout();
-            this.discussionAswerPL.SuspendLayout();
             this.discussionUserGB3.SuspendLayout();
             this.discussionUserGB2.SuspendLayout();
             this.discussionUserGB1.SuspendLayout();
-            this.discGroupGB.SuspendLayout();
+            this.discussionAswerPL.SuspendLayout();
             this.DownloadPL.SuspendLayout();
             this.ContactUsPL.SuspendLayout();
             this.FeedBackManPL.SuspendLayout();
@@ -973,6 +973,7 @@
             // 
             // DiscussionBoardPL
             // 
+            this.DiscussionBoardPL.Controls.Add(this.DiscussionPL);
             this.DiscussionBoardPL.Controls.Add(this.discussionWriteTopicPL);
             this.DiscussionBoardPL.Controls.Add(this.discGroupGB);
             this.DiscussionBoardPL.Controls.Add(this.discPrevBT);
@@ -1056,184 +1057,6 @@
             this.discAnswertopicLB.Size = new System.Drawing.Size(162, 25);
             this.discAnswertopicLB.TabIndex = 0;
             this.discAnswertopicLB.Text = "Make new topic";
-            // 
-            // DiscussionPL
-            // 
-            this.DiscussionPL.Controls.Add(this.discussionTopicPrevBT);
-            this.DiscussionPL.Controls.Add(this.discussionAnswerBT);
-            this.DiscussionPL.Controls.Add(this.discussionBackMainBT);
-            this.DiscussionPL.Controls.Add(this.discussionTopicNextBT);
-            this.DiscussionPL.Controls.Add(this.discussionUserGB3);
-            this.DiscussionPL.Controls.Add(this.discussionUserGB2);
-            this.DiscussionPL.Controls.Add(this.discussionUserGB1);
-            this.DiscussionPL.Controls.Add(this.topicLB);
-            this.DiscussionPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DiscussionPL.Location = new System.Drawing.Point(153, 47);
-            this.DiscussionPL.Name = "DiscussionPL";
-            this.DiscussionPL.Size = new System.Drawing.Size(641, 497);
-            this.DiscussionPL.TabIndex = 3;
-            // 
-            // discussionAswerPL
-            // 
-            this.discussionAswerPL.Controls.Add(this.discAnswerBackBT);
-            this.discussionAswerPL.Controls.Add(this.discAnswerSendBT);
-            this.discussionAswerPL.Controls.Add(this.discAnswerTB);
-            this.discussionAswerPL.Controls.Add(this.discAnswerTopicNameLB);
-            this.discussionAswerPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.discussionAswerPL.Location = new System.Drawing.Point(153, 47);
-            this.discussionAswerPL.Name = "discussionAswerPL";
-            this.discussionAswerPL.Size = new System.Drawing.Size(641, 497);
-            this.discussionAswerPL.TabIndex = 5;
-            // 
-            // discAnswerBackBT
-            // 
-            this.discAnswerBackBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discAnswerBackBT.Location = new System.Drawing.Point(33, 390);
-            this.discAnswerBackBT.Name = "discAnswerBackBT";
-            this.discAnswerBackBT.Size = new System.Drawing.Size(80, 28);
-            this.discAnswerBackBT.TabIndex = 11;
-            this.discAnswerBackBT.Text = "Back";
-            this.discAnswerBackBT.UseVisualStyleBackColor = true;
-            this.discAnswerBackBT.Click += new System.EventHandler(this.discAnswerBackBT_Click);
-            // 
-            // discAnswerSendBT
-            // 
-            this.discAnswerSendBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discAnswerSendBT.Location = new System.Drawing.Point(482, 390);
-            this.discAnswerSendBT.Name = "discAnswerSendBT";
-            this.discAnswerSendBT.Size = new System.Drawing.Size(82, 28);
-            this.discAnswerSendBT.TabIndex = 10;
-            this.discAnswerSendBT.Text = "Send";
-            this.discAnswerSendBT.UseVisualStyleBackColor = true;
-            this.discAnswerSendBT.Click += new System.EventHandler(this.discAnswerSendBT_Click);
-            // 
-            // discAnswerTB
-            // 
-            this.discAnswerTB.Location = new System.Drawing.Point(33, 110);
-            this.discAnswerTB.Name = "discAnswerTB";
-            this.discAnswerTB.Size = new System.Drawing.Size(554, 253);
-            this.discAnswerTB.TabIndex = 9;
-            this.discAnswerTB.Text = "";
-            // 
-            // discAnswerTopicNameLB
-            // 
-            this.discAnswerTopicNameLB.AutoSize = true;
-            this.discAnswerTopicNameLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discAnswerTopicNameLB.Location = new System.Drawing.Point(44, 39);
-            this.discAnswerTopicNameLB.Name = "discAnswerTopicNameLB";
-            this.discAnswerTopicNameLB.Size = new System.Drawing.Size(173, 25);
-            this.discAnswerTopicNameLB.TabIndex = 8;
-            this.discAnswerTopicNameLB.Text = "Topic name here";
-            // 
-            // discussionTopicPrevBT
-            // 
-            this.discussionTopicPrevBT.Location = new System.Drawing.Point(34, 439);
-            this.discussionTopicPrevBT.Name = "discussionTopicPrevBT";
-            this.discussionTopicPrevBT.Size = new System.Drawing.Size(87, 32);
-            this.discussionTopicPrevBT.TabIndex = 2;
-            this.discussionTopicPrevBT.Text = "prev";
-            this.discussionTopicPrevBT.UseVisualStyleBackColor = true;
-            this.discussionTopicPrevBT.Click += new System.EventHandler(this.discussionTopicPrevBT_Click);
-            // 
-            // discussionAnswerBT
-            // 
-            this.discussionAnswerBT.Location = new System.Drawing.Point(319, 439);
-            this.discussionAnswerBT.Name = "discussionAnswerBT";
-            this.discussionAnswerBT.Size = new System.Drawing.Size(87, 32);
-            this.discussionAnswerBT.TabIndex = 2;
-            this.discussionAnswerBT.Text = "Answer";
-            this.discussionAnswerBT.UseVisualStyleBackColor = true;
-            this.discussionAnswerBT.Click += new System.EventHandler(this.discussionAnswerBT_Click);
-            // 
-            // discussionBackMainBT
-            // 
-            this.discussionBackMainBT.Location = new System.Drawing.Point(166, 439);
-            this.discussionBackMainBT.Name = "discussionBackMainBT";
-            this.discussionBackMainBT.Size = new System.Drawing.Size(87, 32);
-            this.discussionBackMainBT.TabIndex = 2;
-            this.discussionBackMainBT.Text = "Back main";
-            this.discussionBackMainBT.UseVisualStyleBackColor = true;
-            this.discussionBackMainBT.Click += new System.EventHandler(this.discussionBackMainBT_Click);
-            // 
-            // discussionTopicNextBT
-            // 
-            this.discussionTopicNextBT.Location = new System.Drawing.Point(471, 440);
-            this.discussionTopicNextBT.Name = "discussionTopicNextBT";
-            this.discussionTopicNextBT.Size = new System.Drawing.Size(87, 32);
-            this.discussionTopicNextBT.TabIndex = 2;
-            this.discussionTopicNextBT.Text = "next";
-            this.discussionTopicNextBT.UseVisualStyleBackColor = true;
-            this.discussionTopicNextBT.Click += new System.EventHandler(this.discussionTopicNextBT_Click);
-            // 
-            // discussionUserGB3
-            // 
-            this.discussionUserGB3.Controls.Add(this.discussionTextLB3);
-            this.discussionUserGB3.Location = new System.Drawing.Point(33, 322);
-            this.discussionUserGB3.Name = "discussionUserGB3";
-            this.discussionUserGB3.Size = new System.Drawing.Size(578, 107);
-            this.discussionUserGB3.TabIndex = 1;
-            this.discussionUserGB3.TabStop = false;
-            this.discussionUserGB3.Text = "groupBox1";
-            // 
-            // discussionTextLB3
-            // 
-            this.discussionTextLB3.AutoSize = true;
-            this.discussionTextLB3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discussionTextLB3.Location = new System.Drawing.Point(6, 20);
-            this.discussionTextLB3.Name = "discussionTextLB3";
-            this.discussionTextLB3.Size = new System.Drawing.Size(51, 20);
-            this.discussionTextLB3.TabIndex = 0;
-            this.discussionTextLB3.Text = "label1";
-            // 
-            // discussionUserGB2
-            // 
-            this.discussionUserGB2.Controls.Add(this.discussionTextLB2);
-            this.discussionUserGB2.Location = new System.Drawing.Point(33, 197);
-            this.discussionUserGB2.Name = "discussionUserGB2";
-            this.discussionUserGB2.Size = new System.Drawing.Size(578, 107);
-            this.discussionUserGB2.TabIndex = 1;
-            this.discussionUserGB2.TabStop = false;
-            this.discussionUserGB2.Text = "groupBox1";
-            // 
-            // discussionTextLB2
-            // 
-            this.discussionTextLB2.AutoSize = true;
-            this.discussionTextLB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discussionTextLB2.Location = new System.Drawing.Point(6, 23);
-            this.discussionTextLB2.Name = "discussionTextLB2";
-            this.discussionTextLB2.Size = new System.Drawing.Size(51, 20);
-            this.discussionTextLB2.TabIndex = 0;
-            this.discussionTextLB2.Text = "label1";
-            // 
-            // discussionUserGB1
-            // 
-            this.discussionUserGB1.Controls.Add(this.discussionTextLB1);
-            this.discussionUserGB1.Location = new System.Drawing.Point(33, 84);
-            this.discussionUserGB1.Name = "discussionUserGB1";
-            this.discussionUserGB1.Size = new System.Drawing.Size(578, 107);
-            this.discussionUserGB1.TabIndex = 1;
-            this.discussionUserGB1.TabStop = false;
-            this.discussionUserGB1.Text = "groupBox1";
-            // 
-            // discussionTextLB1
-            // 
-            this.discussionTextLB1.AutoSize = true;
-            this.discussionTextLB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discussionTextLB1.Location = new System.Drawing.Point(6, 20);
-            this.discussionTextLB1.Name = "discussionTextLB1";
-            this.discussionTextLB1.Size = new System.Drawing.Size(51, 20);
-            this.discussionTextLB1.TabIndex = 0;
-            this.discussionTextLB1.Text = "label1";
-            // 
-            // topicLB
-            // 
-            this.topicLB.AutoSize = true;
-            this.topicLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.topicLB.Location = new System.Drawing.Point(28, 28);
-            this.topicLB.Name = "topicLB";
-            this.topicLB.Size = new System.Drawing.Size(58, 25);
-            this.topicLB.TabIndex = 0;
-            this.topicLB.Text = "topic";
             // 
             // discGroupGB
             // 
@@ -1361,6 +1184,185 @@
             this.DiscLB.Size = new System.Drawing.Size(155, 24);
             this.DiscLB.TabIndex = 0;
             this.DiscLB.Text = "Discussion board";
+            // 
+            // DiscussionPL
+            // 
+            this.DiscussionPL.Controls.Add(this.discussionAswerPL);
+            this.DiscussionPL.Controls.Add(this.discussionTopicPrevBT);
+            this.DiscussionPL.Controls.Add(this.discussionAnswerBT);
+            this.DiscussionPL.Controls.Add(this.discussionBackMainBT);
+            this.DiscussionPL.Controls.Add(this.discussionTopicNextBT);
+            this.DiscussionPL.Controls.Add(this.discussionUserGB3);
+            this.DiscussionPL.Controls.Add(this.discussionUserGB2);
+            this.DiscussionPL.Controls.Add(this.discussionUserGB1);
+            this.DiscussionPL.Controls.Add(this.topicLB);
+            this.DiscussionPL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DiscussionPL.Location = new System.Drawing.Point(0, 0);
+            this.DiscussionPL.Name = "DiscussionPL";
+            this.DiscussionPL.Size = new System.Drawing.Size(641, 497);
+            this.DiscussionPL.TabIndex = 3;
+            // 
+            // discussionTopicPrevBT
+            // 
+            this.discussionTopicPrevBT.Location = new System.Drawing.Point(34, 439);
+            this.discussionTopicPrevBT.Name = "discussionTopicPrevBT";
+            this.discussionTopicPrevBT.Size = new System.Drawing.Size(87, 32);
+            this.discussionTopicPrevBT.TabIndex = 2;
+            this.discussionTopicPrevBT.Text = "prev";
+            this.discussionTopicPrevBT.UseVisualStyleBackColor = true;
+            this.discussionTopicPrevBT.Click += new System.EventHandler(this.discussionTopicPrevBT_Click);
+            // 
+            // discussionAnswerBT
+            // 
+            this.discussionAnswerBT.Location = new System.Drawing.Point(319, 439);
+            this.discussionAnswerBT.Name = "discussionAnswerBT";
+            this.discussionAnswerBT.Size = new System.Drawing.Size(87, 32);
+            this.discussionAnswerBT.TabIndex = 2;
+            this.discussionAnswerBT.Text = "Answer";
+            this.discussionAnswerBT.UseVisualStyleBackColor = true;
+            this.discussionAnswerBT.Click += new System.EventHandler(this.discussionAnswerBT_Click);
+            // 
+            // discussionBackMainBT
+            // 
+            this.discussionBackMainBT.Location = new System.Drawing.Point(166, 439);
+            this.discussionBackMainBT.Name = "discussionBackMainBT";
+            this.discussionBackMainBT.Size = new System.Drawing.Size(87, 32);
+            this.discussionBackMainBT.TabIndex = 2;
+            this.discussionBackMainBT.Text = "Back main";
+            this.discussionBackMainBT.UseVisualStyleBackColor = true;
+            this.discussionBackMainBT.Click += new System.EventHandler(this.discussionBackMainBT_Click);
+            // 
+            // discussionTopicNextBT
+            // 
+            this.discussionTopicNextBT.Location = new System.Drawing.Point(471, 440);
+            this.discussionTopicNextBT.Name = "discussionTopicNextBT";
+            this.discussionTopicNextBT.Size = new System.Drawing.Size(87, 32);
+            this.discussionTopicNextBT.TabIndex = 2;
+            this.discussionTopicNextBT.Text = "next";
+            this.discussionTopicNextBT.UseVisualStyleBackColor = true;
+            this.discussionTopicNextBT.Click += new System.EventHandler(this.discussionTopicNextBT_Click);
+            // 
+            // discussionUserGB3
+            // 
+            this.discussionUserGB3.Controls.Add(this.discussionTextLB3);
+            this.discussionUserGB3.Location = new System.Drawing.Point(33, 322);
+            this.discussionUserGB3.Name = "discussionUserGB3";
+            this.discussionUserGB3.Size = new System.Drawing.Size(578, 107);
+            this.discussionUserGB3.TabIndex = 1;
+            this.discussionUserGB3.TabStop = false;
+            this.discussionUserGB3.Text = "groupBox1";
+            // 
+            // discussionTextLB3
+            // 
+            this.discussionTextLB3.AutoSize = true;
+            this.discussionTextLB3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discussionTextLB3.Location = new System.Drawing.Point(6, 20);
+            this.discussionTextLB3.Name = "discussionTextLB3";
+            this.discussionTextLB3.Size = new System.Drawing.Size(51, 20);
+            this.discussionTextLB3.TabIndex = 0;
+            this.discussionTextLB3.Text = "label1";
+            // 
+            // discussionUserGB2
+            // 
+            this.discussionUserGB2.Controls.Add(this.discussionTextLB2);
+            this.discussionUserGB2.Location = new System.Drawing.Point(33, 197);
+            this.discussionUserGB2.Name = "discussionUserGB2";
+            this.discussionUserGB2.Size = new System.Drawing.Size(578, 107);
+            this.discussionUserGB2.TabIndex = 1;
+            this.discussionUserGB2.TabStop = false;
+            this.discussionUserGB2.Text = "groupBox1";
+            // 
+            // discussionTextLB2
+            // 
+            this.discussionTextLB2.AutoSize = true;
+            this.discussionTextLB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discussionTextLB2.Location = new System.Drawing.Point(6, 23);
+            this.discussionTextLB2.Name = "discussionTextLB2";
+            this.discussionTextLB2.Size = new System.Drawing.Size(51, 20);
+            this.discussionTextLB2.TabIndex = 0;
+            this.discussionTextLB2.Text = "label1";
+            // 
+            // discussionUserGB1
+            // 
+            this.discussionUserGB1.Controls.Add(this.discussionTextLB1);
+            this.discussionUserGB1.Location = new System.Drawing.Point(33, 84);
+            this.discussionUserGB1.Name = "discussionUserGB1";
+            this.discussionUserGB1.Size = new System.Drawing.Size(578, 107);
+            this.discussionUserGB1.TabIndex = 1;
+            this.discussionUserGB1.TabStop = false;
+            this.discussionUserGB1.Text = "groupBox1";
+            // 
+            // discussionTextLB1
+            // 
+            this.discussionTextLB1.AutoSize = true;
+            this.discussionTextLB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discussionTextLB1.Location = new System.Drawing.Point(6, 20);
+            this.discussionTextLB1.Name = "discussionTextLB1";
+            this.discussionTextLB1.Size = new System.Drawing.Size(51, 20);
+            this.discussionTextLB1.TabIndex = 0;
+            this.discussionTextLB1.Text = "label1";
+            // 
+            // topicLB
+            // 
+            this.topicLB.AutoSize = true;
+            this.topicLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.topicLB.Location = new System.Drawing.Point(28, 28);
+            this.topicLB.Name = "topicLB";
+            this.topicLB.Size = new System.Drawing.Size(58, 25);
+            this.topicLB.TabIndex = 0;
+            this.topicLB.Text = "topic";
+            // 
+            // discussionAswerPL
+            // 
+            this.discussionAswerPL.Controls.Add(this.discAnswerBackBT);
+            this.discussionAswerPL.Controls.Add(this.discAnswerSendBT);
+            this.discussionAswerPL.Controls.Add(this.discAnswerTB);
+            this.discussionAswerPL.Controls.Add(this.discAnswerTopicNameLB);
+            this.discussionAswerPL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.discussionAswerPL.Location = new System.Drawing.Point(0, 0);
+            this.discussionAswerPL.Name = "discussionAswerPL";
+            this.discussionAswerPL.Size = new System.Drawing.Size(641, 497);
+            this.discussionAswerPL.TabIndex = 5;
+            // 
+            // discAnswerBackBT
+            // 
+            this.discAnswerBackBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discAnswerBackBT.Location = new System.Drawing.Point(33, 390);
+            this.discAnswerBackBT.Name = "discAnswerBackBT";
+            this.discAnswerBackBT.Size = new System.Drawing.Size(80, 28);
+            this.discAnswerBackBT.TabIndex = 11;
+            this.discAnswerBackBT.Text = "Back";
+            this.discAnswerBackBT.UseVisualStyleBackColor = true;
+            this.discAnswerBackBT.Click += new System.EventHandler(this.discAnswerBackBT_Click);
+            // 
+            // discAnswerSendBT
+            // 
+            this.discAnswerSendBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discAnswerSendBT.Location = new System.Drawing.Point(482, 390);
+            this.discAnswerSendBT.Name = "discAnswerSendBT";
+            this.discAnswerSendBT.Size = new System.Drawing.Size(82, 28);
+            this.discAnswerSendBT.TabIndex = 10;
+            this.discAnswerSendBT.Text = "Send";
+            this.discAnswerSendBT.UseVisualStyleBackColor = true;
+            this.discAnswerSendBT.Click += new System.EventHandler(this.discAnswerSendBT_Click);
+            // 
+            // discAnswerTB
+            // 
+            this.discAnswerTB.Location = new System.Drawing.Point(33, 110);
+            this.discAnswerTB.Name = "discAnswerTB";
+            this.discAnswerTB.Size = new System.Drawing.Size(554, 253);
+            this.discAnswerTB.TabIndex = 9;
+            this.discAnswerTB.Text = "";
+            // 
+            // discAnswerTopicNameLB
+            // 
+            this.discAnswerTopicNameLB.AutoSize = true;
+            this.discAnswerTopicNameLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discAnswerTopicNameLB.Location = new System.Drawing.Point(44, 39);
+            this.discAnswerTopicNameLB.Name = "discAnswerTopicNameLB";
+            this.discAnswerTopicNameLB.Size = new System.Drawing.Size(173, 25);
+            this.discAnswerTopicNameLB.TabIndex = 8;
+            this.discAnswerTopicNameLB.Text = "Topic name here";
             // 
             // DownloadPL
             // 
@@ -2113,10 +2115,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 544);
-            this.Controls.Add(this.loginPL);
-            this.Controls.Add(this.DiscussionPL);
-            this.Controls.Add(this.discussionAswerPL);
             this.Controls.Add(this.DiscussionBoardPL);
+            this.Controls.Add(this.loginPL);
             this.Controls.Add(this.ProfilePL);
             this.Controls.Add(this.HomePL);
             this.Controls.Add(this.ManagementPL);
@@ -2162,18 +2162,18 @@
             this.DiscussionBoardPL.PerformLayout();
             this.discussionWriteTopicPL.ResumeLayout(false);
             this.discussionWriteTopicPL.PerformLayout();
+            this.discGroupGB.ResumeLayout(false);
+            this.discGroupGB.PerformLayout();
             this.DiscussionPL.ResumeLayout(false);
             this.DiscussionPL.PerformLayout();
-            this.discussionAswerPL.ResumeLayout(false);
-            this.discussionAswerPL.PerformLayout();
             this.discussionUserGB3.ResumeLayout(false);
             this.discussionUserGB3.PerformLayout();
             this.discussionUserGB2.ResumeLayout(false);
             this.discussionUserGB2.PerformLayout();
             this.discussionUserGB1.ResumeLayout(false);
             this.discussionUserGB1.PerformLayout();
-            this.discGroupGB.ResumeLayout(false);
-            this.discGroupGB.PerformLayout();
+            this.discussionAswerPL.ResumeLayout(false);
+            this.discussionAswerPL.PerformLayout();
             this.DownloadPL.ResumeLayout(false);
             this.DownloadPL.PerformLayout();
             this.ContactUsPL.ResumeLayout(false);

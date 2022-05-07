@@ -299,7 +299,8 @@ namespace StudyPoint
 
         private void discnextBT_Click(object sender, EventArgs e)
         {
-
+            discTopicNmbr += 7;
+            DiscussionBT_Click(sender, e);
         }
 
         private void discNewBT_Click(object sender, EventArgs e)
@@ -309,7 +310,12 @@ namespace StudyPoint
 
         private void discPrevBT_Click(object sender, EventArgs e)
         {
-
+            if (discTopicNmbr >0)
+            {
+                discTopicNmbr -= 7;
+                DiscussionBT_Click(sender, e);
+            }
+                
         }
 
         private void discTopicLB1_Click(object sender, EventArgs e)
@@ -367,7 +373,7 @@ namespace StudyPoint
         private void ReadTopic()
         {
             GroupBox[] groupBoxes = { discussionUserGB1, discussionUserGB2, discussionUserGB3 };
-            Label[] labelsList = { discussionTextLB1, discussionTextLB2, discussionTextLB3 };
+            Label[] labelsComments = { discussionTextLB1, discussionTextLB2, discussionTextLB3 };
             List<string> list = new List<string>();
             list = discussion.GiveDiscussion(discussion.DiscRegex(topicLB.Text), discCommentnbr);
             int place = 0;
@@ -380,11 +386,11 @@ namespace StudyPoint
                 }
                 else
                 {
-                    labelsList[place].Text = list[i];
+                    labelsComments[place].Text = list[i];
                     place++;
                 }
                 
-                MessageBox.Show(list[i]);
+                //MessageBox.Show(list[i]);
             }
              
 
@@ -397,6 +403,8 @@ namespace StudyPoint
         private void discussionTopicPrevBT_Click(object sender, EventArgs e)
         {
             //edelliset kommentit tästä
+            discCommentnbr -= 3;
+            ReadTopic();
         }
 
         private void discussionBackMainBT_Click(object sender, EventArgs e)
@@ -408,11 +416,15 @@ namespace StudyPoint
         private void discussionAnswerBT_Click(object sender, EventArgs e)
         {
             discussionAswerPL.Visible = true;
+            discAnswertopicLB.Text = topicLB.Text;
+            
         }
 
         private void discussionTopicNextBT_Click(object sender, EventArgs e)
         {
             //seuraavat kommentit tästä
+            discCommentnbr += 3;
+            ReadTopic();
         }
 
 
@@ -429,6 +441,10 @@ namespace StudyPoint
 
         private void discAnswerSendBT_Click(object sender, EventArgs e)
         {
+            if (discussion.AddTopicText(loggedUser, discussion.DiscRegex(discAnswertopicLB.Text), discAnswerTB.Text) == true)
+            {
+                discAnswerTB.Text = "";
+            }
             
         }
 
