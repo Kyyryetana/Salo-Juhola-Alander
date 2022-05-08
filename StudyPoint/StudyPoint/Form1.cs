@@ -300,12 +300,24 @@ namespace StudyPoint
         private void discnextBT_Click(object sender, EventArgs e)
         {
             discTopicNmbr += 7;
-            DiscussionBT_Click(sender, e);
+            DiscussionCall();
+            if(discTopicLB7.Text == "")
+            {
+                discnextBT.Enabled = false;
+            }
         }
 
         private void discNewBT_Click(object sender, EventArgs e)
         {
-            discussionWriteTopicPL.Visible = true;
+            if (loggedUser == "")
+            {
+                MessageBox.Show("You have to logged in before posting comment");
+            }
+            else
+            {
+                discussionWriteTopicPL.Visible = true;
+            }
+                
         }
 
         private void discPrevBT_Click(object sender, EventArgs e)
@@ -313,7 +325,8 @@ namespace StudyPoint
             if (discTopicNmbr >0)
             {
                 discTopicNmbr -= 7;
-                DiscussionBT_Click(sender, e);
+                DiscussionCall();
+                discnextBT.Enabled=true;
             }
                 
         }
@@ -321,6 +334,7 @@ namespace StudyPoint
         private void discTopicLB1_Click(object sender, EventArgs e)
         {
             DiscussionPL.Visible = true;
+            discCommentnbr = 1;
             topicLB.Text = discTopicLB1.Text;
             ReadTopic();
             
@@ -331,6 +345,7 @@ namespace StudyPoint
         private void discTopicLB2_Click(object sender, EventArgs e)
         {
             DiscussionPL.Visible = true;
+            discCommentnbr = 1;
             topicLB.Text = discTopicLB2.Text;
             ReadTopic();
         }
@@ -338,6 +353,7 @@ namespace StudyPoint
         private void discTopicLB3_Click(object sender, EventArgs e)
         {
             DiscussionPL.Visible = true;
+            discCommentnbr = 1;
             topicLB.Text = discTopicLB3.Text;
             ReadTopic();
         }
@@ -345,6 +361,7 @@ namespace StudyPoint
         private void discTopicLB4_Click(object sender, EventArgs e)
         {
             DiscussionPL.Visible = true;
+            discCommentnbr = 1;
             topicLB.Text = discTopicLB4.Text;
             ReadTopic();
         }
@@ -352,6 +369,7 @@ namespace StudyPoint
         private void discTopicLB5_Click(object sender, EventArgs e)
         {
             DiscussionPL.Visible = true;
+            discCommentnbr = 1;
             topicLB.Text = discTopicLB5.Text;
             ReadTopic();
         }
@@ -359,6 +377,7 @@ namespace StudyPoint
         private void discTopicLB6_Click(object sender, EventArgs e)
         {
             DiscussionPL.Visible = true;
+            discCommentnbr = 1;
             topicLB.Text = discTopicLB6.Text;
             ReadTopic();
         }
@@ -366,12 +385,17 @@ namespace StudyPoint
         private void discTopicLB7_Click(object sender, EventArgs e)
         {
             DiscussionPL.Visible = true;
+            discCommentnbr = 1;
             topicLB.Text = discTopicLB7.Text;
             ReadTopic();
         }
 
         private void ReadTopic()
         {
+            if (discCommentnbr == 1)
+            {
+                discussionTopicPrevBT.Enabled = false;
+            }
             GroupBox[] groupBoxes = { discussionUserGB1, discussionUserGB2, discussionUserGB3 };
             Label[] labelsComments = { discussionTextLB1, discussionTextLB2, discussionTextLB3 };
             List<string> list = new List<string>();
@@ -405,6 +429,8 @@ namespace StudyPoint
             //edelliset kommentit tästä
             discCommentnbr -= 3;
             ReadTopic();
+            discussionTopicNextBT.Enabled = true;
+            
         }
 
         private void discussionBackMainBT_Click(object sender, EventArgs e)
@@ -415,8 +441,16 @@ namespace StudyPoint
 
         private void discussionAnswerBT_Click(object sender, EventArgs e)
         {
-            discussionAswerPL.Visible = true;
-            discAnswertopicLB.Text = topicLB.Text;
+            if(loggedUser == "")
+            {
+                MessageBox.Show("You have to logged in before posting comment");
+            }
+            else
+            {
+                discussionAswerPL.Visible = true;
+                discAnswertopicLB.Text = topicLB.Text;
+            }
+            
             
         }
 
@@ -425,6 +459,11 @@ namespace StudyPoint
             //seuraavat kommentit tästä
             discCommentnbr += 3;
             ReadTopic();
+            discussionTopicPrevBT.Enabled = true;
+            if (discussionUserGB3.Text == "")
+            {
+                discussionTopicNextBT.Enabled = false;
+            }
         }
 
 
@@ -441,10 +480,18 @@ namespace StudyPoint
 
         private void discAnswerSendBT_Click(object sender, EventArgs e)
         {
-            if (discussion.AddTopicText(loggedUser, discussion.DiscRegex(discAnswertopicLB.Text), discAnswerTB.Text) == true)
+            if (discAnswerTB.Text.Trim().Equals("")) 
             {
-                discAnswerTB.Text = "";
+                MessageBox.Show("All fields must be filled");
             }
+            else
+            {
+                if (discussion.AddTopicText(loggedUser, discussion.DiscRegex(discAnswertopicLB.Text), discAnswerTB.Text) == true)
+                {
+                    discAnswerTB.Text = "";
+                }
+            }
+            
             
         }
 
@@ -463,11 +510,19 @@ namespace StudyPoint
             
             string topic = discNewTopicNameTB.Text;
             string text = discNewTopicWriteTB.Text;
-            discussion.AddTopic(topic);
-            discussion.AddTopicText(loggedUser, topic, text);
+            if (topic.Trim().Equals("") || text.Trim().Equals(""))
+            {
+                MessageBox.Show("All fields must be filled");
+            }
+            else
+            {
+                discussion.AddTopic(topic);
+                discussion.AddTopicText(loggedUser, topic, text);
+
+                discNewTopicNameTB.Text = "";
+                discNewTopicWriteTB.Text = "";
+            }
             
-            discNewTopicNameTB.Text = "";
-            discNewTopicWriteTB.Text = "";
              
             
             
@@ -481,7 +536,15 @@ namespace StudyPoint
         //menu discussion boad
         private void DiscussionBT_Click(object sender, EventArgs e)
         {
+            discTopicNmbr =0;
+            discnextBT.Enabled = true;
+            DiscussionCall();
 
+            
+        }
+
+        private void DiscussionCall()
+        {
             Label[] labels = { discTopicLB1, discTopicLB2, discTopicLB3, discTopicLB4, discTopicLB5, discTopicLB6, discTopicLB7 };
             HideAllPanels();
             DiscussionBoardPL.Visible = true;
@@ -499,10 +562,8 @@ namespace StudyPoint
                     labels[i].Visible = true;
                 }
             }
-
-
-            
         }
+
 
         private void HideAllPanels()
         {
@@ -533,12 +594,6 @@ namespace StudyPoint
             ProfilePL.Visible = false;
             ProfileUpdatePL.Visible = false;
         }
-
-        
-
-
-
-
 
         //menu discussion board
 
