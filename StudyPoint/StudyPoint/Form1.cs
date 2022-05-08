@@ -304,31 +304,40 @@ namespace StudyPoint
 
         private void UserManDeleteBT_Click(object sender, EventArgs e)
         {
-            int userID = Int32.Parse(UIDTB.Text);
-
-            if (users.DeleteUser(userID))
+            try
             {
-                UserDTG.DataSource = users.GetUsers();
-                MessageBox.Show("User deleted succesfully");
-            }
-            else
-            {
-                MessageBox.Show("ERROR! Couldn't delete the user");
-            }
-            UserManEmptyBT.PerformClick();
+                int userID = Int32.Parse(UIDTB.Text);
 
+                if (users.DeleteUser(userID))
+                {
+                    UserDTG.DataSource = users.GetUsers();
+                    MessageBox.Show("User deleted succesfully");
+                }
+                else
+                {
+                    MessageBox.Show("ERROR! Couldn't delete the user");
+                }
+                UserManEmptyBT.PerformClick();
+            }
+            catch
+            {
+                MessageBox.Show("Select the user first!");
+            }
         }
 
       
 
         private void UserManUpdateBT_Click_1(object sender, EventArgs e)
         {
+            try
+            {
             int UserId = Int32.Parse(UIDTB.Text);
             String enimi = UserManFirstnameTB.Text;
             String snimi = UserManLastnameTB.Text;
             String email = UserManEmailTB.Text;
             int admin = Int32.Parse(UserManAdminTB.Text);
 
+            
             if (enimi.Trim().Equals("") || snimi.Trim().Equals("") || email.Trim().Equals(""))
             {
                 MessageBox.Show("ERROR! Fill firstname, lastname and email to proceed");
@@ -347,6 +356,11 @@ namespace StudyPoint
                 }
                 UserDTG.DataSource = users.GetUsers();
 
+            }
+            }
+            catch
+            {
+                MessageBox.Show("Select the user first!");
             }
         }
 
