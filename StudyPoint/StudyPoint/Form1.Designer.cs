@@ -159,6 +159,12 @@
             this.userManLB5 = new System.Windows.Forms.Label();
             this.userManLB6 = new System.Windows.Forms.Label();
             this.WhatsNewManPL = new System.Windows.Forms.Panel();
+            this.removeNewThingBT = new System.Windows.Forms.Button();
+            this.refreshNewThingBT = new System.Windows.Forms.Button();
+            this.whatsNewManageDG = new System.Windows.Forms.DataGridView();
+            this.emptyNewThingBT = new System.Windows.Forms.Button();
+            this.addNewThingBT = new System.Windows.Forms.Button();
+            this.addNewThingTB = new System.Windows.Forms.TextBox();
             this.WhatsNewManLB = new System.Windows.Forms.Label();
             this.loginPL = new System.Windows.Forms.Panel();
             this.registrationPL = new System.Windows.Forms.Panel();
@@ -199,12 +205,15 @@
             this.ProfileLNameLB = new System.Windows.Forms.Label();
             this.ProfileFNameLB = new System.Windows.Forms.Label();
             this.ProfileLB = new System.Windows.Forms.Label();
-            this.addNewThingTB = new System.Windows.Forms.TextBox();
-            this.addNewThingBT = new System.Windows.Forms.Button();
-            this.emptyNewThingBT = new System.Windows.Forms.Button();
-            this.whatsNewManageDG = new System.Windows.Forms.DataGridView();
-            this.refreshNewThingBT = new System.Windows.Forms.Button();
-            this.removeNewThingBT = new System.Windows.Forms.Button();
+            this.downloadMGPB = new System.Windows.Forms.PictureBox();
+            this.downloadMGbrowseBT = new System.Windows.Forms.Button();
+            this.downloadMGclearBT = new System.Windows.Forms.Button();
+            this.downloadMGsendSqlBT = new System.Windows.Forms.Button();
+            this.downloadMGrefreshBT = new System.Windows.Forms.Button();
+            this.downloadMGdeleteBT = new System.Windows.Forms.Button();
+            this.downloadMGviewBT = new System.Windows.Forms.Button();
+            this.downloadMGTB = new System.Windows.Forms.TextBox();
+            this.downloadMGDGW = new System.Windows.Forms.DataGridView();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -233,11 +242,13 @@
             this.UserManPL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserDTG)).BeginInit();
             this.WhatsNewManPL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.whatsNewManageDG)).BeginInit();
             this.loginPL.SuspendLayout();
             this.registrationPL.SuspendLayout();
             this.ProfilePL.SuspendLayout();
             this.ProfileUpdatePL.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.whatsNewManageDG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.downloadMGPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.downloadMGDGW)).BeginInit();
             this.SuspendLayout();
             // 
             // YlaPL
@@ -1507,6 +1518,15 @@
             // 
             // DownloadManPL
             // 
+            this.DownloadManPL.Controls.Add(this.downloadMGDGW);
+            this.DownloadManPL.Controls.Add(this.downloadMGTB);
+            this.DownloadManPL.Controls.Add(this.downloadMGviewBT);
+            this.DownloadManPL.Controls.Add(this.downloadMGdeleteBT);
+            this.DownloadManPL.Controls.Add(this.downloadMGrefreshBT);
+            this.DownloadManPL.Controls.Add(this.downloadMGsendSqlBT);
+            this.DownloadManPL.Controls.Add(this.downloadMGclearBT);
+            this.DownloadManPL.Controls.Add(this.downloadMGbrowseBT);
+            this.DownloadManPL.Controls.Add(this.downloadMGPB);
             this.DownloadManPL.Controls.Add(this.DownloadManLB);
             this.DownloadManPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DownloadManPL.Location = new System.Drawing.Point(153, 47);
@@ -1714,6 +1734,67 @@
             this.WhatsNewManPL.Size = new System.Drawing.Size(641, 497);
             this.WhatsNewManPL.TabIndex = 22;
             this.WhatsNewManPL.Visible = false;
+            // 
+            // removeNewThingBT
+            // 
+            this.removeNewThingBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeNewThingBT.Location = new System.Drawing.Point(279, 353);
+            this.removeNewThingBT.Name = "removeNewThingBT";
+            this.removeNewThingBT.Size = new System.Drawing.Size(219, 30);
+            this.removeNewThingBT.TabIndex = 6;
+            this.removeNewThingBT.Text = "REMOVE FROM LIST";
+            this.removeNewThingBT.UseVisualStyleBackColor = true;
+            this.removeNewThingBT.Click += new System.EventHandler(this.removeNewThingBT_Click);
+            // 
+            // refreshNewThingBT
+            // 
+            this.refreshNewThingBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshNewThingBT.Location = new System.Drawing.Point(10, 352);
+            this.refreshNewThingBT.Name = "refreshNewThingBT";
+            this.refreshNewThingBT.Size = new System.Drawing.Size(219, 30);
+            this.refreshNewThingBT.TabIndex = 5;
+            this.refreshNewThingBT.Text = "REFRESH LIST";
+            this.refreshNewThingBT.UseVisualStyleBackColor = true;
+            this.refreshNewThingBT.Click += new System.EventHandler(this.refreshNewThingBT_Click);
+            // 
+            // whatsNewManageDG
+            // 
+            this.whatsNewManageDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.whatsNewManageDG.Location = new System.Drawing.Point(10, 97);
+            this.whatsNewManageDG.Name = "whatsNewManageDG";
+            this.whatsNewManageDG.Size = new System.Drawing.Size(488, 249);
+            this.whatsNewManageDG.TabIndex = 4;
+            this.whatsNewManageDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.whatsNewManageDG_CellContentClick);
+            // 
+            // emptyNewThingBT
+            // 
+            this.emptyNewThingBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emptyNewThingBT.Location = new System.Drawing.Point(412, 45);
+            this.emptyNewThingBT.Name = "emptyNewThingBT";
+            this.emptyNewThingBT.Size = new System.Drawing.Size(86, 31);
+            this.emptyNewThingBT.TabIndex = 3;
+            this.emptyNewThingBT.Text = "EMPTY";
+            this.emptyNewThingBT.UseVisualStyleBackColor = true;
+            this.emptyNewThingBT.Click += new System.EventHandler(this.emptyNewThingBT_Click);
+            // 
+            // addNewThingBT
+            // 
+            this.addNewThingBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewThingBT.Location = new System.Drawing.Point(317, 46);
+            this.addNewThingBT.Name = "addNewThingBT";
+            this.addNewThingBT.Size = new System.Drawing.Size(86, 31);
+            this.addNewThingBT.TabIndex = 2;
+            this.addNewThingBT.Text = "ADD";
+            this.addNewThingBT.UseVisualStyleBackColor = true;
+            this.addNewThingBT.Click += new System.EventHandler(this.addNewThingBT_Click);
+            // 
+            // addNewThingTB
+            // 
+            this.addNewThingTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewThingTB.Location = new System.Drawing.Point(10, 50);
+            this.addNewThingTB.Name = "addNewThingTB";
+            this.addNewThingTB.Size = new System.Drawing.Size(298, 26);
+            this.addNewThingTB.TabIndex = 1;
             // 
             // WhatsNewManLB
             // 
@@ -2123,72 +2204,107 @@
             this.ProfileLB.TabIndex = 0;
             this.ProfileLB.Text = "Profile";
             // 
-            // addNewThingTB
+            // downloadMGPB
             // 
-            this.addNewThingTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewThingTB.Location = new System.Drawing.Point(10, 50);
-            this.addNewThingTB.Name = "addNewThingTB";
-            this.addNewThingTB.Size = new System.Drawing.Size(298, 26);
-            this.addNewThingTB.TabIndex = 1;
+            this.downloadMGPB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.downloadMGPB.Location = new System.Drawing.Point(10, 45);
+            this.downloadMGPB.MaximumSize = new System.Drawing.Size(135, 165);
+            this.downloadMGPB.Name = "downloadMGPB";
+            this.downloadMGPB.Size = new System.Drawing.Size(135, 165);
+            this.downloadMGPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.downloadMGPB.TabIndex = 1;
+            this.downloadMGPB.TabStop = false;
             // 
-            // addNewThingBT
+            // downloadMGbrowseBT
             // 
-            this.addNewThingBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewThingBT.Location = new System.Drawing.Point(317, 46);
-            this.addNewThingBT.Name = "addNewThingBT";
-            this.addNewThingBT.Size = new System.Drawing.Size(86, 31);
-            this.addNewThingBT.TabIndex = 2;
-            this.addNewThingBT.Text = "ADD";
-            this.addNewThingBT.UseVisualStyleBackColor = true;
-            this.addNewThingBT.Click += new System.EventHandler(this.addNewThingBT_Click);
+            this.downloadMGbrowseBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGbrowseBT.Location = new System.Drawing.Point(166, 44);
+            this.downloadMGbrowseBT.Name = "downloadMGbrowseBT";
+            this.downloadMGbrowseBT.Size = new System.Drawing.Size(127, 30);
+            this.downloadMGbrowseBT.TabIndex = 2;
+            this.downloadMGbrowseBT.Text = "BROWSE";
+            this.downloadMGbrowseBT.UseVisualStyleBackColor = true;
+            this.downloadMGbrowseBT.Click += new System.EventHandler(this.downloadMGbrowseBT_Click);
             // 
-            // emptyNewThingBT
+            // downloadMGclearBT
             // 
-            this.emptyNewThingBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emptyNewThingBT.Location = new System.Drawing.Point(412, 45);
-            this.emptyNewThingBT.Name = "emptyNewThingBT";
-            this.emptyNewThingBT.Size = new System.Drawing.Size(86, 31);
-            this.emptyNewThingBT.TabIndex = 3;
-            this.emptyNewThingBT.Text = "EMPTY";
-            this.emptyNewThingBT.UseVisualStyleBackColor = true;
-            this.emptyNewThingBT.Click += new System.EventHandler(this.emptyNewThingBT_Click);
+            this.downloadMGclearBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGclearBT.ForeColor = System.Drawing.Color.Red;
+            this.downloadMGclearBT.Location = new System.Drawing.Point(166, 79);
+            this.downloadMGclearBT.Name = "downloadMGclearBT";
+            this.downloadMGclearBT.Size = new System.Drawing.Size(127, 30);
+            this.downloadMGclearBT.TabIndex = 3;
+            this.downloadMGclearBT.Text = "CLEAR";
+            this.downloadMGclearBT.UseVisualStyleBackColor = true;
+            this.downloadMGclearBT.Click += new System.EventHandler(this.downloadMGclearBT_Click);
             // 
-            // whatsNewManageDG
+            // downloadMGsendSqlBT
             // 
-            this.whatsNewManageDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.whatsNewManageDG.Location = new System.Drawing.Point(10, 97);
-            this.whatsNewManageDG.Name = "whatsNewManageDG";
-            this.whatsNewManageDG.Size = new System.Drawing.Size(488, 249);
-            this.whatsNewManageDG.TabIndex = 4;
-            this.whatsNewManageDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.whatsNewManageDG_CellContentClick);
+            this.downloadMGsendSqlBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGsendSqlBT.Location = new System.Drawing.Point(166, 180);
+            this.downloadMGsendSqlBT.Name = "downloadMGsendSqlBT";
+            this.downloadMGsendSqlBT.Size = new System.Drawing.Size(127, 30);
+            this.downloadMGsendSqlBT.TabIndex = 4;
+            this.downloadMGsendSqlBT.Text = "SEND TO SQL";
+            this.downloadMGsendSqlBT.UseVisualStyleBackColor = true;
+            this.downloadMGsendSqlBT.Click += new System.EventHandler(this.downloadMGsendSqlBT_Click);
             // 
-            // refreshNewThingBT
+            // downloadMGrefreshBT
             // 
-            this.refreshNewThingBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshNewThingBT.Location = new System.Drawing.Point(10, 352);
-            this.refreshNewThingBT.Name = "refreshNewThingBT";
-            this.refreshNewThingBT.Size = new System.Drawing.Size(219, 30);
-            this.refreshNewThingBT.TabIndex = 5;
-            this.refreshNewThingBT.Text = "REFRESH LIST";
-            this.refreshNewThingBT.UseVisualStyleBackColor = true;
-            this.refreshNewThingBT.Click += new System.EventHandler(this.refreshNewThingBT_Click);
+            this.downloadMGrefreshBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGrefreshBT.Location = new System.Drawing.Point(449, 181);
+            this.downloadMGrefreshBT.Name = "downloadMGrefreshBT";
+            this.downloadMGrefreshBT.Size = new System.Drawing.Size(162, 30);
+            this.downloadMGrefreshBT.TabIndex = 5;
+            this.downloadMGrefreshBT.Text = "REFRESH LIST";
+            this.downloadMGrefreshBT.UseVisualStyleBackColor = true;
+            this.downloadMGrefreshBT.Click += new System.EventHandler(this.downloadMGrefreshBT_Click);
             // 
-            // removeNewThingBT
+            // downloadMGdeleteBT
             // 
-            this.removeNewThingBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removeNewThingBT.Location = new System.Drawing.Point(279, 353);
-            this.removeNewThingBT.Name = "removeNewThingBT";
-            this.removeNewThingBT.Size = new System.Drawing.Size(219, 30);
-            this.removeNewThingBT.TabIndex = 6;
-            this.removeNewThingBT.Text = "REMOVE FROM LIST";
-            this.removeNewThingBT.UseVisualStyleBackColor = true;
-            this.removeNewThingBT.Click += new System.EventHandler(this.removeNewThingBT_Click);
+            this.downloadMGdeleteBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGdeleteBT.Location = new System.Drawing.Point(441, 455);
+            this.downloadMGdeleteBT.Name = "downloadMGdeleteBT";
+            this.downloadMGdeleteBT.Size = new System.Drawing.Size(170, 30);
+            this.downloadMGdeleteBT.TabIndex = 6;
+            this.downloadMGdeleteBT.Text = "DELETE FROM LIST";
+            this.downloadMGdeleteBT.UseVisualStyleBackColor = true;
+            this.downloadMGdeleteBT.Click += new System.EventHandler(this.downloadMGdeleteBT_Click);
+            // 
+            // downloadMGviewBT
+            // 
+            this.downloadMGviewBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGviewBT.Location = new System.Drawing.Point(334, 455);
+            this.downloadMGviewBT.Name = "downloadMGviewBT";
+            this.downloadMGviewBT.Size = new System.Drawing.Size(101, 30);
+            this.downloadMGviewBT.TabIndex = 7;
+            this.downloadMGviewBT.Text = "VIEW IMG";
+            this.downloadMGviewBT.UseVisualStyleBackColor = true;
+            this.downloadMGviewBT.Click += new System.EventHandler(this.downloadMGviewBT_Click);
+            // 
+            // downloadMGTB
+            // 
+            this.downloadMGTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGTB.Location = new System.Drawing.Point(10, 457);
+            this.downloadMGTB.Name = "downloadMGTB";
+            this.downloadMGTB.Size = new System.Drawing.Size(318, 26);
+            this.downloadMGTB.TabIndex = 8;
+            // 
+            // downloadMGDGW
+            // 
+            this.downloadMGDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.downloadMGDGW.Location = new System.Drawing.Point(10, 226);
+            this.downloadMGDGW.Name = "downloadMGDGW";
+            this.downloadMGDGW.Size = new System.Drawing.Size(601, 214);
+            this.downloadMGDGW.TabIndex = 9;
+            this.downloadMGDGW.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.downloadMGDGW_CellContentClick);
             // 
             // StudyPointForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 544);
+            this.Controls.Add(this.DownloadManPL);
             this.Controls.Add(this.WhatsNewManPL);
             this.Controls.Add(this.loginPL);
             this.Controls.Add(this.DiscussionBoardPL);
@@ -2200,7 +2316,6 @@
             this.Controls.Add(this.FeedBackManPL);
             this.Controls.Add(this.FeedbackPL);
             this.Controls.Add(this.DashboardPL);
-            this.Controls.Add(this.DownloadManPL);
             this.Controls.Add(this.ContactUsPL);
             this.Controls.Add(this.DownloadPL);
             this.Controls.Add(this.OurDepartmentPL);
@@ -2262,6 +2377,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.UserDTG)).EndInit();
             this.WhatsNewManPL.ResumeLayout(false);
             this.WhatsNewManPL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.whatsNewManageDG)).EndInit();
             this.loginPL.ResumeLayout(false);
             this.loginPL.PerformLayout();
             this.registrationPL.ResumeLayout(false);
@@ -2270,7 +2386,8 @@
             this.ProfilePL.PerformLayout();
             this.ProfileUpdatePL.ResumeLayout(false);
             this.ProfileUpdatePL.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.whatsNewManageDG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.downloadMGPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.downloadMGDGW)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2453,6 +2570,15 @@
         private System.Windows.Forms.Button emptyNewThingBT;
         private System.Windows.Forms.Button addNewThingBT;
         private System.Windows.Forms.TextBox addNewThingTB;
+        private System.Windows.Forms.DataGridView downloadMGDGW;
+        private System.Windows.Forms.TextBox downloadMGTB;
+        private System.Windows.Forms.Button downloadMGviewBT;
+        private System.Windows.Forms.Button downloadMGdeleteBT;
+        private System.Windows.Forms.Button downloadMGrefreshBT;
+        private System.Windows.Forms.Button downloadMGsendSqlBT;
+        private System.Windows.Forms.Button downloadMGclearBT;
+        private System.Windows.Forms.Button downloadMGbrowseBT;
+        private System.Windows.Forms.PictureBox downloadMGPB;
     }
 }
 

@@ -52,6 +52,7 @@
     <Compile Include="CONNECT_DISCUSSION.cs" />
     <Compile Include="Crypting.cs" />
     <Compile Include="DISCUSSION.cs" />
+    <Compile Include="DOWNLOADS.cs" />
     <Compile Include="FEEDBACK.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

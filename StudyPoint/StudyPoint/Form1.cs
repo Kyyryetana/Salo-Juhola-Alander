@@ -17,12 +17,14 @@ namespace StudyPoint
         USERS users = new USERS();
         FEEDBACK feedback = new FEEDBACK();
         WHATSNEW whatsnew = new WHATSNEW();
+        DOWNLOADS downloads = new DOWNLOADS();
         string loggedUser = "";
         bool admin = false;
+        string imgLocation = "";
         public StudyPointForm()
         {
             InitializeComponent();
-            HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
+            //HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
             tarkistaNewThing(); // tarkistaa home sivulla olevan whats new tilanteen
         }
 
@@ -612,6 +614,74 @@ namespace StudyPoint
         }
 
         // WHATS NEW MANAGEMENT SIVU LOPPU
+        //DOWNLOAD MANAGEMENT SIVU
+
+        private void downloadMGbrowseBT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog avaa = new OpenFileDialog();
+                avaa.Filter = "JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif|All Files (*.*)|*.*";
+                avaa.Title = "Select picture";
+                if (avaa.ShowDialog() == DialogResult.OK)
+                {
+                    imgLocation = avaa.FileName.ToString();
+                    downloadMGPB.ImageLocation = imgLocation;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void downloadMGclearBT_Click(object sender, EventArgs e)
+        {
+            downloadMGPB.Image = null;
+        }
+
+        private void downloadMGsendSqlBT_Click(object sender, EventArgs e)
+        {
+            downloads.SendImgToSql(imgLocation);
+            downloadMGPB.Image = null;
+            downloadMGrefreshBT.PerformClick();
+        }
+
+        private void downloadMGrefreshBT_Click(object sender, EventArgs e)
+        {
+            downloadMGDGW.DataSource = downloads.FetchImagesFromSql();
+            downloadMGDGW.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            var datagridview = new DataGridView();
+            datagridview.RowTemplate.MinimumHeight = 125;
+            downloadMGTB.Text = "";
+        }
+
+        private void downloadMGdeleteBT_Click(object sender, EventArgs e)
+        {
+            string picture = downloadMGTB.Text;
+            if (downloads.deleteImgFromSql(picture))
+            {
+                downloadMGDGW.DataSource = downloads.FetchImagesFromSql();
+                MessageBox.Show("Picture deleted successfully");
+            }
+            else
+            {
+                MessageBox.Show("Could not delete the picture");
+            }
+            downloadMGTB.Text = "";
+        }
+
+        private void downloadMGDGW_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            downloadMGTB.Text = downloadMGDGW.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void downloadMGviewBT_Click(object sender, EventArgs e)
+        {
+            // TÄMÄ ON TEKEMÄTTÄ
+        }
+
+        // DOWNLOAD MANAGEMENT SIVU LOPPU
 
         private void HideAllPanels()
         {
