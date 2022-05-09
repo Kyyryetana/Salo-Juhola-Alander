@@ -16,6 +16,7 @@ namespace StudyPoint
         DISCUSSION discussion = new DISCUSSION();
         USERS users = new USERS();
         FEEDBACK feedback = new FEEDBACK();
+        WHATSNEW whatsnew = new WHATSNEW();
         string loggedUser = "";
         bool admin = false;
         public StudyPointForm()
@@ -564,6 +565,53 @@ namespace StudyPoint
             }
         }
 
+        // WHATS NEW MANAGEMENT SIVU
+
+        private void addNewThingBT_Click(object sender, EventArgs e)
+        {
+            String asia = addNewThingTB.Text;
+
+            Boolean AddNewThing = whatsnew.AddNewThing(asia);
+
+            addNewThingTB.Text = "";
+
+            refreshNewThingBT.PerformClick();
+        }
+
+        private void emptyNewThingBT_Click(object sender, EventArgs e)
+        {
+            addNewThingTB.Text = "";
+        }
+
+        private void refreshNewThingBT_Click(object sender, EventArgs e)
+        {
+            whatsNewManageDG.DataSource = whatsnew.GetNewThings();
+            whatsNewManageDG.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            var datagridview = new DataGridView();
+            datagridview.RowTemplate.MinimumHeight = 125;
+        }
+
+        private void removeNewThingBT_Click(object sender, EventArgs e)
+        {
+            string newThings = addNewThingTB.Text;
+            if (whatsnew.DeleteNewThing(newThings))
+            {
+                whatsNewManageDG.DataSource = whatsnew.GetNewThings();
+                MessageBox.Show(newThings + " deleted successfully");
+            }
+            else
+            {
+                MessageBox.Show("Could not delete the " + newThings);
+            }
+            addNewThingTB.Text = "";
+        }
+
+        private void whatsNewManageDG_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            addNewThingTB.Text = whatsNewManageDG.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        // WHATS NEW MANAGEMENT SIVU LOPPU
 
         private void HideAllPanels()
         {

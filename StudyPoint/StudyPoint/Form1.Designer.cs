@@ -199,6 +199,12 @@
             this.ProfileLNameLB = new System.Windows.Forms.Label();
             this.ProfileFNameLB = new System.Windows.Forms.Label();
             this.ProfileLB = new System.Windows.Forms.Label();
+            this.addNewThingTB = new System.Windows.Forms.TextBox();
+            this.addNewThingBT = new System.Windows.Forms.Button();
+            this.emptyNewThingBT = new System.Windows.Forms.Button();
+            this.whatsNewManageDG = new System.Windows.Forms.DataGridView();
+            this.refreshNewThingBT = new System.Windows.Forms.Button();
+            this.removeNewThingBT = new System.Windows.Forms.Button();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -231,6 +237,7 @@
             this.registrationPL.SuspendLayout();
             this.ProfilePL.SuspendLayout();
             this.ProfileUpdatePL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.whatsNewManageDG)).BeginInit();
             this.SuspendLayout();
             // 
             // YlaPL
@@ -1694,6 +1701,12 @@
             // 
             // WhatsNewManPL
             // 
+            this.WhatsNewManPL.Controls.Add(this.removeNewThingBT);
+            this.WhatsNewManPL.Controls.Add(this.refreshNewThingBT);
+            this.WhatsNewManPL.Controls.Add(this.whatsNewManageDG);
+            this.WhatsNewManPL.Controls.Add(this.emptyNewThingBT);
+            this.WhatsNewManPL.Controls.Add(this.addNewThingBT);
+            this.WhatsNewManPL.Controls.Add(this.addNewThingTB);
             this.WhatsNewManPL.Controls.Add(this.WhatsNewManLB);
             this.WhatsNewManPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WhatsNewManPL.Location = new System.Drawing.Point(153, 47);
@@ -2110,11 +2123,73 @@
             this.ProfileLB.TabIndex = 0;
             this.ProfileLB.Text = "Profile";
             // 
+            // addNewThingTB
+            // 
+            this.addNewThingTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewThingTB.Location = new System.Drawing.Point(10, 50);
+            this.addNewThingTB.Name = "addNewThingTB";
+            this.addNewThingTB.Size = new System.Drawing.Size(298, 26);
+            this.addNewThingTB.TabIndex = 1;
+            // 
+            // addNewThingBT
+            // 
+            this.addNewThingBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewThingBT.Location = new System.Drawing.Point(317, 46);
+            this.addNewThingBT.Name = "addNewThingBT";
+            this.addNewThingBT.Size = new System.Drawing.Size(86, 31);
+            this.addNewThingBT.TabIndex = 2;
+            this.addNewThingBT.Text = "ADD";
+            this.addNewThingBT.UseVisualStyleBackColor = true;
+            this.addNewThingBT.Click += new System.EventHandler(this.addNewThingBT_Click);
+            // 
+            // emptyNewThingBT
+            // 
+            this.emptyNewThingBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emptyNewThingBT.Location = new System.Drawing.Point(412, 45);
+            this.emptyNewThingBT.Name = "emptyNewThingBT";
+            this.emptyNewThingBT.Size = new System.Drawing.Size(86, 31);
+            this.emptyNewThingBT.TabIndex = 3;
+            this.emptyNewThingBT.Text = "EMPTY";
+            this.emptyNewThingBT.UseVisualStyleBackColor = true;
+            this.emptyNewThingBT.Click += new System.EventHandler(this.emptyNewThingBT_Click);
+            // 
+            // whatsNewManageDG
+            // 
+            this.whatsNewManageDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.whatsNewManageDG.Location = new System.Drawing.Point(10, 97);
+            this.whatsNewManageDG.Name = "whatsNewManageDG";
+            this.whatsNewManageDG.Size = new System.Drawing.Size(488, 249);
+            this.whatsNewManageDG.TabIndex = 4;
+            this.whatsNewManageDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.whatsNewManageDG_CellContentClick);
+            // 
+            // refreshNewThingBT
+            // 
+            this.refreshNewThingBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshNewThingBT.Location = new System.Drawing.Point(10, 352);
+            this.refreshNewThingBT.Name = "refreshNewThingBT";
+            this.refreshNewThingBT.Size = new System.Drawing.Size(219, 30);
+            this.refreshNewThingBT.TabIndex = 5;
+            this.refreshNewThingBT.Text = "REFRESH LIST";
+            this.refreshNewThingBT.UseVisualStyleBackColor = true;
+            this.refreshNewThingBT.Click += new System.EventHandler(this.refreshNewThingBT_Click);
+            // 
+            // removeNewThingBT
+            // 
+            this.removeNewThingBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeNewThingBT.Location = new System.Drawing.Point(279, 353);
+            this.removeNewThingBT.Name = "removeNewThingBT";
+            this.removeNewThingBT.Size = new System.Drawing.Size(219, 30);
+            this.removeNewThingBT.TabIndex = 6;
+            this.removeNewThingBT.Text = "REMOVE FROM LIST";
+            this.removeNewThingBT.UseVisualStyleBackColor = true;
+            this.removeNewThingBT.Click += new System.EventHandler(this.removeNewThingBT_Click);
+            // 
             // StudyPointForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 544);
+            this.Controls.Add(this.WhatsNewManPL);
             this.Controls.Add(this.loginPL);
             this.Controls.Add(this.DiscussionBoardPL);
             this.Controls.Add(this.ProfilePL);
@@ -2125,7 +2200,6 @@
             this.Controls.Add(this.FeedBackManPL);
             this.Controls.Add(this.FeedbackPL);
             this.Controls.Add(this.DashboardPL);
-            this.Controls.Add(this.WhatsNewManPL);
             this.Controls.Add(this.DownloadManPL);
             this.Controls.Add(this.ContactUsPL);
             this.Controls.Add(this.DownloadPL);
@@ -2196,6 +2270,7 @@
             this.ProfilePL.PerformLayout();
             this.ProfileUpdatePL.ResumeLayout(false);
             this.ProfileUpdatePL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.whatsNewManageDG)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2372,6 +2447,12 @@
         private System.Windows.Forms.Label UpdateLastnameLB;
         private System.Windows.Forms.Label UpdateFirstnameLB;
         private System.Windows.Forms.Button ProfileUpdateBT;
+        private System.Windows.Forms.Button removeNewThingBT;
+        private System.Windows.Forms.Button refreshNewThingBT;
+        private System.Windows.Forms.DataGridView whatsNewManageDG;
+        private System.Windows.Forms.Button emptyNewThingBT;
+        private System.Windows.Forms.Button addNewThingBT;
+        private System.Windows.Forms.TextBox addNewThingTB;
     }
 }
 
