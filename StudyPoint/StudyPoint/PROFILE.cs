@@ -79,5 +79,49 @@ namespace StudyPoint
             }
         }
 
+
+        public DataTable OldPassword(string email, string CurrentPW)
+        {
+            MySqlCommand MyCommand = new MySqlCommand("SELECT sahkoposti,salasana FROM studypoint.kayttajat WHERE sahkoposti = '" + email + "'", myConnection.Connection());
+            MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+
+            DataTable MyTable = new DataTable();
+
+            MyAdapter.SelectCommand = MyCommand;
+            MyAdapter.Fill(MyTable);
+
+            return MyTable;
+
+        }
+
+        public bool UpdatePassword(String Email, String Pword)
+        {
+            MySqlCommand myCommand = new MySqlCommand();
+
+            String myAdd = "UPDATE kayttajat SET salasana = @pword WHERE CONCAT(kayttajat.sahkoposti) = '" + Email + "'";
+
+            myCommand.CommandText = myAdd;
+            myCommand.Connection = myConnection.Connection();
+
+            myCommand.Parameters.Add("@pword", MySqlDbType.VarChar).Value = Pword;
+
+            MessageBox.Show("Password updated!");
+
+
+            myConnection.OpenConnection();
+
+            myConnection.OpenConnection();
+            if (myCommand.ExecuteNonQuery() == 1)
+            {
+                myConnection.CloseConnection();
+                return true;
+            }
+            else
+            {
+                myConnection.CloseConnection();
+                return false;
+            }
+        }
+
     }
 }

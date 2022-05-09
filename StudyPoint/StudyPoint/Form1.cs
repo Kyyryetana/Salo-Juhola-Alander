@@ -16,7 +16,7 @@ namespace StudyPoint
         USERS users = new USERS();
         FEEDBACK feedback = new FEEDBACK();
         PROFILE profile = new PROFILE();
-        string loggedUser = "";
+        string loggedUser = "admin@studypoint.net";
         bool admin = false;
         public StudyPointForm()
         {
@@ -194,7 +194,7 @@ namespace StudyPoint
         }
 
 
-        // FEEDBACK-SIVU
+        // FEEDBACK START
         private void FeedbackBT_Click_1(object sender, EventArgs e)
         {
             HomePL.Visible = false;
@@ -220,10 +220,11 @@ namespace StudyPoint
             FBNameTB.Text = "";
             FBEmailTB.Text = "";
         }
+        // FEEDBACK END
 
       
 
-        // FEEDBACK MANAGEMENT -SIVU
+        // FEEDBACK MANAGEMENT START
 
         private void FeedbackManBT_Click_1(object sender, EventArgs e) // tuodaan sivu näkyviin nappia painamalla
         {
@@ -264,7 +265,10 @@ namespace StudyPoint
             FBManEmailTB.Text = "";
         }
 
-        // PROFIILI
+        // FEEDBACK MANAGEMENT END
+        
+
+        // PROFIILI START
         private void ProfileBT_Click(object sender, EventArgs e)
         {
             string email = loggedUser;
@@ -282,6 +286,8 @@ namespace StudyPoint
             ProfileEmail.Text = ProfileDTG.CurrentRow.Cells[0].Value.ToString();
 
             ProfileDTG.Visible = false;
+            ChangePWPanel.Visible = false;
+            ProfileUpdatePL.Visible = false;    
 
 
 
@@ -319,6 +325,56 @@ namespace StudyPoint
 
             ProfileDTG.Visible = false;
         }
+
+        // SALASANAN VAIHTO 
+        private void ProfilePasswordBT_Click(object sender, EventArgs e) // avaa salasanan vaihto ikkunan
+        {
+            ChangePWPanel.Visible = true;
+            ChangePWDTG.Visible = false;
+
+            string email = loggedUser; // sisäänkirjautuneen henkilön sähköposti
+
+            String CurrentPW = CurrentPWTB.Text; // nykyinen salasana
+
+            ChangePWDTG.DataSource = profile.OldPassword(email, CurrentPW); // datagrid näyttää sähköpostin ja nykyisen salasanan
+            var datagridview = new DataGridView(); // tuodaan tiedot datagridiin
+        }
+
+        private void ChangePWBT_Click(object sender, EventArgs e) // vaihtaa salasanan
+        {
+            string email = loggedUser; // sisäänkirjautuneen henkilön sähköposti
+
+            String CurrentPW = CurrentPWTB.Text; // nykyinen salasana
+            String Pword = NewPWTB.Text; // uusi salasana
+
+            ChangePWDTG.DataSource = profile.OldPassword(email, CurrentPW); // datagrid näyttää sähköpostin ja nykyisen salasanan
+            string CheckPw = ChangePWDTG.CurrentRow.Cells[1].Value.ToString(); // tallennetaan muuttujaan nykyinen salasana tietokannasta
+            // TEE YLEMPÄÄN DECRYPTAUS
+
+            if(CurrentPW == CheckPw) // tarkistetaan, onko nykyinen syötetty salasana sama kuin tietokannasta saatu salasana
+            {
+                Boolean UpdatePassword = profile.UpdatePassword(email, Pword); // päivitetään salasana sähköpostin perusteella
+                // TEE YLEMPÄÄN ENCRYPTAUS
+            }
+            else
+            {
+                MessageBox.Show("Wrong old password!");
+            }
+
+            CurrentPWTB.Text = "";
+            NewPWTB.Text = "";
+            
+
+           
+        }
+        private void ChangePWCloseBT_Click(object sender, EventArgs e) // sulkee salasanan vaihto ikkunan
+        {
+            ChangePWPanel.Visible = false;
+            
+        }
+
+        // PROFIILI END
+
 
 
 
@@ -498,7 +554,17 @@ namespace StudyPoint
             ProfileUpdatePL.Visible = false;
         }
 
-      
+       
+
+
+
+
+
+
+
+
+
+
 
 
 
