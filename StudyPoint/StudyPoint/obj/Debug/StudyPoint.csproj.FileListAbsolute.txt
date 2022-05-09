@@ -69,3 +69,4 @@ C:\Users\Henry\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\
 C:\Users\Henry\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.csproj.CopyComplete
 C:\Users\Henry\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.exe
 C:\Users\Henry\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.pdb
+C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\bin\Debug\eCryptography.dll

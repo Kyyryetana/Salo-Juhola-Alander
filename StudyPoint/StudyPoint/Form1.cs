@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Eramake;
 
 namespace StudyPoint
 {
@@ -16,6 +17,7 @@ namespace StudyPoint
         USERS users = new USERS();
         FEEDBACK feedback = new FEEDBACK();
         PROFILE profile = new PROFILE();
+        Crypting crypting = new Crypting();
         string loggedUser = "admin@studypoint.net";
         bool admin = false;
         public StudyPointForm()
@@ -289,8 +291,6 @@ namespace StudyPoint
             ChangePWPanel.Visible = false;
             ProfileUpdatePL.Visible = false;    
 
-
-
         }
         private void ProfileUpdateBT_Click(object sender, EventArgs e)
         {
@@ -349,21 +349,28 @@ namespace StudyPoint
 
             ChangePWDTG.DataSource = profile.OldPassword(email, CurrentPW); // datagrid näyttää sähköpostin ja nykyisen salasanan
             string CheckPw = ChangePWDTG.CurrentRow.Cells[1].Value.ToString(); // tallennetaan muuttujaan nykyinen salasana tietokannasta
-            // TEE YLEMPÄÄN DECRYPTAUS
+            CheckPw = eCryptography.Decrypt(CheckPw);
 
-            if(CurrentPW == CheckPw) // tarkistetaan, onko nykyinen syötetty salasana sama kuin tietokannasta saatu salasana
+            if (CurrentPW == "" || Pword == "")
             {
-                Boolean UpdatePassword = profile.UpdatePassword(email, Pword); // päivitetään salasana sähköpostin perusteella
-                // TEE YLEMPÄÄN ENCRYPTAUS
+                MessageBox.Show("Give your old and new password!");
             }
             else
             {
-                MessageBox.Show("Wrong old password!");
+                if (CurrentPW == CheckPw) // tarkistetaan, onko nykyinen syötetty salasana sama kuin tietokannasta saatu salasana
+                {
+                    Pword = eCryptography.Encrypt(NewPWTB.Text); // cryptataan uusi salasana
+                    Boolean UpdatePassword = profile.UpdatePassword(email, Pword); // päivitetään salasana sähköpostin perusteella
+
+                }
+                else
+                {
+                    MessageBox.Show("Wrong old password!");
+                }
             }
 
             CurrentPWTB.Text = "";
             NewPWTB.Text = "";
-            
 
            
         }
