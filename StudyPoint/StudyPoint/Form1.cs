@@ -267,12 +267,14 @@ namespace StudyPoint
         // PROFIILI
         private void ProfileBT_Click(object sender, EventArgs e)
         {
+            string email = loggedUser;
+
             ProfilePL.Visible = true;
             ProfileFirstname.Visible = true;
             ProfileLastname.Visible = true;
             ProfileEmail.Visible = true;
 
-            ProfileDTG.DataSource = profile.GetProfile();
+            ProfileDTG.DataSource = profile.GetProfile(email);
             var datagridview = new DataGridView();
 
             ProfileFirstname.Text = ProfileDTG.CurrentRow.Cells[1].Value.ToString();
@@ -305,8 +307,10 @@ namespace StudyPoint
         {
             ProfileUpdatePL.Visible=false;
 
+            string email = loggedUser;
 
-            ProfileDTG.DataSource = profile.GetProfile();
+
+            ProfileDTG.DataSource = profile.GetProfile(email);
             var datagridview = new DataGridView();
 
             ProfileFirstname.Text = ProfileDTG.CurrentRow.Cells[1].Value.ToString();

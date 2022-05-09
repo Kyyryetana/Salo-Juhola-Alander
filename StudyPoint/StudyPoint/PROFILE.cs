@@ -14,9 +14,30 @@ namespace StudyPoint
     {
         CONNECT myConnection = new CONNECT();
 
-        public DataTable GetProfile()
+        public bool IsLogged(string email)
         {
-            MySqlCommand MyCommand = new MySqlCommand("SELECT sahkoposti, etunimi,sukunimi,kID FROM studypoint.kayttajat WHERE kID = 1", myConnection.Connection());
+
+            myConnection.OpenConnection();
+            MySqlCommand komento = new MySqlCommand("SELECT sahkoposti FROM kayttajat WHERE sahkoposti = '" + email + "'", myConnection.Connection());
+
+            var sana = (string)komento.ExecuteScalar();
+            myConnection.CloseConnection();
+
+            if (sana == email)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+
+        public DataTable GetProfile(string email)
+        {
+            MySqlCommand MyCommand = new MySqlCommand("SELECT sahkoposti,etunimi,sukunimi,kID FROM studypoint.kayttajat WHERE sahkoposti = '" + email + "'", myConnection.Connection());
             MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
 
             DataTable MyTable = new DataTable();
@@ -32,7 +53,7 @@ namespace StudyPoint
         {
             MySqlCommand myCommand = new MySqlCommand(); // luodaan uusi komento
 
-            String myAdd = "UPDATE kayttajat SET sahkoposti = @email, etunimi = @enm, sukunimi = @snm WHERE CONCAT(kayttajat.kID) = 1";
+            String myAdd = "UPDATE kayttajat SET sahkoposti = @email, etunimi = @enm, sukunimi = @snm WHERE CONCAT(kayttajat.sahkoposti) = '" + Email + "'";
             
 
             myCommand.CommandText = myAdd; // annetaan käsky käyttää myAdd-komentoa
