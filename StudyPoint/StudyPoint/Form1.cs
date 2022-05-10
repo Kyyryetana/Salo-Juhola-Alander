@@ -21,7 +21,6 @@ namespace StudyPoint
         FEEDBACK feedback = new FEEDBACK();
         WHATSNEW whatsnew = new WHATSNEW();
         DOWNLOADS downloads = new DOWNLOADS();
-        // testi
         CONNECT connection = new CONNECT();
         string loggedUser = "";
         bool admin = false;
@@ -212,21 +211,6 @@ namespace StudyPoint
                 MessageBox.Show(ex.Message);
             }
 
-            /*MySqlConnection conn = new MySqlConnection("datasource=localhost; port=3306;username=root;password=;database=" + "studypoint" + ";SSL Mode = None");
-            connection.OpenConnection();
-            MySqlCommand komento = new MySqlCommand("SELECT COUNT(*) FROM kayttajat", conn);
-            Int32 count = (Int32) komento.ExecuteNonQuery();
-            if (count > 0)
-            {
-                regUserNumberLB.Text = Convert.ToString(count.ToString());
-                return;
-            }
-            else
-            {
-                regUserNumberLB.Text = "0";
-                return;
-            }
-            connection.CloseConnection();  //Remember close the connection*/
         }
 
         // DASHBOARD LOPPU
