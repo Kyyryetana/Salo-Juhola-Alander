@@ -155,7 +155,6 @@
             this.UserDTG = new System.Windows.Forms.DataGridView();
             this.UserManDeleteBT = new System.Windows.Forms.Button();
             this.UserManUpdateBT = new System.Windows.Forms.Button();
-            this.UserManSaveBT = new System.Windows.Forms.Button();
             this.UserManEmptyBT = new System.Windows.Forms.Button();
             this.UserManAdminTB = new System.Windows.Forms.TextBox();
             this.UserManEmailTB = new System.Windows.Forms.TextBox();
@@ -577,6 +576,7 @@
             this.UserManBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.UserManBT.UseVisualStyleBackColor = false;
             this.UserManBT.Visible = false;
+            this.UserManBT.Click += new System.EventHandler(this.UserManBT_Click_1);
             // 
             // DownloadManBT
             // 
@@ -1693,7 +1693,6 @@
             this.UserManPL.Controls.Add(this.UserDTG);
             this.UserManPL.Controls.Add(this.UserManDeleteBT);
             this.UserManPL.Controls.Add(this.UserManUpdateBT);
-            this.UserManPL.Controls.Add(this.UserManSaveBT);
             this.UserManPL.Controls.Add(this.UserManEmptyBT);
             this.UserManPL.Controls.Add(this.UserManAdminTB);
             this.UserManPL.Controls.Add(this.UserManEmailTB);
@@ -1715,42 +1714,36 @@
             // 
             // UserDTG
             // 
+            this.UserDTG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.UserDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UserDTG.Location = new System.Drawing.Point(17, 213);
             this.UserDTG.Name = "UserDTG";
             this.UserDTG.RowHeadersWidth = 62;
             this.UserDTG.Size = new System.Drawing.Size(612, 273);
             this.UserDTG.TabIndex = 15;
+            this.UserDTG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UserDTG_CellContentClick);
             // 
             // UserManDeleteBT
             // 
             this.UserManDeleteBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserManDeleteBT.Location = new System.Drawing.Point(298, 166);
+            this.UserManDeleteBT.Location = new System.Drawing.Point(206, 166);
             this.UserManDeleteBT.Name = "UserManDeleteBT";
             this.UserManDeleteBT.Size = new System.Drawing.Size(87, 32);
             this.UserManDeleteBT.TabIndex = 14;
             this.UserManDeleteBT.Text = "Delete";
             this.UserManDeleteBT.UseVisualStyleBackColor = true;
+            this.UserManDeleteBT.Click += new System.EventHandler(this.UserManDeleteBT_Click);
             // 
             // UserManUpdateBT
             // 
             this.UserManUpdateBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserManUpdateBT.Location = new System.Drawing.Point(206, 166);
+            this.UserManUpdateBT.Location = new System.Drawing.Point(113, 166);
             this.UserManUpdateBT.Name = "UserManUpdateBT";
             this.UserManUpdateBT.Size = new System.Drawing.Size(87, 32);
             this.UserManUpdateBT.TabIndex = 13;
             this.UserManUpdateBT.Text = "Update";
             this.UserManUpdateBT.UseVisualStyleBackColor = true;
-            // 
-            // UserManSaveBT
-            // 
-            this.UserManSaveBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserManSaveBT.Location = new System.Drawing.Point(113, 164);
-            this.UserManSaveBT.Name = "UserManSaveBT";
-            this.UserManSaveBT.Size = new System.Drawing.Size(87, 32);
-            this.UserManSaveBT.TabIndex = 12;
-            this.UserManSaveBT.Text = "Save";
-            this.UserManSaveBT.UseVisualStyleBackColor = true;
+            this.UserManUpdateBT.Click += new System.EventHandler(this.UserManUpdateBT_Click_1);
             // 
             // UserManEmptyBT
             // 
@@ -1761,6 +1754,7 @@
             this.UserManEmptyBT.TabIndex = 11;
             this.UserManEmptyBT.Text = "Empty";
             this.UserManEmptyBT.UseVisualStyleBackColor = true;
+            this.UserManEmptyBT.Click += new System.EventHandler(this.UserManEmptyBT_Click);
             // 
             // UserManAdminTB
             // 
@@ -1796,6 +1790,7 @@
             // 
             // UIDTB
             // 
+            this.UIDTB.Enabled = false;
             this.UIDTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UIDTB.Location = new System.Drawing.Point(113, 58);
             this.UIDTB.Name = "UIDTB";
@@ -2621,7 +2616,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 544);
+            this.ClientSize = new System.Drawing.Size(794, 545);
+            this.Controls.Add(this.UserManPL);
+            this.Controls.Add(this.FeedBackManPL);
+            this.Controls.Add(this.ManagementPL);
+            this.Controls.Add(this.FeedbackPL);
+            this.Controls.Add(this.AboutPL);
+            this.Controls.Add(this.loginPL);
+            this.Controls.Add(this.HomePL);
             this.Controls.Add(this.DashboardPL);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
@@ -2778,7 +2780,6 @@
         private System.Windows.Forms.DataGridView UserDTG;
         private System.Windows.Forms.Button UserManDeleteBT;
         private System.Windows.Forms.Button UserManUpdateBT;
-        private System.Windows.Forms.Button UserManSaveBT;
         private System.Windows.Forms.Button UserManEmptyBT;
         private System.Windows.Forms.Label LeaveFeedbackLB;
         private System.Windows.Forms.Label LeaveContactsLB;

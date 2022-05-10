@@ -29,7 +29,7 @@ namespace StudyPoint
         public StudyPointForm()
         {
             InitializeComponent();
-            HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
+            UserManPL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
             tarkistaNewThing(); // tarkistaa home sivulla olevan whats new tilanteen
         }
 
@@ -323,6 +323,121 @@ namespace StudyPoint
             FBManNameTB.Text = "";
             FBManEmailTB.Text = "";
         }
+
+        // USER MANAGEMENT -SIVU
+        private void UserManBT_Click_1(object sender, EventArgs e)
+        {
+            HomePL.Visible = false;
+            UserManPL.Visible = true;
+
+
+            UserDTG.DataSource = users.GetUsers();
+            UserDTG.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            var datagridview = new DataGridView();
+            datagridview.RowTemplate.MinimumHeight = 125;
+        }
+        private void UserManEmptyBT_Click(object sender, EventArgs e)
+        {
+            UIDTB.Text = "";
+            UserManFirstnameTB.Text = "";
+            UserManLastnameTB.Text = "";
+            UserManEmailTB.Text = "";
+            UserManAdminTB.Text = "";
+        }
+
+        private void UserManUpdateBT_Click(object sender, EventArgs e)
+        {
+            int UserId = Int32.Parse(UIDTB.Text);
+            String enimi = UserManFirstnameTB.Text;
+            String snimi = UserManLastnameTB.Text;
+            String email = UserManEmailTB.Text;
+
+            Boolean EditUser = users.EditUser(enimi, snimi, email, UserId);
+            if (EditUser)
+            {
+                MessageBox.Show("Updated succesfully!");
+            }
+            else
+            {
+                MessageBox.Show("Error!");
+            }
+
+            UserDTG.DataSource = users.GetUsers();
+        }
+
+        private void UserDTG_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            UserManEmailTB.Text = UserDTG.CurrentRow.Cells[0].Value.ToString();
+            UserManFirstnameTB.Text = UserDTG.CurrentRow.Cells[1].Value.ToString();
+            UserManLastnameTB.Text = UserDTG.CurrentRow.Cells[2].Value.ToString();
+            UIDTB.Text = UserDTG.CurrentRow.Cells[3].Value.ToString();
+            UserManAdminTB.Text = UserDTG.CurrentRow.Cells[4].Value.ToString();
+
+        }
+
+        private void UserManDeleteBT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int userID = Int32.Parse(UIDTB.Text);
+
+                if (users.DeleteUser(userID))
+                {
+                    UserDTG.DataSource = users.GetUsers();
+                    MessageBox.Show("User deleted succesfully");
+                }
+                else
+                {
+                    MessageBox.Show("ERROR! Couldn't delete the user");
+                }
+                UserManEmptyBT.PerformClick();
+            }
+            catch
+            {
+                MessageBox.Show("Select the user first!");
+            }
+        }
+
+      
+
+        private void UserManUpdateBT_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+            int UserId = Int32.Parse(UIDTB.Text);
+            String enimi = UserManFirstnameTB.Text;
+            String snimi = UserManLastnameTB.Text;
+            String email = UserManEmailTB.Text;
+            int admin = Int32.Parse(UserManAdminTB.Text);
+
+            
+            if (enimi.Trim().Equals("") || snimi.Trim().Equals("") || email.Trim().Equals(""))
+            {
+                MessageBox.Show("ERROR! Fill firstname, lastname and email to proceed");
+            }
+            else
+            {
+                Boolean SaveUser = users.EditUser(enimi, snimi, email, UserId);
+
+                if (SaveUser)
+                {
+                    MessageBox.Show("User information saved succesfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Error. Couldn't update the user information");
+                }
+                UserDTG.DataSource = users.GetUsers();
+
+            }
+            }
+            catch
+            {
+                MessageBox.Show("Select the user first!");
+            }
+        }
+
+      
 
         // FEEDBACK MANAGEMENT END
         

@@ -125,14 +125,14 @@ namespace StudyPoint
             MySqlCommand komento = new MySqlCommand();
             String paivityskysely = "UPDATE `kayttajat` SET `etunimi`= @enm," +
                 "`sukunimi`= @snm,`sahkoposti`= @eml" +
-                " WHERE userid = @uid";
+                " WHERE kID = @uid"; // päivitetty userid = kID
             komento.CommandText = paivityskysely;
             komento.Connection = connection.Connection();
             //@enm, @snm, @eml, @uid
             komento.Parameters.Add("@enm", MySqlDbType.VarChar).Value = enimi;
             komento.Parameters.Add("@snm", MySqlDbType.VarChar).Value = snimi;
             komento.Parameters.Add("@eml", MySqlDbType.VarChar).Value = email;
-            //komento.Parameters.Add("@uid", MySqlDbType.UInt32).Value = UserId;
+            komento.Parameters.Add("@uid", MySqlDbType.UInt32).Value = UserId;
 
 
             connection.OpenConnection();
@@ -153,7 +153,7 @@ namespace StudyPoint
         public bool DeleteUser(int userId)
         {
             MySqlCommand komento = new MySqlCommand();
-            String poistokysely = "DELETE FROM yhteystiedot WHERE userid = @uid";
+            String poistokysely = "DELETE FROM kayttajat WHERE kID = @uid"; // päivitetty: yhteystiedot = kayttajat, userid = kID
             komento.CommandText = poistokysely;
             komento.Connection = connection.Connection();
             //@oid
@@ -171,6 +171,22 @@ namespace StudyPoint
                 return false;
             }
         }
+
+        // LISÄTTY
+        // HAKEE KÄYTTÄJIEN TIEDOT TIETOKANNASTA
+        public DataTable GetUsers()
+        {
+            MySqlCommand MyCommand = new MySqlCommand("SELECT sahkoposti, etunimi, sukunimi, kID, admin FROM kayttajat", connection.Connection());
+            MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+            DataTable MyTable = new DataTable();
+
+            MyAdapter.SelectCommand = MyCommand;
+            MyAdapter.Fill(MyTable);
+
+            return MyTable;
+        }
+
+
         /*
         public String salasana()
         {
