@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Eramake;
 using System.Text.RegularExpressions;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
@@ -19,9 +20,6 @@ namespace StudyPoint
         DISCUSSION discussion = new DISCUSSION();
         USERS users = new USERS();
         FEEDBACK feedback = new FEEDBACK();
-        WHATSNEW whatsnew = new WHATSNEW();
-        DOWNLOADS downloads = new DOWNLOADS();
-        CONNECT connection = new CONNECT();
         string loggedUser = "";
         bool admin = false;
         string imgLocation = "";
@@ -252,7 +250,7 @@ namespace StudyPoint
 
         // HOME SIVU LOPPU
 
-        // FEEDBACK-SIVU
+        // FEEDBACK START
         private void FeedbackBT_Click_1(object sender, EventArgs e)
         {
             HomePL.Visible = false;
@@ -278,10 +276,11 @@ namespace StudyPoint
             FBNameTB.Text = "";
             FBEmailTB.Text = "";
         }
+        // FEEDBACK END
 
       
 
-        // FEEDBACK MANAGEMENT -SIVU
+        // FEEDBACK MANAGEMENT START
 
         private void FeedbackManBT_Click_1(object sender, EventArgs e) // tuodaan sivu näkyviin nappia painamalla
         {
@@ -322,24 +321,124 @@ namespace StudyPoint
             FBManEmailTB.Text = "";
         }
 
-        // PROFIILI
+        // FEEDBACK MANAGEMENT END
+        
+
+        // PROFIILI START
         private void ProfileBT_Click(object sender, EventArgs e)
         {
+            string email = loggedUser;
+
             ProfilePL.Visible = true;
-           
+            ProfileFirstname.Visible = true;
+            ProfileLastname.Visible = true;
+            ProfileEmail.Visible = true;
+
+            ProfileDTG.DataSource = profile.GetProfile(email);
+            var datagridview = new DataGridView();
+
+            ProfileFirstname.Text = ProfileDTG.CurrentRow.Cells[1].Value.ToString();
+            ProfileLastname.Text = ProfileDTG.CurrentRow.Cells[2].Value.ToString();
+            ProfileEmail.Text = ProfileDTG.CurrentRow.Cells[0].Value.ToString();
+
+            ProfileDTG.Visible = false;
+            ChangePWPanel.Visible = false;
+            ProfileUpdatePL.Visible = false;    
+
         }
         private void ProfileUpdateBT_Click(object sender, EventArgs e)
         {
             ProfileUpdatePL.Visible = true;
+           
+            UpdateFNameTB.Text = ProfileDTG.CurrentRow.Cells[1].Value.ToString();
+            UpdateLNameTB.Text = ProfileDTG.CurrentRow.Cells[2].Value.ToString();
+            UpdateEmailTB.Text = ProfileDTG.CurrentRow.Cells[0].Value.ToString();
         }
         private void UpdateUpdateBT_Click(object sender, EventArgs e)
         {
+            String Fname = UpdateFNameTB.Text;
+            String Lname = UpdateLNameTB.Text;
+            String Email = UpdateEmailTB.Text;
+
+            Boolean UpdateProfile = profile.UpdateProfile(Email,Fname,Lname);
 
         }
         private void UpdateCloseBT_Click(object sender, EventArgs e)
         {
             ProfileUpdatePL.Visible=false;
+
+            string email = loggedUser;
+
+
+            ProfileDTG.DataSource = profile.GetProfile(email);
+            var datagridview = new DataGridView();
+
+            ProfileFirstname.Text = ProfileDTG.CurrentRow.Cells[1].Value.ToString();
+            ProfileLastname.Text = ProfileDTG.CurrentRow.Cells[2].Value.ToString();
+            ProfileEmail.Text = ProfileDTG.CurrentRow.Cells[0].Value.ToString();
+
+            ProfileDTG.Visible = false;
         }
+
+        // SALASANAN VAIHTO 
+        private void ProfilePasswordBT_Click(object sender, EventArgs e) // avaa salasanan vaihto ikkunan
+        {
+            ChangePWPanel.Visible = true;
+            ChangePWDTG.Visible = false;
+
+            string email = loggedUser; // sisäänkirjautuneen henkilön sähköposti
+
+            String CurrentPW = CurrentPWTB.Text; // nykyinen salasana
+
+            ChangePWDTG.DataSource = profile.OldPassword(email, CurrentPW); // datagrid näyttää sähköpostin ja nykyisen salasanan
+            var datagridview = new DataGridView(); // tuodaan tiedot datagridiin
+        }
+
+        private void ChangePWBT_Click(object sender, EventArgs e) // vaihtaa salasanan
+        {
+            string email = loggedUser; // sisäänkirjautuneen henkilön sähköposti
+
+            String CurrentPW = CurrentPWTB.Text; // nykyinen salasana
+            String Pword = NewPWTB.Text; // uusi salasana
+            String PwordAgain = NewPWAgainTB.Text; // uusi salasana uudelleen
+
+            ChangePWDTG.DataSource = profile.OldPassword(email, CurrentPW); // datagrid näyttää sähköpostin ja nykyisen salasanan
+            string CheckPw = ChangePWDTG.CurrentRow.Cells[1].Value.ToString(); // tallennetaan muuttujaan nykyinen salasana tietokannasta
+            CheckPw = eCryptography.Decrypt(CheckPw);
+
+            if (CurrentPW == "" || Pword == "" || PwordAgain == "")
+            {
+                MessageBox.Show("Give your old and new password!");
+            }
+            else
+            {
+                if (CurrentPW == CheckPw && Pword == PwordAgain) // tarkistetaan, onko nykyinen syötetty salasana sama kuin tietokannasta saatu salasana
+                {
+                    Pword = eCryptography.Encrypt(NewPWTB.Text); // cryptataan uusi salasana
+                    Boolean UpdatePassword = profile.UpdatePassword(email, Pword); // päivitetään salasana sähköpostin perusteella
+                    ChangePWDTG.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Check your password!");
+                    ChangePWDTG.Visible = false;
+                }
+            }
+
+            CurrentPWTB.Text = "";
+            NewPWTB.Text = "";
+            NewPWAgainTB.Text = "";
+
+           
+        }
+        private void ChangePWCloseBT_Click(object sender, EventArgs e) // sulkee salasanan vaihto ikkunan
+        {
+            ChangePWPanel.Visible = false;
+            
+        }
+
+        // PROFIILI END
+
 
 
 
@@ -781,6 +880,13 @@ namespace StudyPoint
             ProfilePL.Visible = false;
             ProfileUpdatePL.Visible = false;
         }
+
+      
+
+
+
+
+
 
         //menu discussion board
 
