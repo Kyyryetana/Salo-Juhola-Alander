@@ -66,6 +66,7 @@
             this.HomeLB = new System.Windows.Forms.Label();
             this.DashboardPL = new System.Windows.Forms.Panel();
             this.UserDashboardPL = new System.Windows.Forms.Panel();
+            this.adminOrNormalLB = new System.Windows.Forms.Label();
             this.thisUserLB = new System.Windows.Forms.Label();
             this.regUserNumberLB = new System.Windows.Forms.Label();
             this.regUsersLB = new System.Windows.Forms.Label();
@@ -140,6 +141,15 @@
             this.FBManDG = new System.Windows.Forms.DataGridView();
             this.feedbackManLB = new System.Windows.Forms.Label();
             this.DownloadManPL = new System.Windows.Forms.Panel();
+            this.downloadMGDGW = new System.Windows.Forms.DataGridView();
+            this.downloadMGTB = new System.Windows.Forms.TextBox();
+            this.downloadMGviewBT = new System.Windows.Forms.Button();
+            this.downloadMGdeleteBT = new System.Windows.Forms.Button();
+            this.downloadMGrefreshBT = new System.Windows.Forms.Button();
+            this.downloadMGsendSqlBT = new System.Windows.Forms.Button();
+            this.downloadMGclearBT = new System.Windows.Forms.Button();
+            this.downloadMGbrowseBT = new System.Windows.Forms.Button();
+            this.downloadMGPB = new System.Windows.Forms.PictureBox();
             this.DownloadManLB = new System.Windows.Forms.Label();
             this.UserManPL = new System.Windows.Forms.Panel();
             this.UserDTG = new System.Windows.Forms.DataGridView();
@@ -205,15 +215,7 @@
             this.ProfileLNameLB = new System.Windows.Forms.Label();
             this.ProfileFNameLB = new System.Windows.Forms.Label();
             this.ProfileLB = new System.Windows.Forms.Label();
-            this.downloadMGPB = new System.Windows.Forms.PictureBox();
-            this.downloadMGbrowseBT = new System.Windows.Forms.Button();
-            this.downloadMGclearBT = new System.Windows.Forms.Button();
-            this.downloadMGsendSqlBT = new System.Windows.Forms.Button();
-            this.downloadMGrefreshBT = new System.Windows.Forms.Button();
-            this.downloadMGdeleteBT = new System.Windows.Forms.Button();
-            this.downloadMGviewBT = new System.Windows.Forms.Button();
-            this.downloadMGTB = new System.Windows.Forms.TextBox();
-            this.downloadMGDGW = new System.Windows.Forms.DataGridView();
+            this.dashboardRefreshDataBT = new System.Windows.Forms.Button();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -239,6 +241,8 @@
             this.FeedBackManPL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FBManDG)).BeginInit();
             this.DownloadManPL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.downloadMGDGW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.downloadMGPB)).BeginInit();
             this.UserManPL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserDTG)).BeginInit();
             this.WhatsNewManPL.SuspendLayout();
@@ -247,8 +251,6 @@
             this.registrationPL.SuspendLayout();
             this.ProfilePL.SuspendLayout();
             this.ProfileUpdatePL.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.downloadMGPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.downloadMGDGW)).BeginInit();
             this.SuspendLayout();
             // 
             // YlaPL
@@ -526,6 +528,7 @@
             this.NewManBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NewManBT.UseVisualStyleBackColor = false;
             this.NewManBT.Visible = false;
+            this.NewManBT.Click += new System.EventHandler(this.NewManBT_Click);
             // 
             // UserManBT
             // 
@@ -558,6 +561,7 @@
             this.DownloadManBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DownloadManBT.UseVisualStyleBackColor = false;
             this.DownloadManBT.Visible = false;
+            this.DownloadManBT.Click += new System.EventHandler(this.DownloadManBT_Click);
             // 
             // FeedbackManBT
             // 
@@ -731,6 +735,7 @@
             // 
             // DashboardPL
             // 
+            this.DashboardPL.Controls.Add(this.dashboardRefreshDataBT);
             this.DashboardPL.Controls.Add(this.UserDashboardPL);
             this.DashboardPL.Controls.Add(this.regUserNumberLB);
             this.DashboardPL.Controls.Add(this.regUsersLB);
@@ -745,6 +750,7 @@
             // UserDashboardPL
             // 
             this.UserDashboardPL.BackColor = System.Drawing.Color.LightBlue;
+            this.UserDashboardPL.Controls.Add(this.adminOrNormalLB);
             this.UserDashboardPL.Controls.Add(this.thisUserLB);
             this.UserDashboardPL.Dock = System.Windows.Forms.DockStyle.Right;
             this.UserDashboardPL.Location = new System.Drawing.Point(441, 0);
@@ -752,13 +758,23 @@
             this.UserDashboardPL.Size = new System.Drawing.Size(200, 497);
             this.UserDashboardPL.TabIndex = 3;
             // 
+            // adminOrNormalLB
+            // 
+            this.adminOrNormalLB.AutoSize = true;
+            this.adminOrNormalLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminOrNormalLB.Location = new System.Drawing.Point(4, 8);
+            this.adminOrNormalLB.Name = "adminOrNormalLB";
+            this.adminOrNormalLB.Size = new System.Drawing.Size(125, 24);
+            this.adminOrNormalLB.TabIndex = 1;
+            this.adminOrNormalLB.Text = "Admin or no";
+            // 
             // thisUserLB
             // 
             this.thisUserLB.AutoSize = true;
-            this.thisUserLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thisUserLB.Location = new System.Drawing.Point(4, 7);
+            this.thisUserLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thisUserLB.Location = new System.Drawing.Point(4, 35);
             this.thisUserLB.Name = "thisUserLB";
-            this.thisUserLB.Size = new System.Drawing.Size(87, 20);
+            this.thisUserLB.Size = new System.Drawing.Size(102, 24);
             this.thisUserLB.TabIndex = 0;
             this.thisUserLB.Text = "User name";
             // 
@@ -1535,6 +1551,101 @@
             this.DownloadManPL.TabIndex = 20;
             this.DownloadManPL.Visible = false;
             // 
+            // downloadMGDGW
+            // 
+            this.downloadMGDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.downloadMGDGW.Location = new System.Drawing.Point(10, 226);
+            this.downloadMGDGW.Name = "downloadMGDGW";
+            this.downloadMGDGW.Size = new System.Drawing.Size(601, 214);
+            this.downloadMGDGW.TabIndex = 9;
+            this.downloadMGDGW.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.downloadMGDGW_CellContentClick);
+            // 
+            // downloadMGTB
+            // 
+            this.downloadMGTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGTB.Location = new System.Drawing.Point(10, 457);
+            this.downloadMGTB.Name = "downloadMGTB";
+            this.downloadMGTB.Size = new System.Drawing.Size(318, 26);
+            this.downloadMGTB.TabIndex = 8;
+            // 
+            // downloadMGviewBT
+            // 
+            this.downloadMGviewBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGviewBT.Location = new System.Drawing.Point(334, 455);
+            this.downloadMGviewBT.Name = "downloadMGviewBT";
+            this.downloadMGviewBT.Size = new System.Drawing.Size(101, 30);
+            this.downloadMGviewBT.TabIndex = 7;
+            this.downloadMGviewBT.Text = "VIEW IMG";
+            this.downloadMGviewBT.UseVisualStyleBackColor = true;
+            this.downloadMGviewBT.Click += new System.EventHandler(this.downloadMGviewBT_Click);
+            // 
+            // downloadMGdeleteBT
+            // 
+            this.downloadMGdeleteBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGdeleteBT.Location = new System.Drawing.Point(441, 455);
+            this.downloadMGdeleteBT.Name = "downloadMGdeleteBT";
+            this.downloadMGdeleteBT.Size = new System.Drawing.Size(170, 30);
+            this.downloadMGdeleteBT.TabIndex = 6;
+            this.downloadMGdeleteBT.Text = "DELETE FROM LIST";
+            this.downloadMGdeleteBT.UseVisualStyleBackColor = true;
+            this.downloadMGdeleteBT.Click += new System.EventHandler(this.downloadMGdeleteBT_Click);
+            // 
+            // downloadMGrefreshBT
+            // 
+            this.downloadMGrefreshBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGrefreshBT.Location = new System.Drawing.Point(449, 181);
+            this.downloadMGrefreshBT.Name = "downloadMGrefreshBT";
+            this.downloadMGrefreshBT.Size = new System.Drawing.Size(162, 30);
+            this.downloadMGrefreshBT.TabIndex = 5;
+            this.downloadMGrefreshBT.Text = "REFRESH LIST";
+            this.downloadMGrefreshBT.UseVisualStyleBackColor = true;
+            this.downloadMGrefreshBT.Click += new System.EventHandler(this.downloadMGrefreshBT_Click);
+            // 
+            // downloadMGsendSqlBT
+            // 
+            this.downloadMGsendSqlBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGsendSqlBT.Location = new System.Drawing.Point(166, 180);
+            this.downloadMGsendSqlBT.Name = "downloadMGsendSqlBT";
+            this.downloadMGsendSqlBT.Size = new System.Drawing.Size(127, 30);
+            this.downloadMGsendSqlBT.TabIndex = 4;
+            this.downloadMGsendSqlBT.Text = "SEND TO SQL";
+            this.downloadMGsendSqlBT.UseVisualStyleBackColor = true;
+            this.downloadMGsendSqlBT.Click += new System.EventHandler(this.downloadMGsendSqlBT_Click);
+            // 
+            // downloadMGclearBT
+            // 
+            this.downloadMGclearBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGclearBT.ForeColor = System.Drawing.Color.Red;
+            this.downloadMGclearBT.Location = new System.Drawing.Point(166, 79);
+            this.downloadMGclearBT.Name = "downloadMGclearBT";
+            this.downloadMGclearBT.Size = new System.Drawing.Size(127, 30);
+            this.downloadMGclearBT.TabIndex = 3;
+            this.downloadMGclearBT.Text = "CLEAR";
+            this.downloadMGclearBT.UseVisualStyleBackColor = true;
+            this.downloadMGclearBT.Click += new System.EventHandler(this.downloadMGclearBT_Click);
+            // 
+            // downloadMGbrowseBT
+            // 
+            this.downloadMGbrowseBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGbrowseBT.Location = new System.Drawing.Point(166, 44);
+            this.downloadMGbrowseBT.Name = "downloadMGbrowseBT";
+            this.downloadMGbrowseBT.Size = new System.Drawing.Size(127, 30);
+            this.downloadMGbrowseBT.TabIndex = 2;
+            this.downloadMGbrowseBT.Text = "BROWSE";
+            this.downloadMGbrowseBT.UseVisualStyleBackColor = true;
+            this.downloadMGbrowseBT.Click += new System.EventHandler(this.downloadMGbrowseBT_Click);
+            // 
+            // downloadMGPB
+            // 
+            this.downloadMGPB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.downloadMGPB.Location = new System.Drawing.Point(10, 45);
+            this.downloadMGPB.MaximumSize = new System.Drawing.Size(135, 165);
+            this.downloadMGPB.Name = "downloadMGPB";
+            this.downloadMGPB.Size = new System.Drawing.Size(135, 165);
+            this.downloadMGPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.downloadMGPB.TabIndex = 1;
+            this.downloadMGPB.TabStop = false;
+            // 
             // DownloadManLB
             // 
             this.DownloadManLB.AutoSize = true;
@@ -2204,120 +2315,36 @@
             this.ProfileLB.TabIndex = 0;
             this.ProfileLB.Text = "Profile";
             // 
-            // downloadMGPB
+            // dashboardRefreshDataBT
             // 
-            this.downloadMGPB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.downloadMGPB.Location = new System.Drawing.Point(10, 45);
-            this.downloadMGPB.MaximumSize = new System.Drawing.Size(135, 165);
-            this.downloadMGPB.Name = "downloadMGPB";
-            this.downloadMGPB.Size = new System.Drawing.Size(135, 165);
-            this.downloadMGPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.downloadMGPB.TabIndex = 1;
-            this.downloadMGPB.TabStop = false;
-            // 
-            // downloadMGbrowseBT
-            // 
-            this.downloadMGbrowseBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.downloadMGbrowseBT.Location = new System.Drawing.Point(166, 44);
-            this.downloadMGbrowseBT.Name = "downloadMGbrowseBT";
-            this.downloadMGbrowseBT.Size = new System.Drawing.Size(127, 30);
-            this.downloadMGbrowseBT.TabIndex = 2;
-            this.downloadMGbrowseBT.Text = "BROWSE";
-            this.downloadMGbrowseBT.UseVisualStyleBackColor = true;
-            this.downloadMGbrowseBT.Click += new System.EventHandler(this.downloadMGbrowseBT_Click);
-            // 
-            // downloadMGclearBT
-            // 
-            this.downloadMGclearBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.downloadMGclearBT.ForeColor = System.Drawing.Color.Red;
-            this.downloadMGclearBT.Location = new System.Drawing.Point(166, 79);
-            this.downloadMGclearBT.Name = "downloadMGclearBT";
-            this.downloadMGclearBT.Size = new System.Drawing.Size(127, 30);
-            this.downloadMGclearBT.TabIndex = 3;
-            this.downloadMGclearBT.Text = "CLEAR";
-            this.downloadMGclearBT.UseVisualStyleBackColor = true;
-            this.downloadMGclearBT.Click += new System.EventHandler(this.downloadMGclearBT_Click);
-            // 
-            // downloadMGsendSqlBT
-            // 
-            this.downloadMGsendSqlBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.downloadMGsendSqlBT.Location = new System.Drawing.Point(166, 180);
-            this.downloadMGsendSqlBT.Name = "downloadMGsendSqlBT";
-            this.downloadMGsendSqlBT.Size = new System.Drawing.Size(127, 30);
-            this.downloadMGsendSqlBT.TabIndex = 4;
-            this.downloadMGsendSqlBT.Text = "SEND TO SQL";
-            this.downloadMGsendSqlBT.UseVisualStyleBackColor = true;
-            this.downloadMGsendSqlBT.Click += new System.EventHandler(this.downloadMGsendSqlBT_Click);
-            // 
-            // downloadMGrefreshBT
-            // 
-            this.downloadMGrefreshBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.downloadMGrefreshBT.Location = new System.Drawing.Point(449, 181);
-            this.downloadMGrefreshBT.Name = "downloadMGrefreshBT";
-            this.downloadMGrefreshBT.Size = new System.Drawing.Size(162, 30);
-            this.downloadMGrefreshBT.TabIndex = 5;
-            this.downloadMGrefreshBT.Text = "REFRESH LIST";
-            this.downloadMGrefreshBT.UseVisualStyleBackColor = true;
-            this.downloadMGrefreshBT.Click += new System.EventHandler(this.downloadMGrefreshBT_Click);
-            // 
-            // downloadMGdeleteBT
-            // 
-            this.downloadMGdeleteBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.downloadMGdeleteBT.Location = new System.Drawing.Point(441, 455);
-            this.downloadMGdeleteBT.Name = "downloadMGdeleteBT";
-            this.downloadMGdeleteBT.Size = new System.Drawing.Size(170, 30);
-            this.downloadMGdeleteBT.TabIndex = 6;
-            this.downloadMGdeleteBT.Text = "DELETE FROM LIST";
-            this.downloadMGdeleteBT.UseVisualStyleBackColor = true;
-            this.downloadMGdeleteBT.Click += new System.EventHandler(this.downloadMGdeleteBT_Click);
-            // 
-            // downloadMGviewBT
-            // 
-            this.downloadMGviewBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.downloadMGviewBT.Location = new System.Drawing.Point(334, 455);
-            this.downloadMGviewBT.Name = "downloadMGviewBT";
-            this.downloadMGviewBT.Size = new System.Drawing.Size(101, 30);
-            this.downloadMGviewBT.TabIndex = 7;
-            this.downloadMGviewBT.Text = "VIEW IMG";
-            this.downloadMGviewBT.UseVisualStyleBackColor = true;
-            this.downloadMGviewBT.Click += new System.EventHandler(this.downloadMGviewBT_Click);
-            // 
-            // downloadMGTB
-            // 
-            this.downloadMGTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.downloadMGTB.Location = new System.Drawing.Point(10, 457);
-            this.downloadMGTB.Name = "downloadMGTB";
-            this.downloadMGTB.Size = new System.Drawing.Size(318, 26);
-            this.downloadMGTB.TabIndex = 8;
-            // 
-            // downloadMGDGW
-            // 
-            this.downloadMGDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.downloadMGDGW.Location = new System.Drawing.Point(10, 226);
-            this.downloadMGDGW.Name = "downloadMGDGW";
-            this.downloadMGDGW.Size = new System.Drawing.Size(601, 214);
-            this.downloadMGDGW.TabIndex = 9;
-            this.downloadMGDGW.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.downloadMGDGW_CellContentClick);
+            this.dashboardRefreshDataBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardRefreshDataBT.Location = new System.Drawing.Point(265, 6);
+            this.dashboardRefreshDataBT.Name = "dashboardRefreshDataBT";
+            this.dashboardRefreshDataBT.Size = new System.Drawing.Size(170, 31);
+            this.dashboardRefreshDataBT.TabIndex = 4;
+            this.dashboardRefreshDataBT.Text = "REFRESH DATA";
+            this.dashboardRefreshDataBT.UseVisualStyleBackColor = true;
+            this.dashboardRefreshDataBT.Click += new System.EventHandler(this.dashboardRefreshDataBT_Click);
             // 
             // StudyPointForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 544);
+            this.Controls.Add(this.DashboardPL);
+            this.Controls.Add(this.AboutPL);
+            this.Controls.Add(this.ManagementPL);
+            this.Controls.Add(this.HomePL);
             this.Controls.Add(this.DownloadManPL);
             this.Controls.Add(this.WhatsNewManPL);
             this.Controls.Add(this.loginPL);
             this.Controls.Add(this.DiscussionBoardPL);
             this.Controls.Add(this.ProfilePL);
-            this.Controls.Add(this.HomePL);
-            this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.UserManPL);
-            this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.FeedBackManPL);
-            this.Controls.Add(this.FeedbackPL);
-            this.Controls.Add(this.DashboardPL);
-            this.Controls.Add(this.ContactUsPL);
             this.Controls.Add(this.DownloadPL);
+            this.Controls.Add(this.FeedbackPL);
+            this.Controls.Add(this.ContactUsPL);
             this.Controls.Add(this.OurDepartmentPL);
             this.Controls.Add(this.OurGalleryPL);
             this.Controls.Add(this.AboutUsPL);
@@ -2372,6 +2399,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.FBManDG)).EndInit();
             this.DownloadManPL.ResumeLayout(false);
             this.DownloadManPL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.downloadMGDGW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.downloadMGPB)).EndInit();
             this.UserManPL.ResumeLayout(false);
             this.UserManPL.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserDTG)).EndInit();
@@ -2386,8 +2415,6 @@
             this.ProfilePL.PerformLayout();
             this.ProfileUpdatePL.ResumeLayout(false);
             this.ProfileUpdatePL.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.downloadMGPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.downloadMGDGW)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2579,6 +2606,8 @@
         private System.Windows.Forms.Button downloadMGclearBT;
         private System.Windows.Forms.Button downloadMGbrowseBT;
         private System.Windows.Forms.PictureBox downloadMGPB;
+        private System.Windows.Forms.Label adminOrNormalLB;
+        private System.Windows.Forms.Button dashboardRefreshDataBT;
     }
 }
 
