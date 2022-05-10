@@ -18,7 +18,7 @@ namespace StudyPoint
         FEEDBACK feedback = new FEEDBACK();
         PROFILE profile = new PROFILE();
         Crypting crypting = new Crypting();
-        string loggedUser = "admin@studypoint.net";
+        string loggedUser = "";
         bool admin = false;
         public StudyPointForm()
         {
