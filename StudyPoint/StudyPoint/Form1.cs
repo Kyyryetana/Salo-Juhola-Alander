@@ -346,31 +346,34 @@ namespace StudyPoint
 
             String CurrentPW = CurrentPWTB.Text; // nykyinen salasana
             String Pword = NewPWTB.Text; // uusi salasana
+            String PwordAgain = NewPWAgainTB.Text; // uusi salasana uudelleen
 
             ChangePWDTG.DataSource = profile.OldPassword(email, CurrentPW); // datagrid näyttää sähköpostin ja nykyisen salasanan
             string CheckPw = ChangePWDTG.CurrentRow.Cells[1].Value.ToString(); // tallennetaan muuttujaan nykyinen salasana tietokannasta
             CheckPw = eCryptography.Decrypt(CheckPw);
 
-            if (CurrentPW == "" || Pword == "")
+            if (CurrentPW == "" || Pword == "" || PwordAgain == "")
             {
                 MessageBox.Show("Give your old and new password!");
             }
             else
             {
-                if (CurrentPW == CheckPw) // tarkistetaan, onko nykyinen syötetty salasana sama kuin tietokannasta saatu salasana
+                if (CurrentPW == CheckPw && Pword == PwordAgain) // tarkistetaan, onko nykyinen syötetty salasana sama kuin tietokannasta saatu salasana
                 {
                     Pword = eCryptography.Encrypt(NewPWTB.Text); // cryptataan uusi salasana
                     Boolean UpdatePassword = profile.UpdatePassword(email, Pword); // päivitetään salasana sähköpostin perusteella
-
+                    ChangePWDTG.Visible = false;
                 }
                 else
                 {
-                    MessageBox.Show("Wrong old password!");
+                    MessageBox.Show("Check your password!");
+                    ChangePWDTG.Visible = false;
                 }
             }
 
             CurrentPWTB.Text = "";
             NewPWTB.Text = "";
+            NewPWAgainTB.Text = "";
 
            
         }
@@ -562,6 +565,8 @@ namespace StudyPoint
         }
 
        
+
+
 
 
 

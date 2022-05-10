@@ -182,6 +182,8 @@
             this.loginMailTB = new System.Windows.Forms.TextBox();
             this.ProfilePL = new System.Windows.Forms.Panel();
             this.ChangePWPanel = new System.Windows.Forms.Panel();
+            this.NewPWAgainTB = new System.Windows.Forms.TextBox();
+            this.NewPWAgainLB = new System.Windows.Forms.Label();
             this.ChangePWDTG = new System.Windows.Forms.DataGridView();
             this.NewPWTB = new System.Windows.Forms.TextBox();
             this.CurrentPWTB = new System.Windows.Forms.TextBox();
@@ -1944,6 +1946,8 @@
             // 
             // ChangePWPanel
             // 
+            this.ChangePWPanel.Controls.Add(this.NewPWAgainTB);
+            this.ChangePWPanel.Controls.Add(this.NewPWAgainLB);
             this.ChangePWPanel.Controls.Add(this.ChangePWDTG);
             this.ChangePWPanel.Controls.Add(this.NewPWTB);
             this.ChangePWPanel.Controls.Add(this.CurrentPWTB);
@@ -1952,10 +1956,29 @@
             this.ChangePWPanel.Controls.Add(this.NewPWLB);
             this.ChangePWPanel.Controls.Add(this.CurrentPWLB);
             this.ChangePWPanel.Controls.Add(this.ChangePWLB);
-            this.ChangePWPanel.Location = new System.Drawing.Point(145, 11);
+            this.ChangePWPanel.Location = new System.Drawing.Point(124, 11);
             this.ChangePWPanel.Name = "ChangePWPanel";
-            this.ChangePWPanel.Size = new System.Drawing.Size(367, 453);
+            this.ChangePWPanel.Size = new System.Drawing.Size(408, 453);
             this.ChangePWPanel.TabIndex = 11;
+            // 
+            // NewPWAgainTB
+            // 
+            this.NewPWAgainTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewPWAgainTB.Location = new System.Drawing.Point(174, 226);
+            this.NewPWAgainTB.Name = "NewPWAgainTB";
+            this.NewPWAgainTB.Size = new System.Drawing.Size(193, 26);
+            this.NewPWAgainTB.TabIndex = 9;
+            this.NewPWAgainTB.UseSystemPasswordChar = true;
+            // 
+            // NewPWAgainLB
+            // 
+            this.NewPWAgainLB.AutoSize = true;
+            this.NewPWAgainLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewPWAgainLB.Location = new System.Drawing.Point(6, 229);
+            this.NewPWAgainLB.Name = "NewPWAgainLB";
+            this.NewPWAgainLB.Size = new System.Drawing.Size(159, 20);
+            this.NewPWAgainLB.TabIndex = 8;
+            this.NewPWAgainLB.Text = "New password again:";
             // 
             // ChangePWDTG
             // 
@@ -1968,7 +1991,7 @@
             // NewPWTB
             // 
             this.NewPWTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewPWTB.Location = new System.Drawing.Point(152, 182);
+            this.NewPWTB.Location = new System.Drawing.Point(174, 170);
             this.NewPWTB.Name = "NewPWTB";
             this.NewPWTB.Size = new System.Drawing.Size(193, 26);
             this.NewPWTB.TabIndex = 6;
@@ -1977,7 +2000,7 @@
             // CurrentPWTB
             // 
             this.CurrentPWTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentPWTB.Location = new System.Drawing.Point(152, 126);
+            this.CurrentPWTB.Location = new System.Drawing.Point(174, 118);
             this.CurrentPWTB.Name = "CurrentPWTB";
             this.CurrentPWTB.Size = new System.Drawing.Size(193, 26);
             this.CurrentPWTB.TabIndex = 5;
@@ -1986,7 +2009,7 @@
             // ChangePWCloseBT
             // 
             this.ChangePWCloseBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangePWCloseBT.Location = new System.Drawing.Point(86, 332);
+            this.ChangePWCloseBT.Location = new System.Drawing.Point(121, 332);
             this.ChangePWCloseBT.Name = "ChangePWCloseBT";
             this.ChangePWCloseBT.Size = new System.Drawing.Size(172, 32);
             this.ChangePWCloseBT.TabIndex = 4;
@@ -1997,7 +2020,7 @@
             // ChangePWBT
             // 
             this.ChangePWBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangePWBT.Location = new System.Drawing.Point(86, 291);
+            this.ChangePWBT.Location = new System.Drawing.Point(121, 291);
             this.ChangePWBT.Name = "ChangePWBT";
             this.ChangePWBT.Size = new System.Drawing.Size(172, 32);
             this.ChangePWBT.TabIndex = 3;
@@ -2009,7 +2032,7 @@
             // 
             this.NewPWLB.AutoSize = true;
             this.NewPWLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewPWLB.Location = new System.Drawing.Point(25, 185);
+            this.NewPWLB.Location = new System.Drawing.Point(48, 173);
             this.NewPWLB.Name = "NewPWLB";
             this.NewPWLB.Size = new System.Drawing.Size(116, 20);
             this.NewPWLB.TabIndex = 2;
@@ -2019,7 +2042,7 @@
             // 
             this.CurrentPWLB.AutoSize = true;
             this.CurrentPWLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentPWLB.Location = new System.Drawing.Point(3, 129);
+            this.CurrentPWLB.Location = new System.Drawing.Point(26, 121);
             this.CurrentPWLB.Name = "CurrentPWLB";
             this.CurrentPWLB.Size = new System.Drawing.Size(138, 20);
             this.CurrentPWLB.TabIndex = 1;
@@ -2506,6 +2529,8 @@
         private System.Windows.Forms.Label CurrentPWLB;
         private System.Windows.Forms.Label ChangePWLB;
         private System.Windows.Forms.DataGridView ChangePWDTG;
+        private System.Windows.Forms.TextBox NewPWAgainTB;
+        private System.Windows.Forms.Label NewPWAgainLB;
     }
 }
 
