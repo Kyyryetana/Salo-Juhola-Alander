@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace StudyPoint
 {
@@ -18,13 +21,14 @@ namespace StudyPoint
         FEEDBACK feedback = new FEEDBACK();
         WHATSNEW whatsnew = new WHATSNEW();
         DOWNLOADS downloads = new DOWNLOADS();
+        CONNECT connection = new CONNECT();
         string loggedUser = "";
         bool admin = false;
         string imgLocation = "";
         public StudyPointForm()
         {
             InitializeComponent();
-            //HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
+            HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
             tarkistaNewThing(); // tarkistaa home sivulla olevan whats new tilanteen
         }
 
@@ -153,22 +157,72 @@ namespace StudyPoint
         //kirjautuminen ja uusi käyttäjä
         //end
 
+        // DASHBOARD
 
-
-        private void DashboardBT_Click(object sender, EventArgs e) //dashboard esiin, home piiloon, dashboardille tiedot SQL:stä
+        private void DashboardBT_Click(object sender, EventArgs e) // panelit piiloon, dashboard esiin, tarkistaa käyttäjän, tarkistaa onko admin
         {
-            // kesken
-            // tänne sql tietojen noudot
-            // rekisteröityneiden käyttäjien määrä
-            // sen hetkisen käyttäjän / adminin tiedot
+            HideAllPanels();
             DashboardPL.Visible = true;
-            HomePL.Visible = false;
+            
+            if (loggedUser == "")
+            {
+                adminOrNormalLB.Text = "Register or login";
+                thisUserLB.Text = "Visitor";
+            }
+            else
+            {
+                thisUserLB.Text = loggedUser;
+
+                if (admin == true)
+                {
+                    adminOrNormalLB.Text = "ADMIN";
+                }
+                else
+                {
+                    adminOrNormalLB.Text = "NORMAL USER";
+                }
+            }    
+            dashboardRefreshDataBT.PerformClick();
         }
 
-        private void HomeBT_Click(object sender, EventArgs e) //home näkyviin, dashboard piiloon ja tarkistetaan whats new tilanne
+        private void dashboardRefreshDataBT_Click(object sender, EventArgs e)
         {
+            string str = @"datasource=localhost; port=3306;username=root;password=;database=" + "studypoint" + ";SSL Mode = None";
+            MySqlConnection con = new MySqlConnection(str);
+            MySqlCommand cmd;
+
+            string query = "SELECT COUNT(kID) FROM kayttajat";
+
+            try
+            {
+                con.Open();
+
+                cmd = new MySqlCommand(query, con);
+
+                Int32 rows_count = Convert.ToInt32(cmd.ExecuteScalar());
+                cmd.Dispose();
+                con.Close();
+
+                regUserNumberLB.Text = rows_count.ToString();
+                regUserNumberLB.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        // DASHBOARD LOPPU
+        // HOME SIVU
+
+        private void HomeBT_Click(object sender, EventArgs e) // Panelit piiloon, home näkyviin, tarkista uudet tiedot
+        {
+            HideAllPanels();
             HomePL.Visible = true;
-            DashboardPL.Visible = false;
+
+            // tänne funktio joka noutaa sql uudet asiat HOME sivulle
+
             tarkistaNewThing();
         }
 
@@ -196,6 +250,7 @@ namespace StudyPoint
             }
         }
 
+        // HOME SIVU LOPPU
 
         // FEEDBACK-SIVU
         private void FeedbackBT_Click_1(object sender, EventArgs e)
@@ -680,6 +735,20 @@ namespace StudyPoint
         {
             // TÄMÄ ON TEKEMÄTTÄ
         }
+
+        private void NewManBT_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            WhatsNewManPL.Visible = true;
+        }
+
+        private void DownloadManBT_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            DownloadManPL.Visible = true;
+        }
+
+        
 
         // DOWNLOAD MANAGEMENT SIVU LOPPU
 
