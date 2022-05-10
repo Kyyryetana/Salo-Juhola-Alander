@@ -23,7 +23,7 @@ namespace StudyPoint
         WHATSNEW whatsnew = new WHATSNEW();
         PROFILE profile = new PROFILE();
         DOWNLOADS downloads = new DOWNLOADS();
-        string loggedUser = "";
+        string loggedUser = "admin@studypoint.net";
         bool admin = false;
         string imgLocation = "";
         public StudyPointForm()
@@ -330,6 +330,8 @@ namespace StudyPoint
         // PROFIILI START
         private void ProfileBT_Click(object sender, EventArgs e)
         {
+            HomePL.Visible = false;
+            ProfilePL.Visible = true;
             string email = loggedUser;
 
             ProfilePL.Visible = true;
