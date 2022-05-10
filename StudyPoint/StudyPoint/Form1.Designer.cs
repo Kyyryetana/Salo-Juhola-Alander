@@ -181,7 +181,15 @@
             this.loginPassTB = new System.Windows.Forms.TextBox();
             this.loginMailTB = new System.Windows.Forms.TextBox();
             this.ProfilePL = new System.Windows.Forms.Panel();
-            this.ProfileDTG = new System.Windows.Forms.DataGridView();
+            this.ChangePWPanel = new System.Windows.Forms.Panel();
+            this.ChangePWDTG = new System.Windows.Forms.DataGridView();
+            this.NewPWTB = new System.Windows.Forms.TextBox();
+            this.CurrentPWTB = new System.Windows.Forms.TextBox();
+            this.ChangePWCloseBT = new System.Windows.Forms.Button();
+            this.ChangePWBT = new System.Windows.Forms.Button();
+            this.NewPWLB = new System.Windows.Forms.Label();
+            this.CurrentPWLB = new System.Windows.Forms.Label();
+            this.ChangePWLB = new System.Windows.Forms.Label();
             this.ProfileUpdatePL = new System.Windows.Forms.Panel();
             this.UpdateCloseBT = new System.Windows.Forms.Button();
             this.UpdateUpdateBT = new System.Windows.Forms.Button();
@@ -191,14 +199,7 @@
             this.UpdateEmailLB = new System.Windows.Forms.Label();
             this.UpdateLastnameLB = new System.Windows.Forms.Label();
             this.UpdateFirstnameLB = new System.Windows.Forms.Label();
-            this.ChangePWPanel = new System.Windows.Forms.Panel();
-            this.NewPWTB = new System.Windows.Forms.TextBox();
-            this.CurrentPWTB = new System.Windows.Forms.TextBox();
-            this.ChangePWCloseBT = new System.Windows.Forms.Button();
-            this.ChangePWBT = new System.Windows.Forms.Button();
-            this.NewPWLB = new System.Windows.Forms.Label();
-            this.CurrentPWLB = new System.Windows.Forms.Label();
-            this.ChangePWLB = new System.Windows.Forms.Label();
+            this.ProfileDTG = new System.Windows.Forms.DataGridView();
             this.ProfileUpdateBT = new System.Windows.Forms.Button();
             this.ProfilePasswordBT = new System.Windows.Forms.Button();
             this.ProfileEmail = new System.Windows.Forms.Label();
@@ -208,7 +209,6 @@
             this.ProfileLNameLB = new System.Windows.Forms.Label();
             this.ProfileFNameLB = new System.Windows.Forms.Label();
             this.ProfileLB = new System.Windows.Forms.Label();
-            this.ChangePWDTG = new System.Windows.Forms.DataGridView();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -240,10 +240,10 @@
             this.loginPL.SuspendLayout();
             this.registrationPL.SuspendLayout();
             this.ProfilePL.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProfileDTG)).BeginInit();
-            this.ProfileUpdatePL.SuspendLayout();
             this.ChangePWPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChangePWDTG)).BeginInit();
+            this.ProfileUpdatePL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfileDTG)).BeginInit();
             this.SuspendLayout();
             // 
             // YlaPL
@@ -1942,13 +1942,98 @@
             this.ProfilePL.Size = new System.Drawing.Size(641, 497);
             this.ProfilePL.TabIndex = 18;
             // 
-            // ProfileDTG
+            // ChangePWPanel
             // 
-            this.ProfileDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProfileDTG.Location = new System.Drawing.Point(10, 419);
-            this.ProfileDTG.Name = "ProfileDTG";
-            this.ProfileDTG.Size = new System.Drawing.Size(245, 66);
-            this.ProfileDTG.TabIndex = 10;
+            this.ChangePWPanel.Controls.Add(this.ChangePWDTG);
+            this.ChangePWPanel.Controls.Add(this.NewPWTB);
+            this.ChangePWPanel.Controls.Add(this.CurrentPWTB);
+            this.ChangePWPanel.Controls.Add(this.ChangePWCloseBT);
+            this.ChangePWPanel.Controls.Add(this.ChangePWBT);
+            this.ChangePWPanel.Controls.Add(this.NewPWLB);
+            this.ChangePWPanel.Controls.Add(this.CurrentPWLB);
+            this.ChangePWPanel.Controls.Add(this.ChangePWLB);
+            this.ChangePWPanel.Location = new System.Drawing.Point(145, 11);
+            this.ChangePWPanel.Name = "ChangePWPanel";
+            this.ChangePWPanel.Size = new System.Drawing.Size(367, 453);
+            this.ChangePWPanel.TabIndex = 11;
+            // 
+            // ChangePWDTG
+            // 
+            this.ChangePWDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ChangePWDTG.Location = new System.Drawing.Point(86, 384);
+            this.ChangePWDTG.Name = "ChangePWDTG";
+            this.ChangePWDTG.Size = new System.Drawing.Size(214, 44);
+            this.ChangePWDTG.TabIndex = 7;
+            // 
+            // NewPWTB
+            // 
+            this.NewPWTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewPWTB.Location = new System.Drawing.Point(152, 182);
+            this.NewPWTB.Name = "NewPWTB";
+            this.NewPWTB.Size = new System.Drawing.Size(193, 26);
+            this.NewPWTB.TabIndex = 6;
+            this.NewPWTB.UseSystemPasswordChar = true;
+            // 
+            // CurrentPWTB
+            // 
+            this.CurrentPWTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentPWTB.Location = new System.Drawing.Point(152, 126);
+            this.CurrentPWTB.Name = "CurrentPWTB";
+            this.CurrentPWTB.Size = new System.Drawing.Size(193, 26);
+            this.CurrentPWTB.TabIndex = 5;
+            this.CurrentPWTB.UseSystemPasswordChar = true;
+            // 
+            // ChangePWCloseBT
+            // 
+            this.ChangePWCloseBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangePWCloseBT.Location = new System.Drawing.Point(86, 332);
+            this.ChangePWCloseBT.Name = "ChangePWCloseBT";
+            this.ChangePWCloseBT.Size = new System.Drawing.Size(172, 32);
+            this.ChangePWCloseBT.TabIndex = 4;
+            this.ChangePWCloseBT.Text = "Close";
+            this.ChangePWCloseBT.UseVisualStyleBackColor = true;
+            this.ChangePWCloseBT.Click += new System.EventHandler(this.ChangePWCloseBT_Click);
+            // 
+            // ChangePWBT
+            // 
+            this.ChangePWBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangePWBT.Location = new System.Drawing.Point(86, 291);
+            this.ChangePWBT.Name = "ChangePWBT";
+            this.ChangePWBT.Size = new System.Drawing.Size(172, 32);
+            this.ChangePWBT.TabIndex = 3;
+            this.ChangePWBT.Text = "Change password";
+            this.ChangePWBT.UseVisualStyleBackColor = true;
+            this.ChangePWBT.Click += new System.EventHandler(this.ChangePWBT_Click);
+            // 
+            // NewPWLB
+            // 
+            this.NewPWLB.AutoSize = true;
+            this.NewPWLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewPWLB.Location = new System.Drawing.Point(25, 185);
+            this.NewPWLB.Name = "NewPWLB";
+            this.NewPWLB.Size = new System.Drawing.Size(116, 20);
+            this.NewPWLB.TabIndex = 2;
+            this.NewPWLB.Text = "New password:";
+            // 
+            // CurrentPWLB
+            // 
+            this.CurrentPWLB.AutoSize = true;
+            this.CurrentPWLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentPWLB.Location = new System.Drawing.Point(3, 129);
+            this.CurrentPWLB.Name = "CurrentPWLB";
+            this.CurrentPWLB.Size = new System.Drawing.Size(138, 20);
+            this.CurrentPWLB.TabIndex = 1;
+            this.CurrentPWLB.Text = "Current password:";
+            // 
+            // ChangePWLB
+            // 
+            this.ChangePWLB.AutoSize = true;
+            this.ChangePWLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangePWLB.Location = new System.Drawing.Point(98, 28);
+            this.ChangePWLB.Name = "ChangePWLB";
+            this.ChangePWLB.Size = new System.Drawing.Size(163, 24);
+            this.ChangePWLB.TabIndex = 0;
+            this.ChangePWLB.Text = "Change password";
             // 
             // ProfileUpdatePL
             // 
@@ -2042,88 +2127,13 @@
             this.UpdateFirstnameLB.TabIndex = 0;
             this.UpdateFirstnameLB.Text = "Firstname:";
             // 
-            // ChangePWPanel
+            // ProfileDTG
             // 
-            this.ChangePWPanel.Controls.Add(this.ChangePWDTG);
-            this.ChangePWPanel.Controls.Add(this.NewPWTB);
-            this.ChangePWPanel.Controls.Add(this.CurrentPWTB);
-            this.ChangePWPanel.Controls.Add(this.ChangePWCloseBT);
-            this.ChangePWPanel.Controls.Add(this.ChangePWBT);
-            this.ChangePWPanel.Controls.Add(this.NewPWLB);
-            this.ChangePWPanel.Controls.Add(this.CurrentPWLB);
-            this.ChangePWPanel.Controls.Add(this.ChangePWLB);
-            this.ChangePWPanel.Location = new System.Drawing.Point(145, 11);
-            this.ChangePWPanel.Name = "ChangePWPanel";
-            this.ChangePWPanel.Size = new System.Drawing.Size(367, 453);
-            this.ChangePWPanel.TabIndex = 11;
-            // 
-            // NewPWTB
-            // 
-            this.NewPWTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewPWTB.Location = new System.Drawing.Point(152, 182);
-            this.NewPWTB.Name = "NewPWTB";
-            this.NewPWTB.Size = new System.Drawing.Size(193, 26);
-            this.NewPWTB.TabIndex = 6;
-            // 
-            // CurrentPWTB
-            // 
-            this.CurrentPWTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentPWTB.Location = new System.Drawing.Point(152, 126);
-            this.CurrentPWTB.Name = "CurrentPWTB";
-            this.CurrentPWTB.Size = new System.Drawing.Size(193, 26);
-            this.CurrentPWTB.TabIndex = 5;
-            // 
-            // ChangePWCloseBT
-            // 
-            this.ChangePWCloseBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangePWCloseBT.Location = new System.Drawing.Point(86, 332);
-            this.ChangePWCloseBT.Name = "ChangePWCloseBT";
-            this.ChangePWCloseBT.Size = new System.Drawing.Size(172, 32);
-            this.ChangePWCloseBT.TabIndex = 4;
-            this.ChangePWCloseBT.Text = "Close";
-            this.ChangePWCloseBT.UseVisualStyleBackColor = true;
-            this.ChangePWCloseBT.Click += new System.EventHandler(this.ChangePWCloseBT_Click);
-            // 
-            // ChangePWBT
-            // 
-            this.ChangePWBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangePWBT.Location = new System.Drawing.Point(86, 291);
-            this.ChangePWBT.Name = "ChangePWBT";
-            this.ChangePWBT.Size = new System.Drawing.Size(172, 32);
-            this.ChangePWBT.TabIndex = 3;
-            this.ChangePWBT.Text = "Change password";
-            this.ChangePWBT.UseVisualStyleBackColor = true;
-            this.ChangePWBT.Click += new System.EventHandler(this.ChangePWBT_Click);
-            // 
-            // NewPWLB
-            // 
-            this.NewPWLB.AutoSize = true;
-            this.NewPWLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewPWLB.Location = new System.Drawing.Point(25, 185);
-            this.NewPWLB.Name = "NewPWLB";
-            this.NewPWLB.Size = new System.Drawing.Size(116, 20);
-            this.NewPWLB.TabIndex = 2;
-            this.NewPWLB.Text = "New password:";
-            // 
-            // CurrentPWLB
-            // 
-            this.CurrentPWLB.AutoSize = true;
-            this.CurrentPWLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentPWLB.Location = new System.Drawing.Point(3, 129);
-            this.CurrentPWLB.Name = "CurrentPWLB";
-            this.CurrentPWLB.Size = new System.Drawing.Size(138, 20);
-            this.CurrentPWLB.TabIndex = 1;
-            this.CurrentPWLB.Text = "Current password:";
-            // 
-            // ChangePWLB
-            // 
-            this.ChangePWLB.AutoSize = true;
-            this.ChangePWLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangePWLB.Location = new System.Drawing.Point(98, 28);
-            this.ChangePWLB.Name = "ChangePWLB";
-            this.ChangePWLB.Size = new System.Drawing.Size(163, 24);
-            this.ChangePWLB.TabIndex = 0;
-            this.ChangePWLB.Text = "Change password";
+            this.ProfileDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProfileDTG.Location = new System.Drawing.Point(10, 419);
+            this.ProfileDTG.Name = "ProfileDTG";
+            this.ProfileDTG.Size = new System.Drawing.Size(245, 66);
+            this.ProfileDTG.TabIndex = 10;
             // 
             // ProfileUpdateBT
             // 
@@ -2220,15 +2230,6 @@
             this.ProfileLB.TabIndex = 0;
             this.ProfileLB.Text = "Profile";
             // 
-            // ChangePWDTG
-            // 
-            this.ChangePWDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ChangePWDTG.Location = new System.Drawing.Point(86, 384);
-            this.ChangePWDTG.Name = "ChangePWDTG";
-            this.ChangePWDTG.Size = new System.Drawing.Size(214, 44);
-            this.ChangePWDTG.TabIndex = 7;
-          
-            // 
             // StudyPointForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2313,12 +2314,12 @@
             this.registrationPL.PerformLayout();
             this.ProfilePL.ResumeLayout(false);
             this.ProfilePL.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProfileDTG)).EndInit();
-            this.ProfileUpdatePL.ResumeLayout(false);
-            this.ProfileUpdatePL.PerformLayout();
             this.ChangePWPanel.ResumeLayout(false);
             this.ChangePWPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChangePWDTG)).EndInit();
+            this.ProfileUpdatePL.ResumeLayout(false);
+            this.ProfileUpdatePL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfileDTG)).EndInit();
             this.ResumeLayout(false);
 
         }
