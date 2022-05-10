@@ -20,6 +20,9 @@ namespace StudyPoint
         DISCUSSION discussion = new DISCUSSION();
         USERS users = new USERS();
         FEEDBACK feedback = new FEEDBACK();
+        WHATSNEW whatsnew = new WHATSNEW();
+        PROFILE profile = new PROFILE();
+        DOWNLOADS downloads = new DOWNLOADS();
         string loggedUser = "";
         bool admin = false;
         string imgLocation = "";
