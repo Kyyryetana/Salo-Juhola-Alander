@@ -37,6 +37,7 @@ namespace StudyPoint
         private void AboutBT_MouseHover(object sender, EventArgs e) // kun hiiri menee about-painikkeen päälle, alisivut näkyvät
         {
             AboutPL.Visible = true;
+            UsBT.Visible = true;
             ServicesBT.Visible = true;
             GalleryBT.Visible = true;
             DepartmentBT.Visible = true;
@@ -256,7 +257,7 @@ namespace StudyPoint
         // FEEDBACK START
         private void FeedbackBT_Click_1(object sender, EventArgs e)
         {
-            HomePL.Visible = false;
+            HideAllPanels();
             FeedbackPL.Visible = true;
 
         }
@@ -287,9 +288,9 @@ namespace StudyPoint
 
         private void FeedbackManBT_Click_1(object sender, EventArgs e) // tuodaan sivu näkyviin nappia painamalla
         {
+            HideAllPanels();
             FeedBackManPL.Visible = true;
             FeedbackPL.Visible = false;
-            HomePL.Visible=false;
 
             FBManDG.DataSource = feedback.GetFeedback();
             FBManDG.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
@@ -327,7 +328,7 @@ namespace StudyPoint
         // USER MANAGEMENT -SIVU
         private void UserManBT_Click_1(object sender, EventArgs e)
         {
-            HomePL.Visible = false;
+            HideAllPanels();
             UserManPL.Visible = true;
 
 
@@ -445,7 +446,7 @@ namespace StudyPoint
         // PROFIILI START
         private void ProfileBT_Click(object sender, EventArgs e)
         {
-            HomePL.Visible = false;
+            HideAllPanels();
             ProfilePL.Visible = true;
             string email = loggedUser;
 
@@ -967,7 +968,48 @@ namespace StudyPoint
             DownloadManPL.Visible = true;
         }
 
-        
+        private void ServicesBT_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            OurServicesPL.Visible = true;
+        }
+
+        private void GalleryBT_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            OurGalleryPL.Visible = true;
+        }
+
+        private void DepartmentBT_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            OurDepartmentPL.Visible = true;
+        }
+
+       
+
+        private void ContactBT_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            ContactUsPL.Visible = true;
+        }
+
+        private void DownloadBT_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            DownloadPL.Visible = true;
+        }
+
+        private void UsBT_Click(object sender, EventArgs e)
+        {
+            HideAllPanels();
+            AboutUsPL.Visible=true;
+        }
+
+       
+
+
+
 
 
 
@@ -979,6 +1021,7 @@ namespace StudyPoint
             DashboardPL.Visible = false;
 
             AboutPL.Visible = false;
+            AboutUsPL.Visible = false;
             OurServicesPL.Visible = false;
             OurGalleryPL.Visible = false;
             OurDepartmentPL.Visible = false;

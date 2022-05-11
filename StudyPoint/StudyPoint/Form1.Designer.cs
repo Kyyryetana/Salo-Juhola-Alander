@@ -45,6 +45,7 @@
             this.GalleryBT = new System.Windows.Forms.Button();
             this.DepartmentBT = new System.Windows.Forms.Button();
             this.AboutPL = new System.Windows.Forms.Panel();
+            this.UsBT = new System.Windows.Forms.Button();
             this.ManagementPL = new System.Windows.Forms.Panel();
             this.NewManBT = new System.Windows.Forms.Button();
             this.UserManBT = new System.Windows.Forms.Button();
@@ -371,6 +372,7 @@
             this.ContactBT.Text = "Contact us";
             this.ContactBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ContactBT.UseVisualStyleBackColor = false;
+            this.ContactBT.Click += new System.EventHandler(this.ContactBT_Click);
             // 
             // DownloadBT
             // 
@@ -386,6 +388,7 @@
             this.DownloadBT.Text = "Download";
             this.DownloadBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DownloadBT.UseVisualStyleBackColor = false;
+            this.DownloadBT.Click += new System.EventHandler(this.DownloadBT_Click);
             // 
             // DiscussionBT
             // 
@@ -414,7 +417,7 @@
             this.AboutBT.Name = "AboutBT";
             this.AboutBT.Size = new System.Drawing.Size(153, 33);
             this.AboutBT.TabIndex = 2;
-            this.AboutBT.Text = "About us";
+            this.AboutBT.Text = "About";
             this.AboutBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AboutBT.UseVisualStyleBackColor = false;
             this.AboutBT.MouseHover += new System.EventHandler(this.AboutBT_MouseHover);
@@ -457,7 +460,7 @@
             this.ServicesBT.FlatAppearance.BorderSize = 0;
             this.ServicesBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ServicesBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ServicesBT.Location = new System.Drawing.Point(0, 2);
+            this.ServicesBT.Location = new System.Drawing.Point(0, 35);
             this.ServicesBT.Margin = new System.Windows.Forms.Padding(0);
             this.ServicesBT.Name = "ServicesBT";
             this.ServicesBT.Size = new System.Drawing.Size(168, 34);
@@ -466,7 +469,7 @@
             this.ServicesBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ServicesBT.UseVisualStyleBackColor = false;
             this.ServicesBT.Visible = false;
-  
+            this.ServicesBT.Click += new System.EventHandler(this.ServicesBT_Click);
             // 
             // GalleryBT
             // 
@@ -474,7 +477,7 @@
             this.GalleryBT.FlatAppearance.BorderSize = 0;
             this.GalleryBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GalleryBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GalleryBT.Location = new System.Drawing.Point(0, 36);
+            this.GalleryBT.Location = new System.Drawing.Point(0, 69);
             this.GalleryBT.Margin = new System.Windows.Forms.Padding(0);
             this.GalleryBT.Name = "GalleryBT";
             this.GalleryBT.Size = new System.Drawing.Size(168, 33);
@@ -483,6 +486,7 @@
             this.GalleryBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GalleryBT.UseVisualStyleBackColor = false;
             this.GalleryBT.Visible = false;
+            this.GalleryBT.Click += new System.EventHandler(this.GalleryBT_Click);
             // 
             // DepartmentBT
             // 
@@ -490,7 +494,7 @@
             this.DepartmentBT.FlatAppearance.BorderSize = 0;
             this.DepartmentBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DepartmentBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepartmentBT.Location = new System.Drawing.Point(0, 69);
+            this.DepartmentBT.Location = new System.Drawing.Point(0, 101);
             this.DepartmentBT.Margin = new System.Windows.Forms.Padding(0);
             this.DepartmentBT.Name = "DepartmentBT";
             this.DepartmentBT.Size = new System.Drawing.Size(168, 33);
@@ -499,19 +503,38 @@
             this.DepartmentBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DepartmentBT.UseVisualStyleBackColor = false;
             this.DepartmentBT.Visible = false;
+            this.DepartmentBT.Click += new System.EventHandler(this.DepartmentBT_Click);
             // 
             // AboutPL
             // 
             this.AboutPL.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.AboutPL.Controls.Add(this.UsBT);
             this.AboutPL.Controls.Add(this.GalleryBT);
             this.AboutPL.Controls.Add(this.DepartmentBT);
             this.AboutPL.Controls.Add(this.ServicesBT);
-            this.AboutPL.Location = new System.Drawing.Point(146, 141);
+            this.AboutPL.Location = new System.Drawing.Point(146, 107);
             this.AboutPL.Name = "AboutPL";
-            this.AboutPL.Size = new System.Drawing.Size(170, 104);
+            this.AboutPL.Size = new System.Drawing.Size(170, 135);
             this.AboutPL.TabIndex = 11;
             this.AboutPL.Visible = false;
             this.AboutPL.MouseLeave += new System.EventHandler(this.AboutPL_MouseLeave);
+            // 
+            // UsBT
+            // 
+            this.UsBT.BackColor = System.Drawing.Color.Azure;
+            this.UsBT.FlatAppearance.BorderSize = 0;
+            this.UsBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UsBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsBT.Location = new System.Drawing.Point(0, 1);
+            this.UsBT.Margin = new System.Windows.Forms.Padding(0);
+            this.UsBT.Name = "UsBT";
+            this.UsBT.Size = new System.Drawing.Size(168, 34);
+            this.UsBT.TabIndex = 11;
+            this.UsBT.Text = "About us";
+            this.UsBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UsBT.UseVisualStyleBackColor = false;
+            this.UsBT.Visible = false;
+            this.UsBT.Click += new System.EventHandler(this.UsBT_Click);
             // 
             // ManagementPL
             // 
@@ -2762,6 +2785,7 @@
         private System.Windows.Forms.DataGridView ChangePWDTG;
         private System.Windows.Forms.TextBox NewPWAgainTB;
         private System.Windows.Forms.Label NewPWAgainLB;
+        private System.Windows.Forms.Button UsBT;
     }
 }
 
