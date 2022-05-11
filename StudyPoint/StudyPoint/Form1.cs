@@ -1057,16 +1057,71 @@ namespace StudyPoint
             AboutUsPL.Visible=true;
         }
 
+        
+
         // DOWNLOAD MANAGEMENT SIVU LOPPU
 
-        //gallery
+        //gallery start here
         private void galleryPB1_Click(object sender, EventArgs e)
         {
-            var form2 = new Form2();
-            form2.Show();
+            var bigGallery = new gallery_big();
+            bigGallery.Show();
+        }
+        private void galleryPB2_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void galleryPB3_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void galleryPB4_Click(object sender, EventArgs e)
+        {
+
         }
 
+        private void galleryPB5_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void galleryPB6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void galleryPB7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void galleryPB8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void galleryPB9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void galleryPB10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void galleryPB11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void galleryPB12_Click(object sender, EventArgs e)
+        {
+
+        }
+        //gallery end here
+        //
 
 
 

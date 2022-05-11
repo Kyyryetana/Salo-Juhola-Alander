@@ -2573,6 +2573,7 @@
             this.galleryPB12.TabIndex = 1;
             this.galleryPB12.TabStop = false;
             this.galleryPB12.WaitOnLoad = true;
+            this.galleryPB12.Click += new System.EventHandler(this.galleryPB12_Click);
             // 
             // galleryPB8
             // 
@@ -2584,6 +2585,7 @@
             this.galleryPB8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.galleryPB8.TabIndex = 1;
             this.galleryPB8.TabStop = false;
+            this.galleryPB8.Click += new System.EventHandler(this.galleryPB8_Click);
             // 
             // galleryPB4
             // 
@@ -2595,6 +2597,7 @@
             this.galleryPB4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.galleryPB4.TabIndex = 1;
             this.galleryPB4.TabStop = false;
+            this.galleryPB4.Click += new System.EventHandler(this.galleryPB4_Click);
             // 
             // galleryPB11
             // 
@@ -2606,6 +2609,7 @@
             this.galleryPB11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.galleryPB11.TabIndex = 1;
             this.galleryPB11.TabStop = false;
+            this.galleryPB11.Click += new System.EventHandler(this.galleryPB11_Click);
             // 
             // galleryPB7
             // 
@@ -2617,6 +2621,7 @@
             this.galleryPB7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.galleryPB7.TabIndex = 1;
             this.galleryPB7.TabStop = false;
+            this.galleryPB7.Click += new System.EventHandler(this.galleryPB7_Click);
             // 
             // galleryPB3
             // 
@@ -2629,6 +2634,7 @@
             this.galleryPB3.TabIndex = 1;
             this.galleryPB3.TabStop = false;
             this.galleryPB3.WaitOnLoad = true;
+            this.galleryPB3.Click += new System.EventHandler(this.galleryPB3_Click);
             // 
             // galleryPB10
             // 
@@ -2640,6 +2646,7 @@
             this.galleryPB10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.galleryPB10.TabIndex = 1;
             this.galleryPB10.TabStop = false;
+            this.galleryPB10.Click += new System.EventHandler(this.galleryPB10_Click);
             // 
             // galleryPB6
             // 
@@ -2651,6 +2658,7 @@
             this.galleryPB6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.galleryPB6.TabIndex = 1;
             this.galleryPB6.TabStop = false;
+            this.galleryPB6.Click += new System.EventHandler(this.galleryPB6_Click);
             // 
             // galleryPB2
             // 
@@ -2663,6 +2671,7 @@
             this.galleryPB2.TabIndex = 1;
             this.galleryPB2.TabStop = false;
             this.galleryPB2.WaitOnLoad = true;
+            this.galleryPB2.Click += new System.EventHandler(this.galleryPB2_Click);
             // 
             // galleryPB9
             // 
@@ -2674,6 +2683,7 @@
             this.galleryPB9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.galleryPB9.TabIndex = 1;
             this.galleryPB9.TabStop = false;
+            this.galleryPB9.Click += new System.EventHandler(this.galleryPB9_Click);
             // 
             // galleryPB5
             // 
@@ -2685,6 +2695,7 @@
             this.galleryPB5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.galleryPB5.TabIndex = 1;
             this.galleryPB5.TabStop = false;
+            this.galleryPB5.Click += new System.EventHandler(this.galleryPB5_Click);
             // 
             // galleryPB1
             // 
