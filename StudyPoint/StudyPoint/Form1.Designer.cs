@@ -79,6 +79,7 @@
             this.AboutTxt1 = new System.Windows.Forms.Label();
             this.aboutLB = new System.Windows.Forms.Label();
             this.OurServicesPL = new System.Windows.Forms.Panel();
+            this.ServicesTxtLB = new System.Windows.Forms.Label();
             this.sercicesLB = new System.Windows.Forms.Label();
             this.OurGalleryPL = new System.Windows.Forms.Panel();
             this.galleryPB12 = new System.Windows.Forms.PictureBox();
@@ -256,7 +257,6 @@
             this.ProfileFNameLB = new System.Windows.Forms.Label();
             this.ProfileLB = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.ServicesTxtLB = new System.Windows.Forms.Label();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -369,6 +369,7 @@
             this.ManagementBT.Text = "Management";
             this.ManagementBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ManagementBT.UseVisualStyleBackColor = false;
+            this.ManagementBT.Visible = false;
             this.ManagementBT.MouseHover += new System.EventHandler(this.ManagementBT_MouseHover);
             // 
             // ProfileBT
@@ -385,6 +386,7 @@
             this.ProfileBT.Text = "Profile";
             this.ProfileBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProfileBT.UseVisualStyleBackColor = false;
+            this.ProfileBT.Visible = false;
             this.ProfileBT.Click += new System.EventHandler(this.ProfileBT_Click);
             // 
             // FeedbackBT
@@ -956,6 +958,16 @@
             this.OurServicesPL.Size = new System.Drawing.Size(641, 498);
             this.OurServicesPL.TabIndex = 16;
             this.OurServicesPL.Visible = false;
+            // 
+            // ServicesTxtLB
+            // 
+            this.ServicesTxtLB.AutoSize = true;
+            this.ServicesTxtLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServicesTxtLB.Location = new System.Drawing.Point(10, 59);
+            this.ServicesTxtLB.Name = "ServicesTxtLB";
+            this.ServicesTxtLB.Size = new System.Drawing.Size(444, 20);
+            this.ServicesTxtLB.TabIndex = 1;
+            this.ServicesTxtLB.Text = "If nothing else, we offer you our endless hunger to learn more!";
             // 
             // sercicesLB
             // 
@@ -2854,16 +2866,6 @@
             this.ProfileLB.Size = new System.Drawing.Size(73, 25);
             this.ProfileLB.TabIndex = 0;
             this.ProfileLB.Text = "Profile";
-            // 
-            // ServicesTxtLB
-            // 
-            this.ServicesTxtLB.AutoSize = true;
-            this.ServicesTxtLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ServicesTxtLB.Location = new System.Drawing.Point(10, 59);
-            this.ServicesTxtLB.Name = "ServicesTxtLB";
-            this.ServicesTxtLB.Size = new System.Drawing.Size(444, 20);
-            this.ServicesTxtLB.TabIndex = 1;
-            this.ServicesTxtLB.Text = "If nothing else, we offer you our endless hunger to learn more!";
             // 
             // StudyPointForm
             // 

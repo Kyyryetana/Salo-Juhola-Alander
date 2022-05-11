@@ -23,7 +23,7 @@ namespace StudyPoint
         WHATSNEW whatsnew = new WHATSNEW();
         PROFILE profile = new PROFILE();
         DOWNLOADS downloads = new DOWNLOADS();
-        string loggedUser = "admin@studypoint.net";
+        string loggedUser = "";
         bool admin = false;
         string imgLocation = "";
         public StudyPointForm()
@@ -31,6 +31,7 @@ namespace StudyPoint
             InitializeComponent();
             HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
             tarkistaNewThing(); // tarkistaa home sivulla olevan whats new tilanteen
+            
         }
 
   
@@ -90,16 +91,27 @@ namespace StudyPoint
                 loggedUser = users.CheckPassword(email, pass);
                 if (loggedUser != "")
                 {
+                    ProfileBT.Visible = true;
                     loginPL.Visible = false;
                     loginRegBT.Text=LOGIN.loggedInStatus;
                     admin = users.checkAdmin(email);
+                    loginMailTB.Text = "";
+                    loginPassTB.Text = "";
+
+                    if (admin)
+                    {
+                        ManagementBT.Visible = true;
+                    }
+                    
                 }
                 
             }
             else
             {
+                
                 loginRegBT.Text = LOGIN.loggedOutStatus;
                 loggedUser = "";
+                
             }
         }
 
@@ -124,6 +136,8 @@ namespace StudyPoint
             {
                 loginRegBT.Text = LOGIN.loggedOutStatus;
                 loggedUser = "";
+                ProfileBT.Visible = false;
+                ManagementBT.Visible = false;
             }
             
             
