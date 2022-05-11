@@ -16,7 +16,7 @@ namespace StudyPoint
         {
             InitializeComponent();
         }
-        s
+        
         private void bigImageNextBT_Click(object sender, EventArgs e)
         {
 

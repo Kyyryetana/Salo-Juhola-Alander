@@ -1057,7 +1057,11 @@ namespace StudyPoint
             AboutUsPL.Visible=true;
         }
 
-        
+        private void ContactLinkLB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            HideAllPanels();
+            FeedbackPL.Visible = true;
+        }
 
         // DOWNLOAD MANAGEMENT SIVU LOPPU
 
@@ -1115,6 +1119,8 @@ namespace StudyPoint
         {
 
         }
+
+     
 
         private void galleryPB12_Click(object sender, EventArgs e)
         {

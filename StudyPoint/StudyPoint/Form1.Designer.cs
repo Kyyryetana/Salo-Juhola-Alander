@@ -75,6 +75,8 @@
             this.regUsersLB = new System.Windows.Forms.Label();
             this.dashboardLB = new System.Windows.Forms.Label();
             this.AboutUsPL = new System.Windows.Forms.Panel();
+            this.AboutTxt2 = new System.Windows.Forms.Label();
+            this.AboutTxt1 = new System.Windows.Forms.Label();
             this.aboutLB = new System.Windows.Forms.Label();
             this.OurServicesPL = new System.Windows.Forms.Panel();
             this.sercicesLB = new System.Windows.Forms.Label();
@@ -93,6 +95,13 @@
             this.galleryPB1 = new System.Windows.Forms.PictureBox();
             this.galleryLB = new System.Windows.Forms.Label();
             this.OurDepartmentPL = new System.Windows.Forms.Panel();
+            this.DepartmentSaloPB = new System.Windows.Forms.PictureBox();
+            this.DepartmentJuholaPB = new System.Windows.Forms.PictureBox();
+            this.DepartmentAlanderPB = new System.Windows.Forms.PictureBox();
+            this.DepartmentSaloLB = new System.Windows.Forms.Label();
+            this.DepartmentJuholaLB = new System.Windows.Forms.Label();
+            this.DepartmentAlanderLB = new System.Windows.Forms.Label();
+            this.DepartmentTxtLB = new System.Windows.Forms.Label();
             this.ourDepLB = new System.Windows.Forms.Label();
             this.FeedbackPL = new System.Windows.Forms.Panel();
             this.LeaveFeedbackLB = new System.Windows.Forms.Label();
@@ -148,6 +157,8 @@
             this.DownloadPL = new System.Windows.Forms.Panel();
             this.downloadLB = new System.Windows.Forms.Label();
             this.ContactUsPL = new System.Windows.Forms.Panel();
+            this.ContactLinkLB = new System.Windows.Forms.LinkLabel();
+            this.ContactTxtLB = new System.Windows.Forms.Label();
             this.ContactUsLB = new System.Windows.Forms.Label();
             this.FeedBackManPL = new System.Windows.Forms.Panel();
             this.FBManEmailLB = new System.Windows.Forms.Label();
@@ -245,8 +256,7 @@
             this.ProfileFNameLB = new System.Windows.Forms.Label();
             this.ProfileLB = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.AboutTxt1 = new System.Windows.Forms.Label();
-            this.AboutTxt2 = new System.Windows.Forms.Label();
+            this.ServicesTxtLB = new System.Windows.Forms.Label();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -270,6 +280,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.galleryPB5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.galleryPB1)).BeginInit();
             this.OurDepartmentPL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentSaloPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentJuholaPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentAlanderPB)).BeginInit();
             this.FeedbackPL.SuspendLayout();
             this.DiscussionBoardPL.SuspendLayout();
             this.DiscussionPL.SuspendLayout();
@@ -903,6 +916,26 @@
             this.AboutUsPL.TabIndex = 15;
             this.AboutUsPL.Visible = false;
             // 
+            // AboutTxt2
+            // 
+            this.AboutTxt2.AutoSize = true;
+            this.AboutTxt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AboutTxt2.Location = new System.Drawing.Point(13, 128);
+            this.AboutTxt2.Name = "AboutTxt2";
+            this.AboutTxt2.Size = new System.Drawing.Size(272, 20);
+            this.AboutTxt2.TabIndex = 2;
+            this.AboutTxt2.Text = "We mess around and study hard!\r\n";
+            // 
+            // AboutTxt1
+            // 
+            this.AboutTxt1.AutoSize = true;
+            this.AboutTxt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AboutTxt1.Location = new System.Drawing.Point(13, 59);
+            this.AboutTxt1.Name = "AboutTxt1";
+            this.AboutTxt1.Size = new System.Drawing.Size(217, 40);
+            this.AboutTxt1.TabIndex = 1;
+            this.AboutTxt1.Text = "A programmer-student group\r\nTMI Alander, Juhola and Salo\r\n";
+            // 
             // aboutLB
             // 
             this.aboutLB.AutoSize = true;
@@ -915,6 +948,7 @@
             // 
             // OurServicesPL
             // 
+            this.OurServicesPL.Controls.Add(this.ServicesTxtLB);
             this.OurServicesPL.Controls.Add(this.sercicesLB);
             this.OurServicesPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OurServicesPL.Location = new System.Drawing.Point(153, 47);
@@ -1116,6 +1150,13 @@
             // 
             // OurDepartmentPL
             // 
+            this.OurDepartmentPL.Controls.Add(this.DepartmentSaloPB);
+            this.OurDepartmentPL.Controls.Add(this.DepartmentJuholaPB);
+            this.OurDepartmentPL.Controls.Add(this.DepartmentAlanderPB);
+            this.OurDepartmentPL.Controls.Add(this.DepartmentSaloLB);
+            this.OurDepartmentPL.Controls.Add(this.DepartmentJuholaLB);
+            this.OurDepartmentPL.Controls.Add(this.DepartmentAlanderLB);
+            this.OurDepartmentPL.Controls.Add(this.DepartmentTxtLB);
             this.OurDepartmentPL.Controls.Add(this.ourDepLB);
             this.OurDepartmentPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OurDepartmentPL.Location = new System.Drawing.Point(153, 47);
@@ -1123,6 +1164,71 @@
             this.OurDepartmentPL.Size = new System.Drawing.Size(641, 498);
             this.OurDepartmentPL.TabIndex = 18;
             this.OurDepartmentPL.Visible = false;
+            // 
+            // DepartmentSaloPB
+            // 
+            this.DepartmentSaloPB.Image = global::StudyPoint.Properties.Resources.with_moon;
+            this.DepartmentSaloPB.Location = new System.Drawing.Point(423, 137);
+            this.DepartmentSaloPB.Name = "DepartmentSaloPB";
+            this.DepartmentSaloPB.Size = new System.Drawing.Size(175, 204);
+            this.DepartmentSaloPB.TabIndex = 7;
+            this.DepartmentSaloPB.TabStop = false;
+            // 
+            // DepartmentJuholaPB
+            // 
+            this.DepartmentJuholaPB.Location = new System.Drawing.Point(228, 137);
+            this.DepartmentJuholaPB.Name = "DepartmentJuholaPB";
+            this.DepartmentJuholaPB.Size = new System.Drawing.Size(165, 204);
+            this.DepartmentJuholaPB.TabIndex = 6;
+            this.DepartmentJuholaPB.TabStop = false;
+            // 
+            // DepartmentAlanderPB
+            // 
+            this.DepartmentAlanderPB.Location = new System.Drawing.Point(33, 137);
+            this.DepartmentAlanderPB.Name = "DepartmentAlanderPB";
+            this.DepartmentAlanderPB.Size = new System.Drawing.Size(167, 204);
+            this.DepartmentAlanderPB.TabIndex = 5;
+            this.DepartmentAlanderPB.TabStop = false;
+            // 
+            // DepartmentSaloLB
+            // 
+            this.DepartmentSaloLB.AutoSize = true;
+            this.DepartmentSaloLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartmentSaloLB.Location = new System.Drawing.Point(490, 347);
+            this.DepartmentSaloLB.Name = "DepartmentSaloLB";
+            this.DepartmentSaloLB.Size = new System.Drawing.Size(41, 20);
+            this.DepartmentSaloLB.TabIndex = 4;
+            this.DepartmentSaloLB.Text = "Salo";
+            // 
+            // DepartmentJuholaLB
+            // 
+            this.DepartmentJuholaLB.AutoSize = true;
+            this.DepartmentJuholaLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartmentJuholaLB.Location = new System.Drawing.Point(282, 347);
+            this.DepartmentJuholaLB.Name = "DepartmentJuholaLB";
+            this.DepartmentJuholaLB.Size = new System.Drawing.Size(56, 20);
+            this.DepartmentJuholaLB.TabIndex = 3;
+            this.DepartmentJuholaLB.Text = "Juhola";
+            // 
+            // DepartmentAlanderLB
+            // 
+            this.DepartmentAlanderLB.AutoSize = true;
+            this.DepartmentAlanderLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartmentAlanderLB.Location = new System.Drawing.Point(84, 347);
+            this.DepartmentAlanderLB.Name = "DepartmentAlanderLB";
+            this.DepartmentAlanderLB.Size = new System.Drawing.Size(64, 20);
+            this.DepartmentAlanderLB.TabIndex = 2;
+            this.DepartmentAlanderLB.Text = "Alander";
+            // 
+            // DepartmentTxtLB
+            // 
+            this.DepartmentTxtLB.AutoSize = true;
+            this.DepartmentTxtLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartmentTxtLB.Location = new System.Drawing.Point(36, 81);
+            this.DepartmentTxtLB.Name = "DepartmentTxtLB";
+            this.DepartmentTxtLB.Size = new System.Drawing.Size(148, 20);
+            this.DepartmentTxtLB.TabIndex = 1;
+            this.DepartmentTxtLB.Text = "Our programmers";
             // 
             // ourDepLB
             // 
@@ -1704,6 +1810,8 @@
             // 
             // ContactUsPL
             // 
+            this.ContactUsPL.Controls.Add(this.ContactLinkLB);
+            this.ContactUsPL.Controls.Add(this.ContactTxtLB);
             this.ContactUsPL.Controls.Add(this.ContactUsLB);
             this.ContactUsPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContactUsPL.Location = new System.Drawing.Point(153, 47);
@@ -1711,6 +1819,28 @@
             this.ContactUsPL.Size = new System.Drawing.Size(641, 498);
             this.ContactUsPL.TabIndex = 21;
             this.ContactUsPL.Visible = false;
+            // 
+            // ContactLinkLB
+            // 
+            this.ContactLinkLB.AutoSize = true;
+            this.ContactLinkLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactLinkLB.Location = new System.Drawing.Point(337, 56);
+            this.ContactLinkLB.Name = "ContactLinkLB";
+            this.ContactLinkLB.Size = new System.Drawing.Size(80, 20);
+            this.ContactLinkLB.TabIndex = 2;
+            this.ContactLinkLB.TabStop = true;
+            this.ContactLinkLB.Text = "Feedback";
+            this.ContactLinkLB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ContactLinkLB_LinkClicked);
+            // 
+            // ContactTxtLB
+            // 
+            this.ContactTxtLB.AutoSize = true;
+            this.ContactTxtLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactTxtLB.Location = new System.Drawing.Point(6, 56);
+            this.ContactTxtLB.Name = "ContactTxtLB";
+            this.ContactTxtLB.Size = new System.Drawing.Size(332, 20);
+            this.ContactTxtLB.TabIndex = 1;
+            this.ContactTxtLB.Text = "You can contact us by leaving us feedback on";
             // 
             // ContactUsLB
             // 
@@ -2725,31 +2855,24 @@
             this.ProfileLB.TabIndex = 0;
             this.ProfileLB.Text = "Profile";
             // 
-            // AboutTxt1
+            // ServicesTxtLB
             // 
-            this.AboutTxt1.AutoSize = true;
-            this.AboutTxt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AboutTxt1.Location = new System.Drawing.Point(13, 59);
-            this.AboutTxt1.Name = "AboutTxt1";
-            this.AboutTxt1.Size = new System.Drawing.Size(217, 40);
-            this.AboutTxt1.TabIndex = 1;
-            this.AboutTxt1.Text = "A programmer-student group\r\nTMI Alander, Juhola and Salo\r\n";
-            // 
-            // AboutTxt2
-            // 
-            this.AboutTxt2.AutoSize = true;
-            this.AboutTxt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AboutTxt2.Location = new System.Drawing.Point(13, 128);
-            this.AboutTxt2.Name = "AboutTxt2";
-            this.AboutTxt2.Size = new System.Drawing.Size(272, 20);
-            this.AboutTxt2.TabIndex = 2;
-            this.AboutTxt2.Text = "We mess around and study hard!\r\n";
+            this.ServicesTxtLB.AutoSize = true;
+            this.ServicesTxtLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServicesTxtLB.Location = new System.Drawing.Point(10, 59);
+            this.ServicesTxtLB.Name = "ServicesTxtLB";
+            this.ServicesTxtLB.Size = new System.Drawing.Size(444, 20);
+            this.ServicesTxtLB.TabIndex = 1;
+            this.ServicesTxtLB.Text = "If nothing else, we offer you our endless hunger to learn more!";
             // 
             // StudyPointForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
+            this.Controls.Add(this.OurServicesPL);
+            this.Controls.Add(this.OurDepartmentPL);
+            this.Controls.Add(this.ContactUsPL);
             this.Controls.Add(this.AboutUsPL);
             this.Controls.Add(this.OurGalleryPL);
             this.Controls.Add(this.AboutPL);
@@ -2759,15 +2882,12 @@
             this.Controls.Add(this.DiscussionBoardPL);
             this.Controls.Add(this.DashboardPL);
             this.Controls.Add(this.DownloadPL);
-            this.Controls.Add(this.ContactUsPL);
             this.Controls.Add(this.FeedbackPL);
             this.Controls.Add(this.UserManPL);
             this.Controls.Add(this.ProfilePL);
             this.Controls.Add(this.DownloadManPL);
             this.Controls.Add(this.WhatsNewManPL);
             this.Controls.Add(this.FeedBackManPL);
-            this.Controls.Add(this.OurDepartmentPL);
-            this.Controls.Add(this.OurServicesPL);
             this.Controls.Add(this.VasenPL);
             this.Controls.Add(this.YlaPL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -2803,6 +2923,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.galleryPB1)).EndInit();
             this.OurDepartmentPL.ResumeLayout(false);
             this.OurDepartmentPL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentSaloPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentJuholaPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentAlanderPB)).EndInit();
             this.FeedbackPL.ResumeLayout(false);
             this.FeedbackPL.PerformLayout();
             this.DiscussionBoardPL.ResumeLayout(false);
@@ -3074,6 +3197,16 @@
         private System.Windows.Forms.PictureBox galleryPB5;
         private System.Windows.Forms.Label AboutTxt2;
         private System.Windows.Forms.Label AboutTxt1;
+        private System.Windows.Forms.LinkLabel ContactLinkLB;
+        private System.Windows.Forms.Label ContactTxtLB;
+        private System.Windows.Forms.PictureBox DepartmentSaloPB;
+        private System.Windows.Forms.PictureBox DepartmentJuholaPB;
+        private System.Windows.Forms.PictureBox DepartmentAlanderPB;
+        private System.Windows.Forms.Label DepartmentSaloLB;
+        private System.Windows.Forms.Label DepartmentJuholaLB;
+        private System.Windows.Forms.Label DepartmentAlanderLB;
+        private System.Windows.Forms.Label DepartmentTxtLB;
+        private System.Windows.Forms.Label ServicesTxtLB;
     }
 }
 
