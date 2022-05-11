@@ -75,6 +75,7 @@
             this.regUsersLB = new System.Windows.Forms.Label();
             this.dashboardLB = new System.Windows.Forms.Label();
             this.AboutUsPL = new System.Windows.Forms.Panel();
+            this.AboutUsTextLB = new System.Windows.Forms.Label();
             this.aboutLB = new System.Windows.Forms.Label();
             this.OurServicesPL = new System.Windows.Forms.Panel();
             this.sercicesLB = new System.Windows.Forms.Label();
@@ -105,10 +106,13 @@
             this.discussionBackMainBT = new System.Windows.Forms.Button();
             this.discussionTopicNextBT = new System.Windows.Forms.Button();
             this.discussionUserGB3 = new System.Windows.Forms.GroupBox();
+            this.commentBetaTB3 = new System.Windows.Forms.RichTextBox();
             this.discussionTextLB3 = new System.Windows.Forms.Label();
             this.discussionUserGB2 = new System.Windows.Forms.GroupBox();
+            this.commentBetaTB2 = new System.Windows.Forms.RichTextBox();
             this.discussionTextLB2 = new System.Windows.Forms.Label();
             this.discussionUserGB1 = new System.Windows.Forms.GroupBox();
+            this.commentBetaTB1 = new System.Windows.Forms.RichTextBox();
             this.discussionTextLB1 = new System.Windows.Forms.Label();
             this.topicLB = new System.Windows.Forms.Label();
             this.discussionWriteTopicPL = new System.Windows.Forms.Panel();
@@ -230,9 +234,17 @@
             this.ProfileFNameLB = new System.Windows.Forms.Label();
             this.ProfileLB = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.commentBetaTB1 = new System.Windows.Forms.RichTextBox();
-            this.commentBetaTB2 = new System.Windows.Forms.RichTextBox();
-            this.commentBetaTB3 = new System.Windows.Forms.RichTextBox();
+            this.About2LB = new System.Windows.Forms.Label();
+            this.ServicesTextLB = new System.Windows.Forms.Label();
+            this.ImageAlanderPB = new System.Windows.Forms.PictureBox();
+            this.ImageJuholaPB = new System.Windows.Forms.PictureBox();
+            this.ImageSaloPB = new System.Windows.Forms.PictureBox();
+            this.ImgTxtAlander = new System.Windows.Forms.Label();
+            this.ImgTxtJuhola = new System.Windows.Forms.Label();
+            this.ImgTxtSalo = new System.Windows.Forms.Label();
+            this.DepartmentProgrammersLB = new System.Windows.Forms.Label();
+            this.ContactTxtLB = new System.Windows.Forms.Label();
+            this.ContactLinkLB = new System.Windows.Forms.LinkLabel();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -272,6 +284,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ChangePWDTG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfileDTG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageAlanderPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageJuholaPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageSaloPB)).BeginInit();
             this.SuspendLayout();
             // 
             // YlaPL
@@ -867,6 +882,8 @@
             // 
             // AboutUsPL
             // 
+            this.AboutUsPL.Controls.Add(this.About2LB);
+            this.AboutUsPL.Controls.Add(this.AboutUsTextLB);
             this.AboutUsPL.Controls.Add(this.aboutLB);
             this.AboutUsPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AboutUsPL.Location = new System.Drawing.Point(153, 47);
@@ -874,6 +891,17 @@
             this.AboutUsPL.Size = new System.Drawing.Size(641, 498);
             this.AboutUsPL.TabIndex = 15;
             this.AboutUsPL.Visible = false;
+            // 
+            // AboutUsTextLB
+            // 
+            this.AboutUsTextLB.AutoSize = true;
+            this.AboutUsTextLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AboutUsTextLB.Location = new System.Drawing.Point(10, 63);
+            this.AboutUsTextLB.Name = "AboutUsTextLB";
+            this.AboutUsTextLB.Size = new System.Drawing.Size(221, 40);
+            this.AboutUsTextLB.TabIndex = 1;
+            this.AboutUsTextLB.Text = "A programmer-student group \r\nTMI Alander, Juhola  and Salo";
+            this.AboutUsTextLB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // aboutLB
             // 
@@ -887,6 +915,7 @@
             // 
             // OurServicesPL
             // 
+            this.OurServicesPL.Controls.Add(this.ServicesTextLB);
             this.OurServicesPL.Controls.Add(this.sercicesLB);
             this.OurServicesPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OurServicesPL.Location = new System.Drawing.Point(153, 47);
@@ -927,6 +956,13 @@
             // 
             // OurDepartmentPL
             // 
+            this.OurDepartmentPL.Controls.Add(this.DepartmentProgrammersLB);
+            this.OurDepartmentPL.Controls.Add(this.ImgTxtSalo);
+            this.OurDepartmentPL.Controls.Add(this.ImgTxtJuhola);
+            this.OurDepartmentPL.Controls.Add(this.ImgTxtAlander);
+            this.OurDepartmentPL.Controls.Add(this.ImageSaloPB);
+            this.OurDepartmentPL.Controls.Add(this.ImageJuholaPB);
+            this.OurDepartmentPL.Controls.Add(this.ImageAlanderPB);
             this.OurDepartmentPL.Controls.Add(this.ourDepLB);
             this.OurDepartmentPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OurDepartmentPL.Location = new System.Drawing.Point(153, 47);
@@ -1198,6 +1234,17 @@
             this.discussionUserGB3.TabStop = false;
             this.discussionUserGB3.Text = "groupBox1";
             // 
+            // commentBetaTB3
+            // 
+            this.commentBetaTB3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.commentBetaTB3.Location = new System.Drawing.Point(7, 23);
+            this.commentBetaTB3.Name = "commentBetaTB3";
+            this.commentBetaTB3.ReadOnly = true;
+            this.commentBetaTB3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.commentBetaTB3.Size = new System.Drawing.Size(565, 77);
+            this.commentBetaTB3.TabIndex = 1;
+            this.commentBetaTB3.Text = "";
+            // 
             // discussionTextLB3
             // 
             this.discussionTextLB3.AutoSize = true;
@@ -1220,6 +1267,17 @@
             this.discussionUserGB2.TabStop = false;
             this.discussionUserGB2.Text = "groupBox1";
             // 
+            // commentBetaTB2
+            // 
+            this.commentBetaTB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.commentBetaTB2.Location = new System.Drawing.Point(7, 22);
+            this.commentBetaTB2.Name = "commentBetaTB2";
+            this.commentBetaTB2.ReadOnly = true;
+            this.commentBetaTB2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.commentBetaTB2.Size = new System.Drawing.Size(565, 77);
+            this.commentBetaTB2.TabIndex = 1;
+            this.commentBetaTB2.Text = "";
+            // 
             // discussionTextLB2
             // 
             this.discussionTextLB2.AutoSize = true;
@@ -1241,6 +1299,17 @@
             this.discussionUserGB1.TabIndex = 1;
             this.discussionUserGB1.TabStop = false;
             this.discussionUserGB1.Text = "groupBox1";
+            // 
+            // commentBetaTB1
+            // 
+            this.commentBetaTB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.commentBetaTB1.Location = new System.Drawing.Point(6, 22);
+            this.commentBetaTB1.Name = "commentBetaTB1";
+            this.commentBetaTB1.ReadOnly = true;
+            this.commentBetaTB1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.commentBetaTB1.Size = new System.Drawing.Size(565, 77);
+            this.commentBetaTB1.TabIndex = 1;
+            this.commentBetaTB1.Text = "";
             // 
             // discussionTextLB1
             // 
@@ -1482,6 +1551,8 @@
             // 
             // ContactUsPL
             // 
+            this.ContactUsPL.Controls.Add(this.ContactLinkLB);
+            this.ContactUsPL.Controls.Add(this.ContactTxtLB);
             this.ContactUsPL.Controls.Add(this.ContactUsLB);
             this.ContactUsPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContactUsPL.Location = new System.Drawing.Point(153, 47);
@@ -2503,62 +2574,135 @@
             this.ProfileLB.TabIndex = 0;
             this.ProfileLB.Text = "Profile";
             // 
-            // commentBetaTB1
+            // About2LB
             // 
-            this.commentBetaTB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.commentBetaTB1.Location = new System.Drawing.Point(6, 22);
-            this.commentBetaTB1.Name = "commentBetaTB1";
-            this.commentBetaTB1.ReadOnly = true;
-            this.commentBetaTB1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.commentBetaTB1.Size = new System.Drawing.Size(565, 77);
-            this.commentBetaTB1.TabIndex = 1;
-            this.commentBetaTB1.Text = "";
+            this.About2LB.AutoSize = true;
+            this.About2LB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.About2LB.Location = new System.Drawing.Point(6, 132);
+            this.About2LB.Name = "About2LB";
+            this.About2LB.Size = new System.Drawing.Size(272, 20);
+            this.About2LB.TabIndex = 2;
+            this.About2LB.Text = "We mess around and study hard!";
             // 
-            // commentBetaTB2
+            // ServicesTextLB
             // 
-            this.commentBetaTB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.commentBetaTB2.Location = new System.Drawing.Point(7, 22);
-            this.commentBetaTB2.Name = "commentBetaTB2";
-            this.commentBetaTB2.ReadOnly = true;
-            this.commentBetaTB2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.commentBetaTB2.Size = new System.Drawing.Size(565, 77);
-            this.commentBetaTB2.TabIndex = 1;
-            this.commentBetaTB2.Text = "";
+            this.ServicesTextLB.AutoSize = true;
+            this.ServicesTextLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServicesTextLB.Location = new System.Drawing.Point(11, 66);
+            this.ServicesTextLB.Name = "ServicesTextLB";
+            this.ServicesTextLB.Size = new System.Drawing.Size(444, 20);
+            this.ServicesTextLB.TabIndex = 1;
+            this.ServicesTextLB.Text = "If nothing else, we offer you our endless hunger to learn more!";
             // 
-            // commentBetaTB3
+            // ImageAlanderPB
             // 
-            this.commentBetaTB3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.commentBetaTB3.Location = new System.Drawing.Point(7, 23);
-            this.commentBetaTB3.Name = "commentBetaTB3";
-            this.commentBetaTB3.ReadOnly = true;
-            this.commentBetaTB3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.commentBetaTB3.Size = new System.Drawing.Size(565, 77);
-            this.commentBetaTB3.TabIndex = 1;
-            this.commentBetaTB3.Text = "";
+            this.ImageAlanderPB.Location = new System.Drawing.Point(72, 139);
+            this.ImageAlanderPB.Name = "ImageAlanderPB";
+            this.ImageAlanderPB.Size = new System.Drawing.Size(125, 168);
+            this.ImageAlanderPB.TabIndex = 1;
+            this.ImageAlanderPB.TabStop = false;
+            // 
+            // ImageJuholaPB
+            // 
+            this.ImageJuholaPB.Location = new System.Drawing.Point(240, 138);
+            this.ImageJuholaPB.Name = "ImageJuholaPB";
+            this.ImageJuholaPB.Size = new System.Drawing.Size(125, 168);
+            this.ImageJuholaPB.TabIndex = 2;
+            this.ImageJuholaPB.TabStop = false;
+            // 
+            // ImageSaloPB
+            // 
+            this.ImageSaloPB.Location = new System.Drawing.Point(404, 138);
+            this.ImageSaloPB.Name = "ImageSaloPB";
+            this.ImageSaloPB.Size = new System.Drawing.Size(125, 168);
+            this.ImageSaloPB.TabIndex = 3;
+            this.ImageSaloPB.TabStop = false;
+            // 
+            // ImgTxtAlander
+            // 
+            this.ImgTxtAlander.AutoSize = true;
+            this.ImgTxtAlander.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImgTxtAlander.Location = new System.Drawing.Point(102, 331);
+            this.ImgTxtAlander.Name = "ImgTxtAlander";
+            this.ImgTxtAlander.Size = new System.Drawing.Size(64, 20);
+            this.ImgTxtAlander.TabIndex = 4;
+            this.ImgTxtAlander.Text = "Alander";
+            // 
+            // ImgTxtJuhola
+            // 
+            this.ImgTxtJuhola.AutoSize = true;
+            this.ImgTxtJuhola.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImgTxtJuhola.Location = new System.Drawing.Point(274, 331);
+            this.ImgTxtJuhola.Name = "ImgTxtJuhola";
+            this.ImgTxtJuhola.Size = new System.Drawing.Size(56, 20);
+            this.ImgTxtJuhola.TabIndex = 5;
+            this.ImgTxtJuhola.Text = "Juhola";
+            // 
+            // ImgTxtSalo
+            // 
+            this.ImgTxtSalo.AutoSize = true;
+            this.ImgTxtSalo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImgTxtSalo.Location = new System.Drawing.Point(446, 331);
+            this.ImgTxtSalo.Name = "ImgTxtSalo";
+            this.ImgTxtSalo.Size = new System.Drawing.Size(41, 20);
+            this.ImgTxtSalo.TabIndex = 6;
+            this.ImgTxtSalo.Text = "Salo";
+            // 
+            // DepartmentProgrammersLB
+            // 
+            this.DepartmentProgrammersLB.AutoSize = true;
+            this.DepartmentProgrammersLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartmentProgrammersLB.Location = new System.Drawing.Point(68, 81);
+            this.DepartmentProgrammersLB.Name = "DepartmentProgrammersLB";
+            this.DepartmentProgrammersLB.Size = new System.Drawing.Size(148, 20);
+            this.DepartmentProgrammersLB.TabIndex = 7;
+            this.DepartmentProgrammersLB.Text = "Our programmers";
+            // 
+            // ContactTxtLB
+            // 
+            this.ContactTxtLB.AutoSize = true;
+            this.ContactTxtLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactTxtLB.Location = new System.Drawing.Point(9, 62);
+            this.ContactTxtLB.Name = "ContactTxtLB";
+            this.ContactTxtLB.Size = new System.Drawing.Size(336, 20);
+            this.ContactTxtLB.TabIndex = 1;
+            this.ContactTxtLB.Text = "You can contact us by leaving us feedback on ";
+            // 
+            // ContactLinkLB
+            // 
+            this.ContactLinkLB.AutoSize = true;
+            this.ContactLinkLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactLinkLB.Location = new System.Drawing.Point(337, 62);
+            this.ContactLinkLB.Name = "ContactLinkLB";
+            this.ContactLinkLB.Size = new System.Drawing.Size(80, 20);
+            this.ContactLinkLB.TabIndex = 2;
+            this.ContactLinkLB.TabStop = true;
+            this.ContactLinkLB.Text = "Feedback";
+            this.ContactLinkLB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ContactLinkLB_LinkClicked);
             // 
             // StudyPointForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
-            this.Controls.Add(this.loginPL);
-            this.Controls.Add(this.HomePL);
-            this.Controls.Add(this.DiscussionBoardPL);
+            this.Controls.Add(this.ContactUsPL);
+            this.Controls.Add(this.OurDepartmentPL);
+            this.Controls.Add(this.OurServicesPL);
+            this.Controls.Add(this.AboutUsPL);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
+            this.Controls.Add(this.HomePL);
+            this.Controls.Add(this.loginPL);
+            this.Controls.Add(this.DiscussionBoardPL);
             this.Controls.Add(this.DashboardPL);
-            this.Controls.Add(this.AboutUsPL);
             this.Controls.Add(this.DownloadPL);
-            this.Controls.Add(this.ContactUsPL);
             this.Controls.Add(this.FeedbackPL);
             this.Controls.Add(this.UserManPL);
             this.Controls.Add(this.ProfilePL);
             this.Controls.Add(this.DownloadManPL);
             this.Controls.Add(this.WhatsNewManPL);
             this.Controls.Add(this.FeedBackManPL);
-            this.Controls.Add(this.OurDepartmentPL);
             this.Controls.Add(this.OurGalleryPL);
-            this.Controls.Add(this.OurServicesPL);
             this.Controls.Add(this.VasenPL);
             this.Controls.Add(this.YlaPL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -2630,6 +2774,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ChangePWDTG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfileDTG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageAlanderPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageJuholaPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageSaloPB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2839,6 +2986,18 @@
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.RichTextBox commentBetaTB2;
         private System.Windows.Forms.RichTextBox commentBetaTB3;
+        private System.Windows.Forms.Label AboutUsTextLB;
+        private System.Windows.Forms.Label About2LB;
+        private System.Windows.Forms.Label ServicesTextLB;
+        private System.Windows.Forms.Label DepartmentProgrammersLB;
+        private System.Windows.Forms.Label ImgTxtSalo;
+        private System.Windows.Forms.Label ImgTxtJuhola;
+        private System.Windows.Forms.Label ImgTxtAlander;
+        private System.Windows.Forms.PictureBox ImageSaloPB;
+        private System.Windows.Forms.PictureBox ImageJuholaPB;
+        private System.Windows.Forms.PictureBox ImageAlanderPB;
+        private System.Windows.Forms.LinkLabel ContactLinkLB;
+        private System.Windows.Forms.Label ContactTxtLB;
     }
 }
 

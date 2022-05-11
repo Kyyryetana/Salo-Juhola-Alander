@@ -1044,6 +1044,12 @@ namespace StudyPoint
             DownloadPL.Visible = true;
         }
 
+        private void ContactLinkLB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            HideAllPanels();
+            FeedbackPL.Visible = true;
+        }
+
         private void UsBT_Click(object sender, EventArgs e)
         {
             HideAllPanels();
