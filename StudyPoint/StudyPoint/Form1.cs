@@ -842,6 +842,45 @@ namespace StudyPoint
             }
         }
 
+        //menu discussion board
+
+
+        private void HideAllPanels()
+        {
+            HomePL.Visible = false;
+            DashboardPL.Visible = false;
+
+            AboutPL.Visible = false;
+            AboutUsPL.Visible = false;
+            OurServicesPL.Visible = false;
+            OurGalleryPL.Visible = false;
+            OurDepartmentPL.Visible = false;
+
+            DiscussionBoardPL.Visible = false;
+            DiscussionPL.Visible = false;
+            discussionAswerPL.Visible = false;
+            discussionWriteTopicPL.Visible = false;
+
+            DownloadPL.Visible = false;
+            ContactUsPL.Visible = false;
+
+            FeedbackPL.Visible = false;
+            FeedBackManPL.Visible = false;
+            DownloadManPL.Visible = false;
+            UserManPL.Visible = false;
+            WhatsNewManPL.Visible = false;
+
+            loginPL.Visible = false;
+
+            ProfilePL.Visible = false;
+            ProfileUpdatePL.Visible = false;
+        }
+
+
+        //discussion board
+        //end
+
+
         // WHATS NEW MANAGEMENT SIVU
 
         private void addNewThingBT_Click(object sender, EventArgs e)
@@ -1015,36 +1054,7 @@ namespace StudyPoint
 
         // DOWNLOAD MANAGEMENT SIVU LOPPU
 
-        private void HideAllPanels()
-        {
-            HomePL.Visible = false;
-            DashboardPL.Visible = false;
-
-            AboutPL.Visible = false;
-            AboutUsPL.Visible = false;
-            OurServicesPL.Visible = false;
-            OurGalleryPL.Visible = false;
-            OurDepartmentPL.Visible = false;
-
-            DiscussionBoardPL.Visible = false;
-            DiscussionPL.Visible = false;
-            discussionAswerPL.Visible = false;
-            discussionWriteTopicPL.Visible = false;
-
-            DownloadPL.Visible = false;
-            ContactUsPL.Visible = false;
-
-            FeedbackPL.Visible = false;
-            FeedBackManPL.Visible = false;
-            DownloadManPL.Visible = false;
-            UserManPL.Visible = false;
-            WhatsNewManPL.Visible = false;
-
-            loginPL.Visible = false;
-
-            ProfilePL.Visible = false;
-            ProfileUpdatePL.Visible = false;
-        }
+        
 
       
 
@@ -1053,13 +1063,7 @@ namespace StudyPoint
 
 
 
-        //menu discussion board
-
-
-
-        //discussion board
-        //end
-
+       
 
     }
 }

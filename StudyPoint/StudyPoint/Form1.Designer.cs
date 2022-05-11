@@ -2073,6 +2073,7 @@
             this.regPass2TB.Name = "regPass2TB";
             this.regPass2TB.Size = new System.Drawing.Size(194, 26);
             this.regPass2TB.TabIndex = 0;
+            this.regPass2TB.UseSystemPasswordChar = true;
             // 
             // regpass1TB
             // 
@@ -2080,6 +2081,7 @@
             this.regpass1TB.Name = "regpass1TB";
             this.regpass1TB.Size = new System.Drawing.Size(194, 26);
             this.regpass1TB.TabIndex = 0;
+            this.regpass1TB.UseSystemPasswordChar = true;
             // 
             // regMailTB
             // 
@@ -2150,6 +2152,7 @@
             this.loginPassTB.Name = "loginPassTB";
             this.loginPassTB.Size = new System.Drawing.Size(186, 26);
             this.loginPassTB.TabIndex = 0;
+            this.loginPassTB.UseSystemPasswordChar = true;
             // 
             // loginMailTB
             // 
@@ -2493,6 +2496,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
+            this.Controls.Add(this.loginPL);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.HomePL);
@@ -2506,7 +2510,6 @@
             this.Controls.Add(this.ProfilePL);
             this.Controls.Add(this.DownloadManPL);
             this.Controls.Add(this.WhatsNewManPL);
-            this.Controls.Add(this.loginPL);
             this.Controls.Add(this.FeedBackManPL);
             this.Controls.Add(this.OurDepartmentPL);
             this.Controls.Add(this.OurGalleryPL);
