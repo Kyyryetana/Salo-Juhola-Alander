@@ -65,6 +65,7 @@
             this.whatNewLB = new System.Windows.Forms.Label();
             this.HomeLB = new System.Windows.Forms.Label();
             this.DashboardPL = new System.Windows.Forms.Panel();
+            this.dashboardRefreshDataBT = new System.Windows.Forms.Button();
             this.UserDashboardPL = new System.Windows.Forms.Panel();
             this.adminOrNormalLB = new System.Windows.Forms.Label();
             this.thisUserLB = new System.Windows.Forms.Label();
@@ -82,8 +83,8 @@
             this.FeedbackPL = new System.Windows.Forms.Panel();
             this.LeaveFeedbackLB = new System.Windows.Forms.Label();
             this.LeaveContactsLB = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.FeedbackEmailLB = new System.Windows.Forms.Label();
+            this.FeedbackNameLB = new System.Windows.Forms.Label();
             this.FBEmailTB = new System.Windows.Forms.TextBox();
             this.FBNameTB = new System.Windows.Forms.TextBox();
             this.SendFBBT = new System.Windows.Forms.Button();
@@ -226,24 +227,6 @@
             this.ProfileLNameLB = new System.Windows.Forms.Label();
             this.ProfileFNameLB = new System.Windows.Forms.Label();
             this.ProfileLB = new System.Windows.Forms.Label();
-            this.UpdateCloseBT = new System.Windows.Forms.Button();
-            this.UpdateUpdateBT = new System.Windows.Forms.Button();
-            this.UpdateEmailTB = new System.Windows.Forms.TextBox();
-            this.UpdateLNameTB = new System.Windows.Forms.TextBox();
-            this.UpdateFNameTB = new System.Windows.Forms.TextBox();
-            this.UpdateEmailLB = new System.Windows.Forms.Label();
-            this.UpdateLastnameLB = new System.Windows.Forms.Label();
-            this.UpdateFirstnameLB = new System.Windows.Forms.Label();
-            this.ProfileUpdateBT = new System.Windows.Forms.Button();
-            this.ProfilePasswordBT = new System.Windows.Forms.Button();
-            this.ProfileEmail = new System.Windows.Forms.Label();
-            this.ProfileEmailLB = new System.Windows.Forms.Label();
-            this.ProfileLastname = new System.Windows.Forms.Label();
-            this.ProfileFirstname = new System.Windows.Forms.Label();
-            this.ProfileLNameLB = new System.Windows.Forms.Label();
-            this.ProfileFNameLB = new System.Windows.Forms.Label();
-            this.ProfileLB = new System.Windows.Forms.Label();
-            this.dashboardRefreshDataBT = new System.Windows.Forms.Button();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -322,7 +305,7 @@
             this.VasenPL.Dock = System.Windows.Forms.DockStyle.Left;
             this.VasenPL.Location = new System.Drawing.Point(0, 47);
             this.VasenPL.Name = "VasenPL";
-            this.VasenPL.Size = new System.Drawing.Size(153, 497);
+            this.VasenPL.Size = new System.Drawing.Size(153, 498);
             this.VasenPL.TabIndex = 1;
             this.VasenPL.MouseHover += new System.EventHandler(this.VasenPL_MouseHover);
             // 
@@ -630,7 +613,7 @@
             this.HomePL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HomePL.Location = new System.Drawing.Point(153, 47);
             this.HomePL.Name = "HomePL";
-            this.HomePL.Size = new System.Drawing.Size(641, 497);
+            this.HomePL.Size = new System.Drawing.Size(641, 498);
             this.HomePL.TabIndex = 13;
             this.HomePL.Visible = false;
             // 
@@ -775,9 +758,20 @@
             this.DashboardPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DashboardPL.Location = new System.Drawing.Point(153, 47);
             this.DashboardPL.Name = "DashboardPL";
-            this.DashboardPL.Size = new System.Drawing.Size(641, 497);
+            this.DashboardPL.Size = new System.Drawing.Size(641, 498);
             this.DashboardPL.TabIndex = 14;
             this.DashboardPL.Visible = false;
+            // 
+            // dashboardRefreshDataBT
+            // 
+            this.dashboardRefreshDataBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardRefreshDataBT.Location = new System.Drawing.Point(265, 6);
+            this.dashboardRefreshDataBT.Name = "dashboardRefreshDataBT";
+            this.dashboardRefreshDataBT.Size = new System.Drawing.Size(170, 31);
+            this.dashboardRefreshDataBT.TabIndex = 4;
+            this.dashboardRefreshDataBT.Text = "REFRESH DATA";
+            this.dashboardRefreshDataBT.UseVisualStyleBackColor = true;
+            this.dashboardRefreshDataBT.Click += new System.EventHandler(this.dashboardRefreshDataBT_Click);
             // 
             // UserDashboardPL
             // 
@@ -787,7 +781,7 @@
             this.UserDashboardPL.Dock = System.Windows.Forms.DockStyle.Right;
             this.UserDashboardPL.Location = new System.Drawing.Point(441, 0);
             this.UserDashboardPL.Name = "UserDashboardPL";
-            this.UserDashboardPL.Size = new System.Drawing.Size(200, 497);
+            this.UserDashboardPL.Size = new System.Drawing.Size(200, 498);
             this.UserDashboardPL.TabIndex = 3;
             // 
             // adminOrNormalLB
@@ -847,7 +841,7 @@
             this.AboutUsPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AboutUsPL.Location = new System.Drawing.Point(153, 47);
             this.AboutUsPL.Name = "AboutUsPL";
-            this.AboutUsPL.Size = new System.Drawing.Size(641, 497);
+            this.AboutUsPL.Size = new System.Drawing.Size(641, 498);
             this.AboutUsPL.TabIndex = 15;
             this.AboutUsPL.Visible = false;
             // 
@@ -867,7 +861,7 @@
             this.OurServicesPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OurServicesPL.Location = new System.Drawing.Point(153, 47);
             this.OurServicesPL.Name = "OurServicesPL";
-            this.OurServicesPL.Size = new System.Drawing.Size(641, 497);
+            this.OurServicesPL.Size = new System.Drawing.Size(641, 498);
             this.OurServicesPL.TabIndex = 16;
             this.OurServicesPL.Visible = false;
             // 
@@ -887,7 +881,7 @@
             this.OurGalleryPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OurGalleryPL.Location = new System.Drawing.Point(153, 47);
             this.OurGalleryPL.Name = "OurGalleryPL";
-            this.OurGalleryPL.Size = new System.Drawing.Size(641, 497);
+            this.OurGalleryPL.Size = new System.Drawing.Size(641, 498);
             this.OurGalleryPL.TabIndex = 17;
             this.OurGalleryPL.Visible = false;
             // 
@@ -907,7 +901,7 @@
             this.OurDepartmentPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OurDepartmentPL.Location = new System.Drawing.Point(153, 47);
             this.OurDepartmentPL.Name = "OurDepartmentPL";
-            this.OurDepartmentPL.Size = new System.Drawing.Size(641, 497);
+            this.OurDepartmentPL.Size = new System.Drawing.Size(641, 498);
             this.OurDepartmentPL.TabIndex = 18;
             this.OurDepartmentPL.Visible = false;
             // 
@@ -925,8 +919,8 @@
             // 
             this.FeedbackPL.Controls.Add(this.LeaveFeedbackLB);
             this.FeedbackPL.Controls.Add(this.LeaveContactsLB);
-            this.FeedbackPL.Controls.Add(this.label22);
-            this.FeedbackPL.Controls.Add(this.label21);
+            this.FeedbackPL.Controls.Add(this.FeedbackEmailLB);
+            this.FeedbackPL.Controls.Add(this.FeedbackNameLB);
             this.FeedbackPL.Controls.Add(this.FBEmailTB);
             this.FeedbackPL.Controls.Add(this.FBNameTB);
             this.FeedbackPL.Controls.Add(this.SendFBBT);
@@ -936,7 +930,7 @@
             this.FeedbackPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FeedbackPL.Location = new System.Drawing.Point(153, 47);
             this.FeedbackPL.Name = "FeedbackPL";
-            this.FeedbackPL.Size = new System.Drawing.Size(641, 497);
+            this.FeedbackPL.Size = new System.Drawing.Size(641, 498);
             this.FeedbackPL.TabIndex = 18;
             this.FeedbackPL.Visible = false;
             // 
@@ -960,25 +954,25 @@
             this.LeaveContactsLB.TabIndex = 9;
             this.LeaveContactsLB.Text = "Leave your contacts if you wish us to contact you back";
             // 
-            // label22
+            // FeedbackEmailLB
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(18, 410);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(52, 20);
-            this.label22.TabIndex = 8;
-            this.label22.Text = "Email:";
+            this.FeedbackEmailLB.AutoSize = true;
+            this.FeedbackEmailLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeedbackEmailLB.Location = new System.Drawing.Point(18, 410);
+            this.FeedbackEmailLB.Name = "FeedbackEmailLB";
+            this.FeedbackEmailLB.Size = new System.Drawing.Size(52, 20);
+            this.FeedbackEmailLB.TabIndex = 8;
+            this.FeedbackEmailLB.Text = "Email:";
             // 
-            // label21
+            // FeedbackNameLB
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(15, 379);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(55, 20);
-            this.label21.TabIndex = 7;
-            this.label21.Text = "Name:";
+            this.FeedbackNameLB.AutoSize = true;
+            this.FeedbackNameLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeedbackNameLB.Location = new System.Drawing.Point(15, 379);
+            this.FeedbackNameLB.Name = "FeedbackNameLB";
+            this.FeedbackNameLB.Size = new System.Drawing.Size(55, 20);
+            this.FeedbackNameLB.TabIndex = 7;
+            this.FeedbackNameLB.Text = "Name:";
             // 
             // FBEmailTB
             // 
@@ -1049,7 +1043,7 @@
             this.DiscussionBoardPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DiscussionBoardPL.Location = new System.Drawing.Point(153, 47);
             this.DiscussionBoardPL.Name = "DiscussionBoardPL";
-            this.DiscussionBoardPL.Size = new System.Drawing.Size(641, 497);
+            this.DiscussionBoardPL.Size = new System.Drawing.Size(641, 498);
             this.DiscussionBoardPL.TabIndex = 19;
             this.DiscussionBoardPL.Visible = false;
             // 
@@ -1067,7 +1061,7 @@
             this.DiscussionPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DiscussionPL.Location = new System.Drawing.Point(0, 0);
             this.DiscussionPL.Name = "DiscussionPL";
-            this.DiscussionPL.Size = new System.Drawing.Size(641, 497);
+            this.DiscussionPL.Size = new System.Drawing.Size(641, 498);
             this.DiscussionPL.TabIndex = 3;
             // 
             // discussionAswerPL
@@ -1079,7 +1073,7 @@
             this.discussionAswerPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.discussionAswerPL.Location = new System.Drawing.Point(0, 0);
             this.discussionAswerPL.Name = "discussionAswerPL";
-            this.discussionAswerPL.Size = new System.Drawing.Size(641, 497);
+            this.discussionAswerPL.Size = new System.Drawing.Size(641, 498);
             this.discussionAswerPL.TabIndex = 5;
             // 
             // discAnswerBackBT
@@ -1243,7 +1237,7 @@
             this.discussionWriteTopicPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.discussionWriteTopicPL.Location = new System.Drawing.Point(0, 0);
             this.discussionWriteTopicPL.Name = "discussionWriteTopicPL";
-            this.discussionWriteTopicPL.Size = new System.Drawing.Size(641, 497);
+            this.discussionWriteTopicPL.Size = new System.Drawing.Size(641, 498);
             this.discussionWriteTopicPL.TabIndex = 3;
             // 
             // discNewTopicNameLB
@@ -1436,7 +1430,7 @@
             this.DownloadPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DownloadPL.Location = new System.Drawing.Point(153, 47);
             this.DownloadPL.Name = "DownloadPL";
-            this.DownloadPL.Size = new System.Drawing.Size(641, 497);
+            this.DownloadPL.Size = new System.Drawing.Size(641, 498);
             this.DownloadPL.TabIndex = 20;
             this.DownloadPL.Visible = false;
             // 
@@ -1456,7 +1450,7 @@
             this.ContactUsPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContactUsPL.Location = new System.Drawing.Point(153, 47);
             this.ContactUsPL.Name = "ContactUsPL";
-            this.ContactUsPL.Size = new System.Drawing.Size(641, 497);
+            this.ContactUsPL.Size = new System.Drawing.Size(641, 498);
             this.ContactUsPL.TabIndex = 21;
             this.ContactUsPL.Visible = false;
             // 
@@ -1483,7 +1477,7 @@
             this.FeedBackManPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FeedBackManPL.Location = new System.Drawing.Point(153, 47);
             this.FeedBackManPL.Name = "FeedBackManPL";
-            this.FeedBackManPL.Size = new System.Drawing.Size(641, 497);
+            this.FeedBackManPL.Size = new System.Drawing.Size(641, 498);
             this.FeedBackManPL.TabIndex = 19;
             this.FeedBackManPL.Visible = false;
             // 
@@ -1579,7 +1573,7 @@
             this.DownloadManPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DownloadManPL.Location = new System.Drawing.Point(153, 47);
             this.DownloadManPL.Name = "DownloadManPL";
-            this.DownloadManPL.Size = new System.Drawing.Size(641, 497);
+            this.DownloadManPL.Size = new System.Drawing.Size(641, 498);
             this.DownloadManPL.TabIndex = 20;
             this.DownloadManPL.Visible = false;
             // 
@@ -1708,7 +1702,7 @@
             this.UserManPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UserManPL.Location = new System.Drawing.Point(153, 47);
             this.UserManPL.Name = "UserManPL";
-            this.UserManPL.Size = new System.Drawing.Size(641, 497);
+            this.UserManPL.Size = new System.Drawing.Size(641, 498);
             this.UserManPL.TabIndex = 21;
             this.UserManPL.Visible = false;
             // 
@@ -1869,7 +1863,7 @@
             this.WhatsNewManPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WhatsNewManPL.Location = new System.Drawing.Point(153, 47);
             this.WhatsNewManPL.Name = "WhatsNewManPL";
-            this.WhatsNewManPL.Size = new System.Drawing.Size(641, 497);
+            this.WhatsNewManPL.Size = new System.Drawing.Size(641, 498);
             this.WhatsNewManPL.TabIndex = 22;
             this.WhatsNewManPL.Visible = false;
             // 
@@ -1957,7 +1951,7 @@
             this.loginPL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginPL.Location = new System.Drawing.Point(153, 47);
             this.loginPL.Name = "loginPL";
-            this.loginPL.Size = new System.Drawing.Size(641, 497);
+            this.loginPL.Size = new System.Drawing.Size(641, 498);
             this.loginPL.TabIndex = 11;
             this.loginPL.Visible = false;
             // 
@@ -1978,7 +1972,7 @@
             this.registrationPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.registrationPL.Location = new System.Drawing.Point(0, 0);
             this.registrationPL.Name = "registrationPL";
-            this.registrationPL.Size = new System.Drawing.Size(641, 497);
+            this.registrationPL.Size = new System.Drawing.Size(641, 498);
             this.registrationPL.TabIndex = 4;
             this.registrationPL.Visible = false;
             // 
@@ -2143,8 +2137,8 @@
             // 
             // ProfilePL
             // 
-            this.ProfilePL.Controls.Add(this.ChangePWPanel);
             this.ProfilePL.Controls.Add(this.ProfileUpdatePL);
+            this.ProfilePL.Controls.Add(this.ChangePWPanel);
             this.ProfilePL.Controls.Add(this.ProfileDTG);
             this.ProfilePL.Controls.Add(this.ProfileUpdateBT);
             this.ProfilePL.Controls.Add(this.ProfilePasswordBT);
@@ -2158,11 +2152,10 @@
             this.ProfilePL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProfilePL.Location = new System.Drawing.Point(153, 47);
             this.ProfilePL.Name = "ProfilePL";
-            this.ProfilePL.Size = new System.Drawing.Size(641, 497);
+            this.ProfilePL.Size = new System.Drawing.Size(641, 498);
             this.ProfilePL.TabIndex = 18;
             // 
             // ChangePWPanel
-            // ProfileUpdatePL
             // 
             this.ChangePWPanel.Controls.Add(this.NewPWAgainTB);
             this.ChangePWPanel.Controls.Add(this.NewPWAgainLB);
@@ -2178,22 +2171,8 @@
             this.ChangePWPanel.Name = "ChangePWPanel";
             this.ChangePWPanel.Size = new System.Drawing.Size(408, 453);
             this.ChangePWPanel.TabIndex = 11;
-            this.ProfileUpdatePL.Controls.Add(this.UpdateCloseBT);
-            this.ProfileUpdatePL.Controls.Add(this.UpdateUpdateBT);
-            this.ProfileUpdatePL.Controls.Add(this.UpdateEmailTB);
-            this.ProfileUpdatePL.Controls.Add(this.UpdateLNameTB);
-            this.ProfileUpdatePL.Controls.Add(this.UpdateFNameTB);
-            this.ProfileUpdatePL.Controls.Add(this.UpdateEmailLB);
-            this.ProfileUpdatePL.Controls.Add(this.UpdateLastnameLB);
-            this.ProfileUpdatePL.Controls.Add(this.UpdateFirstnameLB);
-            this.ProfileUpdatePL.Location = new System.Drawing.Point(128, 11);
-            this.ProfileUpdatePL.Name = "ProfileUpdatePL";
-            this.ProfileUpdatePL.Size = new System.Drawing.Size(367, 453);
-            this.ProfileUpdatePL.TabIndex = 9;
-            this.ProfileUpdatePL.Visible = false;
             // 
             // NewPWAgainTB
-            // UpdateCloseBT
             // 
             this.NewPWAgainTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewPWAgainTB.Location = new System.Drawing.Point(174, 226);
@@ -2219,17 +2198,8 @@
             this.ChangePWDTG.Name = "ChangePWDTG";
             this.ChangePWDTG.Size = new System.Drawing.Size(214, 44);
             this.ChangePWDTG.TabIndex = 7;
-            this.UpdateCloseBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateCloseBT.Location = new System.Drawing.Point(135, 265);
-            this.UpdateCloseBT.Name = "UpdateCloseBT";
-            this.UpdateCloseBT.Size = new System.Drawing.Size(96, 33);
-            this.UpdateCloseBT.TabIndex = 7;
-            this.UpdateCloseBT.Text = "Close";
-            this.UpdateCloseBT.UseVisualStyleBackColor = true;
-            this.UpdateCloseBT.Click += new System.EventHandler(this.UpdateCloseBT_Click);
             // 
             // NewPWTB
-            // UpdateUpdateBT
             // 
             this.NewPWTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewPWTB.Location = new System.Drawing.Point(174, 170);
@@ -2237,17 +2207,8 @@
             this.NewPWTB.Size = new System.Drawing.Size(193, 26);
             this.NewPWTB.TabIndex = 6;
             this.NewPWTB.UseSystemPasswordChar = true;
-            this.UpdateUpdateBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateUpdateBT.Location = new System.Drawing.Point(135, 223);
-            this.UpdateUpdateBT.Name = "UpdateUpdateBT";
-            this.UpdateUpdateBT.Size = new System.Drawing.Size(96, 33);
-            this.UpdateUpdateBT.TabIndex = 6;
-            this.UpdateUpdateBT.Text = "Update";
-            this.UpdateUpdateBT.UseVisualStyleBackColor = true;
-            this.UpdateUpdateBT.Click += new System.EventHandler(this.UpdateUpdateBT_Click);
             // 
             // CurrentPWTB
-            // UpdateEmailTB
             // 
             this.CurrentPWTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CurrentPWTB.Location = new System.Drawing.Point(174, 118);
@@ -2255,14 +2216,8 @@
             this.CurrentPWTB.Size = new System.Drawing.Size(193, 26);
             this.CurrentPWTB.TabIndex = 5;
             this.CurrentPWTB.UseSystemPasswordChar = true;
-            this.UpdateEmailTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateEmailTB.Location = new System.Drawing.Point(102, 162);
-            this.UpdateEmailTB.Name = "UpdateEmailTB";
-            this.UpdateEmailTB.Size = new System.Drawing.Size(243, 26);
-            this.UpdateEmailTB.TabIndex = 5;
             // 
             // ChangePWCloseBT
-            // UpdateLNameTB
             // 
             this.ChangePWCloseBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChangePWCloseBT.Location = new System.Drawing.Point(121, 332);
@@ -2272,14 +2227,8 @@
             this.ChangePWCloseBT.Text = "Close";
             this.ChangePWCloseBT.UseVisualStyleBackColor = true;
             this.ChangePWCloseBT.Click += new System.EventHandler(this.ChangePWCloseBT_Click);
-            this.UpdateLNameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateLNameTB.Location = new System.Drawing.Point(102, 104);
-            this.UpdateLNameTB.Name = "UpdateLNameTB";
-            this.UpdateLNameTB.Size = new System.Drawing.Size(243, 26);
-            this.UpdateLNameTB.TabIndex = 4;
             // 
             // ChangePWBT
-            // UpdateFNameTB
             // 
             this.ChangePWBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChangePWBT.Location = new System.Drawing.Point(121, 291);
@@ -2289,14 +2238,8 @@
             this.ChangePWBT.Text = "Change password";
             this.ChangePWBT.UseVisualStyleBackColor = true;
             this.ChangePWBT.Click += new System.EventHandler(this.ChangePWBT_Click);
-            this.UpdateFNameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateFNameTB.Location = new System.Drawing.Point(102, 44);
-            this.UpdateFNameTB.Name = "UpdateFNameTB";
-            this.UpdateFNameTB.Size = new System.Drawing.Size(243, 26);
-            this.UpdateFNameTB.TabIndex = 3;
             // 
             // NewPWLB
-            // UpdateEmailLB
             // 
             this.NewPWLB.AutoSize = true;
             this.NewPWLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2305,16 +2248,8 @@
             this.NewPWLB.Size = new System.Drawing.Size(116, 20);
             this.NewPWLB.TabIndex = 2;
             this.NewPWLB.Text = "New password:";
-            this.UpdateEmailLB.AutoSize = true;
-            this.UpdateEmailLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateEmailLB.Location = new System.Drawing.Point(44, 165);
-            this.UpdateEmailLB.Name = "UpdateEmailLB";
-            this.UpdateEmailLB.Size = new System.Drawing.Size(52, 20);
-            this.UpdateEmailLB.TabIndex = 2;
-            this.UpdateEmailLB.Text = "Email:";
             // 
             // CurrentPWLB
-            // UpdateLastnameLB
             // 
             this.CurrentPWLB.AutoSize = true;
             this.CurrentPWLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2323,25 +2258,7 @@
             this.CurrentPWLB.Size = new System.Drawing.Size(138, 20);
             this.CurrentPWLB.TabIndex = 1;
             this.CurrentPWLB.Text = "Current password:";
-            this.UpdateLastnameLB.AutoSize = true;
-            this.UpdateLastnameLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateLastnameLB.Location = new System.Drawing.Point(12, 104);
-            this.UpdateLastnameLB.Name = "UpdateLastnameLB";
-            this.UpdateLastnameLB.Size = new System.Drawing.Size(84, 20);
-            this.UpdateLastnameLB.TabIndex = 1;
-            this.UpdateLastnameLB.Text = "Lastname:";
             // 
-            // UpdateFirstnameLB
-            // 
-            this.UpdateFirstnameLB.AutoSize = true;
-            this.UpdateFirstnameLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateFirstnameLB.Location = new System.Drawing.Point(12, 43);
-            this.UpdateFirstnameLB.Name = "UpdateFirstnameLB";
-            this.UpdateFirstnameLB.Size = new System.Drawing.Size(84, 20);
-            this.UpdateFirstnameLB.TabIndex = 0;
-            this.UpdateFirstnameLB.Text = "Firstname:";
-            // 
-            // ProfileUpdateBT
             // ChangePWLB
             // 
             this.ChangePWLB.AutoSize = true;
@@ -2352,7 +2269,7 @@
             this.ChangePWLB.TabIndex = 0;
             this.ChangePWLB.Text = "Change password";
             // 
-            // ProfilePasswordBT
+            // ProfileUpdatePL
             // 
             this.ProfileUpdatePL.Controls.Add(this.UpdateCloseBT);
             this.ProfileUpdatePL.Controls.Add(this.UpdateUpdateBT);
@@ -2378,13 +2295,6 @@
             this.UpdateCloseBT.Text = "Close";
             this.UpdateCloseBT.UseVisualStyleBackColor = true;
             this.UpdateCloseBT.Click += new System.EventHandler(this.UpdateCloseBT_Click);
-            this.ProfilePasswordBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProfilePasswordBT.Location = new System.Drawing.Point(22, 270);
-            this.ProfilePasswordBT.Name = "ProfilePasswordBT";
-            this.ProfilePasswordBT.Size = new System.Drawing.Size(149, 36);
-            this.ProfilePasswordBT.TabIndex = 7;
-            this.ProfilePasswordBT.Text = "Change password";
-            this.ProfilePasswordBT.UseVisualStyleBackColor = true;
             // 
             // UpdateUpdateBT
             // 
@@ -2432,18 +2342,16 @@
             this.UpdateEmailLB.Text = "Email:";
             // 
             // UpdateLastnameLB
-            // ProfileEmail
             // 
-            this.ProfileEmail.AutoSize = true;
-            this.ProfileEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProfileEmail.Location = new System.Drawing.Point(120, 170);
-            this.ProfileEmail.Name = "ProfileEmail";
-            this.ProfileEmail.Size = new System.Drawing.Size(51, 20);
-            this.ProfileEmail.TabIndex = 6;
-            this.ProfileEmail.Text = "label1";
+            this.UpdateLastnameLB.AutoSize = true;
+            this.UpdateLastnameLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateLastnameLB.Location = new System.Drawing.Point(12, 104);
+            this.UpdateLastnameLB.Name = "UpdateLastnameLB";
+            this.UpdateLastnameLB.Size = new System.Drawing.Size(84, 20);
+            this.UpdateLastnameLB.TabIndex = 1;
+            this.UpdateLastnameLB.Text = "Lastname:";
             // 
             // UpdateFirstnameLB
-            // ProfileEmailLB
             // 
             this.UpdateFirstnameLB.AutoSize = true;
             this.UpdateFirstnameLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2493,16 +2401,8 @@
             this.ProfileEmail.TabIndex = 6;
             this.ProfileEmail.Text = "label1";
             this.ProfileEmail.Visible = false;
-            this.ProfileEmailLB.AutoSize = true;
-            this.ProfileEmailLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProfileEmailLB.Location = new System.Drawing.Point(57, 170);
-            this.ProfileEmailLB.Name = "ProfileEmailLB";
-            this.ProfileEmailLB.Size = new System.Drawing.Size(52, 20);
-            this.ProfileEmailLB.TabIndex = 5;
-            this.ProfileEmailLB.Text = "Email:";
             // 
             // ProfileEmailLB
-            // ProfileLastname
             // 
             this.ProfileEmailLB.AutoSize = true;
             this.ProfileEmailLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2511,16 +2411,8 @@
             this.ProfileEmailLB.Size = new System.Drawing.Size(52, 20);
             this.ProfileEmailLB.TabIndex = 5;
             this.ProfileEmailLB.Text = "Email:";
-            this.ProfileLastname.AutoSize = true;
-            this.ProfileLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProfileLastname.Location = new System.Drawing.Point(120, 112);
-            this.ProfileLastname.Name = "ProfileLastname";
-            this.ProfileLastname.Size = new System.Drawing.Size(51, 20);
-            this.ProfileLastname.TabIndex = 4;
-            this.ProfileLastname.Text = "label1";
             // 
             // ProfileLastname
-            // ProfileFirstname
             // 
             this.ProfileLastname.AutoSize = true;
             this.ProfileLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2530,16 +2422,8 @@
             this.ProfileLastname.TabIndex = 4;
             this.ProfileLastname.Text = "label1";
             this.ProfileLastname.Visible = false;
-            this.ProfileFirstname.AutoSize = true;
-            this.ProfileFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProfileFirstname.Location = new System.Drawing.Point(120, 56);
-            this.ProfileFirstname.Name = "ProfileFirstname";
-            this.ProfileFirstname.Size = new System.Drawing.Size(51, 20);
-            this.ProfileFirstname.TabIndex = 3;
-            this.ProfileFirstname.Text = "label1";
             // 
             // ProfileFirstname
-            // ProfileLNameLB
             // 
             this.ProfileFirstname.AutoSize = true;
             this.ProfileFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2549,16 +2433,8 @@
             this.ProfileFirstname.TabIndex = 3;
             this.ProfileFirstname.Text = "label1";
             this.ProfileFirstname.Visible = false;
-            this.ProfileLNameLB.AutoSize = true;
-            this.ProfileLNameLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProfileLNameLB.Location = new System.Drawing.Point(25, 112);
-            this.ProfileLNameLB.Name = "ProfileLNameLB";
-            this.ProfileLNameLB.Size = new System.Drawing.Size(84, 20);
-            this.ProfileLNameLB.TabIndex = 2;
-            this.ProfileLNameLB.Text = "Lastname:";
             // 
             // ProfileLNameLB
-            // ProfileFNameLB
             // 
             this.ProfileLNameLB.AutoSize = true;
             this.ProfileLNameLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2567,16 +2443,8 @@
             this.ProfileLNameLB.Size = new System.Drawing.Size(84, 20);
             this.ProfileLNameLB.TabIndex = 2;
             this.ProfileLNameLB.Text = "Lastname:";
-            this.ProfileFNameLB.AutoSize = true;
-            this.ProfileFNameLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProfileFNameLB.Location = new System.Drawing.Point(25, 56);
-            this.ProfileFNameLB.Name = "ProfileFNameLB";
-            this.ProfileFNameLB.Size = new System.Drawing.Size(84, 20);
-            this.ProfileFNameLB.TabIndex = 1;
-            this.ProfileFNameLB.Text = "Firstname:";
             // 
             // ProfileFNameLB
-            // ProfileLB
             // 
             this.ProfileFNameLB.AutoSize = true;
             this.ProfileFNameLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2585,16 +2453,8 @@
             this.ProfileFNameLB.Size = new System.Drawing.Size(84, 20);
             this.ProfileFNameLB.TabIndex = 1;
             this.ProfileFNameLB.Text = "Firstname:";
-            this.ProfileLB.AutoSize = true;
-            this.ProfileLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProfileLB.Location = new System.Drawing.Point(10, 11);
-            this.ProfileLB.Name = "ProfileLB";
-            this.ProfileLB.Size = new System.Drawing.Size(73, 25);
-            this.ProfileLB.TabIndex = 0;
-            this.ProfileLB.Text = "Profile";
             // 
             // ProfileLB
-            // dashboardRefreshDataBT
             // 
             this.ProfileLB.AutoSize = true;
             this.ProfileLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2603,14 +2463,6 @@
             this.ProfileLB.Size = new System.Drawing.Size(73, 25);
             this.ProfileLB.TabIndex = 0;
             this.ProfileLB.Text = "Profile";
-            this.dashboardRefreshDataBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboardRefreshDataBT.Location = new System.Drawing.Point(265, 6);
-            this.dashboardRefreshDataBT.Name = "dashboardRefreshDataBT";
-            this.dashboardRefreshDataBT.Size = new System.Drawing.Size(170, 31);
-            this.dashboardRefreshDataBT.TabIndex = 4;
-            this.dashboardRefreshDataBT.Text = "REFRESH DATA";
-            this.dashboardRefreshDataBT.UseVisualStyleBackColor = true;
-            this.dashboardRefreshDataBT.Click += new System.EventHandler(this.dashboardRefreshDataBT_Click);
             // 
             // StudyPointForm
             // 
@@ -2618,12 +2470,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
             this.Controls.Add(this.UserManPL);
-            this.Controls.Add(this.FeedBackManPL);
-            this.Controls.Add(this.ManagementPL);
+            this.Controls.Add(this.ProfilePL);
             this.Controls.Add(this.FeedbackPL);
-            this.Controls.Add(this.AboutPL);
-            this.Controls.Add(this.loginPL);
-            this.Controls.Add(this.HomePL);
             this.Controls.Add(this.DashboardPL);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
@@ -2632,11 +2480,8 @@
             this.Controls.Add(this.WhatsNewManPL);
             this.Controls.Add(this.loginPL);
             this.Controls.Add(this.DiscussionBoardPL);
-            this.Controls.Add(this.ProfilePL);
-            this.Controls.Add(this.UserManPL);
             this.Controls.Add(this.FeedBackManPL);
             this.Controls.Add(this.DownloadPL);
-            this.Controls.Add(this.FeedbackPL);
             this.Controls.Add(this.ContactUsPL);
             this.Controls.Add(this.OurDepartmentPL);
             this.Controls.Add(this.OurGalleryPL);
@@ -2783,8 +2628,8 @@
         private System.Windows.Forms.Button UserManEmptyBT;
         private System.Windows.Forms.Label LeaveFeedbackLB;
         private System.Windows.Forms.Label LeaveContactsLB;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label FeedbackEmailLB;
+        private System.Windows.Forms.Label FeedbackNameLB;
         private System.Windows.Forms.TextBox FBEmailTB;
         private System.Windows.Forms.TextBox FBNameTB;
         private System.Windows.Forms.Button SendFBBT;
