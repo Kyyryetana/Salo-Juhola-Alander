@@ -1063,6 +1063,7 @@
             // 
             // DiscussionBoardPL
             // 
+            this.DiscussionBoardPL.Controls.Add(this.DiscussionPL);
             this.DiscussionBoardPL.Controls.Add(this.discussionWriteTopicPL);
             this.DiscussionBoardPL.Controls.Add(this.discGroupGB);
             this.DiscussionBoardPL.Controls.Add(this.discPrevBT);
@@ -1078,6 +1079,7 @@
             // 
             // DiscussionPL
             // 
+            this.DiscussionPL.Controls.Add(this.discussionAswerPL);
             this.DiscussionPL.Controls.Add(this.discussionTopicPrevBT);
             this.DiscussionPL.Controls.Add(this.discussionAnswerBT);
             this.DiscussionPL.Controls.Add(this.discussionBackMainBT);
@@ -1087,7 +1089,7 @@
             this.DiscussionPL.Controls.Add(this.discussionUserGB1);
             this.DiscussionPL.Controls.Add(this.topicLB);
             this.DiscussionPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DiscussionPL.Location = new System.Drawing.Point(153, 47);
+            this.DiscussionPL.Location = new System.Drawing.Point(0, 0);
             this.DiscussionPL.Name = "DiscussionPL";
             this.DiscussionPL.Size = new System.Drawing.Size(641, 498);
             this.DiscussionPL.TabIndex = 3;
@@ -1099,7 +1101,7 @@
             this.discussionAswerPL.Controls.Add(this.discAnswerTB);
             this.discussionAswerPL.Controls.Add(this.discAnswerTopicNameLB);
             this.discussionAswerPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.discussionAswerPL.Location = new System.Drawing.Point(153, 47);
+            this.discussionAswerPL.Location = new System.Drawing.Point(0, 0);
             this.discussionAswerPL.Name = "discussionAswerPL";
             this.discussionAswerPL.Size = new System.Drawing.Size(641, 498);
             this.discussionAswerPL.TabIndex = 5;
@@ -2539,13 +2541,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
-            this.Controls.Add(this.DiscussionPL);
-            this.Controls.Add(this.discussionAswerPL);
-            this.Controls.Add(this.DiscussionBoardPL);
+            this.Controls.Add(this.HomePL);
             this.Controls.Add(this.loginPL);
+            this.Controls.Add(this.DiscussionBoardPL);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
-            this.Controls.Add(this.HomePL);
             this.Controls.Add(this.DashboardPL);
             this.Controls.Add(this.AboutUsPL);
             this.Controls.Add(this.DownloadPL);
