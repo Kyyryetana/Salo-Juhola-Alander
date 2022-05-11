@@ -28,25 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gallery_big));
+            this.BigGalPicPB = new System.Windows.Forms.PictureBox();
             this.bigImageNextBT = new System.Windows.Forms.Button();
             this.bigImageBackBT = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.BigPicList = new System.Windows.Forms.ImageList(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.BigGalPicPB)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // BigGalPicPB
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(850, 625);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.BigGalPicPB.Location = new System.Drawing.Point(0, 0);
+            this.BigGalPicPB.Name = "BigGalPicPB";
+            this.BigGalPicPB.Size = new System.Drawing.Size(665, 516);
+            this.BigGalPicPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BigGalPicPB.TabIndex = 0;
+            this.BigGalPicPB.TabStop = false;
             // 
             // bigImageNextBT
             // 
-            this.bigImageNextBT.Location = new System.Drawing.Point(775, 602);
+            this.bigImageNextBT.Location = new System.Drawing.Point(527, 522);
             this.bigImageNextBT.Name = "bigImageNextBT";
             this.bigImageNextBT.Size = new System.Drawing.Size(75, 23);
             this.bigImageNextBT.TabIndex = 1;
@@ -56,7 +58,7 @@
             // 
             // bigImageBackBT
             // 
-            this.bigImageBackBT.Location = new System.Drawing.Point(0, 602);
+            this.bigImageBackBT.Location = new System.Drawing.Point(0, 522);
             this.bigImageBackBT.Name = "bigImageBackBT";
             this.bigImageBackBT.Size = new System.Drawing.Size(75, 23);
             this.bigImageBackBT.TabIndex = 1;
@@ -64,25 +66,44 @@
             this.bigImageBackBT.UseVisualStyleBackColor = true;
             this.bigImageBackBT.Click += new System.EventHandler(this.bigImageBackBT_Click);
             // 
+            // BigPicList
+            // 
+            this.BigPicList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("BigPicList.ImageStream")));
+            this.BigPicList.TransparentColor = System.Drawing.Color.Transparent;
+            this.BigPicList.Images.SetKeyName(0, "pic1.jpg");
+            this.BigPicList.Images.SetKeyName(1, "pic2.jpg");
+            this.BigPicList.Images.SetKeyName(2, "pic3.jpg");
+            this.BigPicList.Images.SetKeyName(3, "pic4.jpg");
+            this.BigPicList.Images.SetKeyName(4, "pic5.jpg");
+            this.BigPicList.Images.SetKeyName(5, "pic6.jpg");
+            this.BigPicList.Images.SetKeyName(6, "pic7.jpg");
+            this.BigPicList.Images.SetKeyName(7, "pic8.jpg");
+            this.BigPicList.Images.SetKeyName(8, "pic9.jpg");
+            this.BigPicList.Images.SetKeyName(9, "pic10.JPG");
+            this.BigPicList.Images.SetKeyName(10, "pic11.JPG");
+            this.BigPicList.Images.SetKeyName(11, "pic12.jpg");
+            this.BigPicList.Images.SetKeyName(12, "pic13.jpg");
+            // 
             // gallery_big
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 625);
+            this.ClientSize = new System.Drawing.Size(706, 547);
             this.Controls.Add(this.bigImageBackBT);
             this.Controls.Add(this.bigImageNextBT);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.BigGalPicPB);
             this.Name = "gallery_big";
             this.Text = "gallery_big";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BigGalPicPB)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox BigGalPicPB;
         private System.Windows.Forms.Button bigImageNextBT;
         private System.Windows.Forms.Button bigImageBackBT;
+        private System.Windows.Forms.ImageList BigPicList;
     }
 }

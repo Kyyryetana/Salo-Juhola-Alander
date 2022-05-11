@@ -1068,64 +1068,78 @@ namespace StudyPoint
         //gallery start here
         private void galleryPB1_Click(object sender, EventArgs e)
         {
-            var bigGallery = new gallery_big();
-            bigGallery.Show();
+            CallingBigPic(0);
+
+
         }
         private void galleryPB2_Click(object sender, EventArgs e)
         {
-
+            CallingBigPic(1);
         }
         
         private void galleryPB3_Click(object sender, EventArgs e)
         {
-
+            CallingBigPic(2);
         }
         private void galleryPB4_Click(object sender, EventArgs e)
         {
-
+            CallingBigPic(3);
         }
 
         private void galleryPB5_Click(object sender, EventArgs e)
         {
-
+            CallingBigPic(4);
         }
 
         private void galleryPB6_Click(object sender, EventArgs e)
         {
-
+            CallingBigPic(5);
         }
 
         private void galleryPB7_Click(object sender, EventArgs e)
         {
-
+            CallingBigPic(6);
         }
 
         private void galleryPB8_Click(object sender, EventArgs e)
         {
-
+            CallingBigPic(7);
         }
 
         private void galleryPB9_Click(object sender, EventArgs e)
         {
-
+            CallingBigPic(8);
         }
 
         private void galleryPB10_Click(object sender, EventArgs e)
         {
-
+            CallingBigPic(9);
         }
 
         private void galleryPB11_Click(object sender, EventArgs e)
         {
-
+            CallingBigPic(10);
         }
 
      
 
         private void galleryPB12_Click(object sender, EventArgs e)
         {
+            CallingBigPic(11);
+        }
+
+        //calling second form
+        private void CallingBigPic(int number)
+        {
+            var bigGallery = new gallery_big();
+            gallery_big.Number = number;
+            bigGallery.Show();
+            bigGallery.ShowBigPic(number);
+
 
         }
+        //calling second form end
+
         //gallery end here
         //
 

@@ -49,3 +49,4 @@ C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\bin\Debug\
 C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\bin\Debug\K4os.Hash.xxHash.dll
 C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\bin\Debug\MySql.Data.xml
 C:\Users\salok\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.csproj.CopyComplete
+C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\StudyPoint\StudyPoint\obj\Debug\StudyPoint.gallery_big.resources
