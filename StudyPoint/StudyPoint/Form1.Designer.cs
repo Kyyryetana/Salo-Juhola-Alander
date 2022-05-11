@@ -2541,11 +2541,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
+            this.Controls.Add(this.AboutPL);
+            this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.loginPL);
             this.Controls.Add(this.HomePL);
             this.Controls.Add(this.DiscussionBoardPL);
-            this.Controls.Add(this.AboutPL);
-            this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.DashboardPL);
             this.Controls.Add(this.AboutUsPL);
             this.Controls.Add(this.DownloadPL);
