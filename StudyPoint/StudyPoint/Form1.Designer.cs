@@ -75,13 +75,20 @@
             this.regUsersLB = new System.Windows.Forms.Label();
             this.dashboardLB = new System.Windows.Forms.Label();
             this.AboutUsPL = new System.Windows.Forms.Panel();
-            this.AboutUsTextLB = new System.Windows.Forms.Label();
             this.aboutLB = new System.Windows.Forms.Label();
             this.OurServicesPL = new System.Windows.Forms.Panel();
+            this.ServicesTextLB = new System.Windows.Forms.Label();
             this.sercicesLB = new System.Windows.Forms.Label();
             this.OurGalleryPL = new System.Windows.Forms.Panel();
             this.galleryLB = new System.Windows.Forms.Label();
             this.OurDepartmentPL = new System.Windows.Forms.Panel();
+            this.DepartmentProgrammersLB = new System.Windows.Forms.Label();
+            this.ImgTxtSalo = new System.Windows.Forms.Label();
+            this.ImgTxtJuhola = new System.Windows.Forms.Label();
+            this.ImgTxtAlander = new System.Windows.Forms.Label();
+            this.ImageSaloPB = new System.Windows.Forms.PictureBox();
+            this.ImageJuholaPB = new System.Windows.Forms.PictureBox();
+            this.ImageAlanderPB = new System.Windows.Forms.PictureBox();
             this.ourDepLB = new System.Windows.Forms.Label();
             this.FeedbackPL = new System.Windows.Forms.Panel();
             this.LeaveFeedbackLB = new System.Windows.Forms.Label();
@@ -137,6 +144,8 @@
             this.DownloadPL = new System.Windows.Forms.Panel();
             this.downloadLB = new System.Windows.Forms.Label();
             this.ContactUsPL = new System.Windows.Forms.Panel();
+            this.ContactLinkLB = new System.Windows.Forms.LinkLabel();
+            this.ContactTxtLB = new System.Windows.Forms.Label();
             this.ContactUsLB = new System.Windows.Forms.Label();
             this.FeedBackManPL = new System.Windows.Forms.Panel();
             this.FBManEmailLB = new System.Windows.Forms.Label();
@@ -234,17 +243,6 @@
             this.ProfileFNameLB = new System.Windows.Forms.Label();
             this.ProfileLB = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.About2LB = new System.Windows.Forms.Label();
-            this.ServicesTextLB = new System.Windows.Forms.Label();
-            this.ImageAlanderPB = new System.Windows.Forms.PictureBox();
-            this.ImageJuholaPB = new System.Windows.Forms.PictureBox();
-            this.ImageSaloPB = new System.Windows.Forms.PictureBox();
-            this.ImgTxtAlander = new System.Windows.Forms.Label();
-            this.ImgTxtJuhola = new System.Windows.Forms.Label();
-            this.ImgTxtSalo = new System.Windows.Forms.Label();
-            this.DepartmentProgrammersLB = new System.Windows.Forms.Label();
-            this.ContactTxtLB = new System.Windows.Forms.Label();
-            this.ContactLinkLB = new System.Windows.Forms.LinkLabel();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -256,6 +254,9 @@
             this.OurServicesPL.SuspendLayout();
             this.OurGalleryPL.SuspendLayout();
             this.OurDepartmentPL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageSaloPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageJuholaPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageAlanderPB)).BeginInit();
             this.FeedbackPL.SuspendLayout();
             this.DiscussionBoardPL.SuspendLayout();
             this.DiscussionPL.SuspendLayout();
@@ -284,9 +285,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ChangePWDTG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfileDTG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageAlanderPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageJuholaPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageSaloPB)).BeginInit();
             this.SuspendLayout();
             // 
             // YlaPL
@@ -882,8 +880,6 @@
             // 
             // AboutUsPL
             // 
-            this.AboutUsPL.Controls.Add(this.About2LB);
-            this.AboutUsPL.Controls.Add(this.AboutUsTextLB);
             this.AboutUsPL.Controls.Add(this.aboutLB);
             this.AboutUsPL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AboutUsPL.Location = new System.Drawing.Point(153, 47);
@@ -891,17 +887,6 @@
             this.AboutUsPL.Size = new System.Drawing.Size(641, 498);
             this.AboutUsPL.TabIndex = 15;
             this.AboutUsPL.Visible = false;
-            // 
-            // AboutUsTextLB
-            // 
-            this.AboutUsTextLB.AutoSize = true;
-            this.AboutUsTextLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AboutUsTextLB.Location = new System.Drawing.Point(10, 63);
-            this.AboutUsTextLB.Name = "AboutUsTextLB";
-            this.AboutUsTextLB.Size = new System.Drawing.Size(221, 40);
-            this.AboutUsTextLB.TabIndex = 1;
-            this.AboutUsTextLB.Text = "A programmer-student group \r\nTMI Alander, Juhola  and Salo";
-            this.AboutUsTextLB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // aboutLB
             // 
@@ -923,6 +908,16 @@
             this.OurServicesPL.Size = new System.Drawing.Size(641, 498);
             this.OurServicesPL.TabIndex = 16;
             this.OurServicesPL.Visible = false;
+            // 
+            // ServicesTextLB
+            // 
+            this.ServicesTextLB.AutoSize = true;
+            this.ServicesTextLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServicesTextLB.Location = new System.Drawing.Point(11, 66);
+            this.ServicesTextLB.Name = "ServicesTextLB";
+            this.ServicesTextLB.Size = new System.Drawing.Size(444, 20);
+            this.ServicesTextLB.TabIndex = 1;
+            this.ServicesTextLB.Text = "If nothing else, we offer you our endless hunger to learn more!";
             // 
             // sercicesLB
             // 
@@ -970,6 +965,70 @@
             this.OurDepartmentPL.Size = new System.Drawing.Size(641, 498);
             this.OurDepartmentPL.TabIndex = 18;
             this.OurDepartmentPL.Visible = false;
+            // 
+            // DepartmentProgrammersLB
+            // 
+            this.DepartmentProgrammersLB.AutoSize = true;
+            this.DepartmentProgrammersLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartmentProgrammersLB.Location = new System.Drawing.Point(68, 81);
+            this.DepartmentProgrammersLB.Name = "DepartmentProgrammersLB";
+            this.DepartmentProgrammersLB.Size = new System.Drawing.Size(148, 20);
+            this.DepartmentProgrammersLB.TabIndex = 7;
+            this.DepartmentProgrammersLB.Text = "Our programmers";
+            // 
+            // ImgTxtSalo
+            // 
+            this.ImgTxtSalo.AutoSize = true;
+            this.ImgTxtSalo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImgTxtSalo.Location = new System.Drawing.Point(446, 331);
+            this.ImgTxtSalo.Name = "ImgTxtSalo";
+            this.ImgTxtSalo.Size = new System.Drawing.Size(41, 20);
+            this.ImgTxtSalo.TabIndex = 6;
+            this.ImgTxtSalo.Text = "Salo";
+            // 
+            // ImgTxtJuhola
+            // 
+            this.ImgTxtJuhola.AutoSize = true;
+            this.ImgTxtJuhola.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImgTxtJuhola.Location = new System.Drawing.Point(274, 331);
+            this.ImgTxtJuhola.Name = "ImgTxtJuhola";
+            this.ImgTxtJuhola.Size = new System.Drawing.Size(56, 20);
+            this.ImgTxtJuhola.TabIndex = 5;
+            this.ImgTxtJuhola.Text = "Juhola";
+            // 
+            // ImgTxtAlander
+            // 
+            this.ImgTxtAlander.AutoSize = true;
+            this.ImgTxtAlander.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImgTxtAlander.Location = new System.Drawing.Point(102, 331);
+            this.ImgTxtAlander.Name = "ImgTxtAlander";
+            this.ImgTxtAlander.Size = new System.Drawing.Size(64, 20);
+            this.ImgTxtAlander.TabIndex = 4;
+            this.ImgTxtAlander.Text = "Alander";
+            // 
+            // ImageSaloPB
+            // 
+            this.ImageSaloPB.Location = new System.Drawing.Point(404, 138);
+            this.ImageSaloPB.Name = "ImageSaloPB";
+            this.ImageSaloPB.Size = new System.Drawing.Size(125, 168);
+            this.ImageSaloPB.TabIndex = 3;
+            this.ImageSaloPB.TabStop = false;
+            // 
+            // ImageJuholaPB
+            // 
+            this.ImageJuholaPB.Location = new System.Drawing.Point(240, 138);
+            this.ImageJuholaPB.Name = "ImageJuholaPB";
+            this.ImageJuholaPB.Size = new System.Drawing.Size(125, 168);
+            this.ImageJuholaPB.TabIndex = 2;
+            this.ImageJuholaPB.TabStop = false;
+            // 
+            // ImageAlanderPB
+            // 
+            this.ImageAlanderPB.Location = new System.Drawing.Point(72, 139);
+            this.ImageAlanderPB.Name = "ImageAlanderPB";
+            this.ImageAlanderPB.Size = new System.Drawing.Size(125, 168);
+            this.ImageAlanderPB.TabIndex = 1;
+            this.ImageAlanderPB.TabStop = false;
             // 
             // ourDepLB
             // 
@@ -1560,6 +1619,28 @@
             this.ContactUsPL.Size = new System.Drawing.Size(641, 498);
             this.ContactUsPL.TabIndex = 21;
             this.ContactUsPL.Visible = false;
+            // 
+            // ContactLinkLB
+            // 
+            this.ContactLinkLB.AutoSize = true;
+            this.ContactLinkLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactLinkLB.Location = new System.Drawing.Point(337, 62);
+            this.ContactLinkLB.Name = "ContactLinkLB";
+            this.ContactLinkLB.Size = new System.Drawing.Size(80, 20);
+            this.ContactLinkLB.TabIndex = 2;
+            this.ContactLinkLB.TabStop = true;
+            this.ContactLinkLB.Text = "Feedback";
+            this.ContactLinkLB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ContactLinkLB_LinkClicked);
+            // 
+            // ContactTxtLB
+            // 
+            this.ContactTxtLB.AutoSize = true;
+            this.ContactTxtLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactTxtLB.Location = new System.Drawing.Point(9, 62);
+            this.ContactTxtLB.Name = "ContactTxtLB";
+            this.ContactTxtLB.Size = new System.Drawing.Size(336, 20);
+            this.ContactTxtLB.TabIndex = 1;
+            this.ContactTxtLB.Text = "You can contact us by leaving us feedback on ";
             // 
             // ContactUsLB
             // 
@@ -2574,121 +2655,15 @@
             this.ProfileLB.TabIndex = 0;
             this.ProfileLB.Text = "Profile";
             // 
-            // About2LB
-            // 
-            this.About2LB.AutoSize = true;
-            this.About2LB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.About2LB.Location = new System.Drawing.Point(6, 132);
-            this.About2LB.Name = "About2LB";
-            this.About2LB.Size = new System.Drawing.Size(272, 20);
-            this.About2LB.TabIndex = 2;
-            this.About2LB.Text = "We mess around and study hard!";
-            // 
-            // ServicesTextLB
-            // 
-            this.ServicesTextLB.AutoSize = true;
-            this.ServicesTextLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ServicesTextLB.Location = new System.Drawing.Point(11, 66);
-            this.ServicesTextLB.Name = "ServicesTextLB";
-            this.ServicesTextLB.Size = new System.Drawing.Size(444, 20);
-            this.ServicesTextLB.TabIndex = 1;
-            this.ServicesTextLB.Text = "If nothing else, we offer you our endless hunger to learn more!";
-            // 
-            // ImageAlanderPB
-            // 
-            this.ImageAlanderPB.Location = new System.Drawing.Point(72, 139);
-            this.ImageAlanderPB.Name = "ImageAlanderPB";
-            this.ImageAlanderPB.Size = new System.Drawing.Size(125, 168);
-            this.ImageAlanderPB.TabIndex = 1;
-            this.ImageAlanderPB.TabStop = false;
-            // 
-            // ImageJuholaPB
-            // 
-            this.ImageJuholaPB.Location = new System.Drawing.Point(240, 138);
-            this.ImageJuholaPB.Name = "ImageJuholaPB";
-            this.ImageJuholaPB.Size = new System.Drawing.Size(125, 168);
-            this.ImageJuholaPB.TabIndex = 2;
-            this.ImageJuholaPB.TabStop = false;
-            // 
-            // ImageSaloPB
-            // 
-            this.ImageSaloPB.Location = new System.Drawing.Point(404, 138);
-            this.ImageSaloPB.Name = "ImageSaloPB";
-            this.ImageSaloPB.Size = new System.Drawing.Size(125, 168);
-            this.ImageSaloPB.TabIndex = 3;
-            this.ImageSaloPB.TabStop = false;
-            // 
-            // ImgTxtAlander
-            // 
-            this.ImgTxtAlander.AutoSize = true;
-            this.ImgTxtAlander.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ImgTxtAlander.Location = new System.Drawing.Point(102, 331);
-            this.ImgTxtAlander.Name = "ImgTxtAlander";
-            this.ImgTxtAlander.Size = new System.Drawing.Size(64, 20);
-            this.ImgTxtAlander.TabIndex = 4;
-            this.ImgTxtAlander.Text = "Alander";
-            // 
-            // ImgTxtJuhola
-            // 
-            this.ImgTxtJuhola.AutoSize = true;
-            this.ImgTxtJuhola.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ImgTxtJuhola.Location = new System.Drawing.Point(274, 331);
-            this.ImgTxtJuhola.Name = "ImgTxtJuhola";
-            this.ImgTxtJuhola.Size = new System.Drawing.Size(56, 20);
-            this.ImgTxtJuhola.TabIndex = 5;
-            this.ImgTxtJuhola.Text = "Juhola";
-            // 
-            // ImgTxtSalo
-            // 
-            this.ImgTxtSalo.AutoSize = true;
-            this.ImgTxtSalo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ImgTxtSalo.Location = new System.Drawing.Point(446, 331);
-            this.ImgTxtSalo.Name = "ImgTxtSalo";
-            this.ImgTxtSalo.Size = new System.Drawing.Size(41, 20);
-            this.ImgTxtSalo.TabIndex = 6;
-            this.ImgTxtSalo.Text = "Salo";
-            // 
-            // DepartmentProgrammersLB
-            // 
-            this.DepartmentProgrammersLB.AutoSize = true;
-            this.DepartmentProgrammersLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepartmentProgrammersLB.Location = new System.Drawing.Point(68, 81);
-            this.DepartmentProgrammersLB.Name = "DepartmentProgrammersLB";
-            this.DepartmentProgrammersLB.Size = new System.Drawing.Size(148, 20);
-            this.DepartmentProgrammersLB.TabIndex = 7;
-            this.DepartmentProgrammersLB.Text = "Our programmers";
-            // 
-            // ContactTxtLB
-            // 
-            this.ContactTxtLB.AutoSize = true;
-            this.ContactTxtLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactTxtLB.Location = new System.Drawing.Point(9, 62);
-            this.ContactTxtLB.Name = "ContactTxtLB";
-            this.ContactTxtLB.Size = new System.Drawing.Size(336, 20);
-            this.ContactTxtLB.TabIndex = 1;
-            this.ContactTxtLB.Text = "You can contact us by leaving us feedback on ";
-            // 
-            // ContactLinkLB
-            // 
-            this.ContactLinkLB.AutoSize = true;
-            this.ContactLinkLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactLinkLB.Location = new System.Drawing.Point(337, 62);
-            this.ContactLinkLB.Name = "ContactLinkLB";
-            this.ContactLinkLB.Size = new System.Drawing.Size(80, 20);
-            this.ContactLinkLB.TabIndex = 2;
-            this.ContactLinkLB.TabStop = true;
-            this.ContactLinkLB.Text = "Feedback";
-            this.ContactLinkLB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ContactLinkLB_LinkClicked);
-            // 
             // StudyPointForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
+            this.Controls.Add(this.AboutUsPL);
             this.Controls.Add(this.ContactUsPL);
             this.Controls.Add(this.OurDepartmentPL);
             this.Controls.Add(this.OurServicesPL);
-            this.Controls.Add(this.AboutUsPL);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.HomePL);
@@ -2726,6 +2701,9 @@
             this.OurGalleryPL.PerformLayout();
             this.OurDepartmentPL.ResumeLayout(false);
             this.OurDepartmentPL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageSaloPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageJuholaPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageAlanderPB)).EndInit();
             this.FeedbackPL.ResumeLayout(false);
             this.FeedbackPL.PerformLayout();
             this.DiscussionBoardPL.ResumeLayout(false);
@@ -2774,9 +2752,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ChangePWDTG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfileDTG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageAlanderPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageJuholaPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageSaloPB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2986,8 +2961,6 @@
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.RichTextBox commentBetaTB2;
         private System.Windows.Forms.RichTextBox commentBetaTB3;
-        private System.Windows.Forms.Label AboutUsTextLB;
-        private System.Windows.Forms.Label About2LB;
         private System.Windows.Forms.Label ServicesTextLB;
         private System.Windows.Forms.Label DepartmentProgrammersLB;
         private System.Windows.Forms.Label ImgTxtSalo;
