@@ -29,7 +29,7 @@ namespace StudyPoint
         public StudyPointForm()
         {
             InitializeComponent();
-            UserManPL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
+            HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
             tarkistaNewThing(); // tarkistaa home sivulla olevan whats new tilanteen
         }
 
@@ -968,6 +968,8 @@ namespace StudyPoint
         }
 
         
+
+
 
         // DOWNLOAD MANAGEMENT SIVU LOPPU
 
