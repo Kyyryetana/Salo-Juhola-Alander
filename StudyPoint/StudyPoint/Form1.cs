@@ -1044,31 +1044,35 @@ namespace StudyPoint
             DownloadPL.Visible = true;
         }
 
+        private void OurGalleryPL_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
+
         private void UsBT_Click(object sender, EventArgs e)
         {
             HideAllPanels();
             AboutUsPL.Visible=true;
         }
 
-       
-
-
-
-
-
-
         // DOWNLOAD MANAGEMENT SIVU LOPPU
 
-        
+        //gallery
+        private void galleryPB1_Click(object sender, EventArgs e)
+        {
+            var form2 = new Form2();
+            form2.Show();
+        }
 
-      
 
 
 
 
 
 
-       
+
 
     }
 }
