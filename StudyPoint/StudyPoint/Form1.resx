@@ -133,4 +133,7 @@ Lorem Ipsum passages, and more recently
 with desktop publishing software like Aldus 
 PageMaker including versions of Lorem Ipsum.</value>
   </data>
+  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

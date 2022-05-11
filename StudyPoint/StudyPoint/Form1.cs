@@ -675,7 +675,8 @@ namespace StudyPoint
                 discussionTopicPrevBT.Enabled = false;
             }
             GroupBox[] groupBoxes = { discussionUserGB1, discussionUserGB2, discussionUserGB3 };
-            Label[] labelsComments = { discussionTextLB1, discussionTextLB2, discussionTextLB3 };
+            //Label[] labelsComments = { discussionTextLB1, discussionTextLB2, discussionTextLB3 };
+            RichTextBox[] textBoxComments = {commentBetaTB1, commentBetaTB2, commentBetaTB3 };
             List<string> list = new List<string>();
             list = discussion.GiveDiscussion(discussion.DiscRegex(topicLB.Text), discCommentnbr);
             int place = 0;
@@ -688,7 +689,7 @@ namespace StudyPoint
                 }
                 else
                 {
-                    labelsComments[place].Text = list[i];
+                    textBoxComments[place].Text = list[i];
                     place++;
                 }
                 
@@ -766,7 +767,10 @@ namespace StudyPoint
             {
                 if (discussion.AddTopicText(loggedUser, discussion.DiscRegex(discAnswertopicLB.Text), discAnswerTB.Text) == true)
                 {
+                    ReadTopic();
+                    discussionAswerPL.Visible = true;
                     discAnswerTB.Text = "";
+
                 }
             }
             
@@ -796,7 +800,8 @@ namespace StudyPoint
             {
                 discussion.AddTopic(topic);
                 discussion.AddTopicText(loggedUser, topic, text);
-
+                DiscussionCall();
+                discussionWriteTopicPL.Visible = false;
                 discNewTopicNameTB.Text = "";
                 discNewTopicWriteTB.Text = "";
             }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudyPointForm));
             this.YlaPL = new System.Windows.Forms.Panel();
             this.loginRegBT = new System.Windows.Forms.Button();
@@ -228,6 +229,10 @@
             this.ProfileLNameLB = new System.Windows.Forms.Label();
             this.ProfileFNameLB = new System.Windows.Forms.Label();
             this.ProfileLB = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.commentBetaTB1 = new System.Windows.Forms.RichTextBox();
+            this.commentBetaTB2 = new System.Windows.Forms.RichTextBox();
+            this.commentBetaTB3 = new System.Windows.Forms.RichTextBox();
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
             this.AboutPL.SuspendLayout();
@@ -266,6 +271,7 @@
             this.ChangePWPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChangePWDTG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfileDTG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // YlaPL
@@ -1057,7 +1063,6 @@
             // 
             // DiscussionBoardPL
             // 
-            this.DiscussionBoardPL.Controls.Add(this.DiscussionPL);
             this.DiscussionBoardPL.Controls.Add(this.discussionWriteTopicPL);
             this.DiscussionBoardPL.Controls.Add(this.discGroupGB);
             this.DiscussionBoardPL.Controls.Add(this.discPrevBT);
@@ -1073,7 +1078,6 @@
             // 
             // DiscussionPL
             // 
-            this.DiscussionPL.Controls.Add(this.discussionAswerPL);
             this.DiscussionPL.Controls.Add(this.discussionTopicPrevBT);
             this.DiscussionPL.Controls.Add(this.discussionAnswerBT);
             this.DiscussionPL.Controls.Add(this.discussionBackMainBT);
@@ -1083,7 +1087,7 @@
             this.DiscussionPL.Controls.Add(this.discussionUserGB1);
             this.DiscussionPL.Controls.Add(this.topicLB);
             this.DiscussionPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DiscussionPL.Location = new System.Drawing.Point(0, 0);
+            this.DiscussionPL.Location = new System.Drawing.Point(153, 47);
             this.DiscussionPL.Name = "DiscussionPL";
             this.DiscussionPL.Size = new System.Drawing.Size(641, 498);
             this.DiscussionPL.TabIndex = 3;
@@ -1095,7 +1099,7 @@
             this.discussionAswerPL.Controls.Add(this.discAnswerTB);
             this.discussionAswerPL.Controls.Add(this.discAnswerTopicNameLB);
             this.discussionAswerPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.discussionAswerPL.Location = new System.Drawing.Point(0, 0);
+            this.discussionAswerPL.Location = new System.Drawing.Point(153, 47);
             this.discussionAswerPL.Name = "discussionAswerPL";
             this.discussionAswerPL.Size = new System.Drawing.Size(641, 498);
             this.discussionAswerPL.TabIndex = 5;
@@ -1182,7 +1186,9 @@
             // 
             // discussionUserGB3
             // 
+            this.discussionUserGB3.Controls.Add(this.commentBetaTB3);
             this.discussionUserGB3.Controls.Add(this.discussionTextLB3);
+            this.discussionUserGB3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.discussionUserGB3.Location = new System.Drawing.Point(33, 322);
             this.discussionUserGB3.Name = "discussionUserGB3";
             this.discussionUserGB3.Size = new System.Drawing.Size(578, 107);
@@ -1202,7 +1208,9 @@
             // 
             // discussionUserGB2
             // 
+            this.discussionUserGB2.Controls.Add(this.commentBetaTB2);
             this.discussionUserGB2.Controls.Add(this.discussionTextLB2);
+            this.discussionUserGB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.discussionUserGB2.Location = new System.Drawing.Point(33, 197);
             this.discussionUserGB2.Name = "discussionUserGB2";
             this.discussionUserGB2.Size = new System.Drawing.Size(578, 107);
@@ -1222,7 +1230,9 @@
             // 
             // discussionUserGB1
             // 
+            this.discussionUserGB1.Controls.Add(this.commentBetaTB1);
             this.discussionUserGB1.Controls.Add(this.discussionTextLB1);
+            this.discussionUserGB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.discussionUserGB1.Location = new System.Drawing.Point(33, 84);
             this.discussionUserGB1.Name = "discussionUserGB1";
             this.discussionUserGB1.Size = new System.Drawing.Size(578, 107);
@@ -2491,18 +2501,53 @@
             this.ProfileLB.TabIndex = 0;
             this.ProfileLB.Text = "Profile";
             // 
+            // commentBetaTB1
+            // 
+            this.commentBetaTB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.commentBetaTB1.Location = new System.Drawing.Point(6, 22);
+            this.commentBetaTB1.Name = "commentBetaTB1";
+            this.commentBetaTB1.ReadOnly = true;
+            this.commentBetaTB1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.commentBetaTB1.Size = new System.Drawing.Size(565, 77);
+            this.commentBetaTB1.TabIndex = 1;
+            this.commentBetaTB1.Text = "";
+            // 
+            // commentBetaTB2
+            // 
+            this.commentBetaTB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.commentBetaTB2.Location = new System.Drawing.Point(7, 22);
+            this.commentBetaTB2.Name = "commentBetaTB2";
+            this.commentBetaTB2.ReadOnly = true;
+            this.commentBetaTB2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.commentBetaTB2.Size = new System.Drawing.Size(565, 77);
+            this.commentBetaTB2.TabIndex = 1;
+            this.commentBetaTB2.Text = "";
+            // 
+            // commentBetaTB3
+            // 
+            this.commentBetaTB3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.commentBetaTB3.Location = new System.Drawing.Point(7, 23);
+            this.commentBetaTB3.Name = "commentBetaTB3";
+            this.commentBetaTB3.ReadOnly = true;
+            this.commentBetaTB3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.commentBetaTB3.Size = new System.Drawing.Size(565, 77);
+            this.commentBetaTB3.TabIndex = 1;
+            this.commentBetaTB3.Text = "";
+            // 
             // StudyPointForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
+            this.Controls.Add(this.DiscussionPL);
+            this.Controls.Add(this.discussionAswerPL);
+            this.Controls.Add(this.DiscussionBoardPL);
             this.Controls.Add(this.loginPL);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.HomePL);
             this.Controls.Add(this.DashboardPL);
             this.Controls.Add(this.AboutUsPL);
-            this.Controls.Add(this.DiscussionBoardPL);
             this.Controls.Add(this.DownloadPL);
             this.Controls.Add(this.ContactUsPL);
             this.Controls.Add(this.FeedbackPL);
@@ -2584,6 +2629,7 @@
             this.ChangePWPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChangePWDTG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfileDTG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2789,6 +2835,10 @@
         private System.Windows.Forms.TextBox NewPWAgainTB;
         private System.Windows.Forms.Label NewPWAgainLB;
         private System.Windows.Forms.Button UsBT;
+        private System.Windows.Forms.RichTextBox commentBetaTB1;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.RichTextBox commentBetaTB2;
+        private System.Windows.Forms.RichTextBox commentBetaTB3;
     }
 }
 
