@@ -2540,8 +2540,8 @@
             // 
             // ProfilePL
             // 
-            this.ProfilePL.Controls.Add(this.ProfileUpdatePL);
             this.ProfilePL.Controls.Add(this.ChangePWPanel);
+            this.ProfilePL.Controls.Add(this.ProfileUpdatePL);
             this.ProfilePL.Controls.Add(this.ProfileDTG);
             this.ProfilePL.Controls.Add(this.ProfileUpdateBT);
             this.ProfilePL.Controls.Add(this.ProfilePasswordBT);
@@ -2872,6 +2872,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
+            this.Controls.Add(this.loginPL);
             this.Controls.Add(this.OurServicesPL);
             this.Controls.Add(this.OurDepartmentPL);
             this.Controls.Add(this.ContactUsPL);
@@ -2879,14 +2880,13 @@
             this.Controls.Add(this.OurGalleryPL);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
-            this.Controls.Add(this.loginPL);
             this.Controls.Add(this.HomePL);
             this.Controls.Add(this.DiscussionBoardPL);
             this.Controls.Add(this.DashboardPL);
+            this.Controls.Add(this.ProfilePL);
             this.Controls.Add(this.DownloadPL);
             this.Controls.Add(this.FeedbackPL);
             this.Controls.Add(this.UserManPL);
-            this.Controls.Add(this.ProfilePL);
             this.Controls.Add(this.DownloadManPL);
             this.Controls.Add(this.WhatsNewManPL);
             this.Controls.Add(this.FeedBackManPL);

@@ -66,6 +66,7 @@ namespace StudyPoint
             }
             else
             {
+                MessageBox.Show("User name and password not match");
                 return "";
             }
             
