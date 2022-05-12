@@ -23,6 +23,7 @@ namespace StudyPoint
         WHATSNEW whatsnew = new WHATSNEW();
         PROFILE profile = new PROFILE();
         DOWNLOADS downloads = new DOWNLOADS();
+        Crypting crypting = new Crypting();
         string loggedUser = "";
         bool admin = false;
         string imgLocation = "";
@@ -30,9 +31,10 @@ namespace StudyPoint
         {
             InitializeComponent();
             HideAllPanels();
-            HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
+            //HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
+            WhatsNewManPL.Visible = true;
             if (loggedUser == "")
-            {
+            {   newThing1.Visible = true;
                 newThing1.Text = "Register or login to see new things";
             }
         }
@@ -290,7 +292,7 @@ namespace StudyPoint
                 }
                 if (whatsNewManageDG.Rows.Count == 1)
                 {
-                    MessageBox.Show("We dont have any new things to share right now");
+                    newThing1.Text = "We dont have any new things to share \n right now";
                 }
             }
             
@@ -555,7 +557,6 @@ namespace StudyPoint
             string email = loggedUser; // sisäänkirjautuneen henkilön sähköposti
 
             String CurrentPW = CurrentPWTB.Text; // nykyinen salasana
-
             ChangePWDTG.DataSource = profile.OldPassword(email, CurrentPW); // datagrid näyttää sähköpostin ja nykyisen salasanan
             var datagridview = new DataGridView(); // tuodaan tiedot datagridiin
         }
@@ -570,8 +571,7 @@ namespace StudyPoint
 
             ChangePWDTG.DataSource = profile.OldPassword(email, CurrentPW); // datagrid näyttää sähköpostin ja nykyisen salasanan
             string CheckPw = ChangePWDTG.CurrentRow.Cells[1].Value.ToString(); // tallennetaan muuttujaan nykyinen salasana tietokannasta
-            CheckPw = eCryptography.Decrypt(CheckPw);
-
+            CheckPw = crypting.Decrypt(CheckPw);
             if (CurrentPW == "" || Pword == "" || PwordAgain == "")
             {
                 MessageBox.Show("Give your old and new password!");
@@ -580,7 +580,7 @@ namespace StudyPoint
             {
                 if (CurrentPW == CheckPw && Pword == PwordAgain) // tarkistetaan, onko nykyinen syötetty salasana sama kuin tietokannasta saatu salasana
                 {
-                    Pword = eCryptography.Encrypt(NewPWTB.Text); // cryptataan uusi salasana
+                    Pword = crypting.Encrypt(NewPWTB.Text); // cryptataan uusi salasana
                     Boolean UpdatePassword = profile.UpdatePassword(email, Pword); // päivitetään salasana sähköpostin perusteella
                     ChangePWDTG.Visible = false;
                 }
