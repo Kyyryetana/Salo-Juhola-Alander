@@ -30,9 +30,13 @@ namespace StudyPoint
         public StudyPointForm()
         {
             InitializeComponent();
-            HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
-            tarkistaNewThing(); // tarkistaa home sivulla olevan whats new tilanteen
-            
+            HideAllPanels();
+            //HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
+            WhatsNewManPL.Visible = true;
+            if (loggedUser == "")
+            {   newThing1.Visible = true;
+                newThing1.Text = "Register or login to see new things";
+            }
         }
 
   
@@ -237,34 +241,62 @@ namespace StudyPoint
         {
             HideAllPanels();
             HomePL.Visible = true;
+            if(loggedUser != "")
+            {
+                if (whatsNewManageDG.Rows.Count >= 6)
+                {
+                    newThing1.Text = whatsNewManageDG.Rows[0].Cells[0].Value as string;
+                    newThing2.Text = whatsNewManageDG.Rows[1].Cells[0].Value as string;
+                    newThing3.Text = whatsNewManageDG.Rows[2].Cells[0].Value as string;
+                    newThing4.Text = whatsNewManageDG.Rows[3].Cells[0].Value as string;
+                    newThing5.Text = whatsNewManageDG.Rows[4].Cells[0].Value as string;
+                    newLB1.Visible = true;
+                    newLB2.Visible = true;
+                    newLB3.Visible = true;
+                    newLB4.Visible = true;
+                    newLB5.Visible = true;
 
-            // tänne funktio joka noutaa sql uudet asiat HOME sivulle
+                }
+                if (whatsNewManageDG.Rows.Count == 5)
+                {
+                    newThing1.Text = whatsNewManageDG.Rows[0].Cells[0].Value as string;
+                    newThing2.Text = whatsNewManageDG.Rows[1].Cells[0].Value as string;
+                    newThing3.Text = whatsNewManageDG.Rows[2].Cells[0].Value as string;
+                    newThing4.Text = whatsNewManageDG.Rows[3].Cells[0].Value as string;
+                    newLB1.Visible = true;
+                    newLB2.Visible = true;
+                    newLB3.Visible = true;
+                    newLB4.Visible = true;
 
-            tarkistaNewThing();
-        }
-
-        private void tarkistaNewThing() //funktio tarkistaa home sivulla olevan whats new tilanteen, ja kytkee new tekstin päälle tai pois
-        {
-            if (newThing1.Text == "") 
-            {
-                newLB1.Visible = false;
+                }
+                if (whatsNewManageDG.Rows.Count == 4)
+                {
+                    newThing1.Text = whatsNewManageDG.Rows[0].Cells[0].Value as string;
+                    newThing2.Text = whatsNewManageDG.Rows[1].Cells[0].Value as string;
+                    newThing3.Text = whatsNewManageDG.Rows[2].Cells[0].Value as string;
+                    newLB1.Visible = true;
+                    newLB2.Visible = true;
+                    newLB3.Visible = true;
+                }
+                if (whatsNewManageDG.Rows.Count == 3)
+                {
+                    newThing1.Text = whatsNewManageDG.Rows[0].Cells[0].Value as string;
+                    newThing2.Text = whatsNewManageDG.Rows[1].Cells[0].Value as string;
+                    newLB1.Visible = true;
+                    newLB2.Visible = true;
+                }
+                if (whatsNewManageDG.Rows.Count == 2)
+                {
+                    newThing1.Text = whatsNewManageDG.Rows[0].Cells[0].Value as string;
+                    newLB1.Visible = true;
+                }
+                if (whatsNewManageDG.Rows.Count == 1)
+                {
+                    newThing1.Text = "We dont have any new things to share \n right now";
+                }
             }
-            if (newThing2.Text == "")
-            {
-                newLB2.Visible = false;
-            }
-            if (newThing3.Text == "")
-            {
-                newLB3.Visible = false;
-            }
-            if (newThing4.Text == "")
-            {
-                newLB4.Visible = false;
-            }
-            if (newThing5.Text == "")
-            {
-                newLB5.Visible = false;
-            }
+            
+            
         }
 
         // HOME SIVU LOPPU
@@ -1017,6 +1049,7 @@ namespace StudyPoint
         {
             HideAllPanels();
             WhatsNewManPL.Visible = true;
+            refreshNewThingBT.PerformClick();
         }
 
         private void DownloadManBT_Click(object sender, EventArgs e)
@@ -1140,6 +1173,8 @@ namespace StudyPoint
         {
             CallingBigPic(11);
         }
+
+        
 
         //calling second form
         private void CallingBigPic(int number)
