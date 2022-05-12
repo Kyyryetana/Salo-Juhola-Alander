@@ -693,17 +693,18 @@
             this.newLB5.AutoSize = true;
             this.newLB5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newLB5.ForeColor = System.Drawing.Color.Red;
-            this.newLB5.Location = new System.Drawing.Point(362, 177);
+            this.newLB5.Location = new System.Drawing.Point(365, 306);
             this.newLB5.Name = "newLB5";
             this.newLB5.Size = new System.Drawing.Size(41, 18);
             this.newLB5.TabIndex = 17;
             this.newLB5.Text = "New";
+            this.newLB5.Visible = false;
             // 
             // newThing5
             // 
             this.newThing5.AutoSize = true;
             this.newThing5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newThing5.Location = new System.Drawing.Point(406, 177);
+            this.newThing5.Location = new System.Drawing.Point(365, 337);
             this.newThing5.Name = "newThing5";
             this.newThing5.Size = new System.Drawing.Size(0, 18);
             this.newThing5.TabIndex = 11;
@@ -712,7 +713,7 @@
             // 
             this.newThing4.AutoSize = true;
             this.newThing4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newThing4.Location = new System.Drawing.Point(406, 153);
+            this.newThing4.Location = new System.Drawing.Point(363, 275);
             this.newThing4.Name = "newThing4";
             this.newThing4.Size = new System.Drawing.Size(0, 18);
             this.newThing4.TabIndex = 10;
@@ -721,7 +722,7 @@
             // 
             this.newThing3.AutoSize = true;
             this.newThing3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newThing3.Location = new System.Drawing.Point(406, 128);
+            this.newThing3.Location = new System.Drawing.Point(363, 213);
             this.newThing3.Name = "newThing3";
             this.newThing3.Size = new System.Drawing.Size(0, 18);
             this.newThing3.TabIndex = 9;
@@ -730,7 +731,7 @@
             // 
             this.newThing2.AutoSize = true;
             this.newThing2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newThing2.Location = new System.Drawing.Point(406, 106);
+            this.newThing2.Location = new System.Drawing.Point(363, 151);
             this.newThing2.Name = "newThing2";
             this.newThing2.Size = new System.Drawing.Size(0, 18);
             this.newThing2.TabIndex = 8;
@@ -739,7 +740,7 @@
             // 
             this.newThing1.AutoSize = true;
             this.newThing1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newThing1.Location = new System.Drawing.Point(406, 81);
+            this.newThing1.Location = new System.Drawing.Point(363, 89);
             this.newThing1.Name = "newThing1";
             this.newThing1.Size = new System.Drawing.Size(0, 18);
             this.newThing1.TabIndex = 7;
@@ -749,44 +750,48 @@
             this.newLB3.AutoSize = true;
             this.newLB3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newLB3.ForeColor = System.Drawing.Color.Red;
-            this.newLB3.Location = new System.Drawing.Point(362, 128);
+            this.newLB3.Location = new System.Drawing.Point(362, 182);
             this.newLB3.Name = "newLB3";
             this.newLB3.Size = new System.Drawing.Size(41, 18);
             this.newLB3.TabIndex = 6;
             this.newLB3.Text = "New";
+            this.newLB3.Visible = false;
             // 
             // newLB1
             // 
             this.newLB1.AutoSize = true;
             this.newLB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newLB1.ForeColor = System.Drawing.Color.Red;
-            this.newLB1.Location = new System.Drawing.Point(362, 81);
+            this.newLB1.Location = new System.Drawing.Point(359, 58);
             this.newLB1.Name = "newLB1";
             this.newLB1.Size = new System.Drawing.Size(41, 18);
             this.newLB1.TabIndex = 5;
             this.newLB1.Text = "New";
+            this.newLB1.Visible = false;
             // 
             // newLB4
             // 
             this.newLB4.AutoSize = true;
             this.newLB4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newLB4.ForeColor = System.Drawing.Color.Red;
-            this.newLB4.Location = new System.Drawing.Point(362, 153);
+            this.newLB4.Location = new System.Drawing.Point(362, 244);
             this.newLB4.Name = "newLB4";
             this.newLB4.Size = new System.Drawing.Size(41, 18);
             this.newLB4.TabIndex = 4;
             this.newLB4.Text = "New";
+            this.newLB4.Visible = false;
             // 
             // newLB2
             // 
             this.newLB2.AutoSize = true;
             this.newLB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newLB2.ForeColor = System.Drawing.Color.Red;
-            this.newLB2.Location = new System.Drawing.Point(362, 106);
+            this.newLB2.Location = new System.Drawing.Point(362, 120);
             this.newLB2.Name = "newLB2";
             this.newLB2.Size = new System.Drawing.Size(41, 18);
             this.newLB2.TabIndex = 3;
             this.newLB2.Text = "New";
+            this.newLB2.Visible = false;
             // 
             // homepageTxtLB
             // 
@@ -2872,7 +2877,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
+<<<<<<< HEAD
             this.Controls.Add(this.ProfilePL);
+=======
+            this.Controls.Add(this.HomePL);
+>>>>>>> ba3946f6aa764eb63fc1f6343ca4ba4def0365c9
             this.Controls.Add(this.loginPL);
             this.Controls.Add(this.OurServicesPL);
             this.Controls.Add(this.OurDepartmentPL);
@@ -2881,7 +2890,6 @@
             this.Controls.Add(this.OurGalleryPL);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
-            this.Controls.Add(this.HomePL);
             this.Controls.Add(this.DiscussionBoardPL);
             this.Controls.Add(this.DashboardPL);
             this.Controls.Add(this.DownloadPL);
