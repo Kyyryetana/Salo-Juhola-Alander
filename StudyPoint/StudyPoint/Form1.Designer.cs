@@ -2877,11 +2877,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
-<<<<<<< HEAD
+
             this.Controls.Add(this.ProfilePL);
-=======
+
             this.Controls.Add(this.HomePL);
->>>>>>> ba3946f6aa764eb63fc1f6343ca4ba4def0365c9
+
             this.Controls.Add(this.loginPL);
             this.Controls.Add(this.OurServicesPL);
             this.Controls.Add(this.OurDepartmentPL);
