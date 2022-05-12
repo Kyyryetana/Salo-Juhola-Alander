@@ -490,23 +490,23 @@ namespace StudyPoint
             UpdateLNameTB.Text = ProfileDTG.CurrentRow.Cells[2].Value.ToString();
             UpdateEmailTB.Text = ProfileDTG.CurrentRow.Cells[0].Value.ToString();
         }
-        private void UpdateUpdateBT_Click(object sender, EventArgs e)
+        private void UpdateUpdateBT_Click(object sender, EventArgs e) // päivittää tiedot tietokantaan
         {
             String Fname = UpdateFNameTB.Text;
             String Lname = UpdateLNameTB.Text;
             String Email = UpdateEmailTB.Text;
+            String Logged = loggedUser;
 
-            Boolean UpdateProfile = profile.UpdateProfile(Email,Fname,Lname);
+            Boolean UpdateProfile = profile.UpdateProfile(Email,Fname,Lname,Logged);
+
+            loggedUser = Email;
 
         }
         private void UpdateCloseBT_Click(object sender, EventArgs e)
         {
             ProfileUpdatePL.Visible=false;
 
-            string email = loggedUser;
-
-
-            ProfileDTG.DataSource = profile.GetProfile(email);
+            ProfileDTG.DataSource = profile.GetProfile(loggedUser);
             var datagridview = new DataGridView();
 
             ProfileFirstname.Text = ProfileDTG.CurrentRow.Cells[1].Value.ToString();

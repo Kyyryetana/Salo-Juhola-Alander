@@ -35,9 +35,9 @@ namespace StudyPoint
         }
 
 
-        public DataTable GetProfile(string email)
+        public DataTable GetProfile(String Logged)
         {
-            MySqlCommand MyCommand = new MySqlCommand("SELECT sahkoposti,etunimi,sukunimi,kID FROM studypoint.kayttajat WHERE sahkoposti = '" + email + "'", myConnection.Connection());
+            MySqlCommand MyCommand = new MySqlCommand("SELECT sahkoposti,etunimi,sukunimi,kID FROM studypoint.kayttajat WHERE sahkoposti = '" + Logged + "'", myConnection.Connection());
             MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
 
             DataTable MyTable = new DataTable();
@@ -46,14 +46,15 @@ namespace StudyPoint
             MyAdapter.Fill(MyTable);
 
             return MyTable;
+            
         }
 
 
-        public bool UpdateProfile(String Email, String Fname, String Lname)
+        public bool UpdateProfile(String Email, String Fname, String Lname,String Logged)
         {
             MySqlCommand myCommand = new MySqlCommand(); // luodaan uusi komento
 
-            String myAdd = "UPDATE kayttajat SET sahkoposti = @email, etunimi = @enm, sukunimi = @snm WHERE CONCAT(kayttajat.sahkoposti) = '" + Email + "'";
+            String myAdd = "UPDATE kayttajat SET sahkoposti = @email, etunimi = @enm, sukunimi = @snm WHERE CONCAT(kayttajat.sahkoposti) = '" + Logged + "'";
             
 
             myCommand.CommandText = myAdd; // annetaan käsky käyttää myAdd-komentoa
@@ -77,6 +78,7 @@ namespace StudyPoint
                 myConnection.CloseConnection();
                 return false;
             }
+            
         }
 
 
