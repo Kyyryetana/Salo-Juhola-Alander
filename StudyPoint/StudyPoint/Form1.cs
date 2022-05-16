@@ -31,8 +31,8 @@ namespace StudyPoint
         {
             InitializeComponent();
             HideAllPanels();
-            //HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
-            WhatsNewManPL.Visible = true;
+            HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
+            //WhatsNewManPL.Visible = true;
             if (loggedUser == "")
             {   newThing1.Visible = true;
                 newThing1.Text = "Register or login to see new things";
@@ -43,19 +43,25 @@ namespace StudyPoint
         private void AboutBT_MouseHover(object sender, EventArgs e) // kun hiiri menee about-painikkeen päälle, alisivut näkyvät
         {
             AboutPL.Visible = true;
+            AboutPL.BringToFront();
+            /*
             UsBT.Visible = true;
             ServicesBT.Visible = true;
             GalleryBT.Visible = true;
             DepartmentBT.Visible = true;
+            */
         }
 
         private void ManagementBT_MouseHover(object sender, EventArgs e) // kun hiiri menee management-painikkeen päälle, alisivut näkyvät
         {   
             ManagementPL.Visible = true;
+            ManagementBT.BringToFront();
+            /*
             FeedbackManBT.Visible = true;
             DownloadManBT.Visible = true;
             UserManBT.Visible = true;
             NewManBT.Visible = true;
+            */
         }
 
         private void AboutPL_MouseLeave(object sender, EventArgs e) // hiiren poistuessa aboutPL:n päältä, paneeli poistuu näkyvistä
@@ -136,6 +142,7 @@ namespace StudyPoint
             if (loggedUser == "")
             {
                 loginPL.Visible=true;
+                loginPL.BringToFront();
             }
             else
             {

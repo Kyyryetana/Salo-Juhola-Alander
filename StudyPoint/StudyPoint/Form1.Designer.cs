@@ -515,7 +515,6 @@
             this.ServicesBT.Text = "Our services";
             this.ServicesBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ServicesBT.UseVisualStyleBackColor = false;
-            this.ServicesBT.Visible = false;
             this.ServicesBT.Click += new System.EventHandler(this.ServicesBT_Click);
             // 
             // GalleryBT
@@ -532,7 +531,6 @@
             this.GalleryBT.Text = "Our gallery";
             this.GalleryBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GalleryBT.UseVisualStyleBackColor = false;
-            this.GalleryBT.Visible = false;
             this.GalleryBT.Click += new System.EventHandler(this.GalleryBT_Click);
             // 
             // DepartmentBT
@@ -549,7 +547,6 @@
             this.DepartmentBT.Text = "Our department";
             this.DepartmentBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DepartmentBT.UseVisualStyleBackColor = false;
-            this.DepartmentBT.Visible = false;
             this.DepartmentBT.Click += new System.EventHandler(this.DepartmentBT_Click);
             // 
             // AboutPL
@@ -562,7 +559,7 @@
             this.AboutPL.Location = new System.Drawing.Point(146, 107);
             this.AboutPL.Name = "AboutPL";
             this.AboutPL.Size = new System.Drawing.Size(170, 135);
-            this.AboutPL.TabIndex = 11;
+            this.AboutPL.TabIndex = 0;
             this.AboutPL.Visible = false;
             this.AboutPL.MouseLeave += new System.EventHandler(this.AboutPL_MouseLeave);
             // 
@@ -580,7 +577,6 @@
             this.UsBT.Text = "About us";
             this.UsBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.UsBT.UseVisualStyleBackColor = false;
-            this.UsBT.Visible = false;
             this.UsBT.Click += new System.EventHandler(this.UsBT_Click);
             // 
             // ManagementPL
@@ -594,7 +590,7 @@
             this.ManagementPL.Name = "ManagementPL";
             this.ManagementPL.Padding = new System.Windows.Forms.Padding(2);
             this.ManagementPL.Size = new System.Drawing.Size(202, 138);
-            this.ManagementPL.TabIndex = 12;
+            this.ManagementPL.TabIndex = 1;
             this.ManagementPL.Visible = false;
             this.ManagementPL.MouseLeave += new System.EventHandler(this.ManagementPL_MouseLeave);
             // 
@@ -612,7 +608,6 @@
             this.NewManBT.Text = "What\'s new management";
             this.NewManBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NewManBT.UseVisualStyleBackColor = false;
-            this.NewManBT.Visible = false;
             this.NewManBT.Click += new System.EventHandler(this.NewManBT_Click);
             // 
             // UserManBT
@@ -629,7 +624,6 @@
             this.UserManBT.Text = "User management";
             this.UserManBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.UserManBT.UseVisualStyleBackColor = false;
-            this.UserManBT.Visible = false;
             this.UserManBT.Click += new System.EventHandler(this.UserManBT_Click_1);
             // 
             // DownloadManBT
@@ -646,7 +640,6 @@
             this.DownloadManBT.Text = "Download management";
             this.DownloadManBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DownloadManBT.UseVisualStyleBackColor = false;
-            this.DownloadManBT.Visible = false;
             this.DownloadManBT.Click += new System.EventHandler(this.DownloadManBT_Click);
             // 
             // FeedbackManBT
@@ -663,7 +656,6 @@
             this.FeedbackManBT.Text = "Feedback management";
             this.FeedbackManBT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FeedbackManBT.UseVisualStyleBackColor = false;
-            this.FeedbackManBT.Visible = false;
             this.FeedbackManBT.Click += new System.EventHandler(this.FeedbackManBT_Click_1);
             // 
             // HomePL
@@ -686,7 +678,6 @@
             this.HomePL.Name = "HomePL";
             this.HomePL.Size = new System.Drawing.Size(641, 498);
             this.HomePL.TabIndex = 13;
-            this.HomePL.Visible = false;
             // 
             // newLB5
             // 
@@ -1665,7 +1656,7 @@
             this.discNewTopicWriteTB.Location = new System.Drawing.Point(26, 161);
             this.discNewTopicWriteTB.Name = "discNewTopicWriteTB";
             this.discNewTopicWriteTB.Size = new System.Drawing.Size(554, 253);
-            this.discNewTopicWriteTB.TabIndex = 2;
+            this.discNewTopicWriteTB.TabIndex = 7;
             this.discNewTopicWriteTB.Text = "";
             // 
             // discAnswertopicLB
@@ -2358,7 +2349,7 @@
             this.loginPL.Location = new System.Drawing.Point(153, 47);
             this.loginPL.Name = "loginPL";
             this.loginPL.Size = new System.Drawing.Size(641, 498);
-            this.loginPL.TabIndex = 11;
+            this.loginPL.TabIndex = 0;
             this.loginPL.Visible = false;
             // 
             // registrationPL
@@ -2389,7 +2380,7 @@
             this.regExitBT.Location = new System.Drawing.Point(586, 2);
             this.regExitBT.Name = "regExitBT";
             this.regExitBT.Size = new System.Drawing.Size(51, 46);
-            this.regExitBT.TabIndex = 3;
+            this.regExitBT.TabIndex = 6;
             this.regExitBT.Text = "X";
             this.regExitBT.UseVisualStyleBackColor = true;
             this.regExitBT.Click += new System.EventHandler(this.regExitBT_Click);
@@ -2399,7 +2390,7 @@
             this.RegBT.Location = new System.Drawing.Point(223, 314);
             this.RegBT.Name = "RegBT";
             this.RegBT.Size = new System.Drawing.Size(110, 30);
-            this.RegBT.TabIndex = 2;
+            this.RegBT.TabIndex = 5;
             this.RegBT.Text = "Rekisteröidy";
             this.RegBT.UseVisualStyleBackColor = true;
             this.RegBT.Click += new System.EventHandler(this.RegBT_Click);
@@ -2454,7 +2445,7 @@
             this.regPass2TB.Location = new System.Drawing.Point(223, 270);
             this.regPass2TB.Name = "regPass2TB";
             this.regPass2TB.Size = new System.Drawing.Size(194, 26);
-            this.regPass2TB.TabIndex = 0;
+            this.regPass2TB.TabIndex = 4;
             this.regPass2TB.UseSystemPasswordChar = true;
             // 
             // regpass1TB
@@ -2462,7 +2453,7 @@
             this.regpass1TB.Location = new System.Drawing.Point(223, 217);
             this.regpass1TB.Name = "regpass1TB";
             this.regpass1TB.Size = new System.Drawing.Size(194, 26);
-            this.regpass1TB.TabIndex = 0;
+            this.regpass1TB.TabIndex = 3;
             this.regpass1TB.UseSystemPasswordChar = true;
             // 
             // regMailTB
@@ -2470,14 +2461,14 @@
             this.regMailTB.Location = new System.Drawing.Point(223, 164);
             this.regMailTB.Name = "regMailTB";
             this.regMailTB.Size = new System.Drawing.Size(194, 26);
-            this.regMailTB.TabIndex = 0;
+            this.regMailTB.TabIndex = 2;
             // 
             // regSukunimiTB
             // 
             this.regSukunimiTB.Location = new System.Drawing.Point(223, 106);
             this.regSukunimiTB.Name = "regSukunimiTB";
             this.regSukunimiTB.Size = new System.Drawing.Size(194, 26);
-            this.regSukunimiTB.TabIndex = 0;
+            this.regSukunimiTB.TabIndex = 1;
             // 
             // regNimiTB
             // 
@@ -2502,7 +2493,7 @@
             this.loginBT.Location = new System.Drawing.Point(170, 161);
             this.loginBT.Name = "loginBT";
             this.loginBT.Size = new System.Drawing.Size(100, 37);
-            this.loginBT.TabIndex = 2;
+            this.loginBT.TabIndex = 3;
             this.loginBT.Text = "Login";
             this.loginBT.UseVisualStyleBackColor = true;
             this.loginBT.Click += new System.EventHandler(this.loginBT_Click);
@@ -2533,7 +2524,7 @@
             this.loginPassTB.Location = new System.Drawing.Point(170, 122);
             this.loginPassTB.Name = "loginPassTB";
             this.loginPassTB.Size = new System.Drawing.Size(186, 26);
-            this.loginPassTB.TabIndex = 0;
+            this.loginPassTB.TabIndex = 1;
             this.loginPassTB.UseSystemPasswordChar = true;
             // 
             // loginMailTB
@@ -2563,6 +2554,7 @@
             this.ProfilePL.Name = "ProfilePL";
             this.ProfilePL.Size = new System.Drawing.Size(641, 498);
             this.ProfilePL.TabIndex = 18;
+            this.ProfilePL.Visible = false;
             // 
             // ProfileUpdatePL
             // 
@@ -2880,16 +2872,16 @@
             this.ClientSize = new System.Drawing.Size(794, 545);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
-            this.Controls.Add(this.HomePL);
-            this.Controls.Add(this.UserManPL);
-            this.Controls.Add(this.ProfilePL);
             this.Controls.Add(this.loginPL);
+            this.Controls.Add(this.DiscussionBoardPL);
+            this.Controls.Add(this.UserManPL);
+            this.Controls.Add(this.HomePL);
+            this.Controls.Add(this.ProfilePL);
             this.Controls.Add(this.OurServicesPL);
             this.Controls.Add(this.OurDepartmentPL);
             this.Controls.Add(this.ContactUsPL);
             this.Controls.Add(this.AboutUsPL);
             this.Controls.Add(this.OurGalleryPL);
-            this.Controls.Add(this.DiscussionBoardPL);
             this.Controls.Add(this.DashboardPL);
             this.Controls.Add(this.DownloadPL);
             this.Controls.Add(this.FeedbackPL);
