@@ -328,11 +328,20 @@ namespace StudyPoint
             String email = FBEmailTB.Text;
             String message = FeedbackTB.Text;
 
-            Boolean NewFeedback = feedback.AddFeedback(name, email, message);
+            if(FeedbackTB.Text == "")
+            {
+                MessageBox.Show("Write down the feedback please");
+            }
+            else
+            {
+                Boolean NewFeedback = feedback.AddFeedback(name, email, message);
 
-            FeedbackTB.Text = "";
-            FBNameTB.Text = "";
-            FBEmailTB.Text = "";
+                FeedbackTB.Text = "";
+                FBNameTB.Text = "";
+                FBEmailTB.Text = "";
+            }
+
+           
         }
         // FEEDBACK END
 
