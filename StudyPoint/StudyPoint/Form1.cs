@@ -31,9 +31,9 @@ namespace StudyPoint
         {
             InitializeComponent();
             HideAllPanels();
-            //HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
+            HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
             //WhatsNewManPL.Visible = true;
-            DownloadManPL.Visible = true;
+            //DownloadManPL.Visible = true;
             if (loggedUser == "")
             {   newThing1.Visible = true;
                 newThing1.Text = "Register or login to see new things";
