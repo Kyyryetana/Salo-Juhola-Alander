@@ -171,9 +171,11 @@
             this.FBManDG = new System.Windows.Forms.DataGridView();
             this.feedbackManLB = new System.Windows.Forms.Label();
             this.DownloadManPL = new System.Windows.Forms.Panel();
+            this.downloadMGnimeakuvaLB = new System.Windows.Forms.Label();
+            this.downloadMGpoistoohjeLB = new System.Windows.Forms.Label();
             this.downloadMGDGW = new System.Windows.Forms.DataGridView();
+            this.downloadMGkuvannimiTB = new System.Windows.Forms.TextBox();
             this.downloadMGTB = new System.Windows.Forms.TextBox();
-            this.downloadMGviewBT = new System.Windows.Forms.Button();
             this.downloadMGdeleteBT = new System.Windows.Forms.Button();
             this.downloadMGrefreshBT = new System.Windows.Forms.Button();
             this.downloadMGsendSqlBT = new System.Windows.Forms.Button();
@@ -1956,9 +1958,11 @@
             // 
             // DownloadManPL
             // 
+            this.DownloadManPL.Controls.Add(this.downloadMGnimeakuvaLB);
+            this.DownloadManPL.Controls.Add(this.downloadMGpoistoohjeLB);
             this.DownloadManPL.Controls.Add(this.downloadMGDGW);
+            this.DownloadManPL.Controls.Add(this.downloadMGkuvannimiTB);
             this.DownloadManPL.Controls.Add(this.downloadMGTB);
-            this.DownloadManPL.Controls.Add(this.downloadMGviewBT);
             this.DownloadManPL.Controls.Add(this.downloadMGdeleteBT);
             this.DownloadManPL.Controls.Add(this.downloadMGrefreshBT);
             this.DownloadManPL.Controls.Add(this.downloadMGsendSqlBT);
@@ -1973,33 +1977,50 @@
             this.DownloadManPL.TabIndex = 20;
             this.DownloadManPL.Visible = false;
             // 
+            // downloadMGnimeakuvaLB
+            // 
+            this.downloadMGnimeakuvaLB.AutoSize = true;
+            this.downloadMGnimeakuvaLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGnimeakuvaLB.Location = new System.Drawing.Point(162, 124);
+            this.downloadMGnimeakuvaLB.Name = "downloadMGnimeakuvaLB";
+            this.downloadMGnimeakuvaLB.Size = new System.Drawing.Size(91, 20);
+            this.downloadMGnimeakuvaLB.TabIndex = 13;
+            this.downloadMGnimeakuvaLB.Text = "Nimeä kuva";
+            // 
+            // downloadMGpoistoohjeLB
+            // 
+            this.downloadMGpoistoohjeLB.AutoSize = true;
+            this.downloadMGpoistoohjeLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGpoistoohjeLB.Location = new System.Drawing.Point(6, 434);
+            this.downloadMGpoistoohjeLB.Name = "downloadMGpoistoohjeLB";
+            this.downloadMGpoistoohjeLB.Size = new System.Drawing.Size(271, 20);
+            this.downloadMGpoistoohjeLB.TabIndex = 12;
+            this.downloadMGpoistoohjeLB.Text = "Anna kuvan nimi jonka haluat poistaa";
+            // 
             // downloadMGDGW
             // 
             this.downloadMGDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.downloadMGDGW.Location = new System.Drawing.Point(10, 226);
             this.downloadMGDGW.Name = "downloadMGDGW";
-            this.downloadMGDGW.Size = new System.Drawing.Size(601, 214);
-            this.downloadMGDGW.TabIndex = 9;
+            this.downloadMGDGW.Size = new System.Drawing.Size(601, 175);
+            this.downloadMGDGW.TabIndex = 11;
             this.downloadMGDGW.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.downloadMGDGW_CellContentClick);
+            // 
+            // downloadMGkuvannimiTB
+            // 
+            this.downloadMGkuvannimiTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadMGkuvannimiTB.Location = new System.Drawing.Point(166, 147);
+            this.downloadMGkuvannimiTB.Name = "downloadMGkuvannimiTB";
+            this.downloadMGkuvannimiTB.Size = new System.Drawing.Size(162, 26);
+            this.downloadMGkuvannimiTB.TabIndex = 10;
             // 
             // downloadMGTB
             // 
             this.downloadMGTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.downloadMGTB.Location = new System.Drawing.Point(10, 457);
             this.downloadMGTB.Name = "downloadMGTB";
-            this.downloadMGTB.Size = new System.Drawing.Size(318, 26);
+            this.downloadMGTB.Size = new System.Drawing.Size(425, 26);
             this.downloadMGTB.TabIndex = 8;
-            // 
-            // downloadMGviewBT
-            // 
-            this.downloadMGviewBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.downloadMGviewBT.Location = new System.Drawing.Point(334, 455);
-            this.downloadMGviewBT.Name = "downloadMGviewBT";
-            this.downloadMGviewBT.Size = new System.Drawing.Size(101, 30);
-            this.downloadMGviewBT.TabIndex = 7;
-            this.downloadMGviewBT.Text = "VIEW IMG";
-            this.downloadMGviewBT.UseVisualStyleBackColor = true;
-            this.downloadMGviewBT.Click += new System.EventHandler(this.downloadMGviewBT_Click);
             // 
             // downloadMGdeleteBT
             // 
@@ -2028,7 +2049,7 @@
             this.downloadMGsendSqlBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.downloadMGsendSqlBT.Location = new System.Drawing.Point(166, 180);
             this.downloadMGsendSqlBT.Name = "downloadMGsendSqlBT";
-            this.downloadMGsendSqlBT.Size = new System.Drawing.Size(127, 30);
+            this.downloadMGsendSqlBT.Size = new System.Drawing.Size(162, 30);
             this.downloadMGsendSqlBT.TabIndex = 4;
             this.downloadMGsendSqlBT.Text = "SEND TO SQL";
             this.downloadMGsendSqlBT.UseVisualStyleBackColor = true;
@@ -2870,6 +2891,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
+            this.Controls.Add(this.DownloadManPL);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.loginPL);
@@ -2885,7 +2907,6 @@
             this.Controls.Add(this.DashboardPL);
             this.Controls.Add(this.DownloadPL);
             this.Controls.Add(this.FeedbackPL);
-            this.Controls.Add(this.DownloadManPL);
             this.Controls.Add(this.WhatsNewManPL);
             this.Controls.Add(this.FeedBackManPL);
             this.Controls.Add(this.VasenPL);
@@ -3155,9 +3176,7 @@
         private System.Windows.Forms.Button emptyNewThingBT;
         private System.Windows.Forms.Button addNewThingBT;
         private System.Windows.Forms.TextBox addNewThingTB;
-        private System.Windows.Forms.DataGridView downloadMGDGW;
         private System.Windows.Forms.TextBox downloadMGTB;
-        private System.Windows.Forms.Button downloadMGviewBT;
         private System.Windows.Forms.Button downloadMGdeleteBT;
         private System.Windows.Forms.Button downloadMGrefreshBT;
         private System.Windows.Forms.Button downloadMGsendSqlBT;
@@ -3207,6 +3226,10 @@
         private System.Windows.Forms.Label DepartmentAlanderLB;
         private System.Windows.Forms.Label DepartmentTxtLB;
         private System.Windows.Forms.Label ServicesTxtLB;
+        private System.Windows.Forms.TextBox downloadMGkuvannimiTB;
+        private System.Windows.Forms.DataGridView downloadMGDGW;
+        private System.Windows.Forms.Label downloadMGnimeakuvaLB;
+        private System.Windows.Forms.Label downloadMGpoistoohjeLB;
     }
 }
 

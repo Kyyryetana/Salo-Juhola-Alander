@@ -15,7 +15,7 @@ namespace StudyPoint
         CONNECT myConnection = new CONNECT();
 
         // LÄHETÄ KUVA TIETOKANTAAN
-        public bool SendImgToSql(string imgLocation)
+        /*public bool SendImgToSql(string imgLocation, string kuvannimi)
         {
             byte[] img = null;
             FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
@@ -24,11 +24,12 @@ namespace StudyPoint
 
             MySqlCommand myCommand = new MySqlCommand();
 
-            String newPicture = "INSERT INTO lataukset " + "(kuvan_osoite) " + "VALUES (@kuvan_osoite);";
+            String newPicture = "INSERT INTO lataukset(kuvan_nimi,kuvan_osoite)VALUES ("+kuvannimi+",@img);";
 
             myCommand.CommandText = newPicture;
             myCommand.Connection = myConnection.Connection();
-            myCommand.Parameters.Add("@kuvan_osoite", MySqlDbType.VarChar).Value = imgLocation;
+            myCommand.Parameters.Add("kuvan_nimi", MySqlDbType.VarChar).Value = kuvannimi;
+            myCommand.Parameters.Add("@img", MySqlDbType.VarChar).Value = imgLocation;
 
             MessageBox.Show("New picture added successfully");
 
@@ -43,13 +44,13 @@ namespace StudyPoint
                 myConnection.CloseConnection();
                 return false;
             }
-        }
+        }*/
 
         // NOUDA KUVAT TIETOKANNASTA TAULUKKOON
 
         public DataTable FetchImagesFromSql()
         {
-            MySqlCommand MyCommand = new MySqlCommand("SELECT lID, kuvan_osoite FROM lataukset", myConnection.Connection());
+            MySqlCommand MyCommand = new MySqlCommand("SELECT lID, kuvan_nimi FROM lataukset", myConnection.Connection());
 
             MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
 
@@ -68,13 +69,13 @@ namespace StudyPoint
         {
             MySqlCommand MyCommand = new MySqlCommand();
 
-            String Delete = "DELETE FROM lataukset WHERE kuvan_osoite = @kuvan_osoite";
+            String Delete = "DELETE FROM lataukset WHERE kuvan_nimi = @kuvan_nimi";
 
             MyCommand.CommandText = Delete;
 
             MyCommand.Connection = myConnection.Connection();
 
-            MyCommand.Parameters.Add("@kuvan_osoite", MySqlDbType.VarChar).Value = kuva;
+            MyCommand.Parameters.Add("@kuvan_nimi", MySqlDbType.VarChar).Value = kuva;
 
             myConnection.OpenConnection();
 
