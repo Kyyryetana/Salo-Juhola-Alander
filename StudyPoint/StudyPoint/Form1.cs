@@ -31,8 +31,9 @@ namespace StudyPoint
         {
             InitializeComponent();
             HideAllPanels();
-            HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
+            //HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
             //WhatsNewManPL.Visible = true;
+            DownloadManPL.Visible = true;
             if (loggedUser == "")
             {   newThing1.Visible = true;
                 newThing1.Text = "Register or login to see new things";
@@ -998,21 +999,17 @@ namespace StudyPoint
 
         private void downloadMGbrowseBT_Click(object sender, EventArgs e)
         {
-            try
+            
+            OpenFileDialog avaa = new OpenFileDialog();
+            avaa.Filter = "JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif|All Files (*.*)|*.*";
+            avaa.Title = "Select picture";
+            if (avaa.ShowDialog() == DialogResult.OK)
             {
-                OpenFileDialog avaa = new OpenFileDialog();
-                avaa.Filter = "JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif|All Files (*.*)|*.*";
-                avaa.Title = "Select picture";
-                if (avaa.ShowDialog() == DialogResult.OK)
-                {
-                    imgLocation = avaa.FileName.ToString();
-                    downloadMGPB.ImageLocation = imgLocation;
-                }
+                imgLocation = avaa.FileName.ToString();
+                downloadMGPB.ImageLocation = imgLocation;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
+           
         }
 
         private void downloadMGclearBT_Click(object sender, EventArgs e)
@@ -1022,9 +1019,37 @@ namespace StudyPoint
 
         private void downloadMGsendSqlBT_Click(object sender, EventArgs e)
         {
-            downloads.SendImgToSql(imgLocation);
-            downloadMGPB.Image = null;
-            downloadMGrefreshBT.PerformClick();
+            if(downloadMGPB.Image == null || downloadMGkuvannimiTB.Text == "")
+            {
+                MessageBox.Show("Kuva tai kuvan nimi puuttuu");
+                return;
+            }
+            else
+            {
+                string str = @"datasource=localhost; port=3306;username=root;password=;database=" + "studypoint" + ";SSL Mode = None";
+                MySqlConnection con = new MySqlConnection(str);
+                MySqlCommand cmd;
+
+                byte[] images = null;
+                FileStream stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader binaryReader = new BinaryReader(stream);
+                images = binaryReader.ReadBytes((int)stream.Length);
+
+                con.Open();
+                string sqlQuery = "INSERT INTO lataukset(kuvan_nimi, kuva)VALUES('" + downloadMGkuvannimiTB.Text + "',@images)";
+
+                cmd = new MySqlCommand(sqlQuery, con);
+                cmd.Parameters.Add("@images", MySqlDbType.VarBinary).Value = images;
+                //cmd.Parameters.Add(new SqlParameter("@images", images));
+                int n = cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Image saved successfully");
+                downloadMGrefreshBT.PerformClick();
+                downloadMGkuvannimiTB.Text = "";
+                downloadMGPB.Image = null;
+            }
+            
+
         }
 
         private void downloadMGrefreshBT_Click(object sender, EventArgs e)
@@ -1049,6 +1074,8 @@ namespace StudyPoint
                 MessageBox.Show("Could not delete the picture");
             }
             downloadMGTB.Text = "";
+
+            
         }
 
         private void downloadMGDGW_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -1056,10 +1083,7 @@ namespace StudyPoint
             downloadMGTB.Text = downloadMGDGW.CurrentRow.Cells[1].Value.ToString();
         }
 
-        private void downloadMGviewBT_Click(object sender, EventArgs e)
-        {
-            // TÄMÄ ON TEKEMÄTTÄ
-        }
+        //DOWNLOAD MANAGEMENT SIVU LOPPU
 
         private void NewManBT_Click(object sender, EventArgs e)
         {
@@ -1125,7 +1149,6 @@ namespace StudyPoint
             FeedbackPL.Visible = true;
         }
 
-        // DOWNLOAD MANAGEMENT SIVU LOPPU
 
         //gallery start here
         private void galleryPB1_Click(object sender, EventArgs e)
@@ -1191,6 +1214,8 @@ namespace StudyPoint
         }
 
         
+
+
 
         //calling second form
         private void CallingBigPic(int number)
