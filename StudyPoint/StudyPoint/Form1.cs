@@ -147,6 +147,8 @@ namespace StudyPoint
             }
             else
             {
+                HideAllPanels();
+                HomePL.Visible=true;
                 loginRegBT.Text = LOGIN.loggedOutStatus;
                 loggedUser = "";
                 ProfileBT.Visible = false;
