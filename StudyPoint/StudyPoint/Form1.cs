@@ -832,8 +832,9 @@ namespace StudyPoint
                 if (discussion.AddTopicText(loggedUser, discussion.DiscRegex(discAnswertopicLB.Text), discAnswerTB.Text) == true)
                 {
                     ReadTopic();
-                    discussionAswerPL.Visible = true;
+                    discussionAswerPL.Visible = false;
                     discAnswerTB.Text = "";
+                    
 
                 }
             }
