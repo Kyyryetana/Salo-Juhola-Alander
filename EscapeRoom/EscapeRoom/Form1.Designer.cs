@@ -96,6 +96,7 @@
             this.OviKiinniPB.Size = new System.Drawing.Size(158, 306);
             this.OviKiinniPB.TabIndex = 1;
             this.OviKiinniPB.TabStop = false;
+            this.OviKiinniPB.Click += new System.EventHandler(this.OviKiinniPB_Click);
             // 
             // TauluPB
             // 
@@ -167,6 +168,7 @@
             this.PakastinOviAukiPB.Size = new System.Drawing.Size(156, 161);
             this.PakastinOviAukiPB.TabIndex = 8;
             this.PakastinOviAukiPB.TabStop = false;
+            this.PakastinOviAukiPB.Click += new System.EventHandler(this.PakastinOviAukiPB_Click);
             // 
             // JaakaappiOviKiinniPB
             // 
@@ -188,6 +190,7 @@
             this.PakastinOviKiinni.Size = new System.Drawing.Size(155, 161);
             this.PakastinOviKiinni.TabIndex = 10;
             this.PakastinOviKiinni.TabStop = false;
+            this.PakastinOviKiinni.Click += new System.EventHandler(this.PakastinOviKiinni_Click);
             // 
             // EsPB
             // 
@@ -211,6 +214,7 @@
             this.KaljaPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.KaljaPB.TabIndex = 12;
             this.KaljaPB.TabStop = false;
+            this.KaljaPB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.KaljaPB_MouseClick);
             // 
             // MaitoPB
             // 
@@ -244,6 +248,7 @@
             this.PakastinLokerotPB.Size = new System.Drawing.Size(153, 156);
             this.PakastinLokerotPB.TabIndex = 15;
             this.PakastinLokerotPB.TabStop = false;
+            this.PakastinLokerotPB.Click += new System.EventHandler(this.PakastinLokerotPB_Click);
             // 
             // UuniPB
             // 
@@ -254,6 +259,7 @@
             this.UuniPB.Size = new System.Drawing.Size(172, 183);
             this.UuniPB.TabIndex = 16;
             this.UuniPB.TabStop = false;
+            this.UuniPB.Click += new System.EventHandler(this.UuniPB_Click);
             // 
             // UuniKelloPB
             // 
@@ -264,6 +270,7 @@
             this.UuniKelloPB.Size = new System.Drawing.Size(30, 13);
             this.UuniKelloPB.TabIndex = 17;
             this.UuniKelloPB.TabStop = false;
+            this.UuniKelloPB.Click += new System.EventHandler(this.UuniKelloPB_Click);
             // 
             // IkkunaPB
             // 
@@ -273,6 +280,7 @@
             this.IkkunaPB.Size = new System.Drawing.Size(269, 192);
             this.IkkunaPB.TabIndex = 18;
             this.IkkunaPB.TabStop = false;
+            this.IkkunaPB.Click += new System.EventHandler(this.IkkunaPB_Click);
             // 
             // AmpariPB
             // 
@@ -330,7 +338,6 @@
             this.LamppuPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LamppuPB.TabIndex = 23;
             this.LamppuPB.TabStop = false;
-           
             // 
             // Pelialue
             // 

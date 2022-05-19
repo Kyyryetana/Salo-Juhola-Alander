@@ -42,6 +42,29 @@ namespace EscapeRoom
             KetsuppiPB.Visible =true;
         }
 
+        private void PakastinOviKiinni_Click(object sender, EventArgs e)
+        {
+            PakastinOviKiinni.Visible = false;
+            PakastinOviAukiPB.Visible = true;
+        }
+
+        private void PakastinOviAukiPB_Click(object sender, EventArgs e)
+        {
+            PakastinOviKiinni.Visible = true;
+            PakastinOviAukiPB.Visible = false;
+        }
+
+        private void PakastinLokerotPB_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("En tarvitse pakastimesta mitään");
+        }
+
+
+        private void OviKiinniPB_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Ovi on lukossa. Minneköhän laitoin avaimen?");
+        }
+
         private void ReppuPB_Click(object sender, EventArgs e)
         {
             reppu = true;
@@ -56,11 +79,28 @@ namespace EscapeRoom
             MessageBox.Show("There's more!");
             MessageBox.Show("N O !");
             MessageBox.Show("It contains a number... 9");
-
-
-
         }
-    
+
+        private void UuniPB_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Uuni. Kello on pysähtynyt...");
+        }
+
+        private void UuniKelloPB_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Uunin kello on pysähtynyt kello 2:een");
+        }
+
+        private void IkkunaPB_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("On jo myöhä");
+        }
+
+        private void KaljaPB_MouseClick(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("Nyt ei ole oikea hetki juoda");
+        }
+
         //interaktiiviset asiat end
 
         //inventory
@@ -110,7 +150,7 @@ namespace EscapeRoom
            
         }
 
-     
+      
 
         private void AddInvetory(Image thing, string thingName)
         {
