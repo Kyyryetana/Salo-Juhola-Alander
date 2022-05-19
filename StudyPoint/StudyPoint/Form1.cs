@@ -554,8 +554,12 @@ namespace StudyPoint
             }
             else
             {
-                Boolean UpdateProfile = profile.UpdateProfile(Email, Fname, Lname, Logged);
-                loggedUser = Email;
+                if( Registration.RegCheck(Fname, Lname, Email))
+                {
+                    Boolean UpdateProfile = profile.UpdateProfile(Email, Fname, Lname, Logged);
+                    loggedUser = Email;
+                }
+                
             }
  
             
@@ -597,7 +601,7 @@ namespace StudyPoint
             String CurrentPW = CurrentPWTB.Text; // nykyinen salasana
             String Pword = NewPWTB.Text; // uusi salasana
             String PwordAgain = NewPWAgainTB.Text; // uusi salasana uudelleen
-
+            
             ChangePWDTG.DataSource = profile.OldPassword(email, CurrentPW); // datagrid näyttää sähköpostin ja nykyisen salasanan
             string CheckPw = ChangePWDTG.CurrentRow.Cells[1].Value.ToString(); // tallennetaan muuttujaan nykyinen salasana tietokannasta
             CheckPw = crypting.Decrypt(CheckPw);

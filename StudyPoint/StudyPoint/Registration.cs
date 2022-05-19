@@ -60,7 +60,7 @@ namespace StudyPoint
 
 
         //regex tarkistaa tiedot
-        private static bool  RegCheck(string name, string lastname, string email)
+        public static bool  RegCheck(string name, string lastname, string email)
         {
             //string emailPattern = "^[a-zA-Z0-9\._-]{5,25}.@.[a-z]{2,12}.(com|org|co\.in|net|fi)";
             string emailPattern2 = @"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"
@@ -91,5 +91,19 @@ namespace StudyPoint
             }
         }
 
+
+        public static bool checkPass(string email)
+        {
+            string emailPattern2 = @"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"
+               + "@"
+               + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$";
+            Regex emailReg = new Regex(emailPattern2);
+            if (emailReg.IsMatch(email) == false)
+            {
+                MessageBox.Show("sähköposti osoite ei ole sallittua muotoa");
+                return false;
+            }
+            return true;
+        }
     }
 }
