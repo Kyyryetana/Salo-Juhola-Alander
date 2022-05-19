@@ -27,6 +27,7 @@ namespace EscapeRoom
         List<PictureBox> collected = new List<PictureBox>();
         int x, y;
         Image ItemName;
+        bool reppu = false;
 
         private void AmpariPB_Click(object sender, EventArgs e)
         {
@@ -46,23 +47,33 @@ namespace EscapeRoom
             KetsuppiPB.Visible =true;
         }
 
+        private void ReppuPB_Click(object sender, EventArgs e)
+        {
+            reppu = true;
+            ReppuPB.Visible = false;
+        }
         //interaktiiviset asiat end
 
         //inventory
         private void tavarat_Click(object sender, EventArgs e)
         {
-
-            PictureBox tavara = sender as PictureBox;
-            MessageBox.Show(tavara.Name.ToString());
-            AddInvetory(tavara.Image, tavara.Name);
-            tavara.Visible = false;
+            if (reppu == false) MessageBox.Show("Et voi vielä kerätä tavaroita");
+            
+            else
+            {
+                PictureBox tavara = sender as PictureBox;
+                //MessageBox.Show(tavara.Name.ToString());
+                AddInvetory(tavara.Image, tavara.Name);
+                tavara.Visible = false;
+            }
+            
 
 
         }
 
         private void Invetory_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(sender.ToString());
+            //MessageBox.Show(sender.ToString());
             PictureBox esine = sender as PictureBox;
             esine.BorderStyle = BorderStyle.FixedSingle;
 
@@ -90,19 +101,21 @@ namespace EscapeRoom
 
         }
 
+        
+
         private void AddInvetory(Image thing, string thingName)
         {
-            MessageBox.Show(thing.ToString());
+            //MessageBox.Show(thing.ToString());
             PictureBox item = new PictureBox();
             item.Image = thing;
             item.Tag = thingName;
-            item.Width = 55;
-            item.Height = 55;
+            item.Width = 50;
+            item.Height = 50;
             item.SizeMode = PictureBoxSizeMode.Zoom;
             item.Click += new EventHandler(Invetory_Click);
 
             x = collected.Count * 60;
-            y = 0;
+            y = 5;
             item.Location = new Point(x, y);
 
             collected.Add(item);

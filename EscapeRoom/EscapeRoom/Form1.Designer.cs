@@ -307,6 +307,7 @@
             this.ReppuPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ReppuPB.TabIndex = 21;
             this.ReppuPB.TabStop = false;
+            this.ReppuPB.Click += new System.EventHandler(this.ReppuPB_Click);
             // 
             // InventaarioPB
             // 
