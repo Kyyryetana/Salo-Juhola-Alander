@@ -590,7 +590,7 @@
             this.ManagementPL.Controls.Add(this.FeedbackManBT);
             this.ManagementPL.Location = new System.Drawing.Point(146, 354);
             this.ManagementPL.Name = "ManagementPL";
-            this.ManagementPL.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ManagementPL.Padding = new System.Windows.Forms.Padding(2);
             this.ManagementPL.Size = new System.Drawing.Size(202, 138);
             this.ManagementPL.TabIndex = 1;
             this.ManagementPL.Visible = false;
@@ -2895,6 +2895,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
+            this.Controls.Add(this.ProfilePL);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
             this.Controls.Add(this.loginPL);
@@ -2902,7 +2903,6 @@
             this.Controls.Add(this.DiscussionBoardPL);
             this.Controls.Add(this.UserManPL);
             this.Controls.Add(this.HomePL);
-            this.Controls.Add(this.ProfilePL);
             this.Controls.Add(this.OurServicesPL);
             this.Controls.Add(this.OurDepartmentPL);
             this.Controls.Add(this.ContactUsPL);

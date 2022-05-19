@@ -555,11 +555,12 @@ namespace StudyPoint
             else
             {
                 Boolean UpdateProfile = profile.UpdateProfile(Email, Fname, Lname, Logged);
-
                 loggedUser = Email;
             }
-
+ 
             
+
+
 
         }
         private void UpdateCloseBT_Click(object sender, EventArgs e)
