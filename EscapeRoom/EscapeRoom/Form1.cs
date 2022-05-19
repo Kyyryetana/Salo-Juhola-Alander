@@ -4,14 +4,18 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media; /* otetaan käyttöön system.windows.media äänenhallintaa varten.
+                             Tätä varten lisäätän reference PresentationCore.dll sekä windows base*/
 
 namespace EscapeRoom
 {
     public partial class Pelialue : Form
     {
+       
         public Pelialue()
         {
             InitializeComponent();
@@ -22,21 +26,12 @@ namespace EscapeRoom
             MaitoPB.Visible = false;
             KetsuppiPB.Visible = false;
 
-            
         }
         List<PictureBox> collected = new List<PictureBox>();
         int x, y;
         Image ItemName;
         bool reppu = false;
 
-        private void AmpariPB_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("This is a bucket");
-            MessageBox.Show("DEAR GOD...");
-            MessageBox.Show("There's more!");
-            MessageBox.Show("NO!!");
-            MessageBox.Show("It contains a number... 9");
-        }
 
         //interaktiiviset asiat
         private void JaakaappiOviKiinniPB_Click(object sender, EventArgs e)
@@ -52,6 +47,19 @@ namespace EscapeRoom
             reppu = true;
             ReppuPB.Visible = false;
         }
+
+        private void AmpariPB_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This... is a bucket");
+            MessageBox.Show("D E A R   G O D . . .");
+            MessageBox.Show("There's more!");
+            MessageBox.Show("N O !");
+            MessageBox.Show("It contains a number... 9");
+
+
+
+        }
+    
         //interaktiiviset asiat end
 
         //inventory
@@ -98,10 +106,10 @@ namespace EscapeRoom
 
         private void Tavarat(object sender, EventArgs e)
         {
-
+           
         }
 
-        
+     
 
         private void AddInvetory(Image thing, string thingName)
         {

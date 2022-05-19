@@ -329,6 +329,7 @@
             this.LamppuPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LamppuPB.TabIndex = 23;
             this.LamppuPB.TabStop = false;
+           
             // 
             // Pelialue
             // 
