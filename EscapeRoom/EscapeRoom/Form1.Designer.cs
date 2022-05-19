@@ -177,6 +177,7 @@
             this.JaakaappiOviKiinniPB.Size = new System.Drawing.Size(155, 161);
             this.JaakaappiOviKiinniPB.TabIndex = 9;
             this.JaakaappiOviKiinniPB.TabStop = false;
+            this.JaakaappiOviKiinniPB.Click += new System.EventHandler(this.JaakaappiOviKiinniPB_Click);
             // 
             // PakastinOviKiinni
             // 
@@ -198,6 +199,7 @@
             this.EsPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.EsPB.TabIndex = 11;
             this.EsPB.TabStop = false;
+            this.EsPB.Click += new System.EventHandler(this.tavarat_Click);
             // 
             // KaljaPB
             // 
@@ -220,6 +222,7 @@
             this.MaitoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.MaitoPB.TabIndex = 13;
             this.MaitoPB.TabStop = false;
+            this.MaitoPB.Click += new System.EventHandler(this.tavarat_Click);
             // 
             // KetsuppiPB
             // 

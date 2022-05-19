@@ -9,3 +9,14 @@ C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\
 C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.exe
 C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.pdb
 C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.Pelialue.resources
+C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\bin\Debug\EscapeRoom.exe.config
+C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\bin\Debug\EscapeRoom.exe
+C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\bin\Debug\EscapeRoom.pdb
+C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.csproj.AssemblyReference.cache
+C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.Pelialue.resources
+C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.Properties.Resources.resources
+C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.csproj.GenerateResource.cache
+C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.csproj.CoreCompileInputs.cache
+C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.exe
+C:\Users\Hexulez\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.pdb
