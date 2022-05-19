@@ -46,6 +46,7 @@ namespace EscapeRoom
         {
             reppu = true;
             ReppuPB.Visible = false;
+            InventaarioPB.Visible = true;
         }
 
         private void AmpariPB_Click(object sender, EventArgs e)

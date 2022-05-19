@@ -318,6 +318,7 @@
             this.InventaarioPB.Size = new System.Drawing.Size(891, 67);
             this.InventaarioPB.TabIndex = 22;
             this.InventaarioPB.TabStop = false;
+            this.InventaarioPB.Visible = false;
             // 
             // LamppuPB
             // 
