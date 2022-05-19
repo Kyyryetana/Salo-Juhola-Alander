@@ -9,3 +9,14 @@ C:\Users\Hexulez\source\repos\Ohjelmistokehittaja\temp\inventory_alpha\inventory
 C:\Users\Hexulez\source\repos\Ohjelmistokehittaja\temp\inventory_alpha\inventory_alpha\obj\Debug\inventory_alpha.csproj.CoreCompileInputs.cache
 C:\Users\Hexulez\source\repos\Ohjelmistokehittaja\temp\inventory_alpha\inventory_alpha\obj\Debug\inventory_alpha.exe
 C:\Users\Hexulez\source\repos\Ohjelmistokehittaja\temp\inventory_alpha\inventory_alpha\obj\Debug\inventory_alpha.pdb
+C:\Users\salok\source\repos\Salo-Juhola-Alander\inventory_alpha\inventory_alpha\bin\Debug\inventory_alpha.exe.config
+C:\Users\salok\source\repos\Salo-Juhola-Alander\inventory_alpha\inventory_alpha\bin\Debug\inventory_alpha.exe
+C:\Users\salok\source\repos\Salo-Juhola-Alander\inventory_alpha\inventory_alpha\bin\Debug\inventory_alpha.pdb
+C:\Users\salok\source\repos\Salo-Juhola-Alander\inventory_alpha\inventory_alpha\obj\Debug\inventory_alpha.csproj.AssemblyReference.cache
+C:\Users\salok\source\repos\Salo-Juhola-Alander\inventory_alpha\inventory_alpha\obj\Debug\inventory_alpha.csproj.SuggestedBindingRedirects.cache
+C:\Users\salok\source\repos\Salo-Juhola-Alander\inventory_alpha\inventory_alpha\obj\Debug\inventory_alpha.Form1.resources
+C:\Users\salok\source\repos\Salo-Juhola-Alander\inventory_alpha\inventory_alpha\obj\Debug\inventory_alpha.Properties.Resources.resources
+C:\Users\salok\source\repos\Salo-Juhola-Alander\inventory_alpha\inventory_alpha\obj\Debug\inventory_alpha.csproj.GenerateResource.cache
+C:\Users\salok\source\repos\Salo-Juhola-Alander\inventory_alpha\inventory_alpha\obj\Debug\inventory_alpha.csproj.CoreCompileInputs.cache
+C:\Users\salok\source\repos\Salo-Juhola-Alander\inventory_alpha\inventory_alpha\obj\Debug\inventory_alpha.exe
+C:\Users\salok\source\repos\Salo-Juhola-Alander\inventory_alpha\inventory_alpha\obj\Debug\inventory_alpha.pdb

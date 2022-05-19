@@ -548,9 +548,18 @@ namespace StudyPoint
             String Email = UpdateEmailTB.Text;
             String Logged = loggedUser;
 
-            Boolean UpdateProfile = profile.UpdateProfile(Email,Fname,Lname,Logged);
+            if(Fname.Trim().Equals("") || Lname.Trim().Equals("") || Email.Trim().Equals(""))
+            {
+                MessageBox.Show("Please fill every text field");
+            }
+            else
+            {
+                Boolean UpdateProfile = profile.UpdateProfile(Email, Fname, Lname, Logged);
 
-            loggedUser = Email;
+                loggedUser = Email;
+            }
+
+            
 
         }
         private void UpdateCloseBT_Click(object sender, EventArgs e)
