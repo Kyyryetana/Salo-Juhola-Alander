@@ -281,6 +281,7 @@
             this.AmpariPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AmpariPB.TabIndex = 19;
             this.AmpariPB.TabStop = false;
+            this.AmpariPB.Click += new System.EventHandler(this.AmpariPB_Click);
             // 
             // KengatPB
             // 
