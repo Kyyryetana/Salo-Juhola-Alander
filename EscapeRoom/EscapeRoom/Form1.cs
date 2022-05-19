@@ -51,6 +51,7 @@ namespace EscapeRoom
         {
             reppu = true;
             ReppuPB.Visible = false;
+            InventaarioPB.Visible = true;
         }
         //interaktiiviset asiat end
 
