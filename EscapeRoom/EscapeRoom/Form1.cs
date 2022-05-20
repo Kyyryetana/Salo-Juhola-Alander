@@ -26,7 +26,11 @@ namespace EscapeRoom
             MaitoPB.Visible = false;
             KetsuppiPB.Visible = false;
 
+            Huone2PB.Visible = false;
+            VasemmalleBT.Visible = false;
         }
+
+
         List<PictureBox> collected = new List<PictureBox>();
         int x, y;
         Image ItemName;
@@ -150,8 +154,22 @@ namespace EscapeRoom
            
         }
 
-      
+        private void OikealleBT_Click(object sender, EventArgs e)
+        {
+            VasemmalleBT.Visible = true;
+            Huone2PB.Visible = true;
+            
+        }
 
+
+        private void VasemmalleBT_Click(object sender, EventArgs e)
+        {
+            VasemmalleBT.Visible = false;
+            Huone2PB.Visible = false;
+            
+        }
+
+        
         private void AddInvetory(Image thing, string thingName)
         {
             //MessageBox.Show(thing.ToString());

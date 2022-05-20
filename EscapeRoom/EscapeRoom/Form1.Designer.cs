@@ -52,6 +52,9 @@
             this.ReppuPB = new System.Windows.Forms.PictureBox();
             this.InventaarioPB = new System.Windows.Forms.PictureBox();
             this.LamppuPB = new System.Windows.Forms.PictureBox();
+            this.Huone2PB = new System.Windows.Forms.PictureBox();
+            this.OikealleBT = new System.Windows.Forms.Button();
+            this.VasemmalleBT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.OviAukiPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OviKiinniPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TauluPB)).BeginInit();
@@ -76,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ReppuPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventaarioPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LamppuPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Huone2PB)).BeginInit();
             this.SuspendLayout();
             // 
             // OviAukiPB
@@ -339,12 +343,46 @@
             this.LamppuPB.TabIndex = 23;
             this.LamppuPB.TabStop = false;
             // 
+            // Huone2PB
+            // 
+            this.Huone2PB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Huone2PB.Image = global::EscapeRoom.Properties.Resources.huone_3;
+            this.Huone2PB.Location = new System.Drawing.Point(0, 0);
+            this.Huone2PB.Name = "Huone2PB";
+            this.Huone2PB.Size = new System.Drawing.Size(884, 561);
+            this.Huone2PB.TabIndex = 24;
+            this.Huone2PB.TabStop = false;
+            this.Huone2PB.Visible = false;
+            // 
+            // OikealleBT
+            // 
+            this.OikealleBT.Location = new System.Drawing.Point(799, 244);
+            this.OikealleBT.Name = "OikealleBT";
+            this.OikealleBT.Size = new System.Drawing.Size(75, 23);
+            this.OikealleBT.TabIndex = 25;
+            this.OikealleBT.Text = "--->";
+            this.OikealleBT.UseVisualStyleBackColor = true;
+            this.OikealleBT.Click += new System.EventHandler(this.OikealleBT_Click);
+            // 
+            // VasemmalleBT
+            // 
+            this.VasemmalleBT.Location = new System.Drawing.Point(12, 260);
+            this.VasemmalleBT.Name = "VasemmalleBT";
+            this.VasemmalleBT.Size = new System.Drawing.Size(75, 23);
+            this.VasemmalleBT.TabIndex = 26;
+            this.VasemmalleBT.Text = "<---";
+            this.VasemmalleBT.UseVisualStyleBackColor = true;
+            this.VasemmalleBT.Click += new System.EventHandler(this.VasemmalleBT_Click);
+            // 
             // Pelialue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EscapeRoom.Properties.Resources.tausta1;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.VasemmalleBT);
+            this.Controls.Add(this.Huone2PB);
+            this.Controls.Add(this.OikealleBT);
             this.Controls.Add(this.LamppuPB);
             this.Controls.Add(this.InventaarioPB);
             this.Controls.Add(this.ReppuPB);
@@ -395,6 +433,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ReppuPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventaarioPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LamppuPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Huone2PB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -425,6 +464,9 @@
         private System.Windows.Forms.PictureBox ReppuPB;
         private System.Windows.Forms.PictureBox InventaarioPB;
         private System.Windows.Forms.PictureBox LamppuPB;
+        private System.Windows.Forms.PictureBox Huone2PB;
+        private System.Windows.Forms.Button OikealleBT;
+        private System.Windows.Forms.Button VasemmalleBT;
     }
 }
 

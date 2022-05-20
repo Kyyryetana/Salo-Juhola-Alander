@@ -168,6 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\gloom-danijel-zambo-main-version-01-51-10266.wav" />
+    <None Include="Resources\huone_3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
