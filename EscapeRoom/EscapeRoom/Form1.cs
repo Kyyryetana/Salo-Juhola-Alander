@@ -19,6 +19,10 @@ namespace EscapeRoom
         public Pelialue()
         {
             InitializeComponent();
+            HuoneEkaPL.Visible = true;
+            HuoneTokaPL.Visible = false;
+
+            NuoliVasenPB.Visible = false;
 
             AvainPB.Visible = false;
             JaakaappiOviAukiPB.Visible = false;
@@ -26,8 +30,7 @@ namespace EscapeRoom
             MaitoPB.Visible = false;
             KetsuppiPB.Visible = false;
 
-            Huone2PB.Visible = false;
-            VasemmalleBT.Visible = false;
+          
         }
 
 
@@ -35,6 +38,23 @@ namespace EscapeRoom
         int x, y;
         Image ItemName;
         bool reppu = false;
+
+        private void NuoliOikeaPB_Click(object sender, EventArgs e)
+        {
+            HuoneTokaPL.Visible = true;
+            HuoneEkaPL.Visible = false;
+            NuoliOikeaPB.Visible = false;
+            NuoliVasenPB.Visible = true;
+        }
+
+        private void NuoliVasenPB_Click(object sender, EventArgs e)
+        {
+            HuoneTokaPL.Visible = false;
+            HuoneEkaPL.Visible = true;
+            NuoliOikeaPB.Visible = true;
+            NuoliVasenPB.Visible = false;
+        }
+
 
 
         //interaktiiviset asiat
@@ -45,6 +65,15 @@ namespace EscapeRoom
             MaitoPB.Visible=true;
             KetsuppiPB.Visible =true;
         }
+
+        private void JaakaappiOviAukiPB_Click(object sender, EventArgs e)
+        {
+            JaakaappiOviKiinniPB.Visible = true;
+            JaakaappiOviAukiPB.Visible = false;
+            MaitoPB.Visible = false;
+            KetsuppiPB.Visible = false;
+        }
+
 
         private void PakastinOviKiinni_Click(object sender, EventArgs e)
         {
@@ -154,22 +183,8 @@ namespace EscapeRoom
            
         }
 
-        private void OikealleBT_Click(object sender, EventArgs e)
-        {
-            VasemmalleBT.Visible = true;
-            Huone2PB.Visible = true;
-            
-        }
+       
 
-
-        private void VasemmalleBT_Click(object sender, EventArgs e)
-        {
-            VasemmalleBT.Visible = false;
-            Huone2PB.Visible = false;
-            
-        }
-
-        
         private void AddInvetory(Image thing, string thingName)
         {
             //MessageBox.Show(thing.ToString());
