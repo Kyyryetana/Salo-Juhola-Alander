@@ -130,8 +130,8 @@
   <data name="maito" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pakastin_ovi_kiinni" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pakastin_ovi_kiinni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="laatikko_auki" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laatikko_auki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ovi_auki" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ovi_auki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -141,6 +141,9 @@
   </data>
   <data name="huone_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\huone_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pakastin_ovi_kiinni" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pakastin_ovi_kiinni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="olut" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\olut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,20 +160,17 @@
   <data name="uuni" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\uuni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="kommenttipalkki" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kommenttipalkki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ikkuna" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ikkuna.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="jaakaappi_ovi_auki" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jaakaappi_ovi_auki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="laatikko_auki" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\laatikko_auki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="uuni_kello" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\uuni_kello.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nuolioikealle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nuolioikealle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pakastin_ovi_auki" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pakastin_ovi_auki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,8 +184,8 @@
   <data name="ketsuppi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ketsuppi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tausta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tausta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nuolioikealle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuolioikealle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="avain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,10 +205,13 @@
   <data name="uuni1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\uuni1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tausta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tausta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="kengat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kengat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kommenttipalkki" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kommenttipalkki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maito_kokonainen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maito_kokonainen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

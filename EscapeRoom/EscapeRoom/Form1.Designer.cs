@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.HuoneEkaPL = new System.Windows.Forms.Panel();
+            this.MaitoPanelPL = new System.Windows.Forms.Panel();
             this.NuoliOikeaPB = new System.Windows.Forms.PictureBox();
             this.JaakaappiOviKiinniPB = new System.Windows.Forms.PictureBox();
             this.PakastinOviKiinni = new System.Windows.Forms.PictureBox();
@@ -56,7 +57,14 @@
             this.LamppuPB = new System.Windows.Forms.PictureBox();
             this.HuoneTokaPL = new System.Windows.Forms.Panel();
             this.NuoliVasenPB = new System.Windows.Forms.PictureBox();
+            this.MaitoIsoPB = new System.Windows.Forms.PictureBox();
+            this.MaitoLB = new System.Windows.Forms.Label();
+            this.MaitoSuljeLB = new System.Windows.Forms.Label();
+            this.HuoneKolmasPL = new System.Windows.Forms.Panel();
+            this.NuoliVasemmallePB = new System.Windows.Forms.PictureBox();
+            this.NuoliOikeallePB = new System.Windows.Forms.PictureBox();
             this.HuoneEkaPL.SuspendLayout();
+            this.MaitoPanelPL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NuoliOikeaPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JaakaappiOviKiinniPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PakastinOviKiinni)).BeginInit();
@@ -84,11 +92,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.LamppuPB)).BeginInit();
             this.HuoneTokaPL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NuoliVasenPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaitoIsoPB)).BeginInit();
+            this.HuoneKolmasPL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NuoliVasemmallePB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NuoliOikeallePB)).BeginInit();
             this.SuspendLayout();
             // 
             // HuoneEkaPL
             // 
             this.HuoneEkaPL.BackgroundImage = global::EscapeRoom.Properties.Resources.tausta1;
+            this.HuoneEkaPL.Controls.Add(this.NuoliVasemmallePB);
+            this.HuoneEkaPL.Controls.Add(this.MaitoPanelPL);
             this.HuoneEkaPL.Controls.Add(this.NuoliOikeaPB);
             this.HuoneEkaPL.Controls.Add(this.JaakaappiOviKiinniPB);
             this.HuoneEkaPL.Controls.Add(this.PakastinOviKiinni);
@@ -119,6 +133,18 @@
             this.HuoneEkaPL.Name = "HuoneEkaPL";
             this.HuoneEkaPL.Size = new System.Drawing.Size(884, 561);
             this.HuoneEkaPL.TabIndex = 24;
+            // 
+            // MaitoPanelPL
+            // 
+            this.MaitoPanelPL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MaitoPanelPL.Controls.Add(this.MaitoSuljeLB);
+            this.MaitoPanelPL.Controls.Add(this.MaitoLB);
+            this.MaitoPanelPL.Controls.Add(this.MaitoIsoPB);
+            this.MaitoPanelPL.Location = new System.Drawing.Point(345, 107);
+            this.MaitoPanelPL.Name = "MaitoPanelPL";
+            this.MaitoPanelPL.Size = new System.Drawing.Size(225, 273);
+            this.MaitoPanelPL.TabIndex = 25;
+            this.MaitoPanelPL.Visible = false;
             // 
             // NuoliOikeaPB
             // 
@@ -185,7 +211,7 @@
             this.MaitoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.MaitoPB.TabIndex = 13;
             this.MaitoPB.TabStop = false;
-            this.MaitoPB.Click += new System.EventHandler(this.tavarat_Click);
+            this.MaitoPB.Click += new System.EventHandler(this.MaitoPB_Click);
             // 
             // KaljaPB
             // 
@@ -414,6 +440,68 @@
             this.NuoliVasenPB.TabStop = false;
             this.NuoliVasenPB.Click += new System.EventHandler(this.NuoliVasenPB_Click);
             // 
+            // MaitoIsoPB
+            // 
+            this.MaitoIsoPB.Image = global::EscapeRoom.Properties.Resources.maito_kokonainen;
+            this.MaitoIsoPB.Location = new System.Drawing.Point(68, 22);
+            this.MaitoIsoPB.Name = "MaitoIsoPB";
+            this.MaitoIsoPB.Size = new System.Drawing.Size(90, 202);
+            this.MaitoIsoPB.TabIndex = 0;
+            this.MaitoIsoPB.TabStop = false;
+            // 
+            // MaitoLB
+            // 
+            this.MaitoLB.AutoSize = true;
+            this.MaitoLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaitoLB.Location = new System.Drawing.Point(56, 236);
+            this.MaitoLB.Name = "MaitoLB";
+            this.MaitoLB.Size = new System.Drawing.Size(137, 24);
+            this.MaitoLB.TabIndex = 1;
+            this.MaitoLB.Text = "Rasvaton maito";
+            // 
+            // MaitoSuljeLB
+            // 
+            this.MaitoSuljeLB.AutoSize = true;
+            this.MaitoSuljeLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaitoSuljeLB.Location = new System.Drawing.Point(183, 8);
+            this.MaitoSuljeLB.Name = "MaitoSuljeLB";
+            this.MaitoSuljeLB.Size = new System.Drawing.Size(24, 24);
+            this.MaitoSuljeLB.TabIndex = 2;
+            this.MaitoSuljeLB.Text = "X";
+            this.MaitoSuljeLB.Click += new System.EventHandler(this.MaitoSuljeLB_Click);
+            // 
+            // HuoneKolmasPL
+            // 
+            this.HuoneKolmasPL.BackgroundImage = global::EscapeRoom.Properties.Resources.huone_3;
+            this.HuoneKolmasPL.Controls.Add(this.NuoliOikeallePB);
+            this.HuoneKolmasPL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HuoneKolmasPL.Location = new System.Drawing.Point(0, 0);
+            this.HuoneKolmasPL.Name = "HuoneKolmasPL";
+            this.HuoneKolmasPL.Size = new System.Drawing.Size(884, 561);
+            this.HuoneKolmasPL.TabIndex = 26;
+            // 
+            // NuoliVasemmallePB
+            // 
+            this.NuoliVasemmallePB.BackColor = System.Drawing.Color.Transparent;
+            this.NuoliVasemmallePB.Image = global::EscapeRoom.Properties.Resources.nuolivasemmalle;
+            this.NuoliVasemmallePB.Location = new System.Drawing.Point(0, 237);
+            this.NuoliVasemmallePB.Name = "NuoliVasemmallePB";
+            this.NuoliVasemmallePB.Size = new System.Drawing.Size(54, 33);
+            this.NuoliVasemmallePB.TabIndex = 26;
+            this.NuoliVasemmallePB.TabStop = false;
+            this.NuoliVasemmallePB.Click += new System.EventHandler(this.NuoliVasemmallePB_Click);
+            // 
+            // NuoliOikeallePB
+            // 
+            this.NuoliOikeallePB.BackColor = System.Drawing.Color.Transparent;
+            this.NuoliOikeallePB.Image = global::EscapeRoom.Properties.Resources.nuolioikealle;
+            this.NuoliOikeallePB.Location = new System.Drawing.Point(830, 237);
+            this.NuoliOikeallePB.Name = "NuoliOikeallePB";
+            this.NuoliOikeallePB.Size = new System.Drawing.Size(54, 33);
+            this.NuoliOikeallePB.TabIndex = 0;
+            this.NuoliOikeallePB.TabStop = false;
+            this.NuoliOikeallePB.Click += new System.EventHandler(this.NuoliOikeallePB_Click);
+            // 
             // Pelialue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,9 +509,12 @@
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.HuoneEkaPL);
             this.Controls.Add(this.HuoneTokaPL);
+            this.Controls.Add(this.HuoneKolmasPL);
             this.Name = "Pelialue";
             this.Text = "Escape Room";
             this.HuoneEkaPL.ResumeLayout(false);
+            this.MaitoPanelPL.ResumeLayout(false);
+            this.MaitoPanelPL.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NuoliOikeaPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JaakaappiOviKiinniPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PakastinOviKiinni)).EndInit();
@@ -451,6 +542,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.LamppuPB)).EndInit();
             this.HuoneTokaPL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.NuoliVasenPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaitoIsoPB)).EndInit();
+            this.HuoneKolmasPL.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.NuoliVasemmallePB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NuoliOikeallePB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -485,6 +580,13 @@
         private System.Windows.Forms.PictureBox NuoliOikeaPB;
         private System.Windows.Forms.Panel HuoneTokaPL;
         private System.Windows.Forms.PictureBox NuoliVasenPB;
+        private System.Windows.Forms.Panel MaitoPanelPL;
+        private System.Windows.Forms.Label MaitoSuljeLB;
+        private System.Windows.Forms.Label MaitoLB;
+        private System.Windows.Forms.PictureBox MaitoIsoPB;
+        private System.Windows.Forms.Panel HuoneKolmasPL;
+        private System.Windows.Forms.PictureBox NuoliVasemmallePB;
+        private System.Windows.Forms.PictureBox NuoliOikeallePB;
     }
 }
 

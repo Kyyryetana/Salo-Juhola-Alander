@@ -21,8 +21,7 @@ namespace EscapeRoom
             InitializeComponent();
             HuoneEkaPL.Visible = true;
             HuoneTokaPL.Visible = false;
-
-            NuoliVasenPB.Visible = false;
+            HuoneKolmasPL.Visible = false;
 
             AvainPB.Visible = false;
             JaakaappiOviAukiPB.Visible = false;
@@ -39,20 +38,29 @@ namespace EscapeRoom
         Image ItemName;
         bool reppu = false;
 
-        private void NuoliOikeaPB_Click(object sender, EventArgs e)
+        private void NuoliOikeaPB_Click(object sender, EventArgs e) // nuoli ruokailutilaan
         {
             HuoneTokaPL.Visible = true;
             HuoneEkaPL.Visible = false;
-            NuoliOikeaPB.Visible = false;
-            NuoliVasenPB.Visible = true;
         }
 
-        private void NuoliVasenPB_Click(object sender, EventArgs e)
+        private void NuoliVasenPB_Click(object sender, EventArgs e) // nuoli takaisin keittiöön
         {
             HuoneTokaPL.Visible = false;
             HuoneEkaPL.Visible = true;
-            NuoliOikeaPB.Visible = true;
-            NuoliVasenPB.Visible = false;
+            
+        }
+
+        private void NuoliVasemmallePB_Click(object sender, EventArgs e) // nuoli makuuhuoneeseen
+        {
+            HuoneKolmasPL.Visible = true;
+            HuoneEkaPL.Visible = false;
+        }
+
+        private void NuoliOikeallePB_Click(object sender, EventArgs e) // nuoli takaisin keittiöön
+        {
+            HuoneKolmasPL.Visible = false;
+            HuoneEkaPL.Visible = true;
         }
 
 
@@ -134,6 +142,16 @@ namespace EscapeRoom
             MessageBox.Show("Nyt ei ole oikea hetki juoda");
         }
 
+        private void MaitoPB_Click(object sender, EventArgs e)
+        {
+            MaitoPanelPL.Visible = true;
+        }
+
+        private void MaitoSuljeLB_Click(object sender, EventArgs e)
+        {
+            MaitoPanelPL.Visible = false;
+        }
+
         //interaktiiviset asiat end
 
         //inventory
@@ -182,8 +200,6 @@ namespace EscapeRoom
         {
            
         }
-
-       
 
         private void AddInvetory(Image thing, string thingName)
         {
