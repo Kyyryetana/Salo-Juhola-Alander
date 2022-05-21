@@ -167,7 +167,19 @@
     <None Include="Resources\lamppu.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\taskulamppu1.png" />
+    <None Include="Resources\video1.png" />
+    <None Include="Resources\muistio1.png" />
+    <None Include="Resources\ruutu1.png" />
+    <None Include="Resources\spray1.png" />
+    <None Include="Resources\ampari21.png" />
+    <None Include="Resources\fullscreen1.png" />
     <Content Include="Resources\gloom-danijel-zambo-main-version-01-51-10266.wav" />
+    <None Include="Resources\tietokone1.png" />
+    <None Include="Resources\konetuoli1.png" />
+    <None Include="Resources\sipsi1.png" />
+    <None Include="Resources\sanky1.png" />
+    <None Include="Resources\tausta32.png" />
     <None Include="Resources\jaakaappi_ovi_auki1.png" />
     <None Include="Resources\maito_pieni.png" />
     <None Include="Resources\kasvi.png" />

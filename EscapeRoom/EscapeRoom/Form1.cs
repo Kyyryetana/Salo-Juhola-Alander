@@ -27,6 +27,7 @@ namespace EscapeRoom
             JaakaappiOviAukiPB.Visible = false;
             PakastinOviAukiPB.Visible = false;
 
+
         }
 
 
@@ -186,6 +187,49 @@ namespace EscapeRoom
         {
            
         }
+
+        private void PCPB_Click(object sender, EventArgs e)
+        {
+            String Viesti = "Avaa tietokone?";
+            switch (MessageBox.Show(Viesti, "Tietokone",MessageBoxButtons.YesNo))
+            {
+                case DialogResult.Yes:
+                    RuutuPB.Visible = true;
+                    PCPB.Enabled = false;
+                    break;
+                case DialogResult.No:
+                    RuutuPB.Visible = false;
+                    break;
+            }
+        }
+
+        private void RuutuPB_Click(object sender, EventArgs e)
+        {
+            RuutuPB.Visible = false;
+            FullscreenPL.Visible = true;
+           
+        }
+
+        private void SuljeFullscreenLB_Click(object sender, EventArgs e)
+        {
+            RuutuPB.Visible = true;
+            FullscreenPL.Visible = false;
+        }
+
+        private void MuistioPB_Click(object sender, EventArgs e)
+        {
+            CreditsTB.Visible = true;
+            
+          
+           
+        }
+        private void SuljeCreditsBT_Click(object sender, EventArgs e)
+        {
+            CreditsTB.Visible = false;
+         
+        }
+
+       
 
         private void AddInvetory(Image thing, string thingName)
         {
