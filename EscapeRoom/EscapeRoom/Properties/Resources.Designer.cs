@@ -123,9 +123,29 @@ namespace EscapeRoom.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap inventaariopalkki1 {
+            get {
+                object obj = ResourceManager.GetObject("inventaariopalkki1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap jaakaappi_ovi_auki {
             get {
                 object obj = ResourceManager.GetObject("jaakaappi_ovi_auki", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jaakaappi_ovi_auki1 {
+            get {
+                object obj = ResourceManager.GetObject("jaakaappi_ovi_auki1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +166,16 @@ namespace EscapeRoom.Properties {
         internal static System.Drawing.Bitmap jaakaappi_pohja {
             get {
                 object obj = ResourceManager.GetObject("jaakaappi_pohja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kasvi {
+            get {
+                object obj = ResourceManager.GetObject("kasvi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +256,26 @@ namespace EscapeRoom.Properties {
         internal static System.Drawing.Bitmap maito_kokonainen {
             get {
                 object obj = ResourceManager.GetObject("maito_kokonainen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maito_pieni {
+            get {
+                object obj = ResourceManager.GetObject("maito_pieni", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mankka {
+            get {
+                object obj = ResourceManager.GetObject("mankka", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -346,6 +396,16 @@ namespace EscapeRoom.Properties {
         internal static System.Drawing.Bitmap tausta1 {
             get {
                 object obj = ResourceManager.GetObject("tausta1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tausta2 {
+            get {
+                object obj = ResourceManager.GetObject("tausta2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -26,10 +26,7 @@ namespace EscapeRoom
             AvainPB.Visible = false;
             JaakaappiOviAukiPB.Visible = false;
             PakastinOviAukiPB.Visible = false;
-            MaitoPB.Visible = false;
-            KetsuppiPB.Visible = false;
 
-          
         }
 
 
@@ -70,16 +67,14 @@ namespace EscapeRoom
         {
             JaakaappiOviKiinniPB.Visible = false;
             JaakaappiOviAukiPB.Visible = true;
-            MaitoPB.Visible=true;
-            KetsuppiPB.Visible =true;
+
         }
 
         private void JaakaappiOviAukiPB_Click(object sender, EventArgs e)
         {
             JaakaappiOviKiinniPB.Visible = true;
             JaakaappiOviAukiPB.Visible = false;
-            MaitoPB.Visible = false;
-            KetsuppiPB.Visible = false;
+           
         }
 
 
@@ -142,16 +137,7 @@ namespace EscapeRoom
             MessageBox.Show("Nyt ei ole oikea hetki juoda");
         }
 
-        private void MaitoPB_Click(object sender, EventArgs e)
-        {
-            MaitoPanelPL.Visible = true;
-        }
-
-        private void MaitoSuljeLB_Click(object sender, EventArgs e)
-        {
-            MaitoPanelPL.Visible = false;
-        }
-
+ 
         //interaktiiviset asiat end
 
         //inventory

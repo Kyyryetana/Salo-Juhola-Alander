@@ -168,6 +168,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\gloom-danijel-zambo-main-version-01-51-10266.wav" />
+    <None Include="Resources\jaakaappi_ovi_auki1.png" />
+    <None Include="Resources\maito_pieni.png" />
+    <None Include="Resources\kasvi.png" />
+    <None Include="Resources\inventaariopalkki1.png" />
+    <None Include="Resources\mankka.png" />
+    <None Include="Resources\tausta2.png" />
     <None Include="Resources\maito_kokonainen.png" />
     <None Include="Resources\kommenttipalkki.png" />
     <None Include="Resources\nuolioikealle.png" />
