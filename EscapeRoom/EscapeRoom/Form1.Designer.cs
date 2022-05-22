@@ -55,6 +55,7 @@
             this.LamppuPB = new System.Windows.Forms.PictureBox();
             this.HuoneKolmasPL = new System.Windows.Forms.Panel();
             this.FullscreenPL = new System.Windows.Forms.Panel();
+            this.CreditsTB = new System.Windows.Forms.RichTextBox();
             this.SuljeFullscreenLB = new System.Windows.Forms.Label();
             this.VideoPB = new System.Windows.Forms.PictureBox();
             this.MuistioPB = new System.Windows.Forms.PictureBox();
@@ -71,7 +72,6 @@
             this.KasviPB = new System.Windows.Forms.PictureBox();
             this.MankkaPB = new System.Windows.Forms.PictureBox();
             this.NuoliVasenPB = new System.Windows.Forms.PictureBox();
-            this.CreditsTB = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.InventaarioPB)).BeginInit();
             this.HuoneEkaPL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TaskulamppuPB)).BeginInit();
@@ -130,7 +130,7 @@
             // 
             // HuoneEkaPL
             // 
-            this.HuoneEkaPL.BackgroundImage = global::EscapeRoom.Properties.Resources.tausta1;
+            this.HuoneEkaPL.BackgroundImage = global::EscapeRoom.Properties.Resources.tausta4;
             this.HuoneEkaPL.Controls.Add(this.TaskulamppuPB);
             this.HuoneEkaPL.Controls.Add(this.NuoliVasemmallePB);
             this.HuoneEkaPL.Controls.Add(this.NuoliOikeaPB);
@@ -439,6 +439,17 @@
             this.FullscreenPL.TabIndex = 8;
             this.FullscreenPL.Visible = false;
             // 
+            // CreditsTB
+            // 
+            this.CreditsTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreditsTB.Location = new System.Drawing.Point(246, 62);
+            this.CreditsTB.Name = "CreditsTB";
+            this.CreditsTB.ReadOnly = true;
+            this.CreditsTB.Size = new System.Drawing.Size(233, 284);
+            this.CreditsTB.TabIndex = 3;
+            this.CreditsTB.Text = "Krediitit\n\nOhjelmointi:\n\nGrafiikka:\n\nÄänitehosteet:\n";
+            this.CreditsTB.Visible = false;
+            // 
             // SuljeFullscreenLB
             // 
             this.SuljeFullscreenLB.AutoSize = true;
@@ -605,25 +616,14 @@
             this.NuoliVasenPB.TabStop = false;
             this.NuoliVasenPB.Click += new System.EventHandler(this.NuoliVasenPB_Click);
             // 
-            // CreditsTB
-            // 
-            this.CreditsTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreditsTB.Location = new System.Drawing.Point(246, 62);
-            this.CreditsTB.Name = "CreditsTB";
-            this.CreditsTB.ReadOnly = true;
-            this.CreditsTB.Size = new System.Drawing.Size(233, 284);
-            this.CreditsTB.TabIndex = 3;
-            this.CreditsTB.Text = "Krediitit\n\nOhjelmointi:\n\nGrafiikka:\n\nÄänitehosteet:\n";
-            this.CreditsTB.Visible = false;
-            // 
             // Pelialue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.InventaarioPB);
-            this.Controls.Add(this.HuoneKolmasPL);
             this.Controls.Add(this.HuoneEkaPL);
+            this.Controls.Add(this.HuoneKolmasPL);
             this.Controls.Add(this.HuoneTokaPL);
             this.Name = "Pelialue";
             this.Text = "Escape Room";
