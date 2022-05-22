@@ -109,7 +109,7 @@ namespace EscapeRoom
             InventaarioPB.Visible = true;
         }
 
-        private void AmpariPB_Click(object sender, EventArgs e)
+        private void AmpariPB_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("This... is a bucket");
             MessageBox.Show("D E A R   G O D . . .");
@@ -117,6 +117,7 @@ namespace EscapeRoom
             MessageBox.Show("N O !");
             MessageBox.Show("It contains a number... 9");
         }
+
 
         private void UuniPB_Click(object sender, EventArgs e)
         {
@@ -138,7 +139,67 @@ namespace EscapeRoom
             MessageBox.Show("Nyt ei ole oikea hetki juoda");
         }
 
- 
+        private void MaitoPoydallaPB_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Mölö 0%. Tölkki on tyhjä...");
+        }
+
+        private void LappuPB_Click(object sender, EventArgs e)
+        {
+            LappuIsoPB.Visible = true;
+        }
+
+        private void LappuIsoPB_Click(object sender, EventArgs e)
+        {
+            LappuIsoPB.Visible = false;
+        }
+
+        private void PCPB_Click(object sender, EventArgs e)
+        {
+            String Viesti = "Avaa tietokone?";
+            switch (MessageBox.Show(Viesti, "Tietokone", MessageBoxButtons.YesNo))
+            {
+                case DialogResult.Yes:
+                    RuutuPB.Visible = true;
+                    PCPB.Enabled = false;
+                    break;
+                case DialogResult.No:
+                    RuutuPB.Visible = false;
+                    break;
+            }
+        }
+
+        private void RuutuPB_Click(object sender, EventArgs e)
+        {
+            RuutuPB.Visible = false;
+            FullscreenPL.Visible = true;
+            SuljeMuistioBT.Visible = false;
+
+        }
+
+        private void SuljeFullscreenLB_Click(object sender, EventArgs e)
+        {
+            RuutuPB.Visible = true;
+            FullscreenPL.Visible = false;
+            CreditsTB.Visible = false;
+            SuljeMuistioBT.Visible = false;
+        }
+
+        private void MuistioPB_Click(object sender, EventArgs e)
+        {
+            CreditsTB.Visible = true;
+            SuljeMuistioBT.Visible = true;
+
+        }
+
+        private void SuljeMuistioBT_Click(object sender, EventArgs e)
+        {
+            CreditsTB.Visible = false;
+            SuljeMuistioBT.Visible = false;
+        }
+
+
+
         //interaktiiviset asiat end
 
         //inventory
@@ -188,48 +249,7 @@ namespace EscapeRoom
            
         }
 
-        private void PCPB_Click(object sender, EventArgs e)
-        {
-            String Viesti = "Avaa tietokone?";
-            switch (MessageBox.Show(Viesti, "Tietokone",MessageBoxButtons.YesNo))
-            {
-                case DialogResult.Yes:
-                    RuutuPB.Visible = true;
-                    PCPB.Enabled = false;
-                    break;
-                case DialogResult.No:
-                    RuutuPB.Visible = false;
-                    break;
-            }
-        }
-
-        private void RuutuPB_Click(object sender, EventArgs e)
-        {
-            RuutuPB.Visible = false;
-            FullscreenPL.Visible = true;
-           
-        }
-
-        private void SuljeFullscreenLB_Click(object sender, EventArgs e)
-        {
-            RuutuPB.Visible = true;
-            FullscreenPL.Visible = false;
-        }
-
-        private void MuistioPB_Click(object sender, EventArgs e)
-        {
-            CreditsTB.Visible = true;
-            
-          
-           
-        }
-        private void SuljeCreditsBT_Click(object sender, EventArgs e)
-        {
-            CreditsTB.Visible = false;
-         
-        }
-
-       
+        
 
         private void AddInvetory(Image thing, string thingName)
         {
