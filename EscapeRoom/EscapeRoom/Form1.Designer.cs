@@ -202,6 +202,7 @@
             this.TakkiPB.Size = new System.Drawing.Size(78, 144);
             this.TakkiPB.TabIndex = 28;
             this.TakkiPB.TabStop = false;
+            this.TakkiPB.Click += new System.EventHandler(this.tavarat_Click);
             // 
             // TaskulamppuPB
             // 
@@ -212,6 +213,7 @@
             this.TaskulamppuPB.Size = new System.Drawing.Size(61, 18);
             this.TaskulamppuPB.TabIndex = 27;
             this.TaskulamppuPB.TabStop = false;
+            this.TaskulamppuPB.Click += new System.EventHandler(this.tavarat_Click);
             // 
             // NuoliVasemmallePB
             // 
@@ -427,6 +429,7 @@
             this.KengatPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.KengatPB.TabIndex = 20;
             this.KengatPB.TabStop = false;
+            this.KengatPB.Click += new System.EventHandler(this.tavarat_Click);
             // 
             // ReppuPB
             // 
@@ -474,6 +477,7 @@
             this.HuiviPB.Size = new System.Drawing.Size(77, 39);
             this.HuiviPB.TabIndex = 4;
             this.HuiviPB.TabStop = false;
+            this.HuiviPB.Click += new System.EventHandler(this.tavarat_Click);
             // 
             // MaitoPoydallaPB
             // 
@@ -505,6 +509,7 @@
             this.MankkaPB.Size = new System.Drawing.Size(64, 29);
             this.MankkaPB.TabIndex = 1;
             this.MankkaPB.TabStop = false;
+            this.MankkaPB.Click += new System.EventHandler(this.tavarat_Click);
             // 
             // NuoliVasenPB
             // 
@@ -620,6 +625,7 @@
             this.SprayPB.Size = new System.Drawing.Size(52, 56);
             this.SprayPB.TabIndex = 6;
             this.SprayPB.TabStop = false;
+            this.SprayPB.Click += new System.EventHandler(this.tavarat_Click);
             // 
             // AmpariPB
             // 
@@ -661,6 +667,7 @@
             this.SipsiPB.Size = new System.Drawing.Size(50, 56);
             this.SipsiPB.TabIndex = 2;
             this.SipsiPB.TabStop = false;
+            this.SipsiPB.Click += new System.EventHandler(this.tavarat_Click);
             // 
             // SankyPB
             // 

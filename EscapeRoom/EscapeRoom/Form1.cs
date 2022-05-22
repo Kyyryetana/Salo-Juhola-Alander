@@ -29,7 +29,7 @@ namespace EscapeRoom
 
 
         }
-
+        Kerattavat kerattavat = new Kerattavat();
         Katsottavat katsottavat = new Katsottavat();
         List<PictureBox> collected = new List<PictureBox>();
         int x, y;
@@ -95,8 +95,8 @@ namespace EscapeRoom
         //katsottavat asiat 
         private void KatsoTavaraa_Click(object sender, EventArgs e)
         {
-            PictureBox PicBox = sender as PictureBox;
-            katsottavat.LookAt(PicBox.Name);
+            PictureBox PicBox = sender as PictureBox; //ottaa lähettävän pictureboxin muuttujaan
+            katsottavat.LookAt(PicBox.Name); //kutsuu luokasta katsottavat metodia joka tekee pictureboxin nimen mukaan päättää mitä tehdään.
         }
         // Katsottavat asiat end
         
@@ -171,11 +171,18 @@ namespace EscapeRoom
         //inventory
         private void tavarat_Click(object sender, EventArgs e)
         {
-            if (reppu == false) MessageBox.Show("Et voi vielä kerätä tavaroita");
+            PictureBox tavara = sender as PictureBox;
+            kerattavat.PickUp(tavara.Name.ToString());
+            if (tavara == TakkiPB || tavara == KengatPB|| tavara == HuiviPB)
+            {
+                tavara.Visible = false;
+                collected.Add(tavara);
+            }
+            else if (reppu == false) MessageBox.Show("Sinulla ei ole mitään mihin laittaa tavaroita.");
             
             else
             {
-                PictureBox tavara = sender as PictureBox;
+                
                 //MessageBox.Show(tavara.Name.ToString());
                 AddInvetory(tavara.Image, tavara.Name);
                 tavara.Visible = false;

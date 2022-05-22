@@ -20,7 +20,7 @@ namespace EscapeRoom
             dico["TaskulamppuPB"] = new Func<string, string>(Func5);
             dico["MankkaPB"] = new Func<string, string>(Func6);
             dico["SprayPB"] = new Func<string, string>(Func7);
-            dico["SipsitPB"] = new Func<string, string>(Func8);
+            dico["SipsiPB"] = new Func<string, string>(Func8);
             dico["EsPB"] = new Func<string, string>(Func9);
 
             // and later invoke
@@ -41,43 +41,53 @@ namespace EscapeRoom
 
         private string Func1(string arg)
         {
+            MessageBox.Show("Otat reppusi jotta voit kerätä tarvitsemasi tavarat mukaan.");
             return null;
         }
 
         private string Func2(string arg)
         {
+            MessageBox.Show("Laitat takin päälle jottei tule kylmä");
             return null;
         }
         private string Func3(string arg)
         {
+            MessageBox.Show("Kengät jalkaan ja menoksi.");
             return null;
         }
         private string Func4(string arg)
         {
+            MessageBox.Show("Mitenköhän huivini oli tänne päätynyt");
             return null;
         }
         private string Func5(string arg)
         {
+            MessageBox.Show("Uusi super tehokas maagilite minkä sait joululahjaksi");
             return null;
         }
         private string Func6(string arg)
         {
+            MessageBox.Show("Vanha mutta uskollinen poppikone. Sitä ilman ei voi lähteä minnekään.");
             return null;
         }
         private string Func7(string arg)
         {
+            MessageBox.Show("Kilikali purkkeja. niille saattaa löytyä myöhemmin käyttöä.");
             return null;
         }
         private string Func8(string arg)
         {
+            MessageBox.Show("Sipsuja pitää aina olla mukana!");
             return null;
         }
         private string Func9(string arg)
         {
+            MessageBox.Show("Tänään päristään.");
             return null;
         }
         private string Func10(string arg)
         {
+            
             return null;
         }
         private string Func11(string arg)

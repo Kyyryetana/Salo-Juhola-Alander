@@ -11,9 +11,10 @@ namespace EscapeRoom
     {
         public void LookAt(string juttu)
         {
-            // store
-            var dico = new Dictionary<string, Delegate>();
-            dico["AmpariPB"] = new Func<string, string>(Func1);
+            // Tähän on varastoitu pictureboxin nimi ja kerrotaan mitä metodia halutaan kyseisen tavaran kanssa käyttää
+
+            var dico = new Dictionary<string, Delegate>(); // luodaan muuttujaan uusi "sanakirja".
+            dico["AmpariPB"] = new Func<string, string>(Func1); // lopuissa riveissä luodaan aina uusi kohta siihen
             dico["PakastinLokerotPB"] = new Func<string, string>(Func2);
             dico["OviKiinniPB"] = new Func<string, string>(Func3);
             dico["UuniPB"] = new Func<string, string>(Func4);
@@ -25,9 +26,10 @@ namespace EscapeRoom
             dico["LappuIsoPB"] = new Func<string, string>(Func10);
             
 
-            // and later invoke
+            // Tällä herätetään nimen mukaan haluttu metodi ja annetaan myöskin sama nimi argumentiksi
             var res = dico[juttu].DynamicInvoke(juttu);
         }
+        //nämä metodit toteutetaan sen mukaan mikä halutaan kutsua
         private string Func1(string arg) 
         {
             MessageBox.Show("This... is a bucket");
