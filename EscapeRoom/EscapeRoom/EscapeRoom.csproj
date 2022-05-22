@@ -167,6 +167,7 @@
     <None Include="Resources\lamppu.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\tausta4.png" />
     <None Include="Resources\taskulamppu1.png" />
     <None Include="Resources\video1.png" />
     <None Include="Resources\muistio1.png" />
