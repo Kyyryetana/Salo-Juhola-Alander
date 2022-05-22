@@ -266,7 +266,7 @@
             this.PakastinLokerotPB.Size = new System.Drawing.Size(153, 156);
             this.PakastinLokerotPB.TabIndex = 15;
             this.PakastinLokerotPB.TabStop = false;
-            this.PakastinLokerotPB.Click += new System.EventHandler(this.PakastinLokerotPB_Click);
+            this.PakastinLokerotPB.Click += new System.EventHandler(this.KatsoTavaraa_Click);
             // 
             // KaljaPB
             // 
@@ -278,7 +278,7 @@
             this.KaljaPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.KaljaPB.TabIndex = 12;
             this.KaljaPB.TabStop = false;
-            this.KaljaPB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.KaljaPB_MouseClick);
+            this.KaljaPB.Click += new System.EventHandler(this.KatsoTavaraa_Click);
             // 
             // EsPB
             // 
@@ -373,7 +373,7 @@
             this.OviKiinniPB.Size = new System.Drawing.Size(158, 306);
             this.OviKiinniPB.TabIndex = 1;
             this.OviKiinniPB.TabStop = false;
-            this.OviKiinniPB.Click += new System.EventHandler(this.OviKiinniPB_Click);
+            this.OviKiinniPB.Click += new System.EventHandler(this.KatsoTavaraa_Click);
             // 
             // OviAukiPB
             // 
@@ -394,7 +394,7 @@
             this.UuniKelloPB.Size = new System.Drawing.Size(30, 13);
             this.UuniKelloPB.TabIndex = 17;
             this.UuniKelloPB.TabStop = false;
-            this.UuniKelloPB.Click += new System.EventHandler(this.UuniKelloPB_Click);
+            this.UuniKelloPB.Click += new System.EventHandler(this.KatsoTavaraa_Click);
             // 
             // UuniPB
             // 
@@ -405,7 +405,7 @@
             this.UuniPB.Size = new System.Drawing.Size(172, 183);
             this.UuniPB.TabIndex = 16;
             this.UuniPB.TabStop = false;
-            this.UuniPB.Click += new System.EventHandler(this.UuniPB_Click);
+            this.UuniPB.Click += new System.EventHandler(this.KatsoTavaraa_Click);
             // 
             // IkkunaPB
             // 
@@ -415,7 +415,7 @@
             this.IkkunaPB.Size = new System.Drawing.Size(269, 192);
             this.IkkunaPB.TabIndex = 18;
             this.IkkunaPB.TabStop = false;
-            this.IkkunaPB.Click += new System.EventHandler(this.IkkunaPB_Click);
+            this.IkkunaPB.Click += new System.EventHandler(this.KatsoTavaraa_Click);
             // 
             // KengatPB
             // 
@@ -484,7 +484,7 @@
             this.MaitoPoydallaPB.Size = new System.Drawing.Size(24, 50);
             this.MaitoPoydallaPB.TabIndex = 3;
             this.MaitoPoydallaPB.TabStop = false;
-            this.MaitoPoydallaPB.Click += new System.EventHandler(this.MaitoPoydallaPB_Click);
+            this.MaitoPoydallaPB.Click += new System.EventHandler(this.KatsoTavaraa_Click);
             // 
             // KasviPB
             // 
@@ -630,7 +630,7 @@
             this.AmpariPB.Size = new System.Drawing.Size(72, 72);
             this.AmpariPB.TabIndex = 5;
             this.AmpariPB.TabStop = false;
-            this.AmpariPB.Click += new System.EventHandler(this.AmpariPB_Click_1);
+            this.AmpariPB.Click += new System.EventHandler(this.KatsoTavaraa_Click);
             // 
             // PCPB
             // 

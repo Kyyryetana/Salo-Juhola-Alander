@@ -30,7 +30,7 @@ namespace EscapeRoom
 
         }
 
-
+        Katsottavat katsottavat = new Katsottavat();
         List<PictureBox> collected = new List<PictureBox>();
         int x, y;
         Image ItemName;
@@ -91,16 +91,15 @@ namespace EscapeRoom
             PakastinOviAukiPB.Visible = false;
         }
 
-        private void PakastinLokerotPB_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("En tarvitse pakastimesta mitään");
-        }
 
-
-        private void OviKiinniPB_Click(object sender, EventArgs e)
+        //katsottavat asiat 
+        private void KatsoTavaraa_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ovi on lukossa. Minneköhän laitoin avaimen?");
+            PictureBox PicBox = sender as PictureBox;
+            katsottavat.LookAt(PicBox.Name);
         }
+        // Katsottavat asiat end
+        
 
         private void ReppuPB_Click(object sender, EventArgs e)
         {
@@ -109,40 +108,7 @@ namespace EscapeRoom
             InventaarioPB.Visible = true;
         }
 
-        private void AmpariPB_Click_1(object sender, EventArgs e)
-        {
-            MessageBox.Show("This... is a bucket");
-            MessageBox.Show("D E A R   G O D . . .");
-            MessageBox.Show("There's more!");
-            MessageBox.Show("N O !");
-            MessageBox.Show("It contains a number... 9");
-        }
-
-
-        private void UuniPB_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Uuni. Kello on pysähtynyt...");
-        }
-
-        private void UuniKelloPB_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Uunin kello on pysähtynyt kello 2:een");
-        }
-
-        private void IkkunaPB_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("On jo myöhä");
-        }
-
-        private void KaljaPB_MouseClick(object sender, MouseEventArgs e)
-        {
-            MessageBox.Show("Nyt ei ole oikea hetki juoda");
-        }
-
-        private void MaitoPoydallaPB_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Mölö 0%. Tölkki on tyhjä...");
-        }
+       
 
         private void LappuPB_Click(object sender, EventArgs e)
         {
@@ -243,14 +209,6 @@ namespace EscapeRoom
             }
 
         }
-
-        private void Tavarat(object sender, EventArgs e)
-        {
-           
-        }
-
-        
-
         private void AddInvetory(Image thing, string thingName)
         {
             //MessageBox.Show(thing.ToString());
