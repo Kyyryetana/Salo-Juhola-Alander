@@ -113,6 +113,16 @@ namespace EscapeRoom.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap huivi {
+            get {
+                object obj = ResourceManager.GetObject("huivi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap huone_3 {
             get {
                 object obj = ResourceManager.GetObject("huone_3", resourceCulture);
@@ -453,6 +463,16 @@ namespace EscapeRoom.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap takki {
+            get {
+                object obj = ResourceManager.GetObject("takki", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap taskulamppu {
             get {
                 object obj = ResourceManager.GetObject("taskulamppu", resourceCulture);
@@ -496,6 +516,16 @@ namespace EscapeRoom.Properties {
         internal static System.Drawing.Bitmap tausta2 {
             get {
                 object obj = ResourceManager.GetObject("tausta2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tausta21 {
+            get {
+                object obj = ResourceManager.GetObject("tausta21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
