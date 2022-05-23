@@ -130,11 +130,20 @@
   <data name="pic9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="blob1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blob1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pic1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="with_moon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\with_moon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blob11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blob11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,7 +166,7 @@
   <data name="pic7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="with_moon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\with_moon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blob2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blob2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

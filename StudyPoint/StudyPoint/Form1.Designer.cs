@@ -82,23 +82,8 @@
             this.ServicesTxtLB = new System.Windows.Forms.Label();
             this.sercicesLB = new System.Windows.Forms.Label();
             this.OurGalleryPL = new System.Windows.Forms.Panel();
-            this.galleryPB12 = new System.Windows.Forms.PictureBox();
-            this.galleryPB8 = new System.Windows.Forms.PictureBox();
-            this.galleryPB4 = new System.Windows.Forms.PictureBox();
-            this.galleryPB11 = new System.Windows.Forms.PictureBox();
-            this.galleryPB7 = new System.Windows.Forms.PictureBox();
-            this.galleryPB3 = new System.Windows.Forms.PictureBox();
-            this.galleryPB10 = new System.Windows.Forms.PictureBox();
-            this.galleryPB6 = new System.Windows.Forms.PictureBox();
-            this.galleryPB2 = new System.Windows.Forms.PictureBox();
-            this.galleryPB9 = new System.Windows.Forms.PictureBox();
-            this.galleryPB5 = new System.Windows.Forms.PictureBox();
-            this.galleryPB1 = new System.Windows.Forms.PictureBox();
             this.galleryLB = new System.Windows.Forms.Label();
             this.OurDepartmentPL = new System.Windows.Forms.Panel();
-            this.DepartmentSaloPB = new System.Windows.Forms.PictureBox();
-            this.DepartmentJuholaPB = new System.Windows.Forms.PictureBox();
-            this.DepartmentAlanderPB = new System.Windows.Forms.PictureBox();
             this.DepartmentSaloLB = new System.Windows.Forms.Label();
             this.DepartmentJuholaLB = new System.Windows.Forms.Label();
             this.DepartmentAlanderLB = new System.Windows.Forms.Label();
@@ -181,7 +166,6 @@
             this.downloadMGsendSqlBT = new System.Windows.Forms.Button();
             this.downloadMGclearBT = new System.Windows.Forms.Button();
             this.downloadMGbrowseBT = new System.Windows.Forms.Button();
-            this.downloadMGPB = new System.Windows.Forms.PictureBox();
             this.DownloadManLB = new System.Windows.Forms.Label();
             this.UserManPL = new System.Windows.Forms.Panel();
             this.UserDTG = new System.Windows.Forms.DataGridView();
@@ -258,6 +242,22 @@
             this.ProfileLNameLB = new System.Windows.Forms.Label();
             this.ProfileFNameLB = new System.Windows.Forms.Label();
             this.ProfileLB = new System.Windows.Forms.Label();
+            this.DepartmentSaloPB = new System.Windows.Forms.PictureBox();
+            this.DepartmentJuholaPB = new System.Windows.Forms.PictureBox();
+            this.DepartmentAlanderPB = new System.Windows.Forms.PictureBox();
+            this.downloadMGPB = new System.Windows.Forms.PictureBox();
+            this.galleryPB12 = new System.Windows.Forms.PictureBox();
+            this.galleryPB8 = new System.Windows.Forms.PictureBox();
+            this.galleryPB4 = new System.Windows.Forms.PictureBox();
+            this.galleryPB11 = new System.Windows.Forms.PictureBox();
+            this.galleryPB7 = new System.Windows.Forms.PictureBox();
+            this.galleryPB3 = new System.Windows.Forms.PictureBox();
+            this.galleryPB10 = new System.Windows.Forms.PictureBox();
+            this.galleryPB6 = new System.Windows.Forms.PictureBox();
+            this.galleryPB2 = new System.Windows.Forms.PictureBox();
+            this.galleryPB9 = new System.Windows.Forms.PictureBox();
+            this.galleryPB5 = new System.Windows.Forms.PictureBox();
+            this.galleryPB1 = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.YlaPL.SuspendLayout();
             this.VasenPL.SuspendLayout();
@@ -269,22 +269,7 @@
             this.AboutUsPL.SuspendLayout();
             this.OurServicesPL.SuspendLayout();
             this.OurGalleryPL.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB1)).BeginInit();
             this.OurDepartmentPL.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DepartmentSaloPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepartmentJuholaPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepartmentAlanderPB)).BeginInit();
             this.FeedbackPL.SuspendLayout();
             this.DiscussionBoardPL.SuspendLayout();
             this.DiscussionPL.SuspendLayout();
@@ -300,7 +285,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.FBManDG)).BeginInit();
             this.DownloadManPL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.downloadMGDGW)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.downloadMGPB)).BeginInit();
             this.UserManPL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserDTG)).BeginInit();
             this.WhatsNewManPL.SuspendLayout();
@@ -312,6 +296,22 @@
             this.ChangePWPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChangePWDTG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfileDTG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentSaloPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentJuholaPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentAlanderPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.downloadMGPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1000,154 +1000,6 @@
             this.OurGalleryPL.Visible = false;
             this.OurGalleryPL.Paint += new System.Windows.Forms.PaintEventHandler(this.OurGalleryPL_Paint);
             // 
-            // galleryPB12
-            // 
-            this.galleryPB12.BackColor = System.Drawing.Color.Gainsboro;
-            this.galleryPB12.Image = global::StudyPoint.Properties.Resources.pic12;
-            this.galleryPB12.Location = new System.Drawing.Point(426, 325);
-            this.galleryPB12.Name = "galleryPB12";
-            this.galleryPB12.Size = new System.Drawing.Size(106, 118);
-            this.galleryPB12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.galleryPB12.TabIndex = 1;
-            this.galleryPB12.TabStop = false;
-            this.galleryPB12.WaitOnLoad = true;
-            this.galleryPB12.Click += new System.EventHandler(this.galleryPB12_Click);
-            // 
-            // galleryPB8
-            // 
-            this.galleryPB8.BackColor = System.Drawing.Color.Gainsboro;
-            this.galleryPB8.Image = global::StudyPoint.Properties.Resources.pic8;
-            this.galleryPB8.Location = new System.Drawing.Point(426, 193);
-            this.galleryPB8.Name = "galleryPB8";
-            this.galleryPB8.Size = new System.Drawing.Size(106, 118);
-            this.galleryPB8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.galleryPB8.TabIndex = 1;
-            this.galleryPB8.TabStop = false;
-            this.galleryPB8.Click += new System.EventHandler(this.galleryPB8_Click);
-            // 
-            // galleryPB4
-            // 
-            this.galleryPB4.BackColor = System.Drawing.Color.Gainsboro;
-            this.galleryPB4.Image = global::StudyPoint.Properties.Resources.pic4;
-            this.galleryPB4.Location = new System.Drawing.Point(426, 56);
-            this.galleryPB4.Name = "galleryPB4";
-            this.galleryPB4.Size = new System.Drawing.Size(106, 118);
-            this.galleryPB4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.galleryPB4.TabIndex = 1;
-            this.galleryPB4.TabStop = false;
-            this.galleryPB4.Click += new System.EventHandler(this.galleryPB4_Click);
-            // 
-            // galleryPB11
-            // 
-            this.galleryPB11.BackColor = System.Drawing.Color.Gainsboro;
-            this.galleryPB11.Image = global::StudyPoint.Properties.Resources.pic11;
-            this.galleryPB11.Location = new System.Drawing.Point(294, 325);
-            this.galleryPB11.Name = "galleryPB11";
-            this.galleryPB11.Size = new System.Drawing.Size(106, 118);
-            this.galleryPB11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.galleryPB11.TabIndex = 1;
-            this.galleryPB11.TabStop = false;
-            this.galleryPB11.Click += new System.EventHandler(this.galleryPB11_Click);
-            // 
-            // galleryPB7
-            // 
-            this.galleryPB7.BackColor = System.Drawing.Color.Gainsboro;
-            this.galleryPB7.Image = global::StudyPoint.Properties.Resources.pic7;
-            this.galleryPB7.Location = new System.Drawing.Point(294, 193);
-            this.galleryPB7.Name = "galleryPB7";
-            this.galleryPB7.Size = new System.Drawing.Size(106, 118);
-            this.galleryPB7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.galleryPB7.TabIndex = 1;
-            this.galleryPB7.TabStop = false;
-            this.galleryPB7.Click += new System.EventHandler(this.galleryPB7_Click);
-            // 
-            // galleryPB3
-            // 
-            this.galleryPB3.BackColor = System.Drawing.Color.Gainsboro;
-            this.galleryPB3.Image = global::StudyPoint.Properties.Resources.pic3;
-            this.galleryPB3.Location = new System.Drawing.Point(294, 56);
-            this.galleryPB3.Name = "galleryPB3";
-            this.galleryPB3.Size = new System.Drawing.Size(106, 118);
-            this.galleryPB3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.galleryPB3.TabIndex = 1;
-            this.galleryPB3.TabStop = false;
-            this.galleryPB3.WaitOnLoad = true;
-            this.galleryPB3.Click += new System.EventHandler(this.galleryPB3_Click);
-            // 
-            // galleryPB10
-            // 
-            this.galleryPB10.BackColor = System.Drawing.Color.Gainsboro;
-            this.galleryPB10.Image = global::StudyPoint.Properties.Resources.pic10;
-            this.galleryPB10.Location = new System.Drawing.Point(161, 325);
-            this.galleryPB10.Name = "galleryPB10";
-            this.galleryPB10.Size = new System.Drawing.Size(106, 118);
-            this.galleryPB10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.galleryPB10.TabIndex = 1;
-            this.galleryPB10.TabStop = false;
-            this.galleryPB10.Click += new System.EventHandler(this.galleryPB10_Click);
-            // 
-            // galleryPB6
-            // 
-            this.galleryPB6.BackColor = System.Drawing.Color.Gainsboro;
-            this.galleryPB6.Image = global::StudyPoint.Properties.Resources.pic6;
-            this.galleryPB6.Location = new System.Drawing.Point(161, 193);
-            this.galleryPB6.Name = "galleryPB6";
-            this.galleryPB6.Size = new System.Drawing.Size(106, 118);
-            this.galleryPB6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.galleryPB6.TabIndex = 1;
-            this.galleryPB6.TabStop = false;
-            this.galleryPB6.Click += new System.EventHandler(this.galleryPB6_Click);
-            // 
-            // galleryPB2
-            // 
-            this.galleryPB2.BackColor = System.Drawing.Color.Gainsboro;
-            this.galleryPB2.Image = global::StudyPoint.Properties.Resources.pic2;
-            this.galleryPB2.Location = new System.Drawing.Point(161, 56);
-            this.galleryPB2.Name = "galleryPB2";
-            this.galleryPB2.Size = new System.Drawing.Size(106, 118);
-            this.galleryPB2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.galleryPB2.TabIndex = 1;
-            this.galleryPB2.TabStop = false;
-            this.galleryPB2.WaitOnLoad = true;
-            this.galleryPB2.Click += new System.EventHandler(this.galleryPB2_Click);
-            // 
-            // galleryPB9
-            // 
-            this.galleryPB9.BackColor = System.Drawing.Color.Gainsboro;
-            this.galleryPB9.Image = global::StudyPoint.Properties.Resources.pic9;
-            this.galleryPB9.Location = new System.Drawing.Point(33, 325);
-            this.galleryPB9.Name = "galleryPB9";
-            this.galleryPB9.Size = new System.Drawing.Size(106, 118);
-            this.galleryPB9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.galleryPB9.TabIndex = 1;
-            this.galleryPB9.TabStop = false;
-            this.galleryPB9.Click += new System.EventHandler(this.galleryPB9_Click);
-            // 
-            // galleryPB5
-            // 
-            this.galleryPB5.BackColor = System.Drawing.Color.Gainsboro;
-            this.galleryPB5.Image = global::StudyPoint.Properties.Resources.pic5;
-            this.galleryPB5.Location = new System.Drawing.Point(33, 193);
-            this.galleryPB5.Name = "galleryPB5";
-            this.galleryPB5.Size = new System.Drawing.Size(106, 118);
-            this.galleryPB5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.galleryPB5.TabIndex = 1;
-            this.galleryPB5.TabStop = false;
-            this.galleryPB5.Click += new System.EventHandler(this.galleryPB5_Click);
-            // 
-            // galleryPB1
-            // 
-            this.galleryPB1.BackColor = System.Drawing.Color.Gainsboro;
-            this.galleryPB1.Image = global::StudyPoint.Properties.Resources.pic1;
-            this.galleryPB1.Location = new System.Drawing.Point(33, 56);
-            this.galleryPB1.Name = "galleryPB1";
-            this.galleryPB1.Size = new System.Drawing.Size(106, 118);
-            this.galleryPB1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.galleryPB1.TabIndex = 1;
-            this.galleryPB1.TabStop = false;
-            this.galleryPB1.WaitOnLoad = true;
-            this.galleryPB1.Click += new System.EventHandler(this.galleryPB1_Click);
-            // 
             // galleryLB
             // 
             this.galleryLB.AutoSize = true;
@@ -1174,31 +1026,6 @@
             this.OurDepartmentPL.Size = new System.Drawing.Size(641, 498);
             this.OurDepartmentPL.TabIndex = 18;
             this.OurDepartmentPL.Visible = false;
-            // 
-            // DepartmentSaloPB
-            // 
-            this.DepartmentSaloPB.Image = global::StudyPoint.Properties.Resources.with_moon;
-            this.DepartmentSaloPB.Location = new System.Drawing.Point(423, 137);
-            this.DepartmentSaloPB.Name = "DepartmentSaloPB";
-            this.DepartmentSaloPB.Size = new System.Drawing.Size(175, 204);
-            this.DepartmentSaloPB.TabIndex = 7;
-            this.DepartmentSaloPB.TabStop = false;
-            // 
-            // DepartmentJuholaPB
-            // 
-            this.DepartmentJuholaPB.Location = new System.Drawing.Point(228, 137);
-            this.DepartmentJuholaPB.Name = "DepartmentJuholaPB";
-            this.DepartmentJuholaPB.Size = new System.Drawing.Size(165, 204);
-            this.DepartmentJuholaPB.TabIndex = 6;
-            this.DepartmentJuholaPB.TabStop = false;
-            // 
-            // DepartmentAlanderPB
-            // 
-            this.DepartmentAlanderPB.Location = new System.Drawing.Point(33, 137);
-            this.DepartmentAlanderPB.Name = "DepartmentAlanderPB";
-            this.DepartmentAlanderPB.Size = new System.Drawing.Size(167, 204);
-            this.DepartmentAlanderPB.TabIndex = 5;
-            this.DepartmentAlanderPB.TabStop = false;
             // 
             // DepartmentSaloLB
             // 
@@ -2079,17 +1906,6 @@
             this.downloadMGbrowseBT.UseVisualStyleBackColor = true;
             this.downloadMGbrowseBT.Click += new System.EventHandler(this.downloadMGbrowseBT_Click);
             // 
-            // downloadMGPB
-            // 
-            this.downloadMGPB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.downloadMGPB.Location = new System.Drawing.Point(10, 45);
-            this.downloadMGPB.MaximumSize = new System.Drawing.Size(135, 165);
-            this.downloadMGPB.Name = "downloadMGPB";
-            this.downloadMGPB.Size = new System.Drawing.Size(135, 165);
-            this.downloadMGPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.downloadMGPB.TabIndex = 1;
-            this.downloadMGPB.TabStop = false;
-            // 
             // DownloadManLB
             // 
             this.DownloadManLB.AutoSize = true;
@@ -2890,11 +2706,198 @@
             this.ProfileLB.TabIndex = 0;
             this.ProfileLB.Text = "Profile";
             // 
+            // DepartmentSaloPB
+            // 
+            this.DepartmentSaloPB.Image = global::StudyPoint.Properties.Resources.with_moon;
+            this.DepartmentSaloPB.Location = new System.Drawing.Point(423, 137);
+            this.DepartmentSaloPB.Name = "DepartmentSaloPB";
+            this.DepartmentSaloPB.Size = new System.Drawing.Size(175, 204);
+            this.DepartmentSaloPB.TabIndex = 7;
+            this.DepartmentSaloPB.TabStop = false;
+            // 
+            // DepartmentJuholaPB
+            // 
+            this.DepartmentJuholaPB.Image = global::StudyPoint.Properties.Resources.blob2;
+            this.DepartmentJuholaPB.Location = new System.Drawing.Point(228, 137);
+            this.DepartmentJuholaPB.Name = "DepartmentJuholaPB";
+            this.DepartmentJuholaPB.Size = new System.Drawing.Size(175, 204);
+            this.DepartmentJuholaPB.TabIndex = 6;
+            this.DepartmentJuholaPB.TabStop = false;
+            // 
+            // DepartmentAlanderPB
+            // 
+            this.DepartmentAlanderPB.Image = global::StudyPoint.Properties.Resources.blob11;
+            this.DepartmentAlanderPB.Location = new System.Drawing.Point(33, 137);
+            this.DepartmentAlanderPB.Name = "DepartmentAlanderPB";
+            this.DepartmentAlanderPB.Size = new System.Drawing.Size(175, 204);
+            this.DepartmentAlanderPB.TabIndex = 5;
+            this.DepartmentAlanderPB.TabStop = false;
+            // 
+            // downloadMGPB
+            // 
+            this.downloadMGPB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.downloadMGPB.Location = new System.Drawing.Point(10, 45);
+            this.downloadMGPB.MaximumSize = new System.Drawing.Size(135, 165);
+            this.downloadMGPB.Name = "downloadMGPB";
+            this.downloadMGPB.Size = new System.Drawing.Size(135, 165);
+            this.downloadMGPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.downloadMGPB.TabIndex = 1;
+            this.downloadMGPB.TabStop = false;
+            // 
+            // galleryPB12
+            // 
+            this.galleryPB12.BackColor = System.Drawing.Color.Gainsboro;
+            this.galleryPB12.Image = global::StudyPoint.Properties.Resources.pic12;
+            this.galleryPB12.Location = new System.Drawing.Point(426, 325);
+            this.galleryPB12.Name = "galleryPB12";
+            this.galleryPB12.Size = new System.Drawing.Size(106, 118);
+            this.galleryPB12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.galleryPB12.TabIndex = 1;
+            this.galleryPB12.TabStop = false;
+            this.galleryPB12.WaitOnLoad = true;
+            this.galleryPB12.Click += new System.EventHandler(this.galleryPB12_Click);
+            // 
+            // galleryPB8
+            // 
+            this.galleryPB8.BackColor = System.Drawing.Color.Gainsboro;
+            this.galleryPB8.Image = global::StudyPoint.Properties.Resources.pic8;
+            this.galleryPB8.Location = new System.Drawing.Point(426, 193);
+            this.galleryPB8.Name = "galleryPB8";
+            this.galleryPB8.Size = new System.Drawing.Size(106, 118);
+            this.galleryPB8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.galleryPB8.TabIndex = 1;
+            this.galleryPB8.TabStop = false;
+            this.galleryPB8.Click += new System.EventHandler(this.galleryPB8_Click);
+            // 
+            // galleryPB4
+            // 
+            this.galleryPB4.BackColor = System.Drawing.Color.Gainsboro;
+            this.galleryPB4.Image = global::StudyPoint.Properties.Resources.pic4;
+            this.galleryPB4.Location = new System.Drawing.Point(426, 56);
+            this.galleryPB4.Name = "galleryPB4";
+            this.galleryPB4.Size = new System.Drawing.Size(106, 118);
+            this.galleryPB4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.galleryPB4.TabIndex = 1;
+            this.galleryPB4.TabStop = false;
+            this.galleryPB4.Click += new System.EventHandler(this.galleryPB4_Click);
+            // 
+            // galleryPB11
+            // 
+            this.galleryPB11.BackColor = System.Drawing.Color.Gainsboro;
+            this.galleryPB11.Image = global::StudyPoint.Properties.Resources.pic11;
+            this.galleryPB11.Location = new System.Drawing.Point(294, 325);
+            this.galleryPB11.Name = "galleryPB11";
+            this.galleryPB11.Size = new System.Drawing.Size(106, 118);
+            this.galleryPB11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.galleryPB11.TabIndex = 1;
+            this.galleryPB11.TabStop = false;
+            this.galleryPB11.Click += new System.EventHandler(this.galleryPB11_Click);
+            // 
+            // galleryPB7
+            // 
+            this.galleryPB7.BackColor = System.Drawing.Color.Gainsboro;
+            this.galleryPB7.Image = global::StudyPoint.Properties.Resources.pic7;
+            this.galleryPB7.Location = new System.Drawing.Point(294, 193);
+            this.galleryPB7.Name = "galleryPB7";
+            this.galleryPB7.Size = new System.Drawing.Size(106, 118);
+            this.galleryPB7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.galleryPB7.TabIndex = 1;
+            this.galleryPB7.TabStop = false;
+            this.galleryPB7.Click += new System.EventHandler(this.galleryPB7_Click);
+            // 
+            // galleryPB3
+            // 
+            this.galleryPB3.BackColor = System.Drawing.Color.Gainsboro;
+            this.galleryPB3.Image = global::StudyPoint.Properties.Resources.pic3;
+            this.galleryPB3.Location = new System.Drawing.Point(294, 56);
+            this.galleryPB3.Name = "galleryPB3";
+            this.galleryPB3.Size = new System.Drawing.Size(106, 118);
+            this.galleryPB3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.galleryPB3.TabIndex = 1;
+            this.galleryPB3.TabStop = false;
+            this.galleryPB3.WaitOnLoad = true;
+            this.galleryPB3.Click += new System.EventHandler(this.galleryPB3_Click);
+            // 
+            // galleryPB10
+            // 
+            this.galleryPB10.BackColor = System.Drawing.Color.Gainsboro;
+            this.galleryPB10.Image = global::StudyPoint.Properties.Resources.pic10;
+            this.galleryPB10.Location = new System.Drawing.Point(161, 325);
+            this.galleryPB10.Name = "galleryPB10";
+            this.galleryPB10.Size = new System.Drawing.Size(106, 118);
+            this.galleryPB10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.galleryPB10.TabIndex = 1;
+            this.galleryPB10.TabStop = false;
+            this.galleryPB10.Click += new System.EventHandler(this.galleryPB10_Click);
+            // 
+            // galleryPB6
+            // 
+            this.galleryPB6.BackColor = System.Drawing.Color.Gainsboro;
+            this.galleryPB6.Image = global::StudyPoint.Properties.Resources.pic6;
+            this.galleryPB6.Location = new System.Drawing.Point(161, 193);
+            this.galleryPB6.Name = "galleryPB6";
+            this.galleryPB6.Size = new System.Drawing.Size(106, 118);
+            this.galleryPB6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.galleryPB6.TabIndex = 1;
+            this.galleryPB6.TabStop = false;
+            this.galleryPB6.Click += new System.EventHandler(this.galleryPB6_Click);
+            // 
+            // galleryPB2
+            // 
+            this.galleryPB2.BackColor = System.Drawing.Color.Gainsboro;
+            this.galleryPB2.Image = global::StudyPoint.Properties.Resources.pic2;
+            this.galleryPB2.Location = new System.Drawing.Point(161, 56);
+            this.galleryPB2.Name = "galleryPB2";
+            this.galleryPB2.Size = new System.Drawing.Size(106, 118);
+            this.galleryPB2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.galleryPB2.TabIndex = 1;
+            this.galleryPB2.TabStop = false;
+            this.galleryPB2.WaitOnLoad = true;
+            this.galleryPB2.Click += new System.EventHandler(this.galleryPB2_Click);
+            // 
+            // galleryPB9
+            // 
+            this.galleryPB9.BackColor = System.Drawing.Color.Gainsboro;
+            this.galleryPB9.Image = global::StudyPoint.Properties.Resources.pic9;
+            this.galleryPB9.Location = new System.Drawing.Point(33, 325);
+            this.galleryPB9.Name = "galleryPB9";
+            this.galleryPB9.Size = new System.Drawing.Size(106, 118);
+            this.galleryPB9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.galleryPB9.TabIndex = 1;
+            this.galleryPB9.TabStop = false;
+            this.galleryPB9.Click += new System.EventHandler(this.galleryPB9_Click);
+            // 
+            // galleryPB5
+            // 
+            this.galleryPB5.BackColor = System.Drawing.Color.Gainsboro;
+            this.galleryPB5.Image = global::StudyPoint.Properties.Resources.pic5;
+            this.galleryPB5.Location = new System.Drawing.Point(33, 193);
+            this.galleryPB5.Name = "galleryPB5";
+            this.galleryPB5.Size = new System.Drawing.Size(106, 118);
+            this.galleryPB5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.galleryPB5.TabIndex = 1;
+            this.galleryPB5.TabStop = false;
+            this.galleryPB5.Click += new System.EventHandler(this.galleryPB5_Click);
+            // 
+            // galleryPB1
+            // 
+            this.galleryPB1.BackColor = System.Drawing.Color.Gainsboro;
+            this.galleryPB1.Image = global::StudyPoint.Properties.Resources.pic1;
+            this.galleryPB1.Location = new System.Drawing.Point(33, 56);
+            this.galleryPB1.Name = "galleryPB1";
+            this.galleryPB1.Size = new System.Drawing.Size(106, 118);
+            this.galleryPB1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.galleryPB1.TabIndex = 1;
+            this.galleryPB1.TabStop = false;
+            this.galleryPB1.WaitOnLoad = true;
+            this.galleryPB1.Click += new System.EventHandler(this.galleryPB1_Click);
+            // 
             // StudyPointForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 545);
+            this.Controls.Add(this.OurDepartmentPL);
             this.Controls.Add(this.ProfilePL);
             this.Controls.Add(this.AboutPL);
             this.Controls.Add(this.ManagementPL);
@@ -2904,7 +2907,6 @@
             this.Controls.Add(this.UserManPL);
             this.Controls.Add(this.HomePL);
             this.Controls.Add(this.OurServicesPL);
-            this.Controls.Add(this.OurDepartmentPL);
             this.Controls.Add(this.ContactUsPL);
             this.Controls.Add(this.AboutUsPL);
             this.Controls.Add(this.OurGalleryPL);
@@ -2934,23 +2936,8 @@
             this.OurServicesPL.PerformLayout();
             this.OurGalleryPL.ResumeLayout(false);
             this.OurGalleryPL.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.galleryPB1)).EndInit();
             this.OurDepartmentPL.ResumeLayout(false);
             this.OurDepartmentPL.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DepartmentSaloPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepartmentJuholaPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepartmentAlanderPB)).EndInit();
             this.FeedbackPL.ResumeLayout(false);
             this.FeedbackPL.PerformLayout();
             this.DiscussionBoardPL.ResumeLayout(false);
@@ -2979,7 +2966,6 @@
             this.DownloadManPL.ResumeLayout(false);
             this.DownloadManPL.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.downloadMGDGW)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.downloadMGPB)).EndInit();
             this.UserManPL.ResumeLayout(false);
             this.UserManPL.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserDTG)).EndInit();
@@ -2998,6 +2984,22 @@
             this.ChangePWPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChangePWDTG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfileDTG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentSaloPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentJuholaPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentAlanderPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.downloadMGPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryPB1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
