@@ -185,7 +185,7 @@
             // 
             // RickPB
             // 
-            this.RickPB.Image = global::EscapeRoom.Properties.Resources.rick;
+            this.RickPB.Image = global::EscapeRoom.Properties.Resources.ricky;
             this.RickPB.Location = new System.Drawing.Point(83, 3);
             this.RickPB.Name = "RickPB";
             this.RickPB.Size = new System.Drawing.Size(546, 426);
@@ -795,9 +795,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.InventaarioPB);
-            this.Controls.Add(this.HuoneKolmasPL);
             this.Controls.Add(this.HuoneEkaPL);
             this.Controls.Add(this.HuoneTokaPL);
+            this.Controls.Add(this.HuoneKolmasPL);
             this.Name = "Pelialue";
             this.Text = "Escape Room";
             ((System.ComponentModel.ISupportInitialize)(this.InventaarioPB)).EndInit();

@@ -169,6 +169,8 @@
     <None Include="Resources\lamppu.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ricky.gif" />
+    <None Include="Resources\rick1.gif" />
     <None Include="Resources\rick.gif" />
     <None Include="Resources\paperi.png" />
     <None Include="Resources\muistiopieni.png" />
