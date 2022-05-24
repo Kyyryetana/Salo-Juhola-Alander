@@ -164,6 +164,61 @@ namespace EscapeRoom
             SuljeMuistioBT.Visible = false;
         }
 
+        //avainlaatikon toiminta
+        private void LaatikkoKiinniPB_Click(object sender, EventArgs e)
+        {
+            laatikkoPL.Visible = true;
+            vihjeLB.BackColor = System.Drawing.Color.Transparent;
+        }
+
+        private void suljeLaatikkoBT_Click(object sender, EventArgs e)
+        {
+            laatikkoPL.Visible = false;
+        }
+
+        private void onkoOikeaKoodiBT_Click(object sender, EventArgs e)
+        {
+            
+            if (ekaNumeroNUD.Value == 0 && tokaNumeroNUD.Value == 9 && kolmasNumeroNUD.Value == 2)
+            {
+                MessageBox.Show("MENE TÖIHIN!");
+                MessageBox.Show("eiku...");
+                MessageBox.Show("Hienoa! Sait laatikosta avaimen.");
+
+                laatikkoPL.Visible = false;
+                AvainPB.Visible = true;
+                LaatikkoKiinniPB.Visible = false;
+                LaatikkoAukiPB.Visible = true;
+            }
+
+            else
+            {
+                MessageBox.Show("Kokeile lukuja eri järjestyksessä.");
+            }
+        }
+
+        private void vihjeLB_Click(object sender, EventArgs e)
+        {
+            string apua = "Mestarit eivät tarvitse vihjeitä, toisaalta eiväthän kaikki voi olla sekä fiksuja että filmaattisia samaan aikaan.\n" +
+                "\nTahdotko varmasti helpotusta peliin?";
+            switch (MessageBox.Show(apua, "Apua", MessageBoxButtons.YesNo))
+            {
+                case DialogResult.Yes:
+                    MessageBox.Show("Saatan olla hieman pettynyt sinuun. \nKäytä kaunista maisemataulua apunasi.");
+                    break;
+                case DialogResult.No:
+                    MessageBox.Show("Hienoa! Luotan sinuun!");
+                    break;
+            }
+
+        }
+
+        private void LaatikkoAukiPB_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sait jo avaimen täältä, ei täällä ketää enää oo. Tää on ihan noupadi.");
+        }
+
+        //avainlaatikon toiminta loppu
 
 
         //interaktiiviset asiat end
@@ -216,6 +271,9 @@ namespace EscapeRoom
             }
 
         }
+
+        
+
         private void AddInvetory(Image thing, string thingName)
         {
             //MessageBox.Show(thing.ToString());

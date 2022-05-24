@@ -30,6 +30,13 @@
         {
             this.InventaarioPB = new System.Windows.Forms.PictureBox();
             this.HuoneEkaPL = new System.Windows.Forms.Panel();
+            this.laatikkoPL = new System.Windows.Forms.Panel();
+            this.vihjeLB = new System.Windows.Forms.Label();
+            this.suljeLaatikkoBT = new System.Windows.Forms.Button();
+            this.onkoOikeaKoodiBT = new System.Windows.Forms.Button();
+            this.kolmasNumeroNUD = new System.Windows.Forms.NumericUpDown();
+            this.tokaNumeroNUD = new System.Windows.Forms.NumericUpDown();
+            this.ekaNumeroNUD = new System.Windows.Forms.NumericUpDown();
             this.LappuIsoPB = new System.Windows.Forms.PictureBox();
             this.LappuPB = new System.Windows.Forms.PictureBox();
             this.TakkiPB = new System.Windows.Forms.PictureBox();
@@ -79,6 +86,10 @@
             this.NuoliOikeallePB = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.InventaarioPB)).BeginInit();
             this.HuoneEkaPL.SuspendLayout();
+            this.laatikkoPL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kolmasNumeroNUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tokaNumeroNUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ekaNumeroNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LappuIsoPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LappuPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TakkiPB)).BeginInit();
@@ -140,6 +151,7 @@
             // HuoneEkaPL
             // 
             this.HuoneEkaPL.BackgroundImage = global::EscapeRoom.Properties.Resources.tausta4;
+            this.HuoneEkaPL.Controls.Add(this.laatikkoPL);
             this.HuoneEkaPL.Controls.Add(this.LappuIsoPB);
             this.HuoneEkaPL.Controls.Add(this.LappuPB);
             this.HuoneEkaPL.Controls.Add(this.TakkiPB);
@@ -171,6 +183,76 @@
             this.HuoneEkaPL.Name = "HuoneEkaPL";
             this.HuoneEkaPL.Size = new System.Drawing.Size(884, 561);
             this.HuoneEkaPL.TabIndex = 24;
+            // 
+            // laatikkoPL
+            // 
+            this.laatikkoPL.BackgroundImage = global::EscapeRoom.Properties.Resources.laatikko_kiinni;
+            this.laatikkoPL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.laatikkoPL.Controls.Add(this.vihjeLB);
+            this.laatikkoPL.Controls.Add(this.suljeLaatikkoBT);
+            this.laatikkoPL.Controls.Add(this.onkoOikeaKoodiBT);
+            this.laatikkoPL.Controls.Add(this.kolmasNumeroNUD);
+            this.laatikkoPL.Controls.Add(this.tokaNumeroNUD);
+            this.laatikkoPL.Controls.Add(this.ekaNumeroNUD);
+            this.laatikkoPL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laatikkoPL.Location = new System.Drawing.Point(243, 129);
+            this.laatikkoPL.Name = "laatikkoPL";
+            this.laatikkoPL.Size = new System.Drawing.Size(427, 240);
+            this.laatikkoPL.TabIndex = 31;
+            this.laatikkoPL.Visible = false;
+            // 
+            // vihjeLB
+            // 
+            this.vihjeLB.AutoSize = true;
+            this.vihjeLB.BackColor = System.Drawing.SystemColors.Control;
+            this.vihjeLB.ForeColor = System.Drawing.Color.Yellow;
+            this.vihjeLB.Location = new System.Drawing.Point(394, 204);
+            this.vihjeLB.Name = "vihjeLB";
+            this.vihjeLB.Size = new System.Drawing.Size(20, 24);
+            this.vihjeLB.TabIndex = 5;
+            this.vihjeLB.Text = "?";
+            this.vihjeLB.Click += new System.EventHandler(this.vihjeLB_Click);
+            // 
+            // suljeLaatikkoBT
+            // 
+            this.suljeLaatikkoBT.Location = new System.Drawing.Point(383, 11);
+            this.suljeLaatikkoBT.Name = "suljeLaatikkoBT";
+            this.suljeLaatikkoBT.Size = new System.Drawing.Size(31, 31);
+            this.suljeLaatikkoBT.TabIndex = 4;
+            this.suljeLaatikkoBT.Text = "X";
+            this.suljeLaatikkoBT.UseVisualStyleBackColor = true;
+            this.suljeLaatikkoBT.Click += new System.EventHandler(this.suljeLaatikkoBT_Click);
+            // 
+            // onkoOikeaKoodiBT
+            // 
+            this.onkoOikeaKoodiBT.Location = new System.Drawing.Point(130, 94);
+            this.onkoOikeaKoodiBT.Name = "onkoOikeaKoodiBT";
+            this.onkoOikeaKoodiBT.Size = new System.Drawing.Size(160, 33);
+            this.onkoOikeaKoodiBT.TabIndex = 3;
+            this.onkoOikeaKoodiBT.Text = "Kokeile avata";
+            this.onkoOikeaKoodiBT.UseVisualStyleBackColor = true;
+            this.onkoOikeaKoodiBT.Click += new System.EventHandler(this.onkoOikeaKoodiBT_Click);
+            // 
+            // kolmasNumeroNUD
+            // 
+            this.kolmasNumeroNUD.Location = new System.Drawing.Point(236, 49);
+            this.kolmasNumeroNUD.Name = "kolmasNumeroNUD";
+            this.kolmasNumeroNUD.Size = new System.Drawing.Size(38, 29);
+            this.kolmasNumeroNUD.TabIndex = 2;
+            // 
+            // tokaNumeroNUD
+            // 
+            this.tokaNumeroNUD.Location = new System.Drawing.Point(192, 49);
+            this.tokaNumeroNUD.Name = "tokaNumeroNUD";
+            this.tokaNumeroNUD.Size = new System.Drawing.Size(38, 29);
+            this.tokaNumeroNUD.TabIndex = 1;
+            // 
+            // ekaNumeroNUD
+            // 
+            this.ekaNumeroNUD.Location = new System.Drawing.Point(148, 49);
+            this.ekaNumeroNUD.Name = "ekaNumeroNUD";
+            this.ekaNumeroNUD.Size = new System.Drawing.Size(38, 29);
+            this.ekaNumeroNUD.TabIndex = 0;
             // 
             // LappuIsoPB
             // 
@@ -335,6 +417,7 @@
             this.LaatikkoKiinniPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LaatikkoKiinniPB.TabIndex = 4;
             this.LaatikkoKiinniPB.TabStop = false;
+            this.LaatikkoKiinniPB.Click += new System.EventHandler(this.LaatikkoKiinniPB_Click);
             // 
             // AvainPB
             // 
@@ -356,6 +439,7 @@
             this.LaatikkoAukiPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LaatikkoAukiPB.TabIndex = 3;
             this.LaatikkoAukiPB.TabStop = false;
+            this.LaatikkoAukiPB.Click += new System.EventHandler(this.LaatikkoAukiPB_Click);
             // 
             // TauluPB
             // 
@@ -703,6 +787,11 @@
             this.Text = "Escape Room";
             ((System.ComponentModel.ISupportInitialize)(this.InventaarioPB)).EndInit();
             this.HuoneEkaPL.ResumeLayout(false);
+            this.laatikkoPL.ResumeLayout(false);
+            this.laatikkoPL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kolmasNumeroNUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tokaNumeroNUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ekaNumeroNUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LappuIsoPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LappuPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TakkiPB)).EndInit();
@@ -803,6 +892,13 @@
         private System.Windows.Forms.Button SuljeMuistioBT;
         private System.Windows.Forms.PictureBox LappuPB;
         private System.Windows.Forms.PictureBox LappuIsoPB;
+        private System.Windows.Forms.Panel laatikkoPL;
+        private System.Windows.Forms.Button onkoOikeaKoodiBT;
+        private System.Windows.Forms.NumericUpDown kolmasNumeroNUD;
+        private System.Windows.Forms.NumericUpDown tokaNumeroNUD;
+        private System.Windows.Forms.NumericUpDown ekaNumeroNUD;
+        private System.Windows.Forms.Button suljeLaatikkoBT;
+        private System.Windows.Forms.Label vihjeLB;
     }
 }
 

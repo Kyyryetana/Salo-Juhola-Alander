@@ -24,7 +24,8 @@ namespace EscapeRoom
             dico["MaitoPoydallaPB"] = new Func<string, string>(Func8);
             dico["LappuPB"] = new Func<string, string>(Func9);
             dico["LappuIsoPB"] = new Func<string, string>(Func10);
-            
+            dico["LaatikkoAukiPB"] = new Func<string, string>(Func11);
+
 
             // Tällä herätetään nimen mukaan haluttu metodi ja annetaan myöskin sama nimi argumentiksi
             var res = dico[juttu].DynamicInvoke(juttu);
@@ -83,6 +84,12 @@ namespace EscapeRoom
         private string Func10(string arg)
         {
 
+            return null;
+        }
+
+        private string Func11(string arg)
+        {
+            //MessageBox.Show("Sait jo avaimen täältä, ei täällä ketää enää oo. Tää on ihan noupadi.");
             return null;
         }
 
