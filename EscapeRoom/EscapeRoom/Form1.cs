@@ -109,7 +109,6 @@ namespace EscapeRoom
         }
 
        
-
         private void LappuPB_Click(object sender, EventArgs e)
         {
             LappuIsoPB.Visible = true;
@@ -135,6 +134,7 @@ namespace EscapeRoom
             }
         }
 
+        // tietokoneen ruutu 
         private void RuutuPB_Click(object sender, EventArgs e)
         {
             RuutuPB.Visible = false;
@@ -149,6 +149,7 @@ namespace EscapeRoom
             FullscreenPL.Visible = false;
             CreditsTB.Visible = false;
             SuljeMuistioBT.Visible = false;
+            RickPB.Visible = false;
         }
 
         private void MuistioPB_Click(object sender, EventArgs e)
@@ -163,6 +164,13 @@ namespace EscapeRoom
             CreditsTB.Visible = false;
             SuljeMuistioBT.Visible = false;
         }
+
+        private void VideoPB_Click(object sender, EventArgs e)
+        {
+            RickPB.Visible = true;
+        }
+        // tietokoneen ruutu end
+
 
         //avainlaatikon toiminta
         private void LaatikkoKiinniPB_Click(object sender, EventArgs e)
@@ -272,7 +280,7 @@ namespace EscapeRoom
 
         }
 
-        
+      
 
         private void AddInvetory(Image thing, string thingName)
         {

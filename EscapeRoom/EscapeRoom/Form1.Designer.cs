@@ -29,6 +29,22 @@
         private void InitializeComponent()
         {
             this.InventaarioPB = new System.Windows.Forms.PictureBox();
+            this.HuoneKolmasPL = new System.Windows.Forms.Panel();
+            this.FullscreenPL = new System.Windows.Forms.Panel();
+            this.RickPB = new System.Windows.Forms.PictureBox();
+            this.SuljeMuistioBT = new System.Windows.Forms.Button();
+            this.CreditsTB = new System.Windows.Forms.RichTextBox();
+            this.SuljeFullscreenLB = new System.Windows.Forms.Label();
+            this.VideoPB = new System.Windows.Forms.PictureBox();
+            this.MuistioPB = new System.Windows.Forms.PictureBox();
+            this.RuutuPB = new System.Windows.Forms.PictureBox();
+            this.SprayPB = new System.Windows.Forms.PictureBox();
+            this.AmpariPB = new System.Windows.Forms.PictureBox();
+            this.PCPB = new System.Windows.Forms.PictureBox();
+            this.TuoliPB = new System.Windows.Forms.PictureBox();
+            this.SipsiPB = new System.Windows.Forms.PictureBox();
+            this.SankyPB = new System.Windows.Forms.PictureBox();
+            this.NuoliOikeallePB = new System.Windows.Forms.PictureBox();
             this.HuoneEkaPL = new System.Windows.Forms.Panel();
             this.laatikkoPL = new System.Windows.Forms.Panel();
             this.vihjeLB = new System.Windows.Forms.Label();
@@ -69,22 +85,20 @@
             this.KasviPB = new System.Windows.Forms.PictureBox();
             this.MankkaPB = new System.Windows.Forms.PictureBox();
             this.NuoliVasenPB = new System.Windows.Forms.PictureBox();
-            this.HuoneKolmasPL = new System.Windows.Forms.Panel();
-            this.FullscreenPL = new System.Windows.Forms.Panel();
-            this.SuljeMuistioBT = new System.Windows.Forms.Button();
-            this.CreditsTB = new System.Windows.Forms.RichTextBox();
-            this.SuljeFullscreenLB = new System.Windows.Forms.Label();
-            this.VideoPB = new System.Windows.Forms.PictureBox();
-            this.MuistioPB = new System.Windows.Forms.PictureBox();
-            this.RuutuPB = new System.Windows.Forms.PictureBox();
-            this.SprayPB = new System.Windows.Forms.PictureBox();
-            this.AmpariPB = new System.Windows.Forms.PictureBox();
-            this.PCPB = new System.Windows.Forms.PictureBox();
-            this.TuoliPB = new System.Windows.Forms.PictureBox();
-            this.SipsiPB = new System.Windows.Forms.PictureBox();
-            this.SankyPB = new System.Windows.Forms.PictureBox();
-            this.NuoliOikeallePB = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.InventaarioPB)).BeginInit();
+            this.HuoneKolmasPL.SuspendLayout();
+            this.FullscreenPL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RickPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VideoPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MuistioPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RuutuPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SprayPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmpariPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PCPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TuoliPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SipsiPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SankyPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NuoliOikeallePB)).BeginInit();
             this.HuoneEkaPL.SuspendLayout();
             this.laatikkoPL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kolmasNumeroNUD)).BeginInit();
@@ -122,18 +136,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.KasviPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MankkaPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuoliVasenPB)).BeginInit();
-            this.HuoneKolmasPL.SuspendLayout();
-            this.FullscreenPL.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VideoPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MuistioPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RuutuPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SprayPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AmpariPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PCPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TuoliPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SipsiPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SankyPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NuoliOikeallePB)).BeginInit();
             this.SuspendLayout();
             // 
             // InventaarioPB
@@ -147,6 +149,187 @@
             this.InventaarioPB.TabIndex = 22;
             this.InventaarioPB.TabStop = false;
             this.InventaarioPB.Visible = false;
+            // 
+            // HuoneKolmasPL
+            // 
+            this.HuoneKolmasPL.BackgroundImage = global::EscapeRoom.Properties.Resources.tausta3;
+            this.HuoneKolmasPL.Controls.Add(this.FullscreenPL);
+            this.HuoneKolmasPL.Controls.Add(this.RuutuPB);
+            this.HuoneKolmasPL.Controls.Add(this.SprayPB);
+            this.HuoneKolmasPL.Controls.Add(this.AmpariPB);
+            this.HuoneKolmasPL.Controls.Add(this.PCPB);
+            this.HuoneKolmasPL.Controls.Add(this.TuoliPB);
+            this.HuoneKolmasPL.Controls.Add(this.SipsiPB);
+            this.HuoneKolmasPL.Controls.Add(this.SankyPB);
+            this.HuoneKolmasPL.Controls.Add(this.NuoliOikeallePB);
+            this.HuoneKolmasPL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HuoneKolmasPL.Location = new System.Drawing.Point(0, 0);
+            this.HuoneKolmasPL.Name = "HuoneKolmasPL";
+            this.HuoneKolmasPL.Size = new System.Drawing.Size(884, 561);
+            this.HuoneKolmasPL.TabIndex = 26;
+            // 
+            // FullscreenPL
+            // 
+            this.FullscreenPL.BackgroundImage = global::EscapeRoom.Properties.Resources.fullscreen;
+            this.FullscreenPL.Controls.Add(this.RickPB);
+            this.FullscreenPL.Controls.Add(this.SuljeMuistioBT);
+            this.FullscreenPL.Controls.Add(this.CreditsTB);
+            this.FullscreenPL.Controls.Add(this.SuljeFullscreenLB);
+            this.FullscreenPL.Controls.Add(this.VideoPB);
+            this.FullscreenPL.Controls.Add(this.MuistioPB);
+            this.FullscreenPL.Location = new System.Drawing.Point(73, 23);
+            this.FullscreenPL.Name = "FullscreenPL";
+            this.FullscreenPL.Size = new System.Drawing.Size(730, 465);
+            this.FullscreenPL.TabIndex = 8;
+            this.FullscreenPL.Visible = false;
+            // 
+            // RickPB
+            // 
+            this.RickPB.Image = global::EscapeRoom.Properties.Resources.rick;
+            this.RickPB.Location = new System.Drawing.Point(83, 3);
+            this.RickPB.Name = "RickPB";
+            this.RickPB.Size = new System.Drawing.Size(546, 426);
+            this.RickPB.TabIndex = 5;
+            this.RickPB.TabStop = false;
+            this.RickPB.Visible = false;
+            // 
+            // SuljeMuistioBT
+            // 
+            this.SuljeMuistioBT.Location = new System.Drawing.Point(318, 346);
+            this.SuljeMuistioBT.Name = "SuljeMuistioBT";
+            this.SuljeMuistioBT.Size = new System.Drawing.Size(75, 23);
+            this.SuljeMuistioBT.TabIndex = 4;
+            this.SuljeMuistioBT.Text = "Sulje";
+            this.SuljeMuistioBT.UseVisualStyleBackColor = true;
+            this.SuljeMuistioBT.Click += new System.EventHandler(this.SuljeMuistioBT_Click);
+            // 
+            // CreditsTB
+            // 
+            this.CreditsTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreditsTB.Location = new System.Drawing.Point(246, 62);
+            this.CreditsTB.Name = "CreditsTB";
+            this.CreditsTB.ReadOnly = true;
+            this.CreditsTB.Size = new System.Drawing.Size(233, 284);
+            this.CreditsTB.TabIndex = 3;
+            this.CreditsTB.Text = "Krediitit\n\nOhjelmointi:\nAlander Niko\nJuhola Henry\nSalo Karoliina\n\nGrafiikka:\nSalo" +
+    " Karoliina\n\nÄänitehosteet:\n";
+            this.CreditsTB.Visible = false;
+            // 
+            // SuljeFullscreenLB
+            // 
+            this.SuljeFullscreenLB.AutoSize = true;
+            this.SuljeFullscreenLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SuljeFullscreenLB.Location = new System.Drawing.Point(675, 12);
+            this.SuljeFullscreenLB.Name = "SuljeFullscreenLB";
+            this.SuljeFullscreenLB.Size = new System.Drawing.Size(34, 33);
+            this.SuljeFullscreenLB.TabIndex = 2;
+            this.SuljeFullscreenLB.Text = "X";
+            this.SuljeFullscreenLB.Click += new System.EventHandler(this.SuljeFullscreenLB_Click);
+            // 
+            // VideoPB
+            // 
+            this.VideoPB.Image = global::EscapeRoom.Properties.Resources.video;
+            this.VideoPB.Location = new System.Drawing.Point(48, 144);
+            this.VideoPB.Name = "VideoPB";
+            this.VideoPB.Size = new System.Drawing.Size(56, 56);
+            this.VideoPB.TabIndex = 1;
+            this.VideoPB.TabStop = false;
+            this.VideoPB.Click += new System.EventHandler(this.VideoPB_Click);
+            // 
+            // MuistioPB
+            // 
+            this.MuistioPB.Image = global::EscapeRoom.Properties.Resources.muistio;
+            this.MuistioPB.Location = new System.Drawing.Point(48, 48);
+            this.MuistioPB.Name = "MuistioPB";
+            this.MuistioPB.Size = new System.Drawing.Size(56, 72);
+            this.MuistioPB.TabIndex = 0;
+            this.MuistioPB.TabStop = false;
+            this.MuistioPB.Click += new System.EventHandler(this.MuistioPB_Click);
+            // 
+            // RuutuPB
+            // 
+            this.RuutuPB.Image = global::EscapeRoom.Properties.Resources.ruutu;
+            this.RuutuPB.Location = new System.Drawing.Point(642, 235);
+            this.RuutuPB.Name = "RuutuPB";
+            this.RuutuPB.Size = new System.Drawing.Size(104, 58);
+            this.RuutuPB.TabIndex = 7;
+            this.RuutuPB.TabStop = false;
+            this.RuutuPB.Visible = false;
+            this.RuutuPB.Click += new System.EventHandler(this.RuutuPB_Click);
+            // 
+            // SprayPB
+            // 
+            this.SprayPB.BackColor = System.Drawing.Color.Transparent;
+            this.SprayPB.Image = global::EscapeRoom.Properties.Resources.spray;
+            this.SprayPB.Location = new System.Drawing.Point(435, 420);
+            this.SprayPB.Name = "SprayPB";
+            this.SprayPB.Size = new System.Drawing.Size(52, 56);
+            this.SprayPB.TabIndex = 6;
+            this.SprayPB.TabStop = false;
+            this.SprayPB.Click += new System.EventHandler(this.tavarat_Click);
+            // 
+            // AmpariPB
+            // 
+            this.AmpariPB.BackColor = System.Drawing.Color.Transparent;
+            this.AmpariPB.Image = global::EscapeRoom.Properties.Resources.ampari2;
+            this.AmpariPB.Location = new System.Drawing.Point(782, 396);
+            this.AmpariPB.Name = "AmpariPB";
+            this.AmpariPB.Size = new System.Drawing.Size(72, 72);
+            this.AmpariPB.TabIndex = 5;
+            this.AmpariPB.TabStop = false;
+            this.AmpariPB.Click += new System.EventHandler(this.KatsoTavaraa_Click);
+            // 
+            // PCPB
+            // 
+            this.PCPB.Image = global::EscapeRoom.Properties.Resources.tietokone;
+            this.PCPB.Location = new System.Drawing.Point(767, 214);
+            this.PCPB.Name = "PCPB";
+            this.PCPB.Size = new System.Drawing.Size(45, 100);
+            this.PCPB.TabIndex = 4;
+            this.PCPB.TabStop = false;
+            this.PCPB.Click += new System.EventHandler(this.PCPB_Click);
+            // 
+            // TuoliPB
+            // 
+            this.TuoliPB.BackColor = System.Drawing.Color.Transparent;
+            this.TuoliPB.Image = global::EscapeRoom.Properties.Resources.konetuoli;
+            this.TuoliPB.Location = new System.Drawing.Point(651, 302);
+            this.TuoliPB.Name = "TuoliPB";
+            this.TuoliPB.Size = new System.Drawing.Size(84, 182);
+            this.TuoliPB.TabIndex = 3;
+            this.TuoliPB.TabStop = false;
+            // 
+            // SipsiPB
+            // 
+            this.SipsiPB.BackColor = System.Drawing.Color.Transparent;
+            this.SipsiPB.Image = global::EscapeRoom.Properties.Resources.sipsi;
+            this.SipsiPB.Location = new System.Drawing.Point(576, 259);
+            this.SipsiPB.Name = "SipsiPB";
+            this.SipsiPB.Size = new System.Drawing.Size(50, 56);
+            this.SipsiPB.TabIndex = 2;
+            this.SipsiPB.TabStop = false;
+            this.SipsiPB.Click += new System.EventHandler(this.tavarat_Click);
+            // 
+            // SankyPB
+            // 
+            this.SankyPB.BackColor = System.Drawing.Color.Transparent;
+            this.SankyPB.Image = global::EscapeRoom.Properties.Resources.sanky;
+            this.SankyPB.Location = new System.Drawing.Point(12, 350);
+            this.SankyPB.Name = "SankyPB";
+            this.SankyPB.Size = new System.Drawing.Size(508, 108);
+            this.SankyPB.TabIndex = 1;
+            this.SankyPB.TabStop = false;
+            // 
+            // NuoliOikeallePB
+            // 
+            this.NuoliOikeallePB.BackColor = System.Drawing.Color.Transparent;
+            this.NuoliOikeallePB.Image = global::EscapeRoom.Properties.Resources.nuolioikealle;
+            this.NuoliOikeallePB.Location = new System.Drawing.Point(830, 237);
+            this.NuoliOikeallePB.Name = "NuoliOikeallePB";
+            this.NuoliOikeallePB.Size = new System.Drawing.Size(54, 33);
+            this.NuoliOikeallePB.TabIndex = 0;
+            this.NuoliOikeallePB.TabStop = false;
+            this.NuoliOikeallePB.Click += new System.EventHandler(this.NuoliOikeallePB_Click);
             // 
             // HuoneEkaPL
             // 
@@ -606,175 +789,6 @@
             this.NuoliVasenPB.TabStop = false;
             this.NuoliVasenPB.Click += new System.EventHandler(this.NuoliVasenPB_Click);
             // 
-            // HuoneKolmasPL
-            // 
-            this.HuoneKolmasPL.BackgroundImage = global::EscapeRoom.Properties.Resources.tausta3;
-            this.HuoneKolmasPL.Controls.Add(this.FullscreenPL);
-            this.HuoneKolmasPL.Controls.Add(this.RuutuPB);
-            this.HuoneKolmasPL.Controls.Add(this.SprayPB);
-            this.HuoneKolmasPL.Controls.Add(this.AmpariPB);
-            this.HuoneKolmasPL.Controls.Add(this.PCPB);
-            this.HuoneKolmasPL.Controls.Add(this.TuoliPB);
-            this.HuoneKolmasPL.Controls.Add(this.SipsiPB);
-            this.HuoneKolmasPL.Controls.Add(this.SankyPB);
-            this.HuoneKolmasPL.Controls.Add(this.NuoliOikeallePB);
-            this.HuoneKolmasPL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HuoneKolmasPL.Location = new System.Drawing.Point(0, 0);
-            this.HuoneKolmasPL.Name = "HuoneKolmasPL";
-            this.HuoneKolmasPL.Size = new System.Drawing.Size(884, 561);
-            this.HuoneKolmasPL.TabIndex = 26;
-            // 
-            // FullscreenPL
-            // 
-            this.FullscreenPL.BackgroundImage = global::EscapeRoom.Properties.Resources.fullscreen;
-            this.FullscreenPL.Controls.Add(this.SuljeMuistioBT);
-            this.FullscreenPL.Controls.Add(this.CreditsTB);
-            this.FullscreenPL.Controls.Add(this.SuljeFullscreenLB);
-            this.FullscreenPL.Controls.Add(this.VideoPB);
-            this.FullscreenPL.Controls.Add(this.MuistioPB);
-            this.FullscreenPL.Location = new System.Drawing.Point(73, 23);
-            this.FullscreenPL.Name = "FullscreenPL";
-            this.FullscreenPL.Size = new System.Drawing.Size(730, 465);
-            this.FullscreenPL.TabIndex = 8;
-            this.FullscreenPL.Visible = false;
-            // 
-            // SuljeMuistioBT
-            // 
-            this.SuljeMuistioBT.Location = new System.Drawing.Point(318, 346);
-            this.SuljeMuistioBT.Name = "SuljeMuistioBT";
-            this.SuljeMuistioBT.Size = new System.Drawing.Size(75, 23);
-            this.SuljeMuistioBT.TabIndex = 4;
-            this.SuljeMuistioBT.Text = "Sulje";
-            this.SuljeMuistioBT.UseVisualStyleBackColor = true;
-            this.SuljeMuistioBT.Click += new System.EventHandler(this.SuljeMuistioBT_Click);
-            // 
-            // CreditsTB
-            // 
-            this.CreditsTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreditsTB.Location = new System.Drawing.Point(246, 62);
-            this.CreditsTB.Name = "CreditsTB";
-            this.CreditsTB.ReadOnly = true;
-            this.CreditsTB.Size = new System.Drawing.Size(233, 284);
-            this.CreditsTB.TabIndex = 3;
-            this.CreditsTB.Text = "Krediitit\n\nOhjelmointi:\nAlander Niko\nJuhola Henry\nSalo Karoliina\n\nGrafiikka:\nSalo" +
-    " Karoliina\n\nÄänitehosteet:\n";
-            this.CreditsTB.Visible = false;
-            // 
-            // SuljeFullscreenLB
-            // 
-            this.SuljeFullscreenLB.AutoSize = true;
-            this.SuljeFullscreenLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SuljeFullscreenLB.Location = new System.Drawing.Point(675, 12);
-            this.SuljeFullscreenLB.Name = "SuljeFullscreenLB";
-            this.SuljeFullscreenLB.Size = new System.Drawing.Size(34, 33);
-            this.SuljeFullscreenLB.TabIndex = 2;
-            this.SuljeFullscreenLB.Text = "X";
-            this.SuljeFullscreenLB.Click += new System.EventHandler(this.SuljeFullscreenLB_Click);
-            // 
-            // VideoPB
-            // 
-            this.VideoPB.Image = global::EscapeRoom.Properties.Resources.video;
-            this.VideoPB.Location = new System.Drawing.Point(48, 144);
-            this.VideoPB.Name = "VideoPB";
-            this.VideoPB.Size = new System.Drawing.Size(56, 56);
-            this.VideoPB.TabIndex = 1;
-            this.VideoPB.TabStop = false;
-            // 
-            // MuistioPB
-            // 
-            this.MuistioPB.Image = global::EscapeRoom.Properties.Resources.muistio;
-            this.MuistioPB.Location = new System.Drawing.Point(48, 48);
-            this.MuistioPB.Name = "MuistioPB";
-            this.MuistioPB.Size = new System.Drawing.Size(56, 72);
-            this.MuistioPB.TabIndex = 0;
-            this.MuistioPB.TabStop = false;
-            this.MuistioPB.Click += new System.EventHandler(this.MuistioPB_Click);
-            // 
-            // RuutuPB
-            // 
-            this.RuutuPB.Image = global::EscapeRoom.Properties.Resources.ruutu;
-            this.RuutuPB.Location = new System.Drawing.Point(642, 235);
-            this.RuutuPB.Name = "RuutuPB";
-            this.RuutuPB.Size = new System.Drawing.Size(104, 58);
-            this.RuutuPB.TabIndex = 7;
-            this.RuutuPB.TabStop = false;
-            this.RuutuPB.Visible = false;
-            this.RuutuPB.Click += new System.EventHandler(this.RuutuPB_Click);
-            // 
-            // SprayPB
-            // 
-            this.SprayPB.BackColor = System.Drawing.Color.Transparent;
-            this.SprayPB.Image = global::EscapeRoom.Properties.Resources.spray;
-            this.SprayPB.Location = new System.Drawing.Point(435, 420);
-            this.SprayPB.Name = "SprayPB";
-            this.SprayPB.Size = new System.Drawing.Size(52, 56);
-            this.SprayPB.TabIndex = 6;
-            this.SprayPB.TabStop = false;
-            this.SprayPB.Click += new System.EventHandler(this.tavarat_Click);
-            // 
-            // AmpariPB
-            // 
-            this.AmpariPB.BackColor = System.Drawing.Color.Transparent;
-            this.AmpariPB.Image = global::EscapeRoom.Properties.Resources.ampari2;
-            this.AmpariPB.Location = new System.Drawing.Point(782, 396);
-            this.AmpariPB.Name = "AmpariPB";
-            this.AmpariPB.Size = new System.Drawing.Size(72, 72);
-            this.AmpariPB.TabIndex = 5;
-            this.AmpariPB.TabStop = false;
-            this.AmpariPB.Click += new System.EventHandler(this.KatsoTavaraa_Click);
-            // 
-            // PCPB
-            // 
-            this.PCPB.Image = global::EscapeRoom.Properties.Resources.tietokone;
-            this.PCPB.Location = new System.Drawing.Point(767, 214);
-            this.PCPB.Name = "PCPB";
-            this.PCPB.Size = new System.Drawing.Size(45, 100);
-            this.PCPB.TabIndex = 4;
-            this.PCPB.TabStop = false;
-            this.PCPB.Click += new System.EventHandler(this.PCPB_Click);
-            // 
-            // TuoliPB
-            // 
-            this.TuoliPB.BackColor = System.Drawing.Color.Transparent;
-            this.TuoliPB.Image = global::EscapeRoom.Properties.Resources.konetuoli;
-            this.TuoliPB.Location = new System.Drawing.Point(651, 302);
-            this.TuoliPB.Name = "TuoliPB";
-            this.TuoliPB.Size = new System.Drawing.Size(84, 182);
-            this.TuoliPB.TabIndex = 3;
-            this.TuoliPB.TabStop = false;
-            // 
-            // SipsiPB
-            // 
-            this.SipsiPB.BackColor = System.Drawing.Color.Transparent;
-            this.SipsiPB.Image = global::EscapeRoom.Properties.Resources.sipsi;
-            this.SipsiPB.Location = new System.Drawing.Point(576, 259);
-            this.SipsiPB.Name = "SipsiPB";
-            this.SipsiPB.Size = new System.Drawing.Size(50, 56);
-            this.SipsiPB.TabIndex = 2;
-            this.SipsiPB.TabStop = false;
-            this.SipsiPB.Click += new System.EventHandler(this.tavarat_Click);
-            // 
-            // SankyPB
-            // 
-            this.SankyPB.BackColor = System.Drawing.Color.Transparent;
-            this.SankyPB.Image = global::EscapeRoom.Properties.Resources.sanky;
-            this.SankyPB.Location = new System.Drawing.Point(12, 350);
-            this.SankyPB.Name = "SankyPB";
-            this.SankyPB.Size = new System.Drawing.Size(508, 108);
-            this.SankyPB.TabIndex = 1;
-            this.SankyPB.TabStop = false;
-            // 
-            // NuoliOikeallePB
-            // 
-            this.NuoliOikeallePB.BackColor = System.Drawing.Color.Transparent;
-            this.NuoliOikeallePB.Image = global::EscapeRoom.Properties.Resources.nuolioikealle;
-            this.NuoliOikeallePB.Location = new System.Drawing.Point(830, 237);
-            this.NuoliOikeallePB.Name = "NuoliOikeallePB";
-            this.NuoliOikeallePB.Size = new System.Drawing.Size(54, 33);
-            this.NuoliOikeallePB.TabIndex = 0;
-            this.NuoliOikeallePB.TabStop = false;
-            this.NuoliOikeallePB.Click += new System.EventHandler(this.NuoliOikeallePB_Click);
-            // 
             // Pelialue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -787,6 +801,20 @@
             this.Name = "Pelialue";
             this.Text = "Escape Room";
             ((System.ComponentModel.ISupportInitialize)(this.InventaarioPB)).EndInit();
+            this.HuoneKolmasPL.ResumeLayout(false);
+            this.FullscreenPL.ResumeLayout(false);
+            this.FullscreenPL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RickPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VideoPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MuistioPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RuutuPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SprayPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmpariPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PCPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TuoliPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SipsiPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SankyPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NuoliOikeallePB)).EndInit();
             this.HuoneEkaPL.ResumeLayout(false);
             this.laatikkoPL.ResumeLayout(false);
             this.laatikkoPL.PerformLayout();
@@ -825,19 +853,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.KasviPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MankkaPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuoliVasenPB)).EndInit();
-            this.HuoneKolmasPL.ResumeLayout(false);
-            this.FullscreenPL.ResumeLayout(false);
-            this.FullscreenPL.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VideoPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MuistioPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RuutuPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SprayPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AmpariPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PCPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TuoliPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SipsiPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SankyPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NuoliOikeallePB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -900,6 +915,7 @@
         private System.Windows.Forms.NumericUpDown ekaNumeroNUD;
         private System.Windows.Forms.Button suljeLaatikkoBT;
         private System.Windows.Forms.Label vihjeLB;
+        private System.Windows.Forms.PictureBox RickPB;
     }
 }
 
