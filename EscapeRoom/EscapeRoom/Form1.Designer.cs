@@ -656,7 +656,8 @@
             this.CreditsTB.ReadOnly = true;
             this.CreditsTB.Size = new System.Drawing.Size(233, 284);
             this.CreditsTB.TabIndex = 3;
-            this.CreditsTB.Text = "Krediitit\n\nOhjelmointi:\n\nGrafiikka:\n\nÄänitehosteet:\n";
+            this.CreditsTB.Text = "Krediitit\n\nOhjelmointi:\nAlander Niko\nJuhola Henry\nSalo Karoliina\n\nGrafiikka:\nSalo" +
+    " Karoliina\n\nÄänitehosteet:\n";
             this.CreditsTB.Visible = false;
             // 
             // SuljeFullscreenLB
@@ -780,9 +781,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.InventaarioPB);
+            this.Controls.Add(this.HuoneKolmasPL);
             this.Controls.Add(this.HuoneEkaPL);
             this.Controls.Add(this.HuoneTokaPL);
-            this.Controls.Add(this.HuoneKolmasPL);
             this.Name = "Pelialue";
             this.Text = "Escape Room";
             ((System.ComponentModel.ISupportInitialize)(this.InventaarioPB)).EndInit();
