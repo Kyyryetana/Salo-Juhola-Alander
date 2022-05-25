@@ -50,7 +50,7 @@ namespace StudyPoint
 
         public DataTable FetchImagesFromSql()
         {
-            MySqlCommand MyCommand = new MySqlCommand("SELECT lID, kuvan_nimi FROM lataukset", myConnection.Connection());
+            MySqlCommand MyCommand = new MySqlCommand("SELECT lID, kuvan_nimi, kuva FROM lataukset", myConnection.Connection());
 
             MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
 
