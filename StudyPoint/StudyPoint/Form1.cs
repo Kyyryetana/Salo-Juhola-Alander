@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Eramake;
 using System.Text.RegularExpressions;
 using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
+//using System.Data.SqlClient;
 using System.IO;
 
 namespace StudyPoint
@@ -27,13 +27,16 @@ namespace StudyPoint
         string loggedUser = "";
         bool admin = false;
         string imgLocation = "";
+        MySqlConnection connection = new MySqlConnection("datasource=localhost; port=3306;username=root;password=;database=" + "studypoint" + ";SSL Mode = None");
+        MySqlCommand command;
+        MySqlDataAdapter da;
+        
         public StudyPointForm()
         {
             InitializeComponent();
             HideAllPanels();
             HomePL.Visible = true; // ohjelman latautuessa home-sivu näkyy ensimmäisenä
-            //WhatsNewManPL.Visible = true;
-            //DownloadManPL.Visible = true;
+            
             if (loggedUser == "")
             {   newThing1.Visible = true;
                 newThing1.Text = "Register or login to see new things";
@@ -1056,7 +1059,7 @@ namespace StudyPoint
                 string sqlQuery = "INSERT INTO lataukset(kuvan_nimi, kuva)VALUES('" + downloadMGkuvannimiTB.Text + "',@images)";
 
                 cmd = new MySqlCommand(sqlQuery, con);
-                cmd.Parameters.Add("@images", MySqlDbType.VarBinary).Value = images;
+                cmd.Parameters.Add("@images", MySqlDbType.LongBlob).Value = images;
                 //cmd.Parameters.Add(new SqlParameter("@images", images));
                 int n = cmd.ExecuteNonQuery();
                 con.Close();
@@ -1145,6 +1148,7 @@ namespace StudyPoint
         {
             HideAllPanels();
             DownloadPL.Visible = true;
+            downloadRefreshBT.PerformClick();
         }
 
         private void OurGalleryPL_Paint(object sender, PaintEventArgs e)
@@ -1230,7 +1234,75 @@ namespace StudyPoint
             CallingBigPic(11);
         }
 
-        
+        // DOWNLOAD ALKU
+
+        private void DownloadShowBT_Click(object sender, EventArgs e)
+        {
+            if (downloadIdTB.Text != "")
+            {
+                string selectQuery = "SELECT * FROM lataukset WHERE lID = '" + downloadIdTB.Text + "'";
+                command = new MySqlCommand(selectQuery, connection);
+                da = new MySqlDataAdapter(command);
+                DataTable table = new DataTable();
+                da.Fill(table);
+                byte[] img = (byte[])table.Rows[0][1];
+                MemoryStream ms = new MemoryStream(img);
+                downloadPB.Image = Image.FromStream(ms);
+                da.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("You have to give id from image you want to see.");
+            }
+            
+        }
+
+        private void downloadClearBT_Click(object sender, EventArgs e)
+        {
+            downloadIdTB.Text = "";
+            downloadNameTB.Text = "";
+            downloadPB.Image = null;
+        }
+
+        private void downloadRefreshBT_Click(object sender, EventArgs e)
+        {
+            downloadDGW.DataSource = downloads.FetchImagesFromSql();
+            downloadDGW.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            var datagridview = new DataGridView();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            downloadIdTB.Text = downloadDGW.CurrentRow.Cells[0].Value.ToString();
+            downloadNameTB.Text = downloadDGW.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void downloadThisImgBT_Click(object sender, EventArgs e)
+        {
+            if (downloadPB.Image != null)
+            {
+                SaveFileDialog saveImg = new SaveFileDialog();
+                saveImg.Filter = "JPG Files(*.jpg)| *.jpg | GIF Files(*.gif) | *.gif | All Files(*.*) | *.* ";
+                saveImg.FileName = downloadNameTB.Text;
+
+                if (saveImg.ShowDialog() == DialogResult.OK)
+                {
+                    downloadPB.Image.Save(saveImg.FileName);
+                    MessageBox.Show("Image downloaded successfully!");
+                    downloadClearBT.PerformClick();
+                }
+                else
+                {
+                    MessageBox.Show("There is error with downloading this image...");
+                }
+            }
+            else
+            {
+                MessageBox.Show("There isn't any image to download...");
+            }
+        }
+
+        // DOWNLOAD LOPPU
 
 
 
