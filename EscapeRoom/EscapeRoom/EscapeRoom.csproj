@@ -58,6 +58,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Katsottavat.cs" />
+    <Compile Include="Kaytettavat.cs" />
     <Compile Include="Kerattavat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -612,6 +612,7 @@
             this.AvainPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AvainPB.TabIndex = 5;
             this.AvainPB.TabStop = false;
+            this.AvainPB.Click += new System.EventHandler(this.tavarat_Click);
             // 
             // LaatikkoAukiPB
             // 
@@ -864,7 +865,6 @@
         private System.Windows.Forms.PictureBox TauluPB;
         private System.Windows.Forms.PictureBox LaatikkoAukiPB;
         private System.Windows.Forms.PictureBox LaatikkoKiinniPB;
-        private System.Windows.Forms.PictureBox AvainPB;
         private System.Windows.Forms.PictureBox JääkaappiBasePB;
         private System.Windows.Forms.PictureBox JaakaappiOviAukiPB;
         private System.Windows.Forms.PictureBox PakastinOviAukiPB;
@@ -916,6 +916,7 @@
         private System.Windows.Forms.Button suljeLaatikkoBT;
         private System.Windows.Forms.Label vihjeLB;
         private System.Windows.Forms.PictureBox RickPB;
+        public System.Windows.Forms.PictureBox AvainPB;
     }
 }
 

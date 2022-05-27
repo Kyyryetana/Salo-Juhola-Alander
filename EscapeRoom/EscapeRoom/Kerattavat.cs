@@ -22,6 +22,7 @@ namespace EscapeRoom
             dico["SprayPB"] = new Func<string, string>(Func7);
             dico["SipsiPB"] = new Func<string, string>(Func8);
             dico["EsPB"] = new Func<string, string>(Func9);
+            dico["AvainPB"] = new Func<string, string>(Func10);
 
             // and later invoke
             var res = dico[juttu].DynamicInvoke(juttu);
@@ -87,7 +88,7 @@ namespace EscapeRoom
         }
         private string Func10(string arg)
         {
-            
+            MessageBox.Show("Avain kotioveen");
             return null;
         }
         private string Func11(string arg)

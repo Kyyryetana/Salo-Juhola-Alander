@@ -29,6 +29,7 @@ namespace EscapeRoom
 
 
         }
+        Kaytettavat kaytettavat = new Kaytettavat();
         Kerattavat kerattavat = new Kerattavat();
         Katsottavat katsottavat = new Katsottavat();
         List<PictureBox> collected = new List<PictureBox>();
@@ -266,16 +267,32 @@ namespace EscapeRoom
             {
                 MessageBox.Show("samat");
                 ItemName = null;
+                
             }
             else if (ItemName != null)
             {
                 MessageBox.Show("eri");
                 //UseInventory(ItemName, testi.Image);
+                string yhdistetty = ItemName.Tag.ToString() + esine.Name.ToString();
+                MessageBox.Show(ItemName.Tag.ToString());
+                MessageBox.Show(esine.Name.ToString());
+                kaytettavat.UseItem(yhdistetty);
+                MessageBox.Show(kaytettavat.Lisaa.Count.ToString());
+                List<string> list = kaytettavat.Lisaa;
+                foreach (string s in list)
+                {
+                    MessageBox.Show(s);
+                }
+                object[] testi = MuutaObject(list);
+                testi[0] = true;
+
+                ItemName = null;
             }
             else
             {
                 MessageBox.Show("tyhjä");
                 ItemName = esine.Image;
+                ItemName.Tag = esine.Name.ToString();
             }
 
         }
@@ -288,6 +305,7 @@ namespace EscapeRoom
             PictureBox item = new PictureBox();
             item.Image = thing;
             item.Tag = thingName;
+            item.Name = thingName+"inv";
             item.Width = 50;
             item.Height = 50;
             item.SizeMode = PictureBoxSizeMode.Zoom;
@@ -313,6 +331,11 @@ namespace EscapeRoom
         */
         //inventory end
 
+        private object[] MuutaObject(List<string> lista)
+        {
+            object[] muutettavat = lista.ToArray<object>();
+            return muutettavat;
+        }
 
     }
 }
