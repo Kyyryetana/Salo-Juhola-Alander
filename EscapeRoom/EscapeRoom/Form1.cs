@@ -41,7 +41,7 @@ namespace EscapeRoom
        
         private void Sound()
         {
-            SoundPlayer soundPlayer = new SoundPlayer(@"C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\Resources\gloom-danijel-zambo-main-version-01-51-10266.wav");
+            SoundPlayer soundPlayer = new SoundPlayer(@"Resources\the-street-market-danger-lion-x-main-version-11368-03-01.wav");
             soundPlayer.Play();
             soundPlayer.PlayLooping();
         }
@@ -49,7 +49,7 @@ namespace EscapeRoom
 
         private void SoundOffBT_Click(object sender, EventArgs e)
         {
-            SoundPlayer soundPlayer = new SoundPlayer(@"C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\Resources\gloom-danijel-zambo-main-version-01-51-10266.wav");
+            SoundPlayer soundPlayer = new SoundPlayer();
             soundPlayer.Stop();
             SoundOffBT.Visible = false;
             SoundOnBT.Visible = true;

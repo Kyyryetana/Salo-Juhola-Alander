@@ -35,3 +35,4 @@ C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\bin\Debug\
 C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\bin\Debug\AudioSwitcher.AudioApi.CoreAudio.dll
 C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\bin\Debug\AudioSwitcher.AudioApi.dll
 C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.csproj.CopyComplete
+C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\bin\Debug\Resources\the-street-market-danger-lion-x-main-version-11368-03-01.wav

@@ -191,6 +191,9 @@
     <None Include="Resources\lamppu.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\the-street-market-danger-lion-x-main-version-11368-03-01.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\ricky.gif" />
     <None Include="Resources\rick1.gif" />
     <None Include="Resources\rick.gif" />
