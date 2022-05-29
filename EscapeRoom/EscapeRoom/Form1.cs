@@ -19,6 +19,8 @@ namespace EscapeRoom
         public Pelialue()
         {
             InitializeComponent();
+
+            Sound();
             HuoneEkaPL.Visible = true;
             HuoneTokaPL.Visible = false;
             HuoneKolmasPL.Visible = false;
@@ -35,6 +37,32 @@ namespace EscapeRoom
         int x, y;
         Image ItemName;
         bool reppu = false;
+
+       
+        private void Sound()
+        {
+            SoundPlayer soundPlayer = new SoundPlayer(@"C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\Resources\gloom-danijel-zambo-main-version-01-51-10266.wav");
+            soundPlayer.Play();
+            soundPlayer.PlayLooping();
+        }
+
+
+        private void SoundOffBT_Click(object sender, EventArgs e)
+        {
+            SoundPlayer soundPlayer = new SoundPlayer(@"C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\Resources\gloom-danijel-zambo-main-version-01-51-10266.wav");
+            soundPlayer.Stop();
+            SoundOffBT.Visible = false;
+            SoundOnBT.Visible = true;
+        }
+
+        private void SoundOnBT_Click(object sender, EventArgs e)
+        {
+            Sound();
+            SoundOffBT.Visible = true;
+            SoundOnBT.Visible = false;
+        }
+
+
 
         private void NuoliOikeaPB_Click(object sender, EventArgs e) // nuoli ruokailutilaan
         {

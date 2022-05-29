@@ -31,3 +31,7 @@ C:\Users\Oma\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\Es
 C:\Users\Oma\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.csproj.CoreCompileInputs.cache
 C:\Users\Oma\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.exe
 C:\Users\Oma\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.pdb
+C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\bin\Debug\Resources\gloom-danijel-zambo-main-version-01-51-10266.wav
+C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\bin\Debug\AudioSwitcher.AudioApi.CoreAudio.dll
+C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\bin\Debug\AudioSwitcher.AudioApi.dll
+C:\Users\salok\source\repos\Salo-Juhola-Alander\EscapeRoom\EscapeRoom\obj\Debug\EscapeRoom.csproj.CopyComplete

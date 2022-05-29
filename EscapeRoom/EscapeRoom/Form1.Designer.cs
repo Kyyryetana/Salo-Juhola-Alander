@@ -85,6 +85,8 @@
             this.KasviPB = new System.Windows.Forms.PictureBox();
             this.MankkaPB = new System.Windows.Forms.PictureBox();
             this.NuoliVasenPB = new System.Windows.Forms.PictureBox();
+            this.SoundOffBT = new System.Windows.Forms.Button();
+            this.SoundOnBT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.InventaarioPB)).BeginInit();
             this.HuoneKolmasPL.SuspendLayout();
             this.FullscreenPL.SuspendLayout();
@@ -789,12 +791,38 @@
             this.NuoliVasenPB.TabStop = false;
             this.NuoliVasenPB.Click += new System.EventHandler(this.NuoliVasenPB_Click);
             // 
+            // SoundOffBT
+            // 
+            this.SoundOffBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SoundOffBT.Location = new System.Drawing.Point(0, 0);
+            this.SoundOffBT.Name = "SoundOffBT";
+            this.SoundOffBT.Size = new System.Drawing.Size(75, 23);
+            this.SoundOffBT.TabIndex = 32;
+            this.SoundOffBT.Text = "Sound OFF";
+            this.SoundOffBT.UseVisualStyleBackColor = true;
+            this.SoundOffBT.Click += new System.EventHandler(this.SoundOffBT_Click);
+            // 
+            // SoundOnBT
+            // 
+            this.SoundOnBT.BackColor = System.Drawing.Color.Transparent;
+            this.SoundOnBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SoundOnBT.Location = new System.Drawing.Point(0, 0);
+            this.SoundOnBT.Name = "SoundOnBT";
+            this.SoundOnBT.Size = new System.Drawing.Size(75, 23);
+            this.SoundOnBT.TabIndex = 32;
+            this.SoundOnBT.Text = "Sound ON";
+            this.SoundOnBT.UseVisualStyleBackColor = false;
+            this.SoundOnBT.Visible = false;
+            this.SoundOnBT.Click += new System.EventHandler(this.SoundOnBT_Click);
+            // 
             // Pelialue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.InventaarioPB);
+            this.Controls.Add(this.SoundOffBT);
+            this.Controls.Add(this.SoundOnBT);
             this.Controls.Add(this.HuoneEkaPL);
             this.Controls.Add(this.HuoneTokaPL);
             this.Controls.Add(this.HuoneKolmasPL);
@@ -916,6 +944,8 @@
         private System.Windows.Forms.Button suljeLaatikkoBT;
         private System.Windows.Forms.Label vihjeLB;
         private System.Windows.Forms.PictureBox RickPB;
+        private System.Windows.Forms.Button SoundOffBT;
+        private System.Windows.Forms.Button SoundOnBT;
     }
 }
 
