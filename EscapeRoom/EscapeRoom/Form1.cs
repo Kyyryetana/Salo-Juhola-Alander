@@ -15,7 +15,7 @@ namespace EscapeRoom
 {
     public partial class Pelialue : Form
     {
-       
+
         public Pelialue()
         {
             InitializeComponent();
@@ -26,6 +26,7 @@ namespace EscapeRoom
             AvainPB.Visible = false;
             JaakaappiOviAukiPB.Visible = false;
             PakastinOviAukiPB.Visible = false;
+            MakeDict();
 
 
         }
@@ -36,6 +37,33 @@ namespace EscapeRoom
         int x, y;
         Image ItemName;
         bool reppu = false;
+        Dictionary<string, PictureBox> collectedDict = new Dictionary<string, PictureBox>();
+        Dictionary<string, PictureBox> collectiveBoxes = new Dictionary<string, PictureBox>();
+        PictureBox ItemBox = null;
+
+        // tekee kirjaston asioista jonka avulla voi lisätä tai poistaa asioita... tähän olisi hyvä lisätä kaikki olevat elementit jos niihin tahtoo toiminnallisuuden.
+        private void MakeDict()
+        {
+            
+            collectiveBoxes.Add("ReppuPB", ReppuPB);
+            collectiveBoxes.Add("TakkiPB", TakkiPB);
+            collectiveBoxes.Add("KengatPB", KengatPB);
+            collectiveBoxes.Add("HuiviPB", HuiviPB);
+            collectiveBoxes.Add("TaskulamppuPB", TaskulamppuPB);
+            collectiveBoxes.Add("MankkaPB", MankkaPB);
+            collectiveBoxes.Add("SprayPB", SprayPB);
+            collectiveBoxes.Add("SipsiPB", SipsiPB);
+            collectiveBoxes.Add("EsPB", EsPB);
+            collectiveBoxes.Add("AvainPB", AvainPB);
+            collectiveBoxes.Add("OviKiinniPB", OviKiinniPB);
+            collectiveBoxes.Add("OviAukiPB", OviAukiPB);
+            collectiveBoxes.Add("LappuPB", LappuPB);
+
+            
+        }
+
+        
+        
 
         private void NuoliOikeaPB_Click(object sender, EventArgs e) // nuoli ruokailutilaan
         {
@@ -97,7 +125,15 @@ namespace EscapeRoom
         private void KatsoTavaraa_Click(object sender, EventArgs e)
         {
             PictureBox PicBox = sender as PictureBox; //ottaa lähettävän pictureboxin muuttujaan
-            katsottavat.LookAt(PicBox.Name); //kutsuu luokasta katsottavat metodia joka tekee pictureboxin nimen mukaan päättää mitä tehdään.
+            if (ItemName != null)
+            {
+                Invetory_Click(sender, e);
+            }
+            else
+            {
+                katsottavat.LookAt(PicBox.Name); //kutsuu luokasta katsottavat metodia joka tekee pictureboxin nimen mukaan päättää mitä tehdään.
+            }
+            
         }
         // Katsottavat asiat end
         
@@ -240,7 +276,7 @@ namespace EscapeRoom
             if (tavara == TakkiPB || tavara == KengatPB|| tavara == HuiviPB)
             {
                 tavara.Visible = false;
-                collected.Add(tavara);
+                //collected.Add(tavara);
             }
             else if (reppu == false) MessageBox.Show("Sinulla ei ole mitään mihin laittaa tavaroita.");
             
@@ -255,9 +291,10 @@ namespace EscapeRoom
 
 
         }
-
+        //inventaarion klikkaus
         private void Invetory_Click(object sender, EventArgs e)
         {
+            
             //MessageBox.Show(sender.ToString());
             PictureBox esine = sender as PictureBox;
             esine.BorderStyle = BorderStyle.FixedSingle;
@@ -267,25 +304,48 @@ namespace EscapeRoom
             {
                 MessageBox.Show("samat");
                 ItemName = null;
+                esine.BorderStyle= BorderStyle.None;
                 
             }
             else if (ItemName != null)
             {
                 MessageBox.Show("eri");
                 //UseInventory(ItemName, testi.Image);
-                string yhdistetty = ItemName.Tag.ToString() + esine.Name.ToString();
-                MessageBox.Show(ItemName.Tag.ToString());
-                MessageBox.Show(esine.Name.ToString());
-                kaytettavat.UseItem(yhdistetty);
-                MessageBox.Show(kaytettavat.Lisaa.Count.ToString());
-                List<string> list = kaytettavat.Lisaa;
-                foreach (string s in list)
+                esine.BorderStyle = BorderStyle.None;
+                ItemBox.BorderStyle = BorderStyle.None;
+                
+                
+                List<string> list = kaytettavat.UseItem(ItemName.Tag.ToString(), esine.Name.ToString());
+                
+                
+                if (list != null)
                 {
-                    MessageBox.Show(s);
-                }
-                object[] testi = MuutaObject(list);
-                testi[0] = true;
+                    bool poista = false;
+                    foreach (string s in list)
+                    {
+                        if (poista == true)
+                        {
+                            PictureBox kokeilua = collectiveBoxes[s];
+                            kokeilua.Visible = false;
+                        }
+                        else if (s == "_")
+                        {
+                            poista = true;
+                        }
+                        else
+                        {
 
+                            PictureBox kokeilua = collectiveBoxes[s];
+                            kokeilua.Visible = true;
+                        }   
+                        
+
+                    }
+                    object[] testi = MuutaObject(list);
+                    testi[0] = true;
+                    ItemBox.BorderStyle = BorderStyle.None;
+                    
+                }
                 ItemName = null;
             }
             else
@@ -293,12 +353,14 @@ namespace EscapeRoom
                 MessageBox.Show("tyhjä");
                 ItemName = esine.Image;
                 ItemName.Tag = esine.Name.ToString();
+                ItemBox = esine;
+
             }
 
         }
 
       
-
+        // lisää invetaarioon uuden pictureboxin
         private void AddInvetory(Image thing, string thingName)
         {
             //MessageBox.Show(thing.ToString());
@@ -310,11 +372,12 @@ namespace EscapeRoom
             item.Height = 50;
             item.SizeMode = PictureBoxSizeMode.Zoom;
             item.Click += new EventHandler(Invetory_Click);
+            collectiveBoxes.Add(thingName.ToString()+"inv", item);
 
             x = collected.Count * 60;
             y = 5;
             item.Location = new Point(x, y);
-
+            
             collected.Add(item);
             InventaarioPB.Controls.Add(item);
 

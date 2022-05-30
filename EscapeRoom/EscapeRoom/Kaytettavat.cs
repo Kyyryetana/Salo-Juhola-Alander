@@ -11,26 +11,47 @@ namespace EscapeRoom
     internal  class Kaytettavat
     {
         List<string> lisaa = new List<string>();
-        List<string> poista = new List<string>();
+        
         public List<string> Lisaa { get; set; }
-        public List<string> Poista { get; set; }
-        public void UseItem(string juttu)
+
+
+        /// <summary>
+        /// Lisää dico sanan jälkeen pictureboxin nimi yhdistelmänä minkä jälkeen Func + numero perään ja
+        /// mene sen jälkeen luomaan metodi mihin voit lisätä esineet mitä pitää saada näkyviin.
+        /// Poistaaksesi elementtejä lisää ensin 
+        /// lisaa.Add("_");
+        /// Jonka jälkeen voit lisätä poistettavat elementit.
+        /// </summary>
+        /// <param name="esine1">käytettävä esine</param>
+        /// <param name="esine2">Esine mihin halutaan käyttää ensin valittu tavara</param>
+        /// <returns>palauttaa listan lisättävistä ja poistettavista elementeistä</returns>
+        public List<string> UseItem(string esine1, string esine2)
         {
-            // store
-            var dico = new Dictionary<string, Delegate>();
-            dico["AvainPBinvTaskulamppuPBinv"] = new Func<string, string>(Func1);
-            dico[""] = new Func<string, string>(Func2);
-            dico[""] = new Func<string, string>(Func3);
-            dico[""] = new Func<string, string>(Func4);
-            dico[""] = new Func<string, string>(Func5);
-            dico[""] = new Func<string, string>(Func6);
-            dico[""] = new Func<string, string>(Func7);
-            dico[""] = new Func<string, string>(Func8);
-            dico[""] = new Func<string, string>(Func9);
-            dico[""] = new Func<string, string>(Func10);
-            // and later invoke
-            var res = dico[juttu].DynamicInvoke(juttu);
-            
+            string yhdistetty = esine1 + esine2;
+            try
+            {
+                // store
+                var dico = new Dictionary<string, Delegate>();
+                dico["AvainPBinvTaskulamppuPBinv"] = new Func<string, string>(Func1);
+                dico["TaskulamppuPBinvAvainPBinv"] = new Func<string, string>(Func1);
+                dico["AvainPBinvOviKiinniPB"] = new Func<string, string>(Func2);
+                dico[""] = new Func<string, string>(Func3);
+                dico[""] = new Func<string, string>(Func5);
+                dico[""] = new Func<string, string>(Func6);
+                dico[""] = new Func<string, string>(Func7);
+                dico[""] = new Func<string, string>(Func8);
+                dico[""] = new Func<string, string>(Func9);
+                dico[""] = new Func<string, string>(Func10);
+                // and later invoke
+                var res = dico[yhdistetty].DynamicInvoke(yhdistetty);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Mitään mielenkiintoista ei tapahtunut.");
+                lisaa = null;
+            }
+
+            return lisaa;
         }
 
 
@@ -38,17 +59,22 @@ namespace EscapeRoom
 
         private string Func1(string arg)
         {
-            lisaa.Clear();
             
-            lisaa.Add("AvainPB.Visible");
-            lisaa.Add("AvainPBinv");
-            MessageBox.Show(lisaa.Count.ToString());
+            
+            lisaa.Add("AvainPB");
+            lisaa.Add("TaskulamppuPB");
+            
+
             return null;
         }
 
         private string Func2(string arg)
         {
-            
+            lisaa.Add("OviAukiPB");
+            lisaa.Add("_");
+            lisaa.Add("OviKiinniPB");
+            lisaa.Add("AvainPBinv");
+            lisaa.Add("lappuPB");
             return null;
         }
         private string Func3(string arg)
