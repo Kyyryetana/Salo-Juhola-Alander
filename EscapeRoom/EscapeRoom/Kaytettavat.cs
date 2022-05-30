@@ -74,7 +74,7 @@ namespace EscapeRoom
             lisaa.Add("_");
             lisaa.Add("OviKiinniPB");
             lisaa.Add("AvainPBinv");
-            lisaa.Add("lappuPB");
+            lisaa.Add("LappuPB");
             return null;
         }
         private string Func3(string arg)

@@ -330,14 +330,14 @@ namespace EscapeRoom
 
             if (ItemName == esine.Image)
             {
-                MessageBox.Show("samat");
+                //MessageBox.Show("samat");
                 ItemName = null;
                 esine.BorderStyle= BorderStyle.None;
                 
             }
             else if (ItemName != null)
             {
-                MessageBox.Show("eri");
+                //MessageBox.Show("eri");
                 //UseInventory(ItemName, testi.Image);
                 esine.BorderStyle = BorderStyle.None;
                 ItemBox.BorderStyle = BorderStyle.None;
@@ -369,8 +369,7 @@ namespace EscapeRoom
                         
 
                     }
-                    object[] testi = MuutaObject(list);
-                    testi[0] = true;
+                    
                     ItemBox.BorderStyle = BorderStyle.None;
                     
                 }
@@ -378,7 +377,7 @@ namespace EscapeRoom
             }
             else
             {
-                MessageBox.Show("tyhjä");
+                //MessageBox.Show("tyhjä");
                 ItemName = esine.Image;
                 ItemName.Tag = esine.Name.ToString();
                 ItemBox = esine;
@@ -422,11 +421,7 @@ namespace EscapeRoom
         */
         //inventory end
 
-        private object[] MuutaObject(List<string> lista)
-        {
-            object[] muutettavat = lista.ToArray<object>();
-            return muutettavat;
-        }
+       
 
     }
 }
