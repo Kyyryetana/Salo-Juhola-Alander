@@ -39,7 +39,6 @@ namespace EscapeRoom
         int x, y;
         Image ItemName;
         bool reppu = false;
-        Dictionary<string, PictureBox> collectedDict = new Dictionary<string, PictureBox>();
         Dictionary<string, PictureBox> collectiveBoxes = new Dictionary<string, PictureBox>();
         PictureBox ItemBox = null;
 
@@ -157,11 +156,24 @@ namespace EscapeRoom
             {
                 Invetory_Click(sender, e);
             }
+            else if (PicBox == OviAukiPB)
+            {
+                
+                if (collected.Count == 5 && TakkiPB.Visible == false && KengatPB.Visible == false && HuiviPB.Visible == false)
+                {
+                    MessageBox.Show("Ehdit ajoissa kylille pyörimään. peli loppui ");
+                }
+                else
+                {
+                    MessageBox.Show("Et muistanut kerätä kaikkia tavaroita mukaan! ");
+                }
+            }
             else
             {
                 katsottavat.LookAt(PicBox.Name); //kutsuu luokasta katsottavat metodia joka tekee pictureboxin nimen mukaan päättää mitä tehdään.
             }
             
+
         }
         // Katsottavat asiat end
         

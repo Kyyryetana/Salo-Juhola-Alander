@@ -656,6 +656,7 @@
             this.OviAukiPB.TabIndex = 0;
             this.OviAukiPB.TabStop = false;
             this.OviAukiPB.Visible = false;
+            this.OviAukiPB.Click += new System.EventHandler(this.KatsoTavaraa_Click);
             // 
             // UuniKelloPB
             // 
