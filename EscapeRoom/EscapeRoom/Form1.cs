@@ -159,7 +159,7 @@ namespace EscapeRoom
             else if (PicBox == OviAukiPB)
             {
                 
-                if (collected.Count == 5 && TakkiPB.Visible == false && KengatPB.Visible == false && HuiviPB.Visible == false)
+                if (collected.Count == 6 && TakkiPB.Visible == false && KengatPB.Visible == false && HuiviPB.Visible == false)
                 {
                     MessageBox.Show("Ehdit ajoissa kylille pyörimään. peli loppui ");
                 }
