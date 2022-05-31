@@ -161,7 +161,7 @@ namespace EscapeRoom
                 
                 if (collected.Count == 6 && TakkiPB.Visible == false && KengatPB.Visible == false && HuiviPB.Visible == false)
                 {
-                    MessageBox.Show("Ehdit ajoissa kylille pyörimään. peli loppui ");
+                    MessageBox.Show("Ehdit ajoissa kylille pyörimään. Peli loppui ");
                 }
                 else
                 {

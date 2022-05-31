@@ -48,17 +48,17 @@ namespace EscapeRoom
 
         private string Func2(string arg)
         {
-            MessageBox.Show("Laitat takin päälle jottei tule kylmä");
+            MessageBox.Show("Takki päälle jottei tule kylmä");
             return null;
         }
         private string Func3(string arg)
         {
-            MessageBox.Show("Kengät jalkaan ja menoksi.");
+            MessageBox.Show("Kengät jalkaan ja menoksi!");
             return null;
         }
         private string Func4(string arg)
         {
-            MessageBox.Show("Mitenköhän huivini oli tänne päätynyt");
+            MessageBox.Show("Mitenköhän huivisi oli tänne päätynyt?");
             return null;
         }
         private string Func5(string arg)
@@ -68,12 +68,12 @@ namespace EscapeRoom
         }
         private string Func6(string arg)
         {
-            MessageBox.Show("Vanha mutta uskollinen poppikone. Sitä ilman ei voi lähteä minnekään.");
+            MessageBox.Show("Vanha mutta uskollinen poppikone. Sitä ilman ei voi lähteä minnekään!");
             return null;
         }
         private string Func7(string arg)
         {
-            MessageBox.Show("Kilikali purkkeja. niille saattaa löytyä myöhemmin käyttöä.");
+            MessageBox.Show("Kilikali purkkeja. Niille saattaa löytyä myöhemmin käyttöä");
             return null;
         }
         private string Func8(string arg)
@@ -83,7 +83,7 @@ namespace EscapeRoom
         }
         private string Func9(string arg)
         {
-            MessageBox.Show("Tänään päristään.");
+            MessageBox.Show("Tänään päristään!");
             return null;
         }
         private string Func10(string arg)
