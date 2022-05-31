@@ -341,6 +341,7 @@
             this.HuoneEkaPL.Controls.Add(this.LappuPB);
             this.HuoneEkaPL.Controls.Add(this.TakkiPB);
             this.HuoneEkaPL.Controls.Add(this.TaskulamppuPB);
+            this.HuoneEkaPL.Controls.Add(this.OviAukiPB);
             this.HuoneEkaPL.Controls.Add(this.NuoliVasemmallePB);
             this.HuoneEkaPL.Controls.Add(this.NuoliOikeaPB);
             this.HuoneEkaPL.Controls.Add(this.JaakaappiOviKiinniPB);
@@ -356,7 +357,6 @@
             this.HuoneEkaPL.Controls.Add(this.LaatikkoAukiPB);
             this.HuoneEkaPL.Controls.Add(this.TauluPB);
             this.HuoneEkaPL.Controls.Add(this.OviKiinniPB);
-            this.HuoneEkaPL.Controls.Add(this.OviAukiPB);
             this.HuoneEkaPL.Controls.Add(this.UuniKelloPB);
             this.HuoneEkaPL.Controls.Add(this.UuniPB);
             this.HuoneEkaPL.Controls.Add(this.IkkunaPB);

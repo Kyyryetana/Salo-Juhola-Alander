@@ -161,7 +161,18 @@ namespace EscapeRoom
                 
                 if (collected.Count == 6 && TakkiPB.Visible == false && KengatPB.Visible == false && HuiviPB.Visible == false)
                 {
-                    MessageBox.Show("Ehdit ajoissa kylille pyörimään. Peli loppui ");
+                    String loppu = "Sait oven auki! \nPaina Uudelleen pelataksesi uudestaan.\nPeruuta astuaksesi pimeyteen ja kohtaat totuuden.";
+                    switch (MessageBox.Show(loppu, "The truth is out there", MessageBoxButtons.RetryCancel))
+                    {
+                        case DialogResult.Retry:
+                            MessageBox.Show("Päätät siis pelata uudestaan, loistavaa!");
+                            Application.Restart();
+                            break;
+                        case DialogResult.Cancel:
+                            MessageBox.Show("Kiva olla nössön kaveri");
+                            Application.Exit();
+                            break;
+                    }
                 }
                 else
                 {
