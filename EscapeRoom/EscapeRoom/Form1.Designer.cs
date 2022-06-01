@@ -57,6 +57,7 @@
             this.LappuPB = new System.Windows.Forms.PictureBox();
             this.TakkiPB = new System.Windows.Forms.PictureBox();
             this.TaskulamppuPB = new System.Windows.Forms.PictureBox();
+            this.OviAukiPB = new System.Windows.Forms.PictureBox();
             this.NuoliVasemmallePB = new System.Windows.Forms.PictureBox();
             this.NuoliOikeaPB = new System.Windows.Forms.PictureBox();
             this.JaakaappiOviKiinniPB = new System.Windows.Forms.PictureBox();
@@ -72,7 +73,6 @@
             this.LaatikkoAukiPB = new System.Windows.Forms.PictureBox();
             this.TauluPB = new System.Windows.Forms.PictureBox();
             this.OviKiinniPB = new System.Windows.Forms.PictureBox();
-            this.OviAukiPB = new System.Windows.Forms.PictureBox();
             this.UuniKelloPB = new System.Windows.Forms.PictureBox();
             this.UuniPB = new System.Windows.Forms.PictureBox();
             this.IkkunaPB = new System.Windows.Forms.PictureBox();
@@ -110,6 +110,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.LappuPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TakkiPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TaskulamppuPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OviAukiPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuoliVasemmallePB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuoliOikeaPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JaakaappiOviKiinniPB)).BeginInit();
@@ -125,7 +126,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.LaatikkoAukiPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TauluPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OviKiinniPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OviAukiPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UuniKelloPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UuniPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IkkunaPB)).BeginInit();
@@ -173,9 +173,9 @@
             // FullscreenPL
             // 
             this.FullscreenPL.BackgroundImage = global::EscapeRoom.Properties.Resources.fullscreen;
-            this.FullscreenPL.Controls.Add(this.RickPB);
             this.FullscreenPL.Controls.Add(this.SuljeMuistioBT);
             this.FullscreenPL.Controls.Add(this.CreditsTB);
+            this.FullscreenPL.Controls.Add(this.RickPB);
             this.FullscreenPL.Controls.Add(this.SuljeFullscreenLB);
             this.FullscreenPL.Controls.Add(this.VideoPB);
             this.FullscreenPL.Controls.Add(this.MuistioPB);
@@ -213,8 +213,9 @@
             this.CreditsTB.ReadOnly = true;
             this.CreditsTB.Size = new System.Drawing.Size(233, 284);
             this.CreditsTB.TabIndex = 3;
-            this.CreditsTB.Text = "Krediitit\n\nOhjelmointi:\nAlander Niko\nJuhola Henry\nSalo Karoliina\n\nGrafiikka:\nSalo" +
-    " Karoliina\n\nÄänitehosteet:\n";
+            this.CreditsTB.Text = "Credits\n\nOhjelmointi:\nAlander Niko\nJuhola Henry\nSalo Karoliina\n\nGrafiikka:\nSalo K" +
+    "aroliina\n\nTaustamusiikki:\nDanger Lion X\nuppbeat.io/t/danger-lion-x/the-street-ma" +
+    "rket";
             this.CreditsTB.Visible = false;
             // 
             // SuljeFullscreenLB
@@ -482,6 +483,17 @@
             this.TaskulamppuPB.TabStop = false;
             this.TaskulamppuPB.Click += new System.EventHandler(this.tavarat_Click);
             // 
+            // OviAukiPB
+            // 
+            this.OviAukiPB.Image = global::EscapeRoom.Properties.Resources.ovi_auki;
+            this.OviAukiPB.Location = new System.Drawing.Point(42, 115);
+            this.OviAukiPB.Name = "OviAukiPB";
+            this.OviAukiPB.Size = new System.Drawing.Size(182, 319);
+            this.OviAukiPB.TabIndex = 0;
+            this.OviAukiPB.TabStop = false;
+            this.OviAukiPB.Visible = false;
+            this.OviAukiPB.Click += new System.EventHandler(this.KatsoTavaraa_Click);
+            // 
             // NuoliVasemmallePB
             // 
             this.NuoliVasemmallePB.BackColor = System.Drawing.Color.Transparent;
@@ -646,17 +658,6 @@
             this.OviKiinniPB.TabIndex = 1;
             this.OviKiinniPB.TabStop = false;
             this.OviKiinniPB.Click += new System.EventHandler(this.KatsoTavaraa_Click);
-            // 
-            // OviAukiPB
-            // 
-            this.OviAukiPB.Image = global::EscapeRoom.Properties.Resources.ovi_auki;
-            this.OviAukiPB.Location = new System.Drawing.Point(42, 115);
-            this.OviAukiPB.Name = "OviAukiPB";
-            this.OviAukiPB.Size = new System.Drawing.Size(182, 319);
-            this.OviAukiPB.TabIndex = 0;
-            this.OviAukiPB.TabStop = false;
-            this.OviAukiPB.Visible = false;
-            this.OviAukiPB.Click += new System.EventHandler(this.KatsoTavaraa_Click);
             // 
             // UuniKelloPB
             // 
@@ -825,9 +826,9 @@
             this.Controls.Add(this.InventaarioPB);
             this.Controls.Add(this.SoundOffBT);
             this.Controls.Add(this.SoundOnBT);
+            this.Controls.Add(this.HuoneKolmasPL);
             this.Controls.Add(this.HuoneEkaPL);
             this.Controls.Add(this.HuoneTokaPL);
-            this.Controls.Add(this.HuoneKolmasPL);
             this.Name = "Pelialue";
             this.Text = "Escape Room";
             ((System.ComponentModel.ISupportInitialize)(this.InventaarioPB)).EndInit();
@@ -855,6 +856,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.LappuPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TakkiPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TaskulamppuPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OviAukiPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuoliVasemmallePB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuoliOikeaPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JaakaappiOviKiinniPB)).EndInit();
@@ -870,7 +872,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.LaatikkoAukiPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TauluPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OviKiinniPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OviAukiPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UuniKelloPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UuniPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IkkunaPB)).EndInit();
