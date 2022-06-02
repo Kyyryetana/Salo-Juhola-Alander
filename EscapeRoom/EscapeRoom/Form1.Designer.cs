@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.InventaarioPB = new System.Windows.Forms.PictureBox();
             this.HuoneKolmasPL = new System.Windows.Forms.Panel();
             this.FullscreenPL = new System.Windows.Forms.Panel();
-            this.RickPB = new System.Windows.Forms.PictureBox();
             this.SuljeMuistioBT = new System.Windows.Forms.Button();
             this.CreditsTB = new System.Windows.Forms.RichTextBox();
+            this.RickPB = new System.Windows.Forms.PictureBox();
             this.SuljeFullscreenLB = new System.Windows.Forms.Label();
             this.VideoPB = new System.Windows.Forms.PictureBox();
             this.MuistioPB = new System.Windows.Forms.PictureBox();
@@ -87,6 +88,22 @@
             this.NuoliVasenPB = new System.Windows.Forms.PictureBox();
             this.SoundOffBT = new System.Windows.Forms.Button();
             this.SoundOnBT = new System.Windows.Forms.Button();
+            this.PlayerPB = new System.Windows.Forms.PictureBox();
+            this.gamePL = new System.Windows.Forms.Panel();
+            this.MiniGameTimer = new System.Windows.Forms.Timer(this.components);
+            this.groundPB = new System.Windows.Forms.PictureBox();
+            this.Taso1PB = new System.Windows.Forms.PictureBox();
+            this.Taso2PB = new System.Windows.Forms.PictureBox();
+            this.Taso3PB = new System.Windows.Forms.PictureBox();
+            this.Taso4PB = new System.Windows.Forms.PictureBox();
+            this.coin1 = new System.Windows.Forms.PictureBox();
+            this.coin2 = new System.Windows.Forms.PictureBox();
+            this.coin3 = new System.Windows.Forms.PictureBox();
+            this.coin4 = new System.Windows.Forms.PictureBox();
+            this.coin5 = new System.Windows.Forms.PictureBox();
+            this.coin6 = new System.Windows.Forms.PictureBox();
+            this.coin7 = new System.Windows.Forms.PictureBox();
+            this.MiniGameBT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.InventaarioPB)).BeginInit();
             this.HuoneKolmasPL.SuspendLayout();
             this.FullscreenPL.SuspendLayout();
@@ -138,6 +155,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.KasviPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MankkaPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuoliVasenPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlayerPB)).BeginInit();
+            this.gamePL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groundPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Taso1PB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Taso2PB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Taso3PB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Taso4PB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin7)).BeginInit();
             this.SuspendLayout();
             // 
             // InventaarioPB
@@ -173,6 +204,8 @@
             // FullscreenPL
             // 
             this.FullscreenPL.BackgroundImage = global::EscapeRoom.Properties.Resources.fullscreen;
+            this.FullscreenPL.Controls.Add(this.MiniGameBT);
+            this.FullscreenPL.Controls.Add(this.gamePL);
             this.FullscreenPL.Controls.Add(this.SuljeMuistioBT);
             this.FullscreenPL.Controls.Add(this.CreditsTB);
             this.FullscreenPL.Controls.Add(this.RickPB);
@@ -184,16 +217,6 @@
             this.FullscreenPL.Size = new System.Drawing.Size(730, 465);
             this.FullscreenPL.TabIndex = 8;
             this.FullscreenPL.Visible = false;
-            // 
-            // RickPB
-            // 
-            this.RickPB.Image = global::EscapeRoom.Properties.Resources.ricky;
-            this.RickPB.Location = new System.Drawing.Point(83, 3);
-            this.RickPB.Name = "RickPB";
-            this.RickPB.Size = new System.Drawing.Size(546, 426);
-            this.RickPB.TabIndex = 5;
-            this.RickPB.TabStop = false;
-            this.RickPB.Visible = false;
             // 
             // SuljeMuistioBT
             // 
@@ -217,6 +240,16 @@
     "aroliina\n\nTaustamusiikki:\nDanger Lion X\nuppbeat.io/t/danger-lion-x/the-street-ma" +
     "rket";
             this.CreditsTB.Visible = false;
+            // 
+            // RickPB
+            // 
+            this.RickPB.Image = global::EscapeRoom.Properties.Resources.ricky;
+            this.RickPB.Location = new System.Drawing.Point(83, 3);
+            this.RickPB.Name = "RickPB";
+            this.RickPB.Size = new System.Drawing.Size(546, 426);
+            this.RickPB.TabIndex = 5;
+            this.RickPB.TabStop = false;
+            this.RickPB.Visible = false;
             // 
             // SuljeFullscreenLB
             // 
@@ -818,6 +851,169 @@
             this.SoundOnBT.Visible = false;
             this.SoundOnBT.Click += new System.EventHandler(this.SoundOnBT_Click);
             // 
+            // PlayerPB
+            // 
+            this.PlayerPB.BackColor = System.Drawing.Color.Red;
+            this.PlayerPB.Location = new System.Drawing.Point(120, 370);
+            this.PlayerPB.Margin = new System.Windows.Forms.Padding(0);
+            this.PlayerPB.Name = "PlayerPB";
+            this.PlayerPB.Size = new System.Drawing.Size(30, 40);
+            this.PlayerPB.TabIndex = 6;
+            this.PlayerPB.TabStop = false;
+            // 
+            // gamePL
+            // 
+            this.gamePL.Controls.Add(this.coin7);
+            this.gamePL.Controls.Add(this.coin6);
+            this.gamePL.Controls.Add(this.coin5);
+            this.gamePL.Controls.Add(this.coin4);
+            this.gamePL.Controls.Add(this.coin3);
+            this.gamePL.Controls.Add(this.coin2);
+            this.gamePL.Controls.Add(this.coin1);
+            this.gamePL.Controls.Add(this.Taso4PB);
+            this.gamePL.Controls.Add(this.Taso3PB);
+            this.gamePL.Controls.Add(this.Taso2PB);
+            this.gamePL.Controls.Add(this.Taso1PB);
+            this.gamePL.Controls.Add(this.groundPB);
+            this.gamePL.Controls.Add(this.PlayerPB);
+            this.gamePL.Location = new System.Drawing.Point(80, 3);
+            this.gamePL.Name = "gamePL";
+            this.gamePL.Size = new System.Drawing.Size(546, 426);
+            this.gamePL.TabIndex = 7;
+            this.gamePL.Visible = false;
+            // 
+            // MiniGameTimer
+            // 
+            this.MiniGameTimer.Interval = 50;
+            this.MiniGameTimer.Tick += new System.EventHandler(this.MiniGameTimer_Tick);
+            // 
+            // groundPB
+            // 
+            this.groundPB.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.groundPB.Location = new System.Drawing.Point(0, 410);
+            this.groundPB.Margin = new System.Windows.Forms.Padding(0);
+            this.groundPB.Name = "groundPB";
+            this.groundPB.Size = new System.Drawing.Size(546, 16);
+            this.groundPB.TabIndex = 7;
+            this.groundPB.TabStop = false;
+            // 
+            // Taso1PB
+            // 
+            this.Taso1PB.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Taso1PB.Location = new System.Drawing.Point(210, 320);
+            this.Taso1PB.Margin = new System.Windows.Forms.Padding(0);
+            this.Taso1PB.Name = "Taso1PB";
+            this.Taso1PB.Size = new System.Drawing.Size(340, 20);
+            this.Taso1PB.TabIndex = 7;
+            this.Taso1PB.TabStop = false;
+            // 
+            // Taso2PB
+            // 
+            this.Taso2PB.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Taso2PB.Location = new System.Drawing.Point(0, 220);
+            this.Taso2PB.Margin = new System.Windows.Forms.Padding(0);
+            this.Taso2PB.Name = "Taso2PB";
+            this.Taso2PB.Size = new System.Drawing.Size(340, 20);
+            this.Taso2PB.TabIndex = 7;
+            this.Taso2PB.TabStop = false;
+            // 
+            // Taso3PB
+            // 
+            this.Taso3PB.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Taso3PB.Location = new System.Drawing.Point(120, 130);
+            this.Taso3PB.Margin = new System.Windows.Forms.Padding(0);
+            this.Taso3PB.Name = "Taso3PB";
+            this.Taso3PB.Size = new System.Drawing.Size(110, 20);
+            this.Taso3PB.TabIndex = 7;
+            this.Taso3PB.TabStop = false;
+            // 
+            // Taso4PB
+            // 
+            this.Taso4PB.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Taso4PB.Location = new System.Drawing.Point(290, 60);
+            this.Taso4PB.Margin = new System.Windows.Forms.Padding(0);
+            this.Taso4PB.Name = "Taso4PB";
+            this.Taso4PB.Size = new System.Drawing.Size(110, 20);
+            this.Taso4PB.TabIndex = 7;
+            this.Taso4PB.TabStop = false;
+            // 
+            // coin1
+            // 
+            this.coin1.BackColor = System.Drawing.Color.Gold;
+            this.coin1.Location = new System.Drawing.Point(217, 284);
+            this.coin1.Name = "coin1";
+            this.coin1.Size = new System.Drawing.Size(17, 19);
+            this.coin1.TabIndex = 8;
+            this.coin1.TabStop = false;
+            // 
+            // coin2
+            // 
+            this.coin2.BackColor = System.Drawing.Color.Gold;
+            this.coin2.Location = new System.Drawing.Point(271, 284);
+            this.coin2.Name = "coin2";
+            this.coin2.Size = new System.Drawing.Size(17, 19);
+            this.coin2.TabIndex = 8;
+            this.coin2.TabStop = false;
+            // 
+            // coin3
+            // 
+            this.coin3.BackColor = System.Drawing.Color.Gold;
+            this.coin3.Location = new System.Drawing.Point(409, 284);
+            this.coin3.Name = "coin3";
+            this.coin3.Size = new System.Drawing.Size(17, 19);
+            this.coin3.TabIndex = 8;
+            this.coin3.TabStop = false;
+            // 
+            // coin4
+            // 
+            this.coin4.BackColor = System.Drawing.Color.Gold;
+            this.coin4.Location = new System.Drawing.Point(62, 188);
+            this.coin4.Name = "coin4";
+            this.coin4.Size = new System.Drawing.Size(17, 19);
+            this.coin4.TabIndex = 8;
+            this.coin4.TabStop = false;
+            // 
+            // coin5
+            // 
+            this.coin5.BackColor = System.Drawing.Color.Gold;
+            this.coin5.Location = new System.Drawing.Point(163, 101);
+            this.coin5.Name = "coin5";
+            this.coin5.Size = new System.Drawing.Size(17, 19);
+            this.coin5.TabIndex = 8;
+            this.coin5.TabStop = false;
+            // 
+            // coin6
+            // 
+            this.coin6.BackColor = System.Drawing.Color.Gold;
+            this.coin6.Location = new System.Drawing.Point(347, 34);
+            this.coin6.Name = "coin6";
+            this.coin6.Size = new System.Drawing.Size(17, 19);
+            this.coin6.TabIndex = 8;
+            this.coin6.TabStop = false;
+            // 
+            // coin7
+            // 
+            this.coin7.BackColor = System.Drawing.Color.Gold;
+            this.coin7.Location = new System.Drawing.Point(432, 114);
+            this.coin7.Name = "coin7";
+            this.coin7.Size = new System.Drawing.Size(17, 19);
+            this.coin7.TabIndex = 8;
+            this.coin7.TabStop = false;
+            // 
+            // MiniGameBT
+            // 
+            this.MiniGameBT.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.MiniGameBT.FlatAppearance.BorderSize = 0;
+            this.MiniGameBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MiniGameBT.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.MiniGameBT.Location = new System.Drawing.Point(661, 383);
+            this.MiniGameBT.Name = "MiniGameBT";
+            this.MiniGameBT.Size = new System.Drawing.Size(48, 27);
+            this.MiniGameBT.TabIndex = 9;
+            this.MiniGameBT.Text = "XXX";
+            this.MiniGameBT.UseVisualStyleBackColor = false;
+            this.MiniGameBT.Click += new System.EventHandler(this.MiniGameBT_Click);
+            // 
             // Pelialue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -831,6 +1027,8 @@
             this.Controls.Add(this.HuoneTokaPL);
             this.Name = "Pelialue";
             this.Text = "Escape Room";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Pelialue_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Pelialue_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.InventaarioPB)).EndInit();
             this.HuoneKolmasPL.ResumeLayout(false);
             this.FullscreenPL.ResumeLayout(false);
@@ -884,6 +1082,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.KasviPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MankkaPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuoliVasenPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlayerPB)).EndInit();
+            this.gamePL.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groundPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Taso1PB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Taso2PB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Taso3PB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Taso4PB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -949,6 +1161,22 @@
         private System.Windows.Forms.Button SoundOffBT;
         private System.Windows.Forms.Button SoundOnBT;
         public System.Windows.Forms.PictureBox AvainPB;
+        private System.Windows.Forms.Panel gamePL;
+        private System.Windows.Forms.PictureBox PlayerPB;
+        private System.Windows.Forms.Timer MiniGameTimer;
+        private System.Windows.Forms.PictureBox coin7;
+        private System.Windows.Forms.PictureBox coin6;
+        private System.Windows.Forms.PictureBox coin5;
+        private System.Windows.Forms.PictureBox coin4;
+        private System.Windows.Forms.PictureBox coin3;
+        private System.Windows.Forms.PictureBox coin2;
+        private System.Windows.Forms.PictureBox coin1;
+        private System.Windows.Forms.PictureBox Taso4PB;
+        private System.Windows.Forms.PictureBox Taso3PB;
+        private System.Windows.Forms.PictureBox Taso2PB;
+        private System.Windows.Forms.PictureBox Taso1PB;
+        private System.Windows.Forms.PictureBox groundPB;
+        private System.Windows.Forms.Button MiniGameBT;
     }
 }
 

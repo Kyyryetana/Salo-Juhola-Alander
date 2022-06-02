@@ -15,6 +15,7 @@ namespace EscapeRoom
 {
     public partial class Pelialue : Form
     {
+        
 
         public Pelialue()
         {
@@ -29,6 +30,8 @@ namespace EscapeRoom
             JaakaappiOviAukiPB.Visible = false;
             PakastinOviAukiPB.Visible = false;
             MakeDict();
+            this.KeyPreview = true;
+            GoldList();
 
 
         }
@@ -215,6 +218,7 @@ namespace EscapeRoom
                 case DialogResult.Yes:
                     RuutuPB.Visible = true;
                     PCPB.Enabled = false;
+                    MiniGameTimer.Enabled = true;
                     break;
                 case DialogResult.No:
                     RuutuPB.Visible = false;
@@ -229,6 +233,7 @@ namespace EscapeRoom
             FullscreenPL.Visible = true;
             SuljeMuistioBT.Visible = false;
 
+
         }
 
         private void SuljeFullscreenLB_Click(object sender, EventArgs e)
@@ -238,6 +243,7 @@ namespace EscapeRoom
             CreditsTB.Visible = false;
             SuljeMuistioBT.Visible = false;
             RickPB.Visible = false;
+            gamePL.Visible = false;
         }
 
         private void MuistioPB_Click(object sender, EventArgs e)
@@ -256,6 +262,7 @@ namespace EscapeRoom
         private void VideoPB_Click(object sender, EventArgs e)
         {
             RickPB.Visible = true;
+            gamePL.Visible=false;
         }
         // tietokoneen ruutu end
 
@@ -432,19 +439,310 @@ namespace EscapeRoom
             InventaarioPB.Controls.Add(item);
 
         }
+
         /*
-        private void UseInventory(Image item1, Image item2)
+private void UseInventory(Image item1, Image item2)
+{
+   if (item1.Tag == tavara1 && item2.Tag == tavara2)
+   {
+       MessageBox.Show("Käytit tavara 1 ja 2");
+   }
+
+}
+*/
+        //inventory end
+        //game in game
+        bool goLeft, goRight, goUp, goDown, jump;
+
+        private void Pelialue_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            if (item1.Tag == tavara1 && item2.Tag == tavara2)
+            MessageBox.Show("prewiev");
+        }
+
+        int testinmr = 0;
+
+        private void Pelialue_KeyUp(object sender, KeyEventArgs e)
+        {
+            //MessageBox.Show("kukkuu");
+            if (e.KeyCode == Keys.A)
             {
-                MessageBox.Show("Käytit tavara 1 ja 2");
+               
+                goLeft = false;
+            }
+            if (e.KeyCode == Keys.D)
+            {
+                goRight = false;
+            }
+            if (e.KeyCode == Keys.W)
+            {
+                jump = false;
+            }
+            if (e.KeyCode == Keys.S)
+            {
+                goDown = false;
+            }
+            if (e.KeyCode == Keys.Space)
+            {
+                jump = false;
+            }
+        }
+
+        private void Pelialue_KeyDown(object sender, KeyEventArgs e)
+        {
+            //MessageBox.Show("moi");
+            if (e.KeyCode == Keys.A)
+            {
+                goLeft = true;
+            }
+            if (e.KeyCode == Keys.D)
+            {
+                goRight = true;
+            }
+            if (e.KeyCode == Keys.W)
+            {
+                jump = true;
+            }
+            if (e.KeyCode == Keys.S)
+            {
+                goDown = true;
+            }
+            if (e.KeyCode == Keys.Space)
+            {
+                jump = true;
+            }
+        }
+
+        
+        int maxHeight = 370;
+        
+        private void MiniGameTimer_Tick(object sender, EventArgs e)
+        {
+            int movement = 5;
+            List<bool> list = new List<bool>();
+            bool vasemmalle = false, oikealla = false, alaspain = false, ylospain = false;
+            
+            list = GroundCollision();
+            GoldCollision();
+
+            
+            if (jump)
+            {
+                
+                if (maxHeight >= PlayerPB.Top )
+                maxHeight = PlayerPB.Top - 100;
+            }
+            if (PlayerPB.Top >= maxHeight) //ylöspäin
+            {
+                ylospain = true;
+
+                PlayerPB.Top -= movement;
+                if (StillCollision())
+                {
+                    PlayerPB.Top += movement;
+                    maxHeight = PlayerPB.Top;
+                }
+            }
+            if (maxHeight > PlayerPB.Top) //alaspäin
+            {
+                PlayerPB.Top += movement;
+                
+                alaspain = true;
+                if (StillCollision())
+                {
+                    PlayerPB.Top -= movement;
+                    maxHeight = PlayerPB.Top;
+                }
+            }
+            if (goLeft)
+            {
+                PlayerPB.Left -= movement;
+                vasemmalle = true;
+                if (StillCollision())
+                {
+                    PlayerPB.Left += movement;
+                }
             }
 
-        }
-        */
-        //inventory end
+            if (goRight )
+            {
 
-       
+                PlayerPB.Left += movement;
+                oikealla = true;
+                if (StillCollision())
+                {
+                    PlayerPB.Left -= movement;
+                }
+            }
+            
+            if (PlayerPB.Top == maxHeight)
+            {
+                maxHeight = 370;
+            }
+            
+            /*
+             if (jump)
+             {
+                 maxHeight = PlayerPB.Top - 70;
+             }
+
+             if (maxHeight > PlayerPB.Top && list[0] == false )
+             {
+                 PlayerPB.Top += movement;
+                 maxHeight = PlayerPB.Top;
+                 alaspain = true;
+             }
+             if (goLeft && list[2] == false)
+             {
+                 PlayerPB.Left -= movement;
+                 vasemmalle = true;
+             }
+
+             if (goRight && list[3] == false )
+             {
+
+                 PlayerPB.Left += movement;
+                 oikealla = true;
+             }
+             if (PlayerPB.Top > maxHeight && list[1] == false)
+             {
+                 ylospain = true;
+                 PlayerPB.Top -= movement;
+                maxHeight = 370;
+             }
+             if (PlayerPB.Top == maxHeight)
+             {
+                 maxHeight = 370;
+             }
+
+             bool liikuta = StillCollision();
+             if(liikuta == true)
+             {
+                 if (vasemmalle)
+                 {
+                     PlayerPB.Left += movement;
+                 }
+                 if (oikealla)
+                 {
+                     PlayerPB.Left -= movement;
+                 }
+                 if (ylospain)
+                 {
+                     PlayerPB.Top += movement;
+                 }
+                 if (alaspain)
+                 {
+                     PlayerPB.Top -= movement;
+                 }
+             }
+             */
+
+        }
+
+        private void GoldCollision()
+        {
+            foreach (PictureBox item in coins.ToList())
+            {
+                if (PlayerPB.Bounds.IntersectsWith(item.Bounds))
+                {
+                    item.Visible = false;
+                }
+            }
+        }
+
+        private void MiniGameBT_Click(object sender, EventArgs e)
+        {
+            gamePL.Visible = true;
+        }
+
+        private List<bool> GroundCollision()
+         {
+            List<bool> list = new List<bool>();
+            List<string> alas = new List<string>();
+            List<string> ylos = new List<string>();
+            List<string> vasen = new List<string>();
+            List<string> oikea = new List<string>();
+            foreach (PictureBox wall in Lands.ToList())
+            {
+                
+                PlayerPB.Top+= 1;
+                alas.Add(PlayerPB.Bounds.IntersectsWith(wall.Bounds) == true ? "alas": null);
+                PlayerPB.Top -= 2;
+                ylos.Add(PlayerPB.Bounds.IntersectsWith(wall.Bounds) == true ? "ylos" : null);
+                PlayerPB.Left += 1;
+                vasen.Add(PlayerPB.Bounds.IntersectsWith(wall.Bounds) == true ? "vasen" : null);
+                PlayerPB.Left -= 2;
+                oikea.Add(PlayerPB.Bounds.IntersectsWith(wall.Bounds) == true ? "Oikea" : null);
+                PlayerPB.Top += 1;
+                PlayerPB.Left += 1;
+
+
+            }
+            bool alasbool = false, ylosbool =false, vasenbool =false, oikeabool = false;
+            foreach(string al in alas)
+            {
+              if (al != null)
+                {
+                    alasbool = true;
+                }
+            }
+            foreach (string al in ylos)
+            {
+                if (al != null)
+                {
+                    ylosbool= true;
+                }
+            }
+            foreach (string al in vasen)
+            {
+                if (al != null)
+                {
+                    vasenbool = true;
+                }
+            }
+            foreach (string al in oikea)
+            {
+                if (al != null)
+                {
+                    oikeabool = true;
+                }
+            }
+            list.Add(alasbool);
+            list.Add(ylosbool);
+            list.Add(vasenbool);
+            list.Add(oikeabool);
+            return list;            
+         }
+        private bool StillCollision()
+        {
+            foreach (PictureBox wall in Lands.ToList())
+            { 
+                if (PlayerPB.Bounds.IntersectsWith(wall.Bounds))
+                {
+                    return true;
+                }
+            } 
+                return false;
+        }
+        List<PictureBox> coins = new List<PictureBox>();
+        List<PictureBox> Lands= new List<PictureBox>();
+        private void GoldList()
+        {
+            coins.Add(coin1);
+            coins.Add(coin2);
+            coins.Add(coin3);
+            coins.Add(coin4);
+            coins.Add(coin5);
+            coins.Add(coin6);
+            coins.Add(coin7);
+            Lands.Add(groundPB);
+            Lands.Add(Taso1PB);
+            Lands.Add(Taso2PB);
+            Lands.Add(Taso3PB);
+            Lands.Add(Taso4PB);
+
+        }
+        // game in game ending 
+
 
     }
 }
