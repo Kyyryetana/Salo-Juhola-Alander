@@ -518,10 +518,10 @@ private void UseInventory(Image item1, Image item2)
         private void MiniGameTimer_Tick(object sender, EventArgs e)
         {
             int movement = 5;
-            List<bool> list = new List<bool>();
+            
             bool vasemmalle = false, oikealla = false, alaspain = false, ylospain = false;
             
-            list = GroundCollision();
+            
             GoldCollision();
 
             
@@ -579,62 +579,7 @@ private void UseInventory(Image item1, Image item2)
                 maxHeight = 370;
             }
             
-            /*
-             if (jump)
-             {
-                 maxHeight = PlayerPB.Top - 70;
-             }
-
-             if (maxHeight > PlayerPB.Top && list[0] == false )
-             {
-                 PlayerPB.Top += movement;
-                 maxHeight = PlayerPB.Top;
-                 alaspain = true;
-             }
-             if (goLeft && list[2] == false)
-             {
-                 PlayerPB.Left -= movement;
-                 vasemmalle = true;
-             }
-
-             if (goRight && list[3] == false )
-             {
-
-                 PlayerPB.Left += movement;
-                 oikealla = true;
-             }
-             if (PlayerPB.Top > maxHeight && list[1] == false)
-             {
-                 ylospain = true;
-                 PlayerPB.Top -= movement;
-                maxHeight = 370;
-             }
-             if (PlayerPB.Top == maxHeight)
-             {
-                 maxHeight = 370;
-             }
-
-             bool liikuta = StillCollision();
-             if(liikuta == true)
-             {
-                 if (vasemmalle)
-                 {
-                     PlayerPB.Left += movement;
-                 }
-                 if (oikealla)
-                 {
-                     PlayerPB.Left -= movement;
-                 }
-                 if (ylospain)
-                 {
-                     PlayerPB.Top += movement;
-                 }
-                 if (alaspain)
-                 {
-                     PlayerPB.Top -= movement;
-                 }
-             }
-             */
+            
 
         }
 
@@ -654,64 +599,7 @@ private void UseInventory(Image item1, Image item2)
             gamePL.Visible = true;
         }
 
-        private List<bool> GroundCollision()
-         {
-            List<bool> list = new List<bool>();
-            List<string> alas = new List<string>();
-            List<string> ylos = new List<string>();
-            List<string> vasen = new List<string>();
-            List<string> oikea = new List<string>();
-            foreach (PictureBox wall in Lands.ToList())
-            {
-                
-                PlayerPB.Top+= 1;
-                alas.Add(PlayerPB.Bounds.IntersectsWith(wall.Bounds) == true ? "alas": null);
-                PlayerPB.Top -= 2;
-                ylos.Add(PlayerPB.Bounds.IntersectsWith(wall.Bounds) == true ? "ylos" : null);
-                PlayerPB.Left += 1;
-                vasen.Add(PlayerPB.Bounds.IntersectsWith(wall.Bounds) == true ? "vasen" : null);
-                PlayerPB.Left -= 2;
-                oikea.Add(PlayerPB.Bounds.IntersectsWith(wall.Bounds) == true ? "Oikea" : null);
-                PlayerPB.Top += 1;
-                PlayerPB.Left += 1;
-
-
-            }
-            bool alasbool = false, ylosbool =false, vasenbool =false, oikeabool = false;
-            foreach(string al in alas)
-            {
-              if (al != null)
-                {
-                    alasbool = true;
-                }
-            }
-            foreach (string al in ylos)
-            {
-                if (al != null)
-                {
-                    ylosbool= true;
-                }
-            }
-            foreach (string al in vasen)
-            {
-                if (al != null)
-                {
-                    vasenbool = true;
-                }
-            }
-            foreach (string al in oikea)
-            {
-                if (al != null)
-                {
-                    oikeabool = true;
-                }
-            }
-            list.Add(alasbool);
-            list.Add(ylosbool);
-            list.Add(vasenbool);
-            list.Add(oikeabool);
-            return list;            
-         }
+       
         private bool StillCollision()
         {
             foreach (PictureBox wall in Lands.ToList())
