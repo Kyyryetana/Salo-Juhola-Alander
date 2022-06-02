@@ -59,10 +59,9 @@ namespace EscapeRoom
 
         private string Func1(string arg)
         {
-            
-            
-            lisaa.Add("AvainPB");
-            lisaa.Add("TaskulamppuPB");
+
+
+            MessageBox.Show("tarvitset vielä jesaria että voit laittaa avaimen lamppuun kiinni.");
             
 
             return null;
